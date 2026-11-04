@@ -1,0 +1,7309 @@
+[
+  {
+    "id": "transicoes.fade",
+    "nome": "Fade",
+    "categoria": "transicoes",
+    "categoria_nome": "Transições cinematográficas",
+    "tipo": "transicao",
+    "motores": [
+      "remotion"
+    ],
+    "status": "integracao_nativa",
+    "parametros": [
+      "duracaoFrames",
+      "easing",
+      "direcao",
+      "intensidade"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Disponível por biblioteca/ferramenta externa; exige implementação e teste no pipeline."
+  },
+  {
+    "id": "transicoes.smooth-zoom-in",
+    "nome": "Smooth Zoom In",
+    "categoria": "transicoes",
+    "categoria_nome": "Transições cinematográficas",
+    "tipo": "transicao",
+    "motores": [
+      "remotion"
+    ],
+    "status": "integracao_nativa",
+    "parametros": [
+      "duracaoFrames",
+      "easing",
+      "direcao",
+      "intensidade"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Disponível por biblioteca/ferramenta externa; exige implementação e teste no pipeline."
+  },
+  {
+    "id": "transicoes.smooth-zoom-out",
+    "nome": "Smooth Zoom Out",
+    "categoria": "transicoes",
+    "categoria_nome": "Transições cinematográficas",
+    "tipo": "transicao",
+    "motores": [
+      "remotion"
+    ],
+    "status": "integracao_nativa",
+    "parametros": [
+      "duracaoFrames",
+      "easing",
+      "direcao",
+      "intensidade"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Disponível por biblioteca/ferramenta externa; exige implementação e teste no pipeline."
+  },
+  {
+    "id": "transicoes.zoom-through-cut",
+    "nome": "Zoom Through Cut",
+    "categoria": "transicoes",
+    "categoria_nome": "Transições cinematográficas",
+    "tipo": "transicao",
+    "motores": [
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "duracaoFrames",
+      "easing",
+      "direcao",
+      "intensidade"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "transicoes.whip-pan",
+    "nome": "Whip Pan",
+    "categoria": "transicoes",
+    "categoria_nome": "Transições cinematográficas",
+    "tipo": "transicao",
+    "motores": [
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "duracaoFrames",
+      "easing",
+      "direcao",
+      "intensidade"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "transicoes.motion-blur-transition",
+    "nome": "Motion Blur Transition",
+    "categoria": "transicoes",
+    "categoria_nome": "Transições cinematográficas",
+    "tipo": "transicao",
+    "motores": [
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "duracaoFrames",
+      "easing",
+      "direcao",
+      "intensidade"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "transicoes.speed-ramp-transition",
+    "nome": "Speed Ramp Transition",
+    "categoria": "transicoes",
+    "categoria_nome": "Transições cinematográficas",
+    "tipo": "transicao",
+    "motores": [
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "duracaoFrames",
+      "easing",
+      "direcao",
+      "intensidade"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "transicoes.seamless-match-cut",
+    "nome": "Seamless Match Cut",
+    "categoria": "transicoes",
+    "categoria_nome": "Transições cinematográficas",
+    "tipo": "transicao",
+    "motores": [
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "duracaoFrames",
+      "easing",
+      "direcao",
+      "intensidade"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "transicoes.invisible-cut",
+    "nome": "Invisible Cut",
+    "categoria": "transicoes",
+    "categoria_nome": "Transições cinematográficas",
+    "tipo": "transicao",
+    "motores": [
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "duracaoFrames",
+      "easing",
+      "direcao",
+      "intensidade"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "transicoes.mask-transition",
+    "nome": "Mask Transition",
+    "categoria": "transicoes",
+    "categoria_nome": "Transições cinematográficas",
+    "tipo": "transicao",
+    "motores": [
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "duracaoFrames",
+      "easing",
+      "direcao",
+      "intensidade"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "transicoes.object-wipe",
+    "nome": "Object Wipe",
+    "categoria": "transicoes",
+    "categoria_nome": "Transições cinematográficas",
+    "tipo": "transicao",
+    "motores": [
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "duracaoFrames",
+      "easing",
+      "direcao",
+      "intensidade"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "transicoes.light-leak-transition",
+    "nome": "Light Leak Transition",
+    "categoria": "transicoes",
+    "categoria_nome": "Transições cinematográficas",
+    "tipo": "transicao",
+    "motores": [
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "duracaoFrames",
+      "easing",
+      "direcao",
+      "intensidade"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "transicoes.film-burn",
+    "nome": "Film Burn",
+    "categoria": "transicoes",
+    "categoria_nome": "Transições cinematográficas",
+    "tipo": "transicao",
+    "motores": [
+      "remotion"
+    ],
+    "status": "integracao_nativa",
+    "parametros": [
+      "duracaoFrames",
+      "easing",
+      "direcao",
+      "intensidade"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Disponível por biblioteca/ferramenta externa; exige implementação e teste no pipeline."
+  },
+  {
+    "id": "transicoes.glitch-transition",
+    "nome": "Glitch Transition",
+    "categoria": "transicoes",
+    "categoria_nome": "Transições cinematográficas",
+    "tipo": "transicao",
+    "motores": [
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "duracaoFrames",
+      "easing",
+      "direcao",
+      "intensidade"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "transicoes.rgb-split",
+    "nome": "RGB Split",
+    "categoria": "transicoes",
+    "categoria_nome": "Transições cinematográficas",
+    "tipo": "transicao",
+    "motores": [
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "duracaoFrames",
+      "easing",
+      "direcao",
+      "intensidade"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "transicoes.flash-cut",
+    "nome": "Flash Cut",
+    "categoria": "transicoes",
+    "categoria_nome": "Transições cinematográficas",
+    "tipo": "transicao",
+    "motores": [
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "duracaoFrames",
+      "easing",
+      "direcao",
+      "intensidade"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "transicoes.spin-transition",
+    "nome": "Spin Transition",
+    "categoria": "transicoes",
+    "categoria_nome": "Transições cinematográficas",
+    "tipo": "transicao",
+    "motores": [
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "duracaoFrames",
+      "easing",
+      "direcao",
+      "intensidade"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "transicoes.camera-shake-cut",
+    "nome": "Camera Shake Cut",
+    "categoria": "transicoes",
+    "categoria_nome": "Transições cinematográficas",
+    "tipo": "transicao",
+    "motores": [
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "duracaoFrames",
+      "easing",
+      "direcao",
+      "intensidade"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "transicoes.push-transition",
+    "nome": "Push Transition",
+    "categoria": "transicoes",
+    "categoria_nome": "Transições cinematográficas",
+    "tipo": "transicao",
+    "motores": [
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "duracaoFrames",
+      "easing",
+      "direcao",
+      "intensidade"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "transicoes.slide-transition",
+    "nome": "Slide Transition",
+    "categoria": "transicoes",
+    "categoria_nome": "Transições cinematográficas",
+    "tipo": "transicao",
+    "motores": [
+      "remotion"
+    ],
+    "status": "integracao_nativa",
+    "parametros": [
+      "duracaoFrames",
+      "easing",
+      "direcao",
+      "intensidade"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Disponível por biblioteca/ferramenta externa; exige implementação e teste no pipeline."
+  },
+  {
+    "id": "transicoes.swipe-transition",
+    "nome": "Swipe Transition",
+    "categoria": "transicoes",
+    "categoria_nome": "Transições cinematográficas",
+    "tipo": "transicao",
+    "motores": [
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "duracaoFrames",
+      "easing",
+      "direcao",
+      "intensidade"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "transicoes.parallax-transition",
+    "nome": "Parallax Transition",
+    "categoria": "transicoes",
+    "categoria_nome": "Transições cinematográficas",
+    "tipo": "transicao",
+    "motores": [
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "duracaoFrames",
+      "easing",
+      "direcao",
+      "intensidade"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "transicoes.liquid-morph",
+    "nome": "Liquid Morph",
+    "categoria": "transicoes",
+    "categoria_nome": "Transições cinematográficas",
+    "tipo": "transicao",
+    "motores": [
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "duracaoFrames",
+      "easing",
+      "direcao",
+      "intensidade"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "transicoes.portal-transition",
+    "nome": "Portal Transition",
+    "categoria": "transicoes",
+    "categoria_nome": "Transições cinematográficas",
+    "tipo": "transicao",
+    "motores": [
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "duracaoFrames",
+      "easing",
+      "direcao",
+      "intensidade"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "transicoes.paper-tear",
+    "nome": "Paper Tear",
+    "categoria": "transicoes",
+    "categoria_nome": "Transições cinematográficas",
+    "tipo": "transicao",
+    "motores": [
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "duracaoFrames",
+      "easing",
+      "direcao",
+      "intensidade"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "transicoes.glass-shatter",
+    "nome": "Glass Shatter",
+    "categoria": "transicoes",
+    "categoria_nome": "Transições cinematográficas",
+    "tipo": "transicao",
+    "motores": [
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "duracaoFrames",
+      "easing",
+      "direcao",
+      "intensidade"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "transicoes.3d-cube-rotation",
+    "nome": "3D Cube Rotation",
+    "categoria": "transicoes",
+    "categoria_nome": "Transições cinematográficas",
+    "tipo": "transicao",
+    "motores": [
+      "remotion"
+    ],
+    "status": "integracao_nativa",
+    "parametros": [
+      "duracaoFrames",
+      "easing",
+      "direcao",
+      "intensidade"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Disponível por biblioteca/ferramenta externa; exige implementação e teste no pipeline."
+  },
+  {
+    "id": "transicoes.luma-fade",
+    "nome": "Luma Fade",
+    "categoria": "transicoes",
+    "categoria_nome": "Transições cinematográficas",
+    "tipo": "transicao",
+    "motores": [
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "duracaoFrames",
+      "easing",
+      "direcao",
+      "intensidade"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "transicoes.morphing-transition",
+    "nome": "Morphing Transition",
+    "categoria": "transicoes",
+    "categoria_nome": "Transições cinematográficas",
+    "tipo": "transicao",
+    "motores": [
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "duracaoFrames",
+      "easing",
+      "direcao",
+      "intensidade"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "transicoes.wipe",
+    "nome": "Wipe",
+    "categoria": "transicoes",
+    "categoria_nome": "Transições cinematográficas",
+    "tipo": "transicao",
+    "motores": [
+      "remotion"
+    ],
+    "status": "integracao_nativa",
+    "parametros": [
+      "duracaoFrames",
+      "easing",
+      "direcao",
+      "intensidade"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Disponível por biblioteca/ferramenta externa; exige implementação e teste no pipeline."
+  },
+  {
+    "id": "transicoes.iris-reveal",
+    "nome": "Iris Reveal",
+    "categoria": "transicoes",
+    "categoria_nome": "Transições cinematográficas",
+    "tipo": "transicao",
+    "motores": [
+      "remotion"
+    ],
+    "status": "integracao_nativa",
+    "parametros": [
+      "duracaoFrames",
+      "easing",
+      "direcao",
+      "intensidade"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Disponível por biblioteca/ferramenta externa; exige implementação e teste no pipeline."
+  },
+  {
+    "id": "transicoes.ripple-transition",
+    "nome": "Ripple Transition",
+    "categoria": "transicoes",
+    "categoria_nome": "Transições cinematográficas",
+    "tipo": "transicao",
+    "motores": [
+      "remotion"
+    ],
+    "status": "integracao_nativa",
+    "parametros": [
+      "duracaoFrames",
+      "easing",
+      "direcao",
+      "intensidade"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Disponível por biblioteca/ferramenta externa; exige implementação e teste no pipeline."
+  },
+  {
+    "id": "camera_3d.orbit-camera",
+    "nome": "Orbit Camera",
+    "categoria": "camera_3d",
+    "categoria_nome": "Câmera e profundidade 3D",
+    "tipo": "movimento",
+    "motores": [
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "duracaoFrames",
+      "zoom",
+      "perspectiva",
+      "easing"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "camera_3d.dolly-zoom",
+    "nome": "Dolly Zoom",
+    "categoria": "camera_3d",
+    "categoria_nome": "Câmera e profundidade 3D",
+    "tipo": "movimento",
+    "motores": [
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "duracaoFrames",
+      "zoom",
+      "perspectiva",
+      "easing"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "camera_3d.vertigo",
+    "nome": "Vertigo",
+    "categoria": "camera_3d",
+    "categoria_nome": "Câmera e profundidade 3D",
+    "tipo": "movimento",
+    "motores": [
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "duracaoFrames",
+      "zoom",
+      "perspectiva",
+      "easing"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "camera_3d.push-in",
+    "nome": "Push In",
+    "categoria": "camera_3d",
+    "categoria_nome": "Câmera e profundidade 3D",
+    "tipo": "movimento",
+    "motores": [
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "duracaoFrames",
+      "zoom",
+      "perspectiva",
+      "easing"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "camera_3d.pull-back",
+    "nome": "Pull Back",
+    "categoria": "camera_3d",
+    "categoria_nome": "Câmera e profundidade 3D",
+    "tipo": "movimento",
+    "motores": [
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "duracaoFrames",
+      "zoom",
+      "perspectiva",
+      "easing"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "camera_3d.digital-zoom",
+    "nome": "Digital Zoom",
+    "categoria": "camera_3d",
+    "categoria_nome": "Câmera e profundidade 3D",
+    "tipo": "movimento",
+    "motores": [
+      "remotion"
+    ],
+    "status": "exemplo_executavel",
+    "parametros": [
+      "duracaoFrames",
+      "zoom",
+      "perspectiva",
+      "easing"
+    ],
+    "arquivo_exemplo": "projetos/remotion-base/src/ArthurShowcase.tsx",
+    "observacao": "Há demonstração no showcase Remotion; adaptar para uso em produção."
+  },
+  {
+    "id": "camera_3d.camera-roll",
+    "nome": "Camera Roll",
+    "categoria": "camera_3d",
+    "categoria_nome": "Câmera e profundidade 3D",
+    "tipo": "movimento",
+    "motores": [
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "duracaoFrames",
+      "zoom",
+      "perspectiva",
+      "easing"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "camera_3d.camera-tracking",
+    "nome": "Camera Tracking",
+    "categoria": "camera_3d",
+    "categoria_nome": "Câmera e profundidade 3D",
+    "tipo": "movimento",
+    "motores": [
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "duracaoFrames",
+      "zoom",
+      "perspectiva",
+      "easing"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "camera_3d.handheld-camera",
+    "nome": "Handheld Camera",
+    "categoria": "camera_3d",
+    "categoria_nome": "Câmera e profundidade 3D",
+    "tipo": "movimento",
+    "motores": [
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "duracaoFrames",
+      "zoom",
+      "perspectiva",
+      "easing"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "camera_3d.cinematic-camera-shake",
+    "nome": "Cinematic Camera Shake",
+    "categoria": "camera_3d",
+    "categoria_nome": "Câmera e profundidade 3D",
+    "tipo": "movimento",
+    "motores": [
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "duracaoFrames",
+      "zoom",
+      "perspectiva",
+      "easing"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "camera_3d.3d-parallax",
+    "nome": "3D Parallax",
+    "categoria": "camera_3d",
+    "categoria_nome": "Câmera e profundidade 3D",
+    "tipo": "movimento",
+    "motores": [
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "duracaoFrames",
+      "zoom",
+      "perspectiva",
+      "easing"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "camera_3d.multi-layer-parallax",
+    "nome": "Multi-Layer Parallax",
+    "categoria": "camera_3d",
+    "categoria_nome": "Câmera e profundidade 3D",
+    "tipo": "movimento",
+    "motores": [
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "duracaoFrames",
+      "zoom",
+      "perspectiva",
+      "easing"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "camera_3d.camera-fly-through",
+    "nome": "Camera Fly Through",
+    "categoria": "camera_3d",
+    "categoria_nome": "Câmera e profundidade 3D",
+    "tipo": "movimento",
+    "motores": [
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "duracaoFrames",
+      "zoom",
+      "perspectiva",
+      "easing"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "camera_3d.infinite-zoom",
+    "nome": "Infinite Zoom",
+    "categoria": "camera_3d",
+    "categoria_nome": "Câmera e profundidade 3D",
+    "tipo": "movimento",
+    "motores": [
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "duracaoFrames",
+      "zoom",
+      "perspectiva",
+      "easing"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "camera_3d.perspective-shift",
+    "nome": "Perspective Shift",
+    "categoria": "camera_3d",
+    "categoria_nome": "Câmera e profundidade 3D",
+    "tipo": "movimento",
+    "motores": [
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "duracaoFrames",
+      "zoom",
+      "perspectiva",
+      "easing"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "camera_3d.tilt-shift",
+    "nome": "Tilt Shift",
+    "categoria": "camera_3d",
+    "categoria_nome": "Câmera e profundidade 3D",
+    "tipo": "movimento",
+    "motores": [
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "duracaoFrames",
+      "zoom",
+      "perspectiva",
+      "easing"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "camera_3d.rack-focus",
+    "nome": "Rack Focus",
+    "categoria": "camera_3d",
+    "categoria_nome": "Câmera e profundidade 3D",
+    "tipo": "movimento",
+    "motores": [
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "duracaoFrames",
+      "zoom",
+      "perspectiva",
+      "easing"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "camera_3d.depth-of-field",
+    "nome": "Depth of Field",
+    "categoria": "camera_3d",
+    "categoria_nome": "Câmera e profundidade 3D",
+    "tipo": "movimento",
+    "motores": [
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "duracaoFrames",
+      "zoom",
+      "perspectiva",
+      "easing"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "camera_3d.dolly-in",
+    "nome": "Dolly In",
+    "categoria": "camera_3d",
+    "categoria_nome": "Câmera e profundidade 3D",
+    "tipo": "movimento",
+    "motores": [
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "duracaoFrames",
+      "zoom",
+      "perspectiva",
+      "easing"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "camera_3d.dolly-out",
+    "nome": "Dolly Out",
+    "categoria": "camera_3d",
+    "categoria_nome": "Câmera e profundidade 3D",
+    "tipo": "movimento",
+    "motores": [
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "duracaoFrames",
+      "zoom",
+      "perspectiva",
+      "easing"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "camera_3d.virtual-drone-shot",
+    "nome": "Virtual Drone Shot",
+    "categoria": "camera_3d",
+    "categoria_nome": "Câmera e profundidade 3D",
+    "tipo": "movimento",
+    "motores": [
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "duracaoFrames",
+      "zoom",
+      "perspectiva",
+      "easing"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "camera_3d.camera-follow",
+    "nome": "Camera Follow",
+    "categoria": "camera_3d",
+    "categoria_nome": "Câmera e profundidade 3D",
+    "tipo": "movimento",
+    "motores": [
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "duracaoFrames",
+      "zoom",
+      "perspectiva",
+      "easing"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "camera_3d.zoom-reveal",
+    "nome": "Zoom Reveal",
+    "categoria": "camera_3d",
+    "categoria_nome": "Câmera e profundidade 3D",
+    "tipo": "movimento",
+    "motores": [
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "duracaoFrames",
+      "zoom",
+      "perspectiva",
+      "easing"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "camera_3d.frame-break",
+    "nome": "Frame Break",
+    "categoria": "camera_3d",
+    "categoria_nome": "Câmera e profundidade 3D",
+    "tipo": "movimento",
+    "motores": [
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "duracaoFrames",
+      "zoom",
+      "perspectiva",
+      "easing"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "camera_3d.ui-world",
+    "nome": "UI World",
+    "categoria": "camera_3d",
+    "categoria_nome": "Câmera e profundidade 3D",
+    "tipo": "movimento",
+    "motores": [
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "duracaoFrames",
+      "zoom",
+      "perspectiva",
+      "easing"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "camera_3d.ken-burns",
+    "nome": "Ken Burns",
+    "categoria": "camera_3d",
+    "categoria_nome": "Câmera e profundidade 3D",
+    "tipo": "movimento",
+    "motores": [
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "duracaoFrames",
+      "zoom",
+      "perspectiva",
+      "easing"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "camera_3d.3d-perspective-shift",
+    "nome": "3D Perspective Shift",
+    "categoria": "camera_3d",
+    "categoria_nome": "Câmera e profundidade 3D",
+    "tipo": "movimento",
+    "motores": [
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "duracaoFrames",
+      "zoom",
+      "perspectiva",
+      "easing"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "motion_graphics.kinetic-hook",
+    "nome": "Kinetic Hook",
+    "categoria": "motion_graphics",
+    "categoria_nome": "Motion graphics",
+    "tipo": "animacao",
+    "motores": [
+      "remotion"
+    ],
+    "status": "exemplo_executavel",
+    "parametros": [
+      "duracaoFrames",
+      "easing",
+      "escala",
+      "cor"
+    ],
+    "arquivo_exemplo": "projetos/remotion-base/src/ArthurShowcase.tsx",
+    "observacao": "Há demonstração no showcase Remotion; adaptar para uso em produção."
+  },
+  {
+    "id": "motion_graphics.gravity-drop",
+    "nome": "Gravity Drop",
+    "categoria": "motion_graphics",
+    "categoria_nome": "Motion graphics",
+    "tipo": "animacao",
+    "motores": [
+      "remotion"
+    ],
+    "status": "exemplo_executavel",
+    "parametros": [
+      "duracaoFrames",
+      "easing",
+      "escala",
+      "cor"
+    ],
+    "arquivo_exemplo": "projetos/remotion-base/src/ArthurShowcase.tsx",
+    "observacao": "Há demonstração no showcase Remotion; adaptar para uso em produção."
+  },
+  {
+    "id": "motion_graphics.elastic-bounce",
+    "nome": "Elastic Bounce",
+    "categoria": "motion_graphics",
+    "categoria_nome": "Motion graphics",
+    "tipo": "animacao",
+    "motores": [
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "duracaoFrames",
+      "easing",
+      "escala",
+      "cor"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "motion_graphics.spring-animation",
+    "nome": "Spring Animation",
+    "categoria": "motion_graphics",
+    "categoria_nome": "Motion graphics",
+    "tipo": "animacao",
+    "motores": [
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "duracaoFrames",
+      "easing",
+      "escala",
+      "cor"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "motion_graphics.overshoot",
+    "nome": "Overshoot",
+    "categoria": "motion_graphics",
+    "categoria_nome": "Motion graphics",
+    "tipo": "animacao",
+    "motores": [
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "duracaoFrames",
+      "easing",
+      "escala",
+      "cor"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "motion_graphics.stagger-animation",
+    "nome": "Stagger Animation",
+    "categoria": "motion_graphics",
+    "categoria_nome": "Motion graphics",
+    "tipo": "animacao",
+    "motores": [
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "duracaoFrames",
+      "easing",
+      "escala",
+      "cor"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "motion_graphics.morphing-shapes",
+    "nome": "Morphing Shapes",
+    "categoria": "motion_graphics",
+    "categoria_nome": "Motion graphics",
+    "tipo": "animacao",
+    "motores": [
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "duracaoFrames",
+      "easing",
+      "escala",
+      "cor"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "motion_graphics.particle-explosion",
+    "nome": "Particle Explosion",
+    "categoria": "motion_graphics",
+    "categoria_nome": "Motion graphics",
+    "tipo": "animacao",
+    "motores": [
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "duracaoFrames",
+      "easing",
+      "escala",
+      "cor"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "motion_graphics.floating-elements",
+    "nome": "Floating Elements",
+    "categoria": "motion_graphics",
+    "categoria_nome": "Motion graphics",
+    "tipo": "animacao",
+    "motores": [
+      "remotion"
+    ],
+    "status": "exemplo_executavel",
+    "parametros": [
+      "duracaoFrames",
+      "easing",
+      "escala",
+      "cor"
+    ],
+    "arquivo_exemplo": "projetos/remotion-base/src/ArthurShowcase.tsx",
+    "observacao": "Há demonstração no showcase Remotion; adaptar para uso em produção."
+  },
+  {
+    "id": "motion_graphics.icon-impact",
+    "nome": "Icon Impact",
+    "categoria": "motion_graphics",
+    "categoria_nome": "Motion graphics",
+    "tipo": "animacao",
+    "motores": [
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "duracaoFrames",
+      "easing",
+      "escala",
+      "cor"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "motion_graphics.liquid-motion",
+    "nome": "Liquid Motion",
+    "categoria": "motion_graphics",
+    "categoria_nome": "Motion graphics",
+    "tipo": "animacao",
+    "motores": [
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "duracaoFrames",
+      "easing",
+      "escala",
+      "cor"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "motion_graphics.magnetic-motion",
+    "nome": "Magnetic Motion",
+    "categoria": "motion_graphics",
+    "categoria_nome": "Motion graphics",
+    "tipo": "animacao",
+    "motores": [
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "duracaoFrames",
+      "easing",
+      "escala",
+      "cor"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "motion_graphics.animated-arrows",
+    "nome": "Animated Arrows",
+    "categoria": "motion_graphics",
+    "categoria_nome": "Motion graphics",
+    "tipo": "animacao",
+    "motores": [
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "duracaoFrames",
+      "easing",
+      "escala",
+      "cor"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "motion_graphics.progress-bar",
+    "nome": "Progress Bar",
+    "categoria": "motion_graphics",
+    "categoria_nome": "Motion graphics",
+    "tipo": "animacao",
+    "motores": [
+      "remotion"
+    ],
+    "status": "exemplo_executavel",
+    "parametros": [
+      "duracaoFrames",
+      "easing",
+      "escala",
+      "cor"
+    ],
+    "arquivo_exemplo": "projetos/remotion-base/src/ArthurShowcase.tsx",
+    "observacao": "Há demonstração no showcase Remotion; adaptar para uso em produção."
+  },
+  {
+    "id": "motion_graphics.animated-checklist",
+    "nome": "Animated Checklist",
+    "categoria": "motion_graphics",
+    "categoria_nome": "Motion graphics",
+    "tipo": "animacao",
+    "motores": [
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "duracaoFrames",
+      "easing",
+      "escala",
+      "cor"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "motion_graphics.chart-grow",
+    "nome": "Chart Grow",
+    "categoria": "motion_graphics",
+    "categoria_nome": "Motion graphics",
+    "tipo": "animacao",
+    "motores": [
+      "remotion"
+    ],
+    "status": "exemplo_executavel",
+    "parametros": [
+      "duracaoFrames",
+      "easing",
+      "escala",
+      "cor"
+    ],
+    "arquivo_exemplo": "projetos/remotion-base/src/ArthurShowcase.tsx",
+    "observacao": "Há demonstração no showcase Remotion; adaptar para uso em produção."
+  },
+  {
+    "id": "motion_graphics.data-counter",
+    "nome": "Data Counter",
+    "categoria": "motion_graphics",
+    "categoria_nome": "Motion graphics",
+    "tipo": "animacao",
+    "motores": [
+      "remotion"
+    ],
+    "status": "exemplo_executavel",
+    "parametros": [
+      "duracaoFrames",
+      "easing",
+      "escala",
+      "cor"
+    ],
+    "arquivo_exemplo": "projetos/remotion-base/src/ArthurShowcase.tsx",
+    "observacao": "Há demonstração no showcase Remotion; adaptar para uso em produção."
+  },
+  {
+    "id": "motion_graphics.infographic-reveal",
+    "nome": "Infographic Reveal",
+    "categoria": "motion_graphics",
+    "categoria_nome": "Motion graphics",
+    "tipo": "animacao",
+    "motores": [
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "duracaoFrames",
+      "easing",
+      "escala",
+      "cor"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "motion_graphics.animated-timeline",
+    "nome": "Animated Timeline",
+    "categoria": "motion_graphics",
+    "categoria_nome": "Motion graphics",
+    "tipo": "animacao",
+    "motores": [
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "duracaoFrames",
+      "easing",
+      "escala",
+      "cor"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "motion_graphics.doodle-boil",
+    "nome": "Doodle Boil",
+    "categoria": "motion_graphics",
+    "categoria_nome": "Motion graphics",
+    "tipo": "animacao",
+    "motores": [
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "duracaoFrames",
+      "easing",
+      "escala",
+      "cor"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "motion_graphics.paper-cut-animation",
+    "nome": "Paper Cut Animation",
+    "categoria": "motion_graphics",
+    "categoria_nome": "Motion graphics",
+    "tipo": "animacao",
+    "motores": [
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "duracaoFrames",
+      "easing",
+      "escala",
+      "cor"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "motion_graphics.glassmorphism",
+    "nome": "Glassmorphism",
+    "categoria": "motion_graphics",
+    "categoria_nome": "Motion graphics",
+    "tipo": "animacao",
+    "motores": [
+      "remotion"
+    ],
+    "status": "exemplo_executavel",
+    "parametros": [
+      "duracaoFrames",
+      "easing",
+      "escala",
+      "cor"
+    ],
+    "arquivo_exemplo": "projetos/remotion-base/src/ArthurShowcase.tsx",
+    "observacao": "Há demonstração no showcase Remotion; adaptar para uso em produção."
+  },
+  {
+    "id": "motion_graphics.neon-glow-motion",
+    "nome": "Neon Glow Motion",
+    "categoria": "motion_graphics",
+    "categoria_nome": "Motion graphics",
+    "tipo": "animacao",
+    "motores": [
+      "remotion"
+    ],
+    "status": "exemplo_executavel",
+    "parametros": [
+      "duracaoFrames",
+      "easing",
+      "escala",
+      "cor"
+    ],
+    "arquivo_exemplo": "projetos/remotion-base/src/ArthurShowcase.tsx",
+    "observacao": "Há demonstração no showcase Remotion; adaptar para uso em produção."
+  },
+  {
+    "id": "motion_graphics.3d-object-rotation",
+    "nome": "3D Object Rotation",
+    "categoria": "motion_graphics",
+    "categoria_nome": "Motion graphics",
+    "tipo": "animacao",
+    "motores": [
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "duracaoFrames",
+      "easing",
+      "escala",
+      "cor"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "motion_graphics.follow-path-animation",
+    "nome": "Follow Path Animation",
+    "categoria": "motion_graphics",
+    "categoria_nome": "Motion graphics",
+    "tipo": "animacao",
+    "motores": [
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "duracaoFrames",
+      "easing",
+      "escala",
+      "cor"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "motion_graphics.morphing-icons",
+    "nome": "Morphing Icons",
+    "categoria": "motion_graphics",
+    "categoria_nome": "Motion graphics",
+    "tipo": "animacao",
+    "motores": [
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "duracaoFrames",
+      "easing",
+      "escala",
+      "cor"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "motion_graphics.animated-callout",
+    "nome": "Animated Callout",
+    "categoria": "motion_graphics",
+    "categoria_nome": "Motion graphics",
+    "tipo": "animacao",
+    "motores": [
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "duracaoFrames",
+      "easing",
+      "escala",
+      "cor"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "motion_graphics.kinetic-shapes",
+    "nome": "Kinetic Shapes",
+    "categoria": "motion_graphics",
+    "categoria_nome": "Motion graphics",
+    "tipo": "animacao",
+    "motores": [
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "duracaoFrames",
+      "easing",
+      "escala",
+      "cor"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "motion_graphics.animated-lower-third",
+    "nome": "Animated Lower Third",
+    "categoria": "motion_graphics",
+    "categoria_nome": "Motion graphics",
+    "tipo": "animacao",
+    "motores": [
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "duracaoFrames",
+      "easing",
+      "escala",
+      "cor"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "legendas_tipografia.kinetic-typography",
+    "nome": "Kinetic Typography",
+    "categoria": "legendas_tipografia",
+    "categoria_nome": "Legendas e tipografia",
+    "tipo": "texto",
+    "motores": [
+      "remotion",
+      "whisper"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "texto",
+      "fonte",
+      "tamanho",
+      "posicao",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "legendas_tipografia.word-by-word-captions",
+    "nome": "Word by Word Captions",
+    "categoria": "legendas_tipografia",
+    "categoria_nome": "Legendas e tipografia",
+    "tipo": "texto",
+    "motores": [
+      "remotion",
+      "whisper"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "texto",
+      "fonte",
+      "tamanho",
+      "posicao",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "legendas_tipografia.karaoke-captions",
+    "nome": "Karaoke Captions",
+    "categoria": "legendas_tipografia",
+    "categoria_nome": "Legendas e tipografia",
+    "tipo": "texto",
+    "motores": [
+      "remotion",
+      "whisper"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "texto",
+      "fonte",
+      "tamanho",
+      "posicao",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "legendas_tipografia.giant-captions",
+    "nome": "Giant Captions",
+    "categoria": "legendas_tipografia",
+    "categoria_nome": "Legendas e tipografia",
+    "tipo": "texto",
+    "motores": [
+      "remotion",
+      "whisper"
+    ],
+    "status": "exemplo_executavel",
+    "parametros": [
+      "texto",
+      "fonte",
+      "tamanho",
+      "posicao",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": "projetos/remotion-base/src/ArthurShowcase.tsx",
+    "observacao": "Há demonstração no showcase Remotion; adaptar para uso em produção."
+  },
+  {
+    "id": "legendas_tipografia.pop-up-captions",
+    "nome": "Pop-up Captions",
+    "categoria": "legendas_tipografia",
+    "categoria_nome": "Legendas e tipografia",
+    "tipo": "texto",
+    "motores": [
+      "remotion",
+      "whisper"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "texto",
+      "fonte",
+      "tamanho",
+      "posicao",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "legendas_tipografia.subtitle-bounce",
+    "nome": "Subtitle Bounce",
+    "categoria": "legendas_tipografia",
+    "categoria_nome": "Legendas e tipografia",
+    "tipo": "texto",
+    "motores": [
+      "remotion",
+      "whisper"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "texto",
+      "fonte",
+      "tamanho",
+      "posicao",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "legendas_tipografia.typewriter-effect",
+    "nome": "Typewriter Effect",
+    "categoria": "legendas_tipografia",
+    "categoria_nome": "Legendas e tipografia",
+    "tipo": "texto",
+    "motores": [
+      "remotion",
+      "whisper"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "texto",
+      "fonte",
+      "tamanho",
+      "posicao",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "legendas_tipografia.highlight-words",
+    "nome": "Highlight Words",
+    "categoria": "legendas_tipografia",
+    "categoria_nome": "Legendas e tipografia",
+    "tipo": "texto",
+    "motores": [
+      "remotion",
+      "whisper"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "texto",
+      "fonte",
+      "tamanho",
+      "posicao",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "legendas_tipografia.word-shake",
+    "nome": "Word Shake",
+    "categoria": "legendas_tipografia",
+    "categoria_nome": "Legendas e tipografia",
+    "tipo": "texto",
+    "motores": [
+      "remotion",
+      "whisper"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "texto",
+      "fonte",
+      "tamanho",
+      "posicao",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "legendas_tipografia.text-tracking",
+    "nome": "Text Tracking",
+    "categoria": "legendas_tipografia",
+    "categoria_nome": "Legendas e tipografia",
+    "tipo": "texto",
+    "motores": [
+      "remotion",
+      "whisper"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "texto",
+      "fonte",
+      "tamanho",
+      "posicao",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "legendas_tipografia.text-reveal",
+    "nome": "Text Reveal",
+    "categoria": "legendas_tipografia",
+    "categoria_nome": "Legendas e tipografia",
+    "tipo": "texto",
+    "motores": [
+      "remotion",
+      "whisper"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "texto",
+      "fonte",
+      "tamanho",
+      "posicao",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "legendas_tipografia.masked-text",
+    "nome": "Masked Text",
+    "categoria": "legendas_tipografia",
+    "categoria_nome": "Legendas e tipografia",
+    "tipo": "texto",
+    "motores": [
+      "remotion",
+      "whisper"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "texto",
+      "fonte",
+      "tamanho",
+      "posicao",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "legendas_tipografia.3d-typography",
+    "nome": "3D Typography",
+    "categoria": "legendas_tipografia",
+    "categoria_nome": "Legendas e tipografia",
+    "tipo": "texto",
+    "motores": [
+      "remotion",
+      "whisper"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "texto",
+      "fonte",
+      "tamanho",
+      "posicao",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "legendas_tipografia.glass-type",
+    "nome": "Glass Type",
+    "categoria": "legendas_tipografia",
+    "categoria_nome": "Legendas e tipografia",
+    "tipo": "texto",
+    "motores": [
+      "remotion",
+      "whisper"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "texto",
+      "fonte",
+      "tamanho",
+      "posicao",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "legendas_tipografia.neon-text",
+    "nome": "Neon Text",
+    "categoria": "legendas_tipografia",
+    "categoria_nome": "Legendas e tipografia",
+    "tipo": "texto",
+    "motores": [
+      "remotion",
+      "whisper"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "texto",
+      "fonte",
+      "tamanho",
+      "posicao",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "legendas_tipografia.text-behind-subject",
+    "nome": "Text Behind Subject",
+    "categoria": "legendas_tipografia",
+    "categoria_nome": "Legendas e tipografia",
+    "tipo": "texto",
+    "motores": [
+      "remotion",
+      "whisper"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "texto",
+      "fonte",
+      "tamanho",
+      "posicao",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "legendas_tipografia.text-explosion",
+    "nome": "Text Explosion",
+    "categoria": "legendas_tipografia",
+    "categoria_nome": "Legendas e tipografia",
+    "tipo": "texto",
+    "motores": [
+      "remotion",
+      "whisper"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "texto",
+      "fonte",
+      "tamanho",
+      "posicao",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "legendas_tipografia.rolling-text",
+    "nome": "Rolling Text",
+    "categoria": "legendas_tipografia",
+    "categoria_nome": "Legendas e tipografia",
+    "tipo": "texto",
+    "motores": [
+      "remotion",
+      "whisper"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "texto",
+      "fonte",
+      "tamanho",
+      "posicao",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "legendas_tipografia.gradient-typography",
+    "nome": "Gradient Typography",
+    "categoria": "legendas_tipografia",
+    "categoria_nome": "Legendas e tipografia",
+    "tipo": "texto",
+    "motores": [
+      "remotion",
+      "whisper"
+    ],
+    "status": "exemplo_executavel",
+    "parametros": [
+      "texto",
+      "fonte",
+      "tamanho",
+      "posicao",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": "projetos/remotion-base/src/ArthurShowcase.tsx",
+    "observacao": "Há demonstração no showcase Remotion; adaptar para uso em produção."
+  },
+  {
+    "id": "legendas_tipografia.glitch-typography",
+    "nome": "Glitch Typography",
+    "categoria": "legendas_tipografia",
+    "categoria_nome": "Legendas e tipografia",
+    "tipo": "texto",
+    "motores": [
+      "remotion",
+      "whisper"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "texto",
+      "fonte",
+      "tamanho",
+      "posicao",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "legendas_tipografia.subtitle-progress",
+    "nome": "Subtitle Progress",
+    "categoria": "legendas_tipografia",
+    "categoria_nome": "Legendas e tipografia",
+    "tipo": "texto",
+    "motores": [
+      "remotion",
+      "whisper"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "texto",
+      "fonte",
+      "tamanho",
+      "posicao",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "legendas_tipografia.dynamic-emoji-captions",
+    "nome": "Dynamic Emoji Captions",
+    "categoria": "legendas_tipografia",
+    "categoria_nome": "Legendas e tipografia",
+    "tipo": "texto",
+    "motores": [
+      "remotion",
+      "whisper"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "texto",
+      "fonte",
+      "tamanho",
+      "posicao",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "legendas_tipografia.highlight-box-captions",
+    "nome": "Highlight Box Captions",
+    "categoria": "legendas_tipografia",
+    "categoria_nome": "Legendas e tipografia",
+    "tipo": "texto",
+    "motores": [
+      "remotion",
+      "whisper"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "texto",
+      "fonte",
+      "tamanho",
+      "posicao",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "legendas_tipografia.lower-thirds",
+    "nome": "Lower Thirds",
+    "categoria": "legendas_tipografia",
+    "categoria_nome": "Legendas e tipografia",
+    "tipo": "texto",
+    "motores": [
+      "remotion",
+      "whisper"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "texto",
+      "fonte",
+      "tamanho",
+      "posicao",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "legendas_tipografia.cinematic-titles",
+    "nome": "Cinematic Titles",
+    "categoria": "legendas_tipografia",
+    "categoria_nome": "Legendas e tipografia",
+    "tipo": "texto",
+    "motores": [
+      "remotion",
+      "whisper"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "texto",
+      "fonte",
+      "tamanho",
+      "posicao",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "legendas_tipografia.bounce-captions",
+    "nome": "Bounce Captions",
+    "categoria": "legendas_tipografia",
+    "categoria_nome": "Legendas e tipografia",
+    "tipo": "texto",
+    "motores": [
+      "remotion",
+      "whisper"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "texto",
+      "fonte",
+      "tamanho",
+      "posicao",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "legendas_tipografia.caption-follow-speaker",
+    "nome": "Caption Follow Speaker",
+    "categoria": "legendas_tipografia",
+    "categoria_nome": "Legendas e tipografia",
+    "tipo": "texto",
+    "motores": [
+      "remotion",
+      "whisper"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "texto",
+      "fonte",
+      "tamanho",
+      "posicao",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "legendas_tipografia.title-card",
+    "nome": "Title Card",
+    "categoria": "legendas_tipografia",
+    "categoria_nome": "Legendas e tipografia",
+    "tipo": "texto",
+    "motores": [
+      "remotion",
+      "whisper"
+    ],
+    "status": "exemplo_executavel",
+    "parametros": [
+      "texto",
+      "fonte",
+      "tamanho",
+      "posicao",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": "projetos/remotion-base/src/ArthurShowcase.tsx",
+    "observacao": "Há demonstração no showcase Remotion; adaptar para uso em produção."
+  },
+  {
+    "id": "legendas_tipografia.text-stroke-reveal",
+    "nome": "Text Stroke Reveal",
+    "categoria": "legendas_tipografia",
+    "categoria_nome": "Legendas e tipografia",
+    "tipo": "texto",
+    "motores": [
+      "remotion",
+      "whisper"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "texto",
+      "fonte",
+      "tamanho",
+      "posicao",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "vfx.green-screen",
+    "nome": "Green Screen",
+    "categoria": "vfx",
+    "categoria_nome": "Efeitos visuais e composição",
+    "tipo": "vfx",
+    "motores": [
+      "ffmpeg",
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "intensidade",
+      "mistura",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "vfx.chroma-key",
+    "nome": "Chroma Key",
+    "categoria": "vfx",
+    "categoria_nome": "Efeitos visuais e composição",
+    "tipo": "vfx",
+    "motores": [
+      "ffmpeg",
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "intensidade",
+      "mistura",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "vfx.background-replacement",
+    "nome": "Background Replacement",
+    "categoria": "vfx",
+    "categoria_nome": "Efeitos visuais e composição",
+    "tipo": "vfx",
+    "motores": [
+      "ffmpeg",
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "intensidade",
+      "mistura",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "vfx.background-removal",
+    "nome": "Background Removal",
+    "categoria": "vfx",
+    "categoria_nome": "Efeitos visuais e composição",
+    "tipo": "vfx",
+    "motores": [
+      "ffmpeg",
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "intensidade",
+      "mistura",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "vfx.object-removal",
+    "nome": "Object Removal",
+    "categoria": "vfx",
+    "categoria_nome": "Efeitos visuais e composição",
+    "tipo": "vfx",
+    "motores": [
+      "ffmpeg",
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "intensidade",
+      "mistura",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "vfx.object-tracking",
+    "nome": "Object Tracking",
+    "categoria": "vfx",
+    "categoria_nome": "Efeitos visuais e composição",
+    "tipo": "vfx",
+    "motores": [
+      "ffmpeg",
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "intensidade",
+      "mistura",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "vfx.face-tracking",
+    "nome": "Face Tracking",
+    "categoria": "vfx",
+    "categoria_nome": "Efeitos visuais e composição",
+    "tipo": "vfx",
+    "motores": [
+      "ffmpeg",
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "intensidade",
+      "mistura",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "vfx.motion-tracking",
+    "nome": "Motion Tracking",
+    "categoria": "vfx",
+    "categoria_nome": "Efeitos visuais e composição",
+    "tipo": "vfx",
+    "motores": [
+      "ffmpeg",
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "intensidade",
+      "mistura",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "vfx.rotoscoping",
+    "nome": "Rotoscoping",
+    "categoria": "vfx",
+    "categoria_nome": "Efeitos visuais e composição",
+    "tipo": "vfx",
+    "motores": [
+      "ffmpeg",
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "intensidade",
+      "mistura",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "vfx.glow-effect",
+    "nome": "Glow Effect",
+    "categoria": "vfx",
+    "categoria_nome": "Efeitos visuais e composição",
+    "tipo": "vfx",
+    "motores": [
+      "ffmpeg",
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "intensidade",
+      "mistura",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "vfx.bloom",
+    "nome": "Bloom",
+    "categoria": "vfx",
+    "categoria_nome": "Efeitos visuais e composição",
+    "tipo": "vfx",
+    "motores": [
+      "ffmpeg",
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "intensidade",
+      "mistura",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "vfx.lens-flare",
+    "nome": "Lens Flare",
+    "categoria": "vfx",
+    "categoria_nome": "Efeitos visuais e composição",
+    "tipo": "vfx",
+    "motores": [
+      "ffmpeg",
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "intensidade",
+      "mistura",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "vfx.chromatic-aberration",
+    "nome": "Chromatic Aberration",
+    "categoria": "vfx",
+    "categoria_nome": "Efeitos visuais e composição",
+    "tipo": "vfx",
+    "motores": [
+      "ffmpeg",
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "intensidade",
+      "mistura",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "vfx.vhs",
+    "nome": "VHS",
+    "categoria": "vfx",
+    "categoria_nome": "Efeitos visuais e composição",
+    "tipo": "vfx",
+    "motores": [
+      "ffmpeg",
+      "remotion"
+    ],
+    "status": "integracao_nativa",
+    "parametros": [
+      "intensidade",
+      "mistura",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Disponível por biblioteca/ferramenta externa; exige implementação e teste no pipeline."
+  },
+  {
+    "id": "vfx.analog-noise",
+    "nome": "Analog Noise",
+    "categoria": "vfx",
+    "categoria_nome": "Efeitos visuais e composição",
+    "tipo": "vfx",
+    "motores": [
+      "ffmpeg",
+      "remotion"
+    ],
+    "status": "integracao_nativa",
+    "parametros": [
+      "intensidade",
+      "mistura",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Disponível por biblioteca/ferramenta externa; exige implementação e teste no pipeline."
+  },
+  {
+    "id": "vfx.film-grain",
+    "nome": "Film Grain",
+    "categoria": "vfx",
+    "categoria_nome": "Efeitos visuais e composição",
+    "tipo": "vfx",
+    "motores": [
+      "ffmpeg",
+      "remotion"
+    ],
+    "status": "integracao_nativa",
+    "parametros": [
+      "intensidade",
+      "mistura",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Disponível por biblioteca/ferramenta externa; exige implementação e teste no pipeline."
+  },
+  {
+    "id": "vfx.retro-camcorder",
+    "nome": "Retro Camcorder",
+    "categoria": "vfx",
+    "categoria_nome": "Efeitos visuais e composição",
+    "tipo": "vfx",
+    "motores": [
+      "ffmpeg",
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "intensidade",
+      "mistura",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "vfx.hologram-effect",
+    "nome": "Hologram Effect",
+    "categoria": "vfx",
+    "categoria_nome": "Efeitos visuais e composição",
+    "tipo": "vfx",
+    "motores": [
+      "ffmpeg",
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "intensidade",
+      "mistura",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "vfx.double-exposure",
+    "nome": "Double Exposure",
+    "categoria": "vfx",
+    "categoria_nome": "Efeitos visuais e composição",
+    "tipo": "vfx",
+    "motores": [
+      "ffmpeg",
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "intensidade",
+      "mistura",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "vfx.ghost-trail",
+    "nome": "Ghost Trail",
+    "categoria": "vfx",
+    "categoria_nome": "Efeitos visuais e composição",
+    "tipo": "vfx",
+    "motores": [
+      "ffmpeg",
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "intensidade",
+      "mistura",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "vfx.freeze-frame",
+    "nome": "Freeze Frame",
+    "categoria": "vfx",
+    "categoria_nome": "Efeitos visuais e composição",
+    "tipo": "vfx",
+    "motores": [
+      "ffmpeg",
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "intensidade",
+      "mistura",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "vfx.pixel-sorting",
+    "nome": "Pixel Sorting",
+    "categoria": "vfx",
+    "categoria_nome": "Efeitos visuais e composição",
+    "tipo": "vfx",
+    "motores": [
+      "ffmpeg",
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "intensidade",
+      "mistura",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "vfx.displacement",
+    "nome": "Displacement",
+    "categoria": "vfx",
+    "categoria_nome": "Efeitos visuais e composição",
+    "tipo": "vfx",
+    "motores": [
+      "ffmpeg",
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "intensidade",
+      "mistura",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "vfx.heat-distortion",
+    "nome": "Heat Distortion",
+    "categoria": "vfx",
+    "categoria_nome": "Efeitos visuais e composição",
+    "tipo": "vfx",
+    "motores": [
+      "ffmpeg",
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "intensidade",
+      "mistura",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "vfx.smoke-overlay",
+    "nome": "Smoke Overlay",
+    "categoria": "vfx",
+    "categoria_nome": "Efeitos visuais e composição",
+    "tipo": "vfx",
+    "motores": [
+      "ffmpeg",
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "intensidade",
+      "mistura",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "vfx.fire-particles",
+    "nome": "Fire Particles",
+    "categoria": "vfx",
+    "categoria_nome": "Efeitos visuais e composição",
+    "tipo": "vfx",
+    "motores": [
+      "ffmpeg",
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "intensidade",
+      "mistura",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "vfx.rain-effect",
+    "nome": "Rain Effect",
+    "categoria": "vfx",
+    "categoria_nome": "Efeitos visuais e composição",
+    "tipo": "vfx",
+    "motores": [
+      "ffmpeg",
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "intensidade",
+      "mistura",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "vfx.snow-effect",
+    "nome": "Snow Effect",
+    "categoria": "vfx",
+    "categoria_nome": "Efeitos visuais e composição",
+    "tipo": "vfx",
+    "motores": [
+      "ffmpeg",
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "intensidade",
+      "mistura",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "vfx.light-rays",
+    "nome": "Light Rays",
+    "categoria": "vfx",
+    "categoria_nome": "Efeitos visuais e composição",
+    "tipo": "vfx",
+    "motores": [
+      "ffmpeg",
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "intensidade",
+      "mistura",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "vfx.digital-distortion",
+    "nome": "Digital Distortion",
+    "categoria": "vfx",
+    "categoria_nome": "Efeitos visuais e composição",
+    "tipo": "vfx",
+    "motores": [
+      "ffmpeg",
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "intensidade",
+      "mistura",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "estilos.cinematic-editing",
+    "nome": "Cinematic Editing",
+    "categoria": "estilos",
+    "categoria_nome": "Estilos de edição",
+    "tipo": "estilo",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ritmo",
+      "paleta",
+      "tipografia",
+      "trilha"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "estilos.documentary-style",
+    "nome": "Documentary Style",
+    "categoria": "estilos",
+    "categoria_nome": "Estilos de edição",
+    "tipo": "estilo",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ritmo",
+      "paleta",
+      "tipografia",
+      "trilha"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "estilos.hollywood-trailer",
+    "nome": "Hollywood Trailer",
+    "categoria": "estilos",
+    "categoria_nome": "Estilos de edição",
+    "tipo": "estilo",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ritmo",
+      "paleta",
+      "tipografia",
+      "trilha"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "estilos.luxury-premium",
+    "nome": "Luxury Premium",
+    "categoria": "estilos",
+    "categoria_nome": "Estilos de edição",
+    "tipo": "estilo",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ritmo",
+      "paleta",
+      "tipografia",
+      "trilha"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "estilos.minimalist-clean",
+    "nome": "Minimalist Clean",
+    "categoria": "estilos",
+    "categoria_nome": "Estilos de edição",
+    "tipo": "estilo",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ritmo",
+      "paleta",
+      "tipografia",
+      "trilha"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "estilos.corporate-professional",
+    "nome": "Corporate Professional",
+    "categoria": "estilos",
+    "categoria_nome": "Estilos de edição",
+    "tipo": "estilo",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ritmo",
+      "paleta",
+      "tipografia",
+      "trilha"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "estilos.dark-cinematic",
+    "nome": "Dark Cinematic",
+    "categoria": "estilos",
+    "categoria_nome": "Estilos de edição",
+    "tipo": "estilo",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ritmo",
+      "paleta",
+      "tipografia",
+      "trilha"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "estilos.motivational-inspirational",
+    "nome": "Motivational Inspirational",
+    "categoria": "estilos",
+    "categoria_nome": "Estilos de edição",
+    "tipo": "estilo",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ritmo",
+      "paleta",
+      "tipografia",
+      "trilha"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "estilos.emotional-storytelling",
+    "nome": "Emotional Storytelling",
+    "categoria": "estilos",
+    "categoria_nome": "Estilos de edição",
+    "tipo": "estilo",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ritmo",
+      "paleta",
+      "tipografia",
+      "trilha"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "estilos.epic-adventure",
+    "nome": "Epic Adventure",
+    "categoria": "estilos",
+    "categoria_nome": "Estilos de edição",
+    "tipo": "estilo",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ritmo",
+      "paleta",
+      "tipografia",
+      "trilha"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "estilos.fast-paced-reels",
+    "nome": "Fast-Paced Reels",
+    "categoria": "estilos",
+    "categoria_nome": "Estilos de edição",
+    "tipo": "estilo",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ritmo",
+      "paleta",
+      "tipografia",
+      "trilha"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "estilos.podcast-highlights",
+    "nome": "Podcast Highlights",
+    "categoria": "estilos",
+    "categoria_nome": "Estilos de edição",
+    "tipo": "estilo",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ritmo",
+      "paleta",
+      "tipografia",
+      "trilha"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "estilos.talking-head-dynamic",
+    "nome": "Talking Head Dynamic",
+    "categoria": "estilos",
+    "categoria_nome": "Estilos de edição",
+    "tipo": "estilo",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ritmo",
+      "paleta",
+      "tipografia",
+      "trilha"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "estilos.high-energy-social",
+    "nome": "High-Energy Social",
+    "categoria": "estilos",
+    "categoria_nome": "Estilos de edição",
+    "tipo": "estilo",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ritmo",
+      "paleta",
+      "tipografia",
+      "trilha"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "estilos.social-media-viral",
+    "nome": "Social Media Viral",
+    "categoria": "estilos",
+    "categoria_nome": "Estilos de edição",
+    "tipo": "estilo",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ritmo",
+      "paleta",
+      "tipografia",
+      "trilha"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "estilos.retro-vintage",
+    "nome": "Retro Vintage",
+    "categoria": "estilos",
+    "categoria_nome": "Estilos de edição",
+    "tipo": "estilo",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ritmo",
+      "paleta",
+      "tipografia",
+      "trilha"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "estilos.cyberpunk-futuristic",
+    "nome": "Cyberpunk Futuristic",
+    "categoria": "estilos",
+    "categoria_nome": "Estilos de edição",
+    "tipo": "estilo",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ritmo",
+      "paleta",
+      "tipografia",
+      "trilha"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "estilos.editorial-fashion",
+    "nome": "Editorial Fashion",
+    "categoria": "estilos",
+    "categoria_nome": "Estilos de edição",
+    "tipo": "estilo",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ritmo",
+      "paleta",
+      "tipografia",
+      "trilha"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "estilos.wedding-cinematic",
+    "nome": "Wedding Cinematic",
+    "categoria": "estilos",
+    "categoria_nome": "Estilos de edição",
+    "tipo": "estilo",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ritmo",
+      "paleta",
+      "tipografia",
+      "trilha"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "estilos.travel-vlog",
+    "nome": "Travel Vlog",
+    "categoria": "estilos",
+    "categoria_nome": "Estilos de edição",
+    "tipo": "estilo",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ritmo",
+      "paleta",
+      "tipografia",
+      "trilha"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "estilos.sports-highlights",
+    "nome": "Sports Highlights",
+    "categoria": "estilos",
+    "categoria_nome": "Estilos de edição",
+    "tipo": "estilo",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ritmo",
+      "paleta",
+      "tipografia",
+      "trilha"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "estilos.real-estate-luxury",
+    "nome": "Real Estate Luxury",
+    "categoria": "estilos",
+    "categoria_nome": "Estilos de edição",
+    "tipo": "estilo",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ritmo",
+      "paleta",
+      "tipografia",
+      "trilha"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "estilos.testimonial-editing",
+    "nome": "Testimonial Editing",
+    "categoria": "estilos",
+    "categoria_nome": "Estilos de edição",
+    "tipo": "estilo",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ritmo",
+      "paleta",
+      "tipografia",
+      "trilha"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "estilos.religious-worship",
+    "nome": "Religious Worship",
+    "categoria": "estilos",
+    "categoria_nome": "Estilos de edição",
+    "tipo": "estilo",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ritmo",
+      "paleta",
+      "tipografia",
+      "trilha"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "estilos.legal-educational",
+    "nome": "Legal Educational",
+    "categoria": "estilos",
+    "categoria_nome": "Estilos de edição",
+    "tipo": "estilo",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ritmo",
+      "paleta",
+      "tipografia",
+      "trilha"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "estilos.product-launch",
+    "nome": "Product Launch",
+    "categoria": "estilos",
+    "categoria_nome": "Estilos de edição",
+    "tipo": "estilo",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ritmo",
+      "paleta",
+      "tipografia",
+      "trilha"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "estilos.event-aftermovie",
+    "nome": "Event Aftermovie",
+    "categoria": "estilos",
+    "categoria_nome": "Estilos de edição",
+    "tipo": "estilo",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ritmo",
+      "paleta",
+      "tipografia",
+      "trilha"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "interfaces_mockups.phone-mockup",
+    "nome": "Phone Mockup",
+    "categoria": "interfaces_mockups",
+    "categoria_nome": "Interfaces, mockups e composições",
+    "tipo": "composicao",
+    "motores": [
+      "hyperframes",
+      "remotion"
+    ],
+    "status": "exemplo_executavel",
+    "parametros": [
+      "posicao",
+      "escala",
+      "layout",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": "projetos/remotion-base/src/ArthurShowcase.tsx",
+    "observacao": "Há demonstração no showcase Remotion; adaptar para uso em produção."
+  },
+  {
+    "id": "interfaces_mockups.laptop-mockup",
+    "nome": "Laptop Mockup",
+    "categoria": "interfaces_mockups",
+    "categoria_nome": "Interfaces, mockups e composições",
+    "tipo": "composicao",
+    "motores": [
+      "hyperframes",
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "posicao",
+      "escala",
+      "layout",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "interfaces_mockups.browser-window",
+    "nome": "Browser Window",
+    "categoria": "interfaces_mockups",
+    "categoria_nome": "Interfaces, mockups e composições",
+    "tipo": "composicao",
+    "motores": [
+      "hyperframes",
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "posicao",
+      "escala",
+      "layout",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "interfaces_mockups.app-interface-animation",
+    "nome": "App Interface Animation",
+    "categoria": "interfaces_mockups",
+    "categoria_nome": "Interfaces, mockups e composições",
+    "tipo": "composicao",
+    "motores": [
+      "hyperframes",
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "posicao",
+      "escala",
+      "layout",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "interfaces_mockups.social-media-feed",
+    "nome": "Social Media Feed",
+    "categoria": "interfaces_mockups",
+    "categoria_nome": "Interfaces, mockups e composições",
+    "tipo": "composicao",
+    "motores": [
+      "hyperframes",
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "posicao",
+      "escala",
+      "layout",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "interfaces_mockups.scrolling-reels-grid",
+    "nome": "Scrolling Reels Grid",
+    "categoria": "interfaces_mockups",
+    "categoria_nome": "Interfaces, mockups e composições",
+    "tipo": "composicao",
+    "motores": [
+      "hyperframes",
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "posicao",
+      "escala",
+      "layout",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "interfaces_mockups.instagram-comment-pop-up",
+    "nome": "Instagram Comment Pop-up",
+    "categoria": "interfaces_mockups",
+    "categoria_nome": "Interfaces, mockups e composições",
+    "tipo": "composicao",
+    "motores": [
+      "hyperframes",
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "posicao",
+      "escala",
+      "layout",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "interfaces_mockups.falling-comments",
+    "nome": "Falling Comments",
+    "categoria": "interfaces_mockups",
+    "categoria_nome": "Interfaces, mockups e composições",
+    "tipo": "composicao",
+    "motores": [
+      "hyperframes",
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "posicao",
+      "escala",
+      "layout",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "interfaces_mockups.chat-bubble-animation",
+    "nome": "Chat Bubble Animation",
+    "categoria": "interfaces_mockups",
+    "categoria_nome": "Interfaces, mockups e composições",
+    "tipo": "composicao",
+    "motores": [
+      "hyperframes",
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "posicao",
+      "escala",
+      "layout",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "interfaces_mockups.notification-pop",
+    "nome": "Notification Pop",
+    "categoria": "interfaces_mockups",
+    "categoria_nome": "Interfaces, mockups e composições",
+    "tipo": "composicao",
+    "motores": [
+      "hyperframes",
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "posicao",
+      "escala",
+      "layout",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "interfaces_mockups.prompt-bar",
+    "nome": "Prompt Bar",
+    "categoria": "interfaces_mockups",
+    "categoria_nome": "Interfaces, mockups e composições",
+    "tipo": "composicao",
+    "motores": [
+      "hyperframes",
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "posicao",
+      "escala",
+      "layout",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "interfaces_mockups.search-bar-animation",
+    "nome": "Search Bar Animation",
+    "categoria": "interfaces_mockups",
+    "categoria_nome": "Interfaces, mockups e composições",
+    "tipo": "composicao",
+    "motores": [
+      "hyperframes",
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "posicao",
+      "escala",
+      "layout",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "interfaces_mockups.drag-and-drop-file",
+    "nome": "Drag and Drop File",
+    "categoria": "interfaces_mockups",
+    "categoria_nome": "Interfaces, mockups e composições",
+    "tipo": "composicao",
+    "motores": [
+      "hyperframes",
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "posicao",
+      "escala",
+      "layout",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "interfaces_mockups.editor-timeline-simulation",
+    "nome": "Editor Timeline Simulation",
+    "categoria": "interfaces_mockups",
+    "categoria_nome": "Interfaces, mockups e composições",
+    "tipo": "composicao",
+    "motores": [
+      "hyperframes",
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "posicao",
+      "escala",
+      "layout",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "interfaces_mockups.storyboard-animation",
+    "nome": "Storyboard Animation",
+    "categoria": "interfaces_mockups",
+    "categoria_nome": "Interfaces, mockups e composições",
+    "tipo": "composicao",
+    "motores": [
+      "hyperframes",
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "posicao",
+      "escala",
+      "layout",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "interfaces_mockups.couch-wall",
+    "nome": "Couch Wall",
+    "categoria": "interfaces_mockups",
+    "categoria_nome": "Interfaces, mockups e composições",
+    "tipo": "composicao",
+    "motores": [
+      "hyperframes",
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "posicao",
+      "escala",
+      "layout",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "interfaces_mockups.headline-wall",
+    "nome": "Headline Wall",
+    "categoria": "interfaces_mockups",
+    "categoria_nome": "Interfaces, mockups e composições",
+    "tipo": "composicao",
+    "motores": [
+      "hyperframes",
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "posicao",
+      "escala",
+      "layout",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "interfaces_mockups.cover-story",
+    "nome": "Cover Story",
+    "categoria": "interfaces_mockups",
+    "categoria_nome": "Interfaces, mockups e composições",
+    "tipo": "composicao",
+    "motores": [
+      "hyperframes",
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "posicao",
+      "escala",
+      "layout",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "interfaces_mockups.pull-back-reveal",
+    "nome": "Pull-Back Reveal",
+    "categoria": "interfaces_mockups",
+    "categoria_nome": "Interfaces, mockups e composições",
+    "tipo": "composicao",
+    "motores": [
+      "hyperframes",
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "posicao",
+      "escala",
+      "layout",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "interfaces_mockups.floating-screens",
+    "nome": "Floating Screens",
+    "categoria": "interfaces_mockups",
+    "categoria_nome": "Interfaces, mockups e composições",
+    "tipo": "composicao",
+    "motores": [
+      "hyperframes",
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "posicao",
+      "escala",
+      "layout",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "interfaces_mockups.split-screen",
+    "nome": "Split Screen",
+    "categoria": "interfaces_mockups",
+    "categoria_nome": "Interfaces, mockups e composições",
+    "tipo": "composicao",
+    "motores": [
+      "hyperframes",
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "posicao",
+      "escala",
+      "layout",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "interfaces_mockups.picture-in-picture",
+    "nome": "Picture in Picture",
+    "categoria": "interfaces_mockups",
+    "categoria_nome": "Interfaces, mockups e composições",
+    "tipo": "composicao",
+    "motores": [
+      "hyperframes",
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "posicao",
+      "escala",
+      "layout",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "interfaces_mockups.video-collage",
+    "nome": "Video Collage",
+    "categoria": "interfaces_mockups",
+    "categoria_nome": "Interfaces, mockups e composições",
+    "tipo": "composicao",
+    "motores": [
+      "hyperframes",
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "posicao",
+      "escala",
+      "layout",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "interfaces_mockups.3d-gallery-wall",
+    "nome": "3D Gallery Wall",
+    "categoria": "interfaces_mockups",
+    "categoria_nome": "Interfaces, mockups e composições",
+    "tipo": "composicao",
+    "motores": [
+      "hyperframes",
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "posicao",
+      "escala",
+      "layout",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "interfaces_mockups.infinite-video-grid",
+    "nome": "Infinite Video Grid",
+    "categoria": "interfaces_mockups",
+    "categoria_nome": "Interfaces, mockups e composições",
+    "tipo": "composicao",
+    "motores": [
+      "hyperframes",
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "posicao",
+      "escala",
+      "layout",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "interfaces_mockups.glass-ui-cards",
+    "nome": "Glass UI Cards",
+    "categoria": "interfaces_mockups",
+    "categoria_nome": "Interfaces, mockups e composições",
+    "tipo": "composicao",
+    "motores": [
+      "hyperframes",
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "posicao",
+      "escala",
+      "layout",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "interfaces_mockups.feed-of-reels",
+    "nome": "Feed of Reels",
+    "categoria": "interfaces_mockups",
+    "categoria_nome": "Interfaces, mockups e composições",
+    "tipo": "composicao",
+    "motores": [
+      "hyperframes",
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "posicao",
+      "escala",
+      "layout",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "interfaces_mockups.video-card",
+    "nome": "Video Card",
+    "categoria": "interfaces_mockups",
+    "categoria_nome": "Interfaces, mockups e composições",
+    "tipo": "composicao",
+    "motores": [
+      "hyperframes",
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "posicao",
+      "escala",
+      "layout",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "interfaces_mockups.comment-cta",
+    "nome": "Comment CTA",
+    "categoria": "interfaces_mockups",
+    "categoria_nome": "Interfaces, mockups e composições",
+    "tipo": "composicao",
+    "motores": [
+      "hyperframes",
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "posicao",
+      "escala",
+      "layout",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "interfaces_mockups.checklist-ui",
+    "nome": "Checklist UI",
+    "categoria": "interfaces_mockups",
+    "categoria_nome": "Interfaces, mockups e composições",
+    "tipo": "composicao",
+    "motores": [
+      "hyperframes",
+      "remotion"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "posicao",
+      "escala",
+      "layout",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "montagem.jump-cut",
+    "nome": "Jump Cut",
+    "categoria": "montagem",
+    "categoria_nome": "Cortes e técnicas de montagem",
+    "tipo": "montagem",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "pontoEntrada",
+      "pontoSaida",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "montagem.j-cut",
+    "nome": "J-Cut",
+    "categoria": "montagem",
+    "categoria_nome": "Cortes e técnicas de montagem",
+    "tipo": "montagem",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "pontoEntrada",
+      "pontoSaida",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "montagem.l-cut",
+    "nome": "L-Cut",
+    "categoria": "montagem",
+    "categoria_nome": "Cortes e técnicas de montagem",
+    "tipo": "montagem",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "pontoEntrada",
+      "pontoSaida",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "montagem.match-cut",
+    "nome": "Match Cut",
+    "categoria": "montagem",
+    "categoria_nome": "Cortes e técnicas de montagem",
+    "tipo": "montagem",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "pontoEntrada",
+      "pontoSaida",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "montagem.smash-cut",
+    "nome": "Smash Cut",
+    "categoria": "montagem",
+    "categoria_nome": "Cortes e técnicas de montagem",
+    "tipo": "montagem",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "pontoEntrada",
+      "pontoSaida",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "montagem.hard-cut",
+    "nome": "Hard Cut",
+    "categoria": "montagem",
+    "categoria_nome": "Cortes e técnicas de montagem",
+    "tipo": "montagem",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "pontoEntrada",
+      "pontoSaida",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "montagem.cut-on-action",
+    "nome": "Cut on Action",
+    "categoria": "montagem",
+    "categoria_nome": "Cortes e técnicas de montagem",
+    "tipo": "montagem",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "pontoEntrada",
+      "pontoSaida",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "montagem.beat-cut",
+    "nome": "Beat Cut",
+    "categoria": "montagem",
+    "categoria_nome": "Cortes e técnicas de montagem",
+    "tipo": "montagem",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "pontoEntrada",
+      "pontoSaida",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "montagem.montage-sequence",
+    "nome": "Montage Sequence",
+    "categoria": "montagem",
+    "categoria_nome": "Cortes e técnicas de montagem",
+    "tipo": "montagem",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "pontoEntrada",
+      "pontoSaida",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "montagem.speed-ramp",
+    "nome": "Speed Ramp",
+    "categoria": "montagem",
+    "categoria_nome": "Cortes e técnicas de montagem",
+    "tipo": "montagem",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "pontoEntrada",
+      "pontoSaida",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "montagem.slow-motion",
+    "nome": "Slow Motion",
+    "categoria": "montagem",
+    "categoria_nome": "Cortes e técnicas de montagem",
+    "tipo": "montagem",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "integracao_nativa",
+    "parametros": [
+      "pontoEntrada",
+      "pontoSaida",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Disponível por biblioteca/ferramenta externa; exige implementação e teste no pipeline."
+  },
+  {
+    "id": "montagem.fast-motion",
+    "nome": "Fast Motion",
+    "categoria": "montagem",
+    "categoria_nome": "Cortes e técnicas de montagem",
+    "tipo": "montagem",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "integracao_nativa",
+    "parametros": [
+      "pontoEntrada",
+      "pontoSaida",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Disponível por biblioteca/ferramenta externa; exige implementação e teste no pipeline."
+  },
+  {
+    "id": "montagem.reverse-playback",
+    "nome": "Reverse Playback",
+    "categoria": "montagem",
+    "categoria_nome": "Cortes e técnicas de montagem",
+    "tipo": "montagem",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "integracao_nativa",
+    "parametros": [
+      "pontoEntrada",
+      "pontoSaida",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Disponível por biblioteca/ferramenta externa; exige implementação e teste no pipeline."
+  },
+  {
+    "id": "montagem.freeze-frame-cut",
+    "nome": "Freeze Frame Cut",
+    "categoria": "montagem",
+    "categoria_nome": "Cortes e técnicas de montagem",
+    "tipo": "montagem",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "pontoEntrada",
+      "pontoSaida",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "montagem.multi-camera-cut",
+    "nome": "Multi-Camera Cut",
+    "categoria": "montagem",
+    "categoria_nome": "Cortes e técnicas de montagem",
+    "tipo": "montagem",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "pontoEntrada",
+      "pontoSaida",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "montagem.reaction-cut",
+    "nome": "Reaction Cut",
+    "categoria": "montagem",
+    "categoria_nome": "Cortes e técnicas de montagem",
+    "tipo": "montagem",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "pontoEntrada",
+      "pontoSaida",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "montagem.b-roll-insert",
+    "nome": "B-Roll Insert",
+    "categoria": "montagem",
+    "categoria_nome": "Cortes e técnicas de montagem",
+    "tipo": "montagem",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "pontoEntrada",
+      "pontoSaida",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "montagem.cutaway",
+    "nome": "Cutaway",
+    "categoria": "montagem",
+    "categoria_nome": "Cortes e técnicas de montagem",
+    "tipo": "montagem",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "pontoEntrada",
+      "pontoSaida",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "montagem.rhythm-editing",
+    "nome": "Rhythm Editing",
+    "categoria": "montagem",
+    "categoria_nome": "Cortes e técnicas de montagem",
+    "tipo": "montagem",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "pontoEntrada",
+      "pontoSaida",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "montagem.time-remapping",
+    "nome": "Time Remapping",
+    "categoria": "montagem",
+    "categoria_nome": "Cortes e técnicas de montagem",
+    "tipo": "montagem",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "pontoEntrada",
+      "pontoSaida",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "montagem.match-on-motion",
+    "nome": "Match on Motion",
+    "categoria": "montagem",
+    "categoria_nome": "Cortes e técnicas de montagem",
+    "tipo": "montagem",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "pontoEntrada",
+      "pontoSaida",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "montagem.scene-detection",
+    "nome": "Scene Detection",
+    "categoria": "montagem",
+    "categoria_nome": "Cortes e técnicas de montagem",
+    "tipo": "montagem",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "pontoEntrada",
+      "pontoSaida",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "montagem.silence-cut",
+    "nome": "Silence Cut",
+    "categoria": "montagem",
+    "categoria_nome": "Cortes e técnicas de montagem",
+    "tipo": "montagem",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "pontoEntrada",
+      "pontoSaida",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "montagem.punch-in-cut",
+    "nome": "Punch In Cut",
+    "categoria": "montagem",
+    "categoria_nome": "Cortes e técnicas de montagem",
+    "tipo": "montagem",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "pontoEntrada",
+      "pontoSaida",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "montagem.paper-cut",
+    "nome": "Paper Cut",
+    "categoria": "montagem",
+    "categoria_nome": "Cortes e técnicas de montagem",
+    "tipo": "montagem",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "pontoEntrada",
+      "pontoSaida",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "color_grading.hollywood-cinematic-lut",
+    "nome": "Hollywood Cinematic LUT",
+    "categoria": "color_grading",
+    "categoria_nome": "Color grading",
+    "tipo": "cor",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "contraste",
+      "saturacao",
+      "temperatura",
+      "intensidade"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "color_grading.teal-and-orange",
+    "nome": "Teal and Orange",
+    "categoria": "color_grading",
+    "categoria_nome": "Color grading",
+    "tipo": "cor",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "contraste",
+      "saturacao",
+      "temperatura",
+      "intensidade"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "color_grading.dark-moody",
+    "nome": "Dark Moody",
+    "categoria": "color_grading",
+    "categoria_nome": "Color grading",
+    "tipo": "cor",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "contraste",
+      "saturacao",
+      "temperatura",
+      "intensidade"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "color_grading.warm-film",
+    "nome": "Warm Film",
+    "categoria": "color_grading",
+    "categoria_nome": "Color grading",
+    "tipo": "cor",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "contraste",
+      "saturacao",
+      "temperatura",
+      "intensidade"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "color_grading.golden-hour",
+    "nome": "Golden Hour",
+    "categoria": "color_grading",
+    "categoria_nome": "Color grading",
+    "tipo": "cor",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "contraste",
+      "saturacao",
+      "temperatura",
+      "intensidade"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "color_grading.black-and-white",
+    "nome": "Black and White",
+    "categoria": "color_grading",
+    "categoria_nome": "Color grading",
+    "tipo": "cor",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "integracao_nativa",
+    "parametros": [
+      "contraste",
+      "saturacao",
+      "temperatura",
+      "intensidade"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Disponível por biblioteca/ferramenta externa; exige implementação e teste no pipeline."
+  },
+  {
+    "id": "color_grading.high-contrast",
+    "nome": "High Contrast",
+    "categoria": "color_grading",
+    "categoria_nome": "Color grading",
+    "tipo": "cor",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "integracao_nativa",
+    "parametros": [
+      "contraste",
+      "saturacao",
+      "temperatura",
+      "intensidade"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Disponível por biblioteca/ferramenta externa; exige implementação e teste no pipeline."
+  },
+  {
+    "id": "color_grading.matte-film-look",
+    "nome": "Matte Film Look",
+    "categoria": "color_grading",
+    "categoria_nome": "Color grading",
+    "tipo": "cor",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "contraste",
+      "saturacao",
+      "temperatura",
+      "intensidade"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "color_grading.vintage-kodak-look",
+    "nome": "Vintage Kodak Look",
+    "categoria": "color_grading",
+    "categoria_nome": "Color grading",
+    "tipo": "cor",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "contraste",
+      "saturacao",
+      "temperatura",
+      "intensidade"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "color_grading.film-emulation",
+    "nome": "Film Emulation",
+    "categoria": "color_grading",
+    "categoria_nome": "Color grading",
+    "tipo": "cor",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "contraste",
+      "saturacao",
+      "temperatura",
+      "intensidade"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "color_grading.pastel-soft",
+    "nome": "Pastel Soft",
+    "categoria": "color_grading",
+    "categoria_nome": "Color grading",
+    "tipo": "cor",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "contraste",
+      "saturacao",
+      "temperatura",
+      "intensidade"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "color_grading.luxury-gold",
+    "nome": "Luxury Gold",
+    "categoria": "color_grading",
+    "categoria_nome": "Color grading",
+    "tipo": "cor",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "contraste",
+      "saturacao",
+      "temperatura",
+      "intensidade"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "color_grading.cold-blue",
+    "nome": "Cold Blue",
+    "categoria": "color_grading",
+    "categoria_nome": "Color grading",
+    "tipo": "cor",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "contraste",
+      "saturacao",
+      "temperatura",
+      "intensidade"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "color_grading.desaturated-drama",
+    "nome": "Desaturated Drama",
+    "categoria": "color_grading",
+    "categoria_nome": "Color grading",
+    "tipo": "cor",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "contraste",
+      "saturacao",
+      "temperatura",
+      "intensidade"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "color_grading.hdr-look",
+    "nome": "HDR Look",
+    "categoria": "color_grading",
+    "categoria_nome": "Color grading",
+    "tipo": "cor",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "contraste",
+      "saturacao",
+      "temperatura",
+      "intensidade"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "color_grading.skin-tone-correction",
+    "nome": "Skin Tone Correction",
+    "categoria": "color_grading",
+    "categoria_nome": "Color grading",
+    "tipo": "cor",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "contraste",
+      "saturacao",
+      "temperatura",
+      "intensidade"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "color_grading.exposure-matching",
+    "nome": "Exposure Matching",
+    "categoria": "color_grading",
+    "categoria_nome": "Color grading",
+    "tipo": "cor",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "contraste",
+      "saturacao",
+      "temperatura",
+      "intensidade"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "color_grading.white-balance-matching",
+    "nome": "White Balance Matching",
+    "categoria": "color_grading",
+    "categoria_nome": "Color grading",
+    "tipo": "cor",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "contraste",
+      "saturacao",
+      "temperatura",
+      "intensidade"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "color_grading.selective-color",
+    "nome": "Selective Color",
+    "categoria": "color_grading",
+    "categoria_nome": "Color grading",
+    "tipo": "cor",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "contraste",
+      "saturacao",
+      "temperatura",
+      "intensidade"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "color_grading.color-isolation",
+    "nome": "Color Isolation",
+    "categoria": "color_grading",
+    "categoria_nome": "Color grading",
+    "tipo": "cor",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "contraste",
+      "saturacao",
+      "temperatura",
+      "intensidade"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "color_grading.vignette",
+    "nome": "Vignette",
+    "categoria": "color_grading",
+    "categoria_nome": "Color grading",
+    "tipo": "cor",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "integracao_nativa",
+    "parametros": [
+      "contraste",
+      "saturacao",
+      "temperatura",
+      "intensidade"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Disponível por biblioteca/ferramenta externa; exige implementação e teste no pipeline."
+  },
+  {
+    "id": "color_grading.highlight-roll-off",
+    "nome": "Highlight Roll-Off",
+    "categoria": "color_grading",
+    "categoria_nome": "Color grading",
+    "tipo": "cor",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "contraste",
+      "saturacao",
+      "temperatura",
+      "intensidade"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "color_grading.clean-natural",
+    "nome": "Clean Natural",
+    "categoria": "color_grading",
+    "categoria_nome": "Color grading",
+    "tipo": "cor",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "contraste",
+      "saturacao",
+      "temperatura",
+      "intensidade"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "color_grading.retro-color",
+    "nome": "Retro Color",
+    "categoria": "color_grading",
+    "categoria_nome": "Color grading",
+    "tipo": "cor",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "contraste",
+      "saturacao",
+      "temperatura",
+      "intensidade"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "color_grading.cinematic-contrast",
+    "nome": "Cinematic Contrast",
+    "categoria": "color_grading",
+    "categoria_nome": "Color grading",
+    "tipo": "cor",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "contraste",
+      "saturacao",
+      "temperatura",
+      "intensidade"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "efeitos_sonoros.whoosh",
+    "nome": "Whoosh",
+    "categoria": "efeitos_sonoros",
+    "categoria_nome": "Efeitos sonoros",
+    "tipo": "sfx",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ganhoDB",
+      "sincronizacao",
+      "duracaoMs"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "efeitos_sonoros.cinematic-impact",
+    "nome": "Cinematic Impact",
+    "categoria": "efeitos_sonoros",
+    "categoria_nome": "Efeitos sonoros",
+    "tipo": "sfx",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ganhoDB",
+      "sincronizacao",
+      "duracaoMs"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "efeitos_sonoros.bass-drop",
+    "nome": "Bass Drop",
+    "categoria": "efeitos_sonoros",
+    "categoria_nome": "Efeitos sonoros",
+    "tipo": "sfx",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ganhoDB",
+      "sincronizacao",
+      "duracaoMs"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "efeitos_sonoros.sub-boom",
+    "nome": "Sub Boom",
+    "categoria": "efeitos_sonoros",
+    "categoria_nome": "Efeitos sonoros",
+    "tipo": "sfx",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ganhoDB",
+      "sincronizacao",
+      "duracaoMs"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "efeitos_sonoros.riser",
+    "nome": "Riser",
+    "categoria": "efeitos_sonoros",
+    "categoria_nome": "Efeitos sonoros",
+    "tipo": "sfx",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ganhoDB",
+      "sincronizacao",
+      "duracaoMs"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "efeitos_sonoros.reverse-riser",
+    "nome": "Reverse Riser",
+    "categoria": "efeitos_sonoros",
+    "categoria_nome": "Efeitos sonoros",
+    "tipo": "sfx",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ganhoDB",
+      "sincronizacao",
+      "duracaoMs"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "efeitos_sonoros.glitch-sound",
+    "nome": "Glitch Sound",
+    "categoria": "efeitos_sonoros",
+    "categoria_nome": "Efeitos sonoros",
+    "tipo": "sfx",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ganhoDB",
+      "sincronizacao",
+      "duracaoMs"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "efeitos_sonoros.digital-click",
+    "nome": "Digital Click",
+    "categoria": "efeitos_sonoros",
+    "categoria_nome": "Efeitos sonoros",
+    "tipo": "sfx",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ganhoDB",
+      "sincronizacao",
+      "duracaoMs"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "efeitos_sonoros.camera-shutter",
+    "nome": "Camera Shutter",
+    "categoria": "efeitos_sonoros",
+    "categoria_nome": "Efeitos sonoros",
+    "tipo": "sfx",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ganhoDB",
+      "sincronizacao",
+      "duracaoMs"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "efeitos_sonoros.typing-keyboard",
+    "nome": "Typing Keyboard",
+    "categoria": "efeitos_sonoros",
+    "categoria_nome": "Efeitos sonoros",
+    "tipo": "sfx",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ganhoDB",
+      "sincronizacao",
+      "duracaoMs"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "efeitos_sonoros.notification-pop-sfx",
+    "nome": "Notification Pop SFX",
+    "categoria": "efeitos_sonoros",
+    "categoria_nome": "Efeitos sonoros",
+    "tipo": "sfx",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ganhoDB",
+      "sincronizacao",
+      "duracaoMs"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "efeitos_sonoros.ui-hover",
+    "nome": "UI Hover",
+    "categoria": "efeitos_sonoros",
+    "categoria_nome": "Efeitos sonoros",
+    "tipo": "sfx",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ganhoDB",
+      "sincronizacao",
+      "duracaoMs"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "efeitos_sonoros.swipe-sound",
+    "nome": "Swipe Sound",
+    "categoria": "efeitos_sonoros",
+    "categoria_nome": "Efeitos sonoros",
+    "tipo": "sfx",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ganhoDB",
+      "sincronizacao",
+      "duracaoMs"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "efeitos_sonoros.transition-sweep",
+    "nome": "Transition Sweep",
+    "categoria": "efeitos_sonoros",
+    "categoria_nome": "Efeitos sonoros",
+    "tipo": "sfx",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ganhoDB",
+      "sincronizacao",
+      "duracaoMs"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "efeitos_sonoros.paper-flip",
+    "nome": "Paper Flip",
+    "categoria": "efeitos_sonoros",
+    "categoria_nome": "Efeitos sonoros",
+    "tipo": "sfx",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ganhoDB",
+      "sincronizacao",
+      "duracaoMs"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "efeitos_sonoros.glass-break",
+    "nome": "Glass Break",
+    "categoria": "efeitos_sonoros",
+    "categoria_nome": "Efeitos sonoros",
+    "tipo": "sfx",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ganhoDB",
+      "sincronizacao",
+      "duracaoMs"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "efeitos_sonoros.metallic-hit",
+    "nome": "Metallic Hit",
+    "categoria": "efeitos_sonoros",
+    "categoria_nome": "Efeitos sonoros",
+    "tipo": "sfx",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ganhoDB",
+      "sincronizacao",
+      "duracaoMs"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "efeitos_sonoros.heartbeat",
+    "nome": "Heartbeat",
+    "categoria": "efeitos_sonoros",
+    "categoria_nome": "Efeitos sonoros",
+    "tipo": "sfx",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ganhoDB",
+      "sincronizacao",
+      "duracaoMs"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "efeitos_sonoros.crowd-applause",
+    "nome": "Crowd Applause",
+    "categoria": "efeitos_sonoros",
+    "categoria_nome": "Efeitos sonoros",
+    "tipo": "sfx",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ganhoDB",
+      "sincronizacao",
+      "duracaoMs"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "efeitos_sonoros.ambient-atmosphere",
+    "nome": "Ambient Atmosphere",
+    "categoria": "efeitos_sonoros",
+    "categoria_nome": "Efeitos sonoros",
+    "tipo": "sfx",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ganhoDB",
+      "sincronizacao",
+      "duracaoMs"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "efeitos_sonoros.cinematic-drone",
+    "nome": "Cinematic Drone",
+    "categoria": "efeitos_sonoros",
+    "categoria_nome": "Efeitos sonoros",
+    "tipo": "sfx",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ganhoDB",
+      "sincronizacao",
+      "duracaoMs"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "efeitos_sonoros.braam",
+    "nome": "Braam",
+    "categoria": "efeitos_sonoros",
+    "categoria_nome": "Efeitos sonoros",
+    "tipo": "sfx",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ganhoDB",
+      "sincronizacao",
+      "duracaoMs"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "efeitos_sonoros.reverse-cymbal",
+    "nome": "Reverse Cymbal",
+    "categoria": "efeitos_sonoros",
+    "categoria_nome": "Efeitos sonoros",
+    "tipo": "sfx",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ganhoDB",
+      "sincronizacao",
+      "duracaoMs"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "efeitos_sonoros.logo-sound-reveal",
+    "nome": "Logo Sound Reveal",
+    "categoria": "efeitos_sonoros",
+    "categoria_nome": "Efeitos sonoros",
+    "tipo": "sfx",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ganhoDB",
+      "sincronizacao",
+      "duracaoMs"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "efeitos_sonoros.pop-impact",
+    "nome": "Pop Impact",
+    "categoria": "efeitos_sonoros",
+    "categoria_nome": "Efeitos sonoros",
+    "tipo": "sfx",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ganhoDB",
+      "sincronizacao",
+      "duracaoMs"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "efeitos_sonoros.wind-sweep",
+    "nome": "Wind Sweep",
+    "categoria": "efeitos_sonoros",
+    "categoria_nome": "Efeitos sonoros",
+    "tipo": "sfx",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ganhoDB",
+      "sincronizacao",
+      "duracaoMs"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "efeitos_sonoros.low-hit",
+    "nome": "Low Hit",
+    "categoria": "efeitos_sonoros",
+    "categoria_nome": "Efeitos sonoros",
+    "tipo": "sfx",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ganhoDB",
+      "sincronizacao",
+      "duracaoMs"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "efeitos_sonoros.shimmer",
+    "nome": "Shimmer",
+    "categoria": "efeitos_sonoros",
+    "categoria_nome": "Efeitos sonoros",
+    "tipo": "sfx",
+    "motores": [
+      "ffmpeg"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ganhoDB",
+      "sincronizacao",
+      "duracaoMs"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "audio.ai-voiceover",
+    "nome": "AI Voiceover",
+    "categoria": "audio",
+    "categoria_nome": "Narração, música e pós-produção de áudio",
+    "tipo": "audio",
+    "motores": [
+      "ffmpeg",
+      "whisper"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ganhoDB",
+      "lufsAlvo",
+      "frequencia"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "audio.text-to-speech",
+    "nome": "Text to Speech",
+    "categoria": "audio",
+    "categoria_nome": "Narração, música e pós-produção de áudio",
+    "tipo": "audio",
+    "motores": [
+      "ffmpeg",
+      "whisper"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ganhoDB",
+      "lufsAlvo",
+      "frequencia"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "audio.voice-cloning-authorized",
+    "nome": "Voice Cloning Authorized",
+    "categoria": "audio",
+    "categoria_nome": "Narração, música e pós-produção de áudio",
+    "tipo": "audio",
+    "motores": [
+      "ffmpeg",
+      "whisper"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ganhoDB",
+      "lufsAlvo",
+      "frequencia"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "audio.automatic-transcription",
+    "nome": "Automatic Transcription",
+    "categoria": "audio",
+    "categoria_nome": "Narração, música e pós-produção de áudio",
+    "tipo": "audio",
+    "motores": [
+      "ffmpeg",
+      "whisper"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ganhoDB",
+      "lufsAlvo",
+      "frequencia"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "audio.speaker-diarization",
+    "nome": "Speaker Diarization",
+    "categoria": "audio",
+    "categoria_nome": "Narração, música e pós-produção de áudio",
+    "tipo": "audio",
+    "motores": [
+      "ffmpeg",
+      "whisper"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ganhoDB",
+      "lufsAlvo",
+      "frequencia"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "audio.voice-enhancement",
+    "nome": "Voice Enhancement",
+    "categoria": "audio",
+    "categoria_nome": "Narração, música e pós-produção de áudio",
+    "tipo": "audio",
+    "motores": [
+      "ffmpeg",
+      "whisper"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ganhoDB",
+      "lufsAlvo",
+      "frequencia"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "audio.noise-reduction",
+    "nome": "Noise Reduction",
+    "categoria": "audio",
+    "categoria_nome": "Narração, música e pós-produção de áudio",
+    "tipo": "audio",
+    "motores": [
+      "ffmpeg",
+      "whisper"
+    ],
+    "status": "integracao_nativa",
+    "parametros": [
+      "ganhoDB",
+      "lufsAlvo",
+      "frequencia"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Disponível por biblioteca/ferramenta externa; exige implementação e teste no pipeline."
+  },
+  {
+    "id": "audio.echo-reduction",
+    "nome": "Echo Reduction",
+    "categoria": "audio",
+    "categoria_nome": "Narração, música e pós-produção de áudio",
+    "tipo": "audio",
+    "motores": [
+      "ffmpeg",
+      "whisper"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ganhoDB",
+      "lufsAlvo",
+      "frequencia"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "audio.silence-removal",
+    "nome": "Silence Removal",
+    "categoria": "audio",
+    "categoria_nome": "Narração, música e pós-produção de áudio",
+    "tipo": "audio",
+    "motores": [
+      "ffmpeg",
+      "whisper"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ganhoDB",
+      "lufsAlvo",
+      "frequencia"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "audio.automatic-audio-ducking",
+    "nome": "Automatic Audio Ducking",
+    "categoria": "audio",
+    "categoria_nome": "Narração, música e pós-produção de áudio",
+    "tipo": "audio",
+    "motores": [
+      "ffmpeg",
+      "whisper"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ganhoDB",
+      "lufsAlvo",
+      "frequencia"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "audio.loudness-normalization",
+    "nome": "Loudness Normalization",
+    "categoria": "audio",
+    "categoria_nome": "Narração, música e pós-produção de áudio",
+    "tipo": "audio",
+    "motores": [
+      "ffmpeg",
+      "whisper"
+    ],
+    "status": "integracao_nativa",
+    "parametros": [
+      "ganhoDB",
+      "lufsAlvo",
+      "frequencia"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Disponível por biblioteca/ferramenta externa; exige implementação e teste no pipeline."
+  },
+  {
+    "id": "audio.voice-eq",
+    "nome": "Voice EQ",
+    "categoria": "audio",
+    "categoria_nome": "Narração, música e pós-produção de áudio",
+    "tipo": "audio",
+    "motores": [
+      "ffmpeg",
+      "whisper"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ganhoDB",
+      "lufsAlvo",
+      "frequencia"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "audio.audio-compression",
+    "nome": "Audio Compression",
+    "categoria": "audio",
+    "categoria_nome": "Narração, música e pós-produção de áudio",
+    "tipo": "audio",
+    "motores": [
+      "ffmpeg",
+      "whisper"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ganhoDB",
+      "lufsAlvo",
+      "frequencia"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "audio.beat-detection",
+    "nome": "Beat Detection",
+    "categoria": "audio",
+    "categoria_nome": "Narração, música e pós-produção de áudio",
+    "tipo": "audio",
+    "motores": [
+      "ffmpeg",
+      "whisper"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ganhoDB",
+      "lufsAlvo",
+      "frequencia"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "audio.beat-synchronization",
+    "nome": "Beat Synchronization",
+    "categoria": "audio",
+    "categoria_nome": "Narração, música e pós-produção de áudio",
+    "tipo": "audio",
+    "motores": [
+      "ffmpeg",
+      "whisper"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ganhoDB",
+      "lufsAlvo",
+      "frequencia"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "audio.audio-fade-in",
+    "nome": "Audio Fade In",
+    "categoria": "audio",
+    "categoria_nome": "Narração, música e pós-produção de áudio",
+    "tipo": "audio",
+    "motores": [
+      "ffmpeg",
+      "whisper"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ganhoDB",
+      "lufsAlvo",
+      "frequencia"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "audio.audio-fade-out",
+    "nome": "Audio Fade Out",
+    "categoria": "audio",
+    "categoria_nome": "Narração, música e pós-produção de áudio",
+    "tipo": "audio",
+    "motores": [
+      "ffmpeg",
+      "whisper"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ganhoDB",
+      "lufsAlvo",
+      "frequencia"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "audio.music-crossfade",
+    "nome": "Music Crossfade",
+    "categoria": "audio",
+    "categoria_nome": "Narração, música e pós-produção de áudio",
+    "tipo": "audio",
+    "motores": [
+      "ffmpeg",
+      "whisper"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ganhoDB",
+      "lufsAlvo",
+      "frequencia"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "audio.background-ambience",
+    "nome": "Background Ambience",
+    "categoria": "audio",
+    "categoria_nome": "Narração, música e pós-produção de áudio",
+    "tipo": "audio",
+    "motores": [
+      "ffmpeg",
+      "whisper"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ganhoDB",
+      "lufsAlvo",
+      "frequencia"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "audio.multilingual-dubbing",
+    "nome": "Multilingual Dubbing",
+    "categoria": "audio",
+    "categoria_nome": "Narração, música e pós-produção de áudio",
+    "tipo": "audio",
+    "motores": [
+      "ffmpeg",
+      "whisper"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ganhoDB",
+      "lufsAlvo",
+      "frequencia"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "audio.audio-translation",
+    "nome": "Audio Translation",
+    "categoria": "audio",
+    "categoria_nome": "Narração, música e pós-produção de áudio",
+    "tipo": "audio",
+    "motores": [
+      "ffmpeg",
+      "whisper"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ganhoDB",
+      "lufsAlvo",
+      "frequencia"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "audio.voice-pitch-shifting",
+    "nome": "Voice Pitch Shifting",
+    "categoria": "audio",
+    "categoria_nome": "Narração, música e pós-produção de áudio",
+    "tipo": "audio",
+    "motores": [
+      "ffmpeg",
+      "whisper"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ganhoDB",
+      "lufsAlvo",
+      "frequencia"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "audio.sound-design-layering",
+    "nome": "Sound Design Layering",
+    "categoria": "audio",
+    "categoria_nome": "Narração, música e pós-produção de áudio",
+    "tipo": "audio",
+    "motores": [
+      "ffmpeg",
+      "whisper"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ganhoDB",
+      "lufsAlvo",
+      "frequencia"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "audio.audio-gate",
+    "nome": "Audio Gate",
+    "categoria": "audio",
+    "categoria_nome": "Narração, música e pós-produção de áudio",
+    "tipo": "audio",
+    "motores": [
+      "ffmpeg",
+      "whisper"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ganhoDB",
+      "lufsAlvo",
+      "frequencia"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "audio.de-esser",
+    "nome": "De-esser",
+    "categoria": "audio",
+    "categoria_nome": "Narração, música e pós-produção de áudio",
+    "tipo": "audio",
+    "motores": [
+      "ffmpeg",
+      "whisper"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ganhoDB",
+      "lufsAlvo",
+      "frequencia"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "audio.voice-isolation",
+    "nome": "Voice Isolation",
+    "categoria": "audio",
+    "categoria_nome": "Narração, música e pós-produção de áudio",
+    "tipo": "audio",
+    "motores": [
+      "ffmpeg",
+      "whisper"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "ganhoDB",
+      "lufsAlvo",
+      "frequencia"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "automacao_ia.ai-auto-edit",
+    "nome": "AI Auto Edit",
+    "categoria": "automacao_ia",
+    "categoria_nome": "Automação de edição com IA",
+    "tipo": "automacao",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "entrada",
+      "parametros",
+      "revisaoHumana"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "automacao_ia.smart-scene-detection",
+    "nome": "Smart Scene Detection",
+    "categoria": "automacao_ia",
+    "categoria_nome": "Automação de edição com IA",
+    "tipo": "automacao",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "entrada",
+      "parametros",
+      "revisaoHumana"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "automacao_ia.automatic-highlight-extraction",
+    "nome": "Automatic Highlight Extraction",
+    "categoria": "automacao_ia",
+    "categoria_nome": "Automação de edição com IA",
+    "tipo": "automacao",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "entrada",
+      "parametros",
+      "revisaoHumana"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "automacao_ia.ai-best-moments",
+    "nome": "AI Best Moments",
+    "categoria": "automacao_ia",
+    "categoria_nome": "Automação de edição com IA",
+    "tipo": "automacao",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "entrada",
+      "parametros",
+      "revisaoHumana"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "automacao_ia.viral-hook-detection",
+    "nome": "Viral Hook Detection",
+    "categoria": "automacao_ia",
+    "categoria_nome": "Automação de edição com IA",
+    "tipo": "automacao",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "entrada",
+      "parametros",
+      "revisaoHumana"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "automacao_ia.automatic-b-roll-suggestion",
+    "nome": "Automatic B-Roll Suggestion",
+    "categoria": "automacao_ia",
+    "categoria_nome": "Automação de edição com IA",
+    "tipo": "automacao",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "entrada",
+      "parametros",
+      "revisaoHumana"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "automacao_ia.ai-cut-on-beat",
+    "nome": "AI Cut on Beat",
+    "categoria": "automacao_ia",
+    "categoria_nome": "Automação de edição com IA",
+    "tipo": "automacao",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "entrada",
+      "parametros",
+      "revisaoHumana"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "automacao_ia.smart-silence-removal",
+    "nome": "Smart Silence Removal",
+    "categoria": "automacao_ia",
+    "categoria_nome": "Automação de edição com IA",
+    "tipo": "automacao",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "entrada",
+      "parametros",
+      "revisaoHumana"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "automacao_ia.ai-auto-captions",
+    "nome": "AI Auto Captions",
+    "categoria": "automacao_ia",
+    "categoria_nome": "Automação de edição com IA",
+    "tipo": "automacao",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "entrada",
+      "parametros",
+      "revisaoHumana"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "automacao_ia.smart-caption-styling",
+    "nome": "Smart Caption Styling",
+    "categoria": "automacao_ia",
+    "categoria_nome": "Automação de edição com IA",
+    "tipo": "automacao",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "entrada",
+      "parametros",
+      "revisaoHumana"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "automacao_ia.automatic-reframing",
+    "nome": "Automatic Reframing",
+    "categoria": "automacao_ia",
+    "categoria_nome": "Automação de edição com IA",
+    "tipo": "automacao",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "entrada",
+      "parametros",
+      "revisaoHumana"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "automacao_ia.face-centered-crop",
+    "nome": "Face-Centered Crop",
+    "categoria": "automacao_ia",
+    "categoria_nome": "Automação de edição com IA",
+    "tipo": "automacao",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "entrada",
+      "parametros",
+      "revisaoHumana"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "automacao_ia.ai-video-summarization",
+    "nome": "AI Video Summarization",
+    "categoria": "automacao_ia",
+    "categoria_nome": "Automação de edição com IA",
+    "tipo": "automacao",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "entrada",
+      "parametros",
+      "revisaoHumana"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "automacao_ia.long-video-to-shorts",
+    "nome": "Long Video to Shorts",
+    "categoria": "automacao_ia",
+    "categoria_nome": "Automação de edição com IA",
+    "tipo": "automacao",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "entrada",
+      "parametros",
+      "revisaoHumana"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "automacao_ia.ai-storyboard-generation",
+    "nome": "AI Storyboard Generation",
+    "categoria": "automacao_ia",
+    "categoria_nome": "Automação de edição com IA",
+    "tipo": "automacao",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "entrada",
+      "parametros",
+      "revisaoHumana"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "automacao_ia.ai-scene-classification",
+    "nome": "AI Scene Classification",
+    "categoria": "automacao_ia",
+    "categoria_nome": "Automação de edição com IA",
+    "tipo": "automacao",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "entrada",
+      "parametros",
+      "revisaoHumana"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "automacao_ia.automatic-color-matching",
+    "nome": "Automatic Color Matching",
+    "categoria": "automacao_ia",
+    "categoria_nome": "Automação de edição com IA",
+    "tipo": "automacao",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "entrada",
+      "parametros",
+      "revisaoHumana"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "automacao_ia.smart-sound-effects-placement",
+    "nome": "Smart Sound Effects Placement",
+    "categoria": "automacao_ia",
+    "categoria_nome": "Automação de edição com IA",
+    "tipo": "automacao",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "entrada",
+      "parametros",
+      "revisaoHumana"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "automacao_ia.ai-music-suggestion",
+    "nome": "AI Music Suggestion",
+    "categoria": "automacao_ia",
+    "categoria_nome": "Automação de edição com IA",
+    "tipo": "automacao",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "entrada",
+      "parametros",
+      "revisaoHumana"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "automacao_ia.ai-motion-graphics-selection",
+    "nome": "AI Motion Graphics Selection",
+    "categoria": "automacao_ia",
+    "categoria_nome": "Automação de edição com IA",
+    "tipo": "automacao",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "entrada",
+      "parametros",
+      "revisaoHumana"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "automacao_ia.ai-quality-enhancement",
+    "nome": "AI Quality Enhancement",
+    "categoria": "automacao_ia",
+    "categoria_nome": "Automação de edição com IA",
+    "tipo": "automacao",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "entrada",
+      "parametros",
+      "revisaoHumana"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "automacao_ia.smart-video-upscaling",
+    "nome": "Smart Video Upscaling",
+    "categoria": "automacao_ia",
+    "categoria_nome": "Automação de edição com IA",
+    "tipo": "automacao",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "entrada",
+      "parametros",
+      "revisaoHumana"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "automacao_ia.ai-content-repurposing",
+    "nome": "AI Content Repurposing",
+    "categoria": "automacao_ia",
+    "categoria_nome": "Automação de edição com IA",
+    "tipo": "automacao",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "entrada",
+      "parametros",
+      "revisaoHumana"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "automacao_ia.automated-multi-format-editing",
+    "nome": "Automated Multi-Format Editing",
+    "categoria": "automacao_ia",
+    "categoria_nome": "Automação de edição com IA",
+    "tipo": "automacao",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "entrada",
+      "parametros",
+      "revisaoHumana"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "automacao_ia.ai-edit-by-reference",
+    "nome": "AI Edit by Reference",
+    "categoria": "automacao_ia",
+    "categoria_nome": "Automação de edição com IA",
+    "tipo": "automacao",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "entrada",
+      "parametros",
+      "revisaoHumana"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "automacao_ia.ai-shot-classification",
+    "nome": "AI Shot Classification",
+    "categoria": "automacao_ia",
+    "categoria_nome": "Automação de edição com IA",
+    "tipo": "automacao",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "entrada",
+      "parametros",
+      "revisaoHumana"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "templates.reels-template",
+    "nome": "Reels Template",
+    "categoria": "templates",
+    "categoria_nome": "Modelos e formatos",
+    "tipo": "template",
+    "motores": [
+      "remotion",
+      "hyperframes"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "titulo",
+      "subtitulo",
+      "formato",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "templates.tiktok-template",
+    "nome": "TikTok Template",
+    "categoria": "templates",
+    "categoria_nome": "Modelos e formatos",
+    "tipo": "template",
+    "motores": [
+      "remotion",
+      "hyperframes"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "titulo",
+      "subtitulo",
+      "formato",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "templates.shorts-template",
+    "nome": "Shorts Template",
+    "categoria": "templates",
+    "categoria_nome": "Modelos e formatos",
+    "tipo": "template",
+    "motores": [
+      "remotion",
+      "hyperframes"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "titulo",
+      "subtitulo",
+      "formato",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "templates.youtube-long-form",
+    "nome": "YouTube Long Form",
+    "categoria": "templates",
+    "categoria_nome": "Modelos e formatos",
+    "tipo": "template",
+    "motores": [
+      "remotion",
+      "hyperframes"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "titulo",
+      "subtitulo",
+      "formato",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "templates.youtube-intro",
+    "nome": "YouTube Intro",
+    "categoria": "templates",
+    "categoria_nome": "Modelos e formatos",
+    "tipo": "template",
+    "motores": [
+      "remotion",
+      "hyperframes"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "titulo",
+      "subtitulo",
+      "formato",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "templates.youtube-outro",
+    "nome": "YouTube Outro",
+    "categoria": "templates",
+    "categoria_nome": "Modelos e formatos",
+    "tipo": "template",
+    "motores": [
+      "remotion",
+      "hyperframes"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "titulo",
+      "subtitulo",
+      "formato",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "templates.podcast-clips",
+    "nome": "Podcast Clips",
+    "categoria": "templates",
+    "categoria_nome": "Modelos e formatos",
+    "tipo": "template",
+    "motores": [
+      "remotion",
+      "hyperframes"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "titulo",
+      "subtitulo",
+      "formato",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "templates.video-ads",
+    "nome": "Video Ads",
+    "categoria": "templates",
+    "categoria_nome": "Modelos e formatos",
+    "tipo": "template",
+    "motores": [
+      "remotion",
+      "hyperframes"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "titulo",
+      "subtitulo",
+      "formato",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "templates.product-commercial",
+    "nome": "Product Commercial",
+    "categoria": "templates",
+    "categoria_nome": "Modelos e formatos",
+    "tipo": "template",
+    "motores": [
+      "remotion",
+      "hyperframes"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "titulo",
+      "subtitulo",
+      "formato",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "templates.event-aftermovie-template",
+    "nome": "Event Aftermovie Template",
+    "categoria": "templates",
+    "categoria_nome": "Modelos e formatos",
+    "tipo": "template",
+    "motores": [
+      "remotion",
+      "hyperframes"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "titulo",
+      "subtitulo",
+      "formato",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "templates.wedding-highlights",
+    "nome": "Wedding Highlights",
+    "categoria": "templates",
+    "categoria_nome": "Modelos e formatos",
+    "tipo": "template",
+    "motores": [
+      "remotion",
+      "hyperframes"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "titulo",
+      "subtitulo",
+      "formato",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "templates.testimonial-template",
+    "nome": "Testimonial Template",
+    "categoria": "templates",
+    "categoria_nome": "Modelos e formatos",
+    "tipo": "template",
+    "motores": [
+      "remotion",
+      "hyperframes"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "titulo",
+      "subtitulo",
+      "formato",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "templates.documentary-template",
+    "nome": "Documentary Template",
+    "categoria": "templates",
+    "categoria_nome": "Modelos e formatos",
+    "tipo": "template",
+    "motores": [
+      "remotion",
+      "hyperframes"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "titulo",
+      "subtitulo",
+      "formato",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "templates.educational-explainer",
+    "nome": "Educational Explainer",
+    "categoria": "templates",
+    "categoria_nome": "Modelos e formatos",
+    "tipo": "template",
+    "motores": [
+      "remotion",
+      "hyperframes"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "titulo",
+      "subtitulo",
+      "formato",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "templates.news-report",
+    "nome": "News Report",
+    "categoria": "templates",
+    "categoria_nome": "Modelos e formatos",
+    "tipo": "template",
+    "motores": [
+      "remotion",
+      "hyperframes"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "titulo",
+      "subtitulo",
+      "formato",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "templates.corporate-presentation",
+    "nome": "Corporate Presentation",
+    "categoria": "templates",
+    "categoria_nome": "Modelos e formatos",
+    "tipo": "template",
+    "motores": [
+      "remotion",
+      "hyperframes"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "titulo",
+      "subtitulo",
+      "formato",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "templates.brand-story",
+    "nome": "Brand Story",
+    "categoria": "templates",
+    "categoria_nome": "Modelos e formatos",
+    "tipo": "template",
+    "motores": [
+      "remotion",
+      "hyperframes"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "titulo",
+      "subtitulo",
+      "formato",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "templates.motivational-reel",
+    "nome": "Motivational Reel",
+    "categoria": "templates",
+    "categoria_nome": "Modelos e formatos",
+    "tipo": "template",
+    "motores": [
+      "remotion",
+      "hyperframes"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "titulo",
+      "subtitulo",
+      "formato",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "templates.religious-worship-highlights",
+    "nome": "Religious Worship Highlights",
+    "categoria": "templates",
+    "categoria_nome": "Modelos e formatos",
+    "tipo": "template",
+    "motores": [
+      "remotion",
+      "hyperframes"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "titulo",
+      "subtitulo",
+      "formato",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "templates.real-estate-showcase",
+    "nome": "Real Estate Showcase",
+    "categoria": "templates",
+    "categoria_nome": "Modelos e formatos",
+    "tipo": "template",
+    "motores": [
+      "remotion",
+      "hyperframes"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "titulo",
+      "subtitulo",
+      "formato",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "templates.legal-educational-content",
+    "nome": "Legal Educational Content",
+    "categoria": "templates",
+    "categoria_nome": "Modelos e formatos",
+    "tipo": "template",
+    "motores": [
+      "remotion",
+      "hyperframes"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "titulo",
+      "subtitulo",
+      "formato",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "templates.social-media-announcement",
+    "nome": "Social Media Announcement",
+    "categoria": "templates",
+    "categoria_nome": "Modelos e formatos",
+    "tipo": "template",
+    "motores": [
+      "remotion",
+      "hyperframes"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "titulo",
+      "subtitulo",
+      "formato",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "templates.countdown-event-teaser",
+    "nome": "Countdown Event Teaser",
+    "categoria": "templates",
+    "categoria_nome": "Modelos e formatos",
+    "tipo": "template",
+    "motores": [
+      "remotion",
+      "hyperframes"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "titulo",
+      "subtitulo",
+      "formato",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "templates.product-showcase",
+    "nome": "Product Showcase",
+    "categoria": "templates",
+    "categoria_nome": "Modelos e formatos",
+    "tipo": "template",
+    "motores": [
+      "remotion",
+      "hyperframes"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "titulo",
+      "subtitulo",
+      "formato",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "templates.interview-highlights",
+    "nome": "Interview Highlights",
+    "categoria": "templates",
+    "categoria_nome": "Modelos e formatos",
+    "tipo": "template",
+    "motores": [
+      "remotion",
+      "hyperframes"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "titulo",
+      "subtitulo",
+      "formato",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "templates.social-story",
+    "nome": "Social Story",
+    "categoria": "templates",
+    "categoria_nome": "Modelos e formatos",
+    "tipo": "template",
+    "motores": [
+      "remotion",
+      "hyperframes"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "titulo",
+      "subtitulo",
+      "formato",
+      "duracaoFrames"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "infraestrutura.multitrack-timeline",
+    "nome": "Multitrack Timeline",
+    "categoria": "infraestrutura",
+    "categoria_nome": "Ferramentas do estúdio",
+    "tipo": "recurso",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "configuracao",
+      "entrada",
+      "saida"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "infraestrutura.keyframe-editor",
+    "nome": "Keyframe Editor",
+    "categoria": "infraestrutura",
+    "categoria_nome": "Ferramentas do estúdio",
+    "tipo": "recurso",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "configuracao",
+      "entrada",
+      "saida"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "infraestrutura.easing-curves",
+    "nome": "Easing Curves",
+    "categoria": "infraestrutura",
+    "categoria_nome": "Ferramentas do estúdio",
+    "tipo": "recurso",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "configuracao",
+      "entrada",
+      "saida"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "infraestrutura.preset-library",
+    "nome": "Preset Library",
+    "categoria": "infraestrutura",
+    "categoria_nome": "Ferramentas do estúdio",
+    "tipo": "recurso",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "configuracao",
+      "entrada",
+      "saida"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "infraestrutura.live-preview",
+    "nome": "Live Preview",
+    "categoria": "infraestrutura",
+    "categoria_nome": "Ferramentas do estúdio",
+    "tipo": "recurso",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "configuracao",
+      "entrada",
+      "saida"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "infraestrutura.undo-history",
+    "nome": "Undo History",
+    "categoria": "infraestrutura",
+    "categoria_nome": "Ferramentas do estúdio",
+    "tipo": "recurso",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "configuracao",
+      "entrada",
+      "saida"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "infraestrutura.video-layers",
+    "nome": "Video Layers",
+    "categoria": "infraestrutura",
+    "categoria_nome": "Ferramentas do estúdio",
+    "tipo": "recurso",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "configuracao",
+      "entrada",
+      "saida"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "infraestrutura.mask-editor",
+    "nome": "Mask Editor",
+    "categoria": "infraestrutura",
+    "categoria_nome": "Ferramentas do estúdio",
+    "tipo": "recurso",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "configuracao",
+      "entrada",
+      "saida"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "infraestrutura.subtitle-editor",
+    "nome": "Subtitle Editor",
+    "categoria": "infraestrutura",
+    "categoria_nome": "Ferramentas do estúdio",
+    "tipo": "recurso",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "configuracao",
+      "entrada",
+      "saida"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "infraestrutura.color-editor",
+    "nome": "Color Editor",
+    "categoria": "infraestrutura",
+    "categoria_nome": "Ferramentas do estúdio",
+    "tipo": "recurso",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "configuracao",
+      "entrada",
+      "saida"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "infraestrutura.reusable-templates",
+    "nome": "Reusable Templates",
+    "categoria": "infraestrutura",
+    "categoria_nome": "Ferramentas do estúdio",
+    "tipo": "recurso",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "configuracao",
+      "entrada",
+      "saida"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "infraestrutura.project-management",
+    "nome": "Project Management",
+    "categoria": "infraestrutura",
+    "categoria_nome": "Ferramentas do estúdio",
+    "tipo": "recurso",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "configuracao",
+      "entrada",
+      "saida"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "infraestrutura.aspect-ratio-presets",
+    "nome": "Aspect Ratio Presets",
+    "categoria": "infraestrutura",
+    "categoria_nome": "Ferramentas do estúdio",
+    "tipo": "recurso",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "configuracao",
+      "entrada",
+      "saida"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "infraestrutura.batch-export",
+    "nome": "Batch Export",
+    "categoria": "infraestrutura",
+    "categoria_nome": "Ferramentas do estúdio",
+    "tipo": "recurso",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "configuracao",
+      "entrada",
+      "saida"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "infraestrutura.4k-rendering",
+    "nome": "4K Rendering",
+    "categoria": "infraestrutura",
+    "categoria_nome": "Ferramentas do estúdio",
+    "tipo": "recurso",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "configuracao",
+      "entrada",
+      "saida"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "infraestrutura.social-export-presets",
+    "nome": "Social Export Presets",
+    "categoria": "infraestrutura",
+    "categoria_nome": "Ferramentas do estúdio",
+    "tipo": "recurso",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "configuracao",
+      "entrada",
+      "saida"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "infraestrutura.licensed-audio-library",
+    "nome": "Licensed Audio Library",
+    "categoria": "infraestrutura",
+    "categoria_nome": "Ferramentas do estúdio",
+    "tipo": "recurso",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "configuracao",
+      "entrada",
+      "saida"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "infraestrutura.asset-manager",
+    "nome": "Asset Manager",
+    "categoria": "infraestrutura",
+    "categoria_nome": "Ferramentas do estúdio",
+    "tipo": "recurso",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "configuracao",
+      "entrada",
+      "saida"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "infraestrutura.scene-graph",
+    "nome": "Scene Graph",
+    "categoria": "infraestrutura",
+    "categoria_nome": "Ferramentas do estúdio",
+    "tipo": "recurso",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "configuracao",
+      "entrada",
+      "saida"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "infraestrutura.render-queue",
+    "nome": "Render Queue",
+    "categoria": "infraestrutura",
+    "categoria_nome": "Ferramentas do estúdio",
+    "tipo": "recurso",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "configuracao",
+      "entrada",
+      "saida"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "infraestrutura.metadata-export",
+    "nome": "Metadata Export",
+    "categoria": "infraestrutura",
+    "categoria_nome": "Ferramentas do estúdio",
+    "tipo": "recurso",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "configuracao",
+      "entrada",
+      "saida"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "infraestrutura.catalog-search",
+    "nome": "Catalog Search",
+    "categoria": "infraestrutura",
+    "categoria_nome": "Ferramentas do estúdio",
+    "tipo": "recurso",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "configuracao",
+      "entrada",
+      "saida"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "infraestrutura.production-checklist",
+    "nome": "Production Checklist",
+    "categoria": "infraestrutura",
+    "categoria_nome": "Ferramentas do estúdio",
+    "tipo": "recurso",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "configuracao",
+      "entrada",
+      "saida"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  },
+  {
+    "id": "infraestrutura.versioned-skill",
+    "nome": "Versioned Skill",
+    "categoria": "infraestrutura",
+    "categoria_nome": "Ferramentas do estúdio",
+    "tipo": "recurso",
+    "motores": [
+      "orquestracao"
+    ],
+    "status": "catalogado",
+    "parametros": [
+      "configuracao",
+      "entrada",
+      "saida"
+    ],
+    "arquivo_exemplo": null,
+    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+  }
+]

@@ -65,3 +65,16 @@ ffmpeg -i entrada.mp4 -af loudnorm=I=-14:TP=-1.5:LRA=11 -c:v copy saida.mp4
   resultado, sem mercantilização, sem captação indevida de clientela).
 - Não baixar nem reutilizar conteúdo de terceiros sem autorização (direitos autorais — Lei 9.610/98).
 - Dados de clientes e processos em vídeos: atenção à LGPD e ao sigilo profissional.
+
+
+## Skill permanente de edição audiovisual
+
+**Obrigatório em todos os pedidos de vídeo:** ler `.claude/skills/arthur-video-editor/SKILL.md`, consultar `biblioteca/catalogo.json` e `biblioteca/presets.json`. Os nomes do catálogo não equivalem a funcionalidades implementadas: confira `status`.
+
+- Prompt mestre reutilizável: `docs/PROMPT-CLAUDE.md`
+- Arquitetura e estados reais: `docs/ARQUITETURA.md`
+- Pesquisa: `python3 scripts/catalogo.py --resumo` e `--buscar "termo"`
+- Validação: `python3 scripts/catalogo.py --validar` e `python3 -m unittest discover -s tests`
+- Demonstração: composição Remotion `ArthurShowcase` na base existente.
+- Presets FFmpeg: `bash scripts/efeitos-ffmpeg.sh` (ver README).
+- Ao acrescentar efeito novo, documente código e teste antes de alterar status do catálogo.
