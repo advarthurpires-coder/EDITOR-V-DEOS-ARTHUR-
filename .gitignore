@@ -1,0 +1,12 @@
+# Ferramentas compiladas/baixadas pelo setup (recriadas a cada sessão)
+tools/
+node_modules/
+# Saídas de render e arquivos de trabalho pesados
+projetos/*/out/
+projetos/*/renders/
+projetos/*/.debug/
+midia/brutos/
+midia/saida/
+*.log
+.DS_Store
+projetos/*/.hyperframes/
