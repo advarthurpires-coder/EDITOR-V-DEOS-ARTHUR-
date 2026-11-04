@@ -21,6 +21,13 @@ Responder sempre em português.
 | **HyperFrames** | vídeos em HTML + GSAP: vinhetas, legendas animadas, motion graphics, templates rápidos | `hyperframes` no PATH; exemplo em `projetos/teste-hyperframes/` |
 | **Remotion** | vídeos em React: séries com padrão visual fixo, templates parametrizados, dados dinâmicos | `projetos/remotion-base/` (`npx remotion render src/index.ts <Composição> out/x.mp4`) |
 
+## Skills do HyperFrames (instaladas em `.claude/skills/`)
+
+Para qualquer vídeo em HyperFrames, carregar primeiro a skill `/hyperframes`; para a CLI,
+`/hyperframes-cli`; blocos prontos, `/hyperframes-registry`; mídia (voz, música, transcrição,
+recorte de fundo), `/media-use`; converter projeto Remotion, `/remotion-to-hyperframes`.
+Atualizar com: `npx hyperframes skills update`.
+
 ## Estrutura
 
 - `midia/brutos/` — arquivos recebidos (não versionados)
