@@ -405,10 +405,11 @@
           }, "hold4+=0.1");
 
           // 13. Hold
-          tl.addLabel("hold5", "+=0.2");
+          // [Estúdio Arthur] tl.labels não existe no proxy de GSAP do render: calcula o instante equivalente a "+=0.2"
+          const typingStart = tl.duration() + 0.2;
+          tl.addLabel("hold5", typingStart);
 
           // 14. Type correction: "Pythom" → "Python"
-          const typingStart = tl.labels["hold5"];
           const words = ["P", "Py", "Pyt", "Pyth", "Pytho", "Python"];
           words.forEach((word, i) => {
             tl.add(

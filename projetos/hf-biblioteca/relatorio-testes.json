@@ -341,6 +341,21 @@
   "tipo": "component",
   "variaveis": 4
  },
+ "flowchart": {
+  "erro": "warningOwners\":[]}\n\n✗  Render failed\n\n   Render blocked by 1 correctness warning:\n   - sub_timeline_script_failure: A composition script threw before its timeline registered (still unregistered: flowchart) (runtime-error:flowchart TypeError: Cannot read properties of undefined (reading 'hold5')). Fix the error; a composition animated by CSS or rAF rathe…\n   Try --docker for containerized rendering",
+  "ok": false
+ },
+ "focus-blur-resolve": {
+  "brilho_medio": 38.0,
+  "duracao": 4.0,
+  "ficha_demo": false,
+  "movimento": 0.0,
+  "movimento_pico": 0.0,
+  "ok": false,
+  "quadros_analisados": 16,
+  "tipo": "component",
+  "variaveis": 3
+ },
  "grain-overlay": {
   "brilho_medio": 48.6,
   "duracao": 4.0,
