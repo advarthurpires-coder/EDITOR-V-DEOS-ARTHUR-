@@ -70,10 +70,21 @@ def info(path: str) -> dict:
     if v and v.get("avg_frame_rate", "0/0") != "0/0":
         n, m = v["avg_frame_rate"].split("/")
         fps = float(n) / float(m) if float(m) else 0.0
+    largura, altura = (int(v["width"]), int(v["height"])) if v else (0, 0)
+    # celulares gravam "deitado" e marcam rotação; o FFmpeg aplica a rotação ao decodificar (autorotate)
+    rot = 0
+    if v:
+        for sd in v.get("side_data_list", []) or []:
+            if "rotation" in sd:
+                rot = int(float(sd["rotation"]))
+        rot = rot or int(v.get("tags", {}).get("rotate", 0) or 0)
+    if abs(rot) % 180 == 90:
+        largura, altura = altura, largura
     return {
         "duracao": float(d["format"].get("duration", 0) or 0),
-        "largura": int(v["width"]) if v else 0,
-        "altura": int(v["height"]) if v else 0,
+        "largura": largura,
+        "altura": altura,
+        "rotacao": rot,
         "fps": round(fps, 3),
         "tem_video": v is not None,
         "tem_audio": a is not None,
@@ -117,7 +128,7 @@ def cmd_cor(a):
         filtro = f"split[o][g];[g]{filtro}[gg];[o][gg]blend=all_expr='A*(1-{a.intensidade})+B*{a.intensidade}'"
     if a.vinheta:
         filtro += ",vignette=PI/4.5"
-    ff("-i", a.entrada, "-vf", filtro, *VIDEO_OUT, "-c:a", "copy", a.saida)
+    ff("-i", a.entrada, "-map", "0:v:0", "-map", "0:a:0?", "-vf", filtro, *VIDEO_OUT, "-c:a", "copy", a.saida)
 
 # ----------------------------------------------------------------------------- VFX
 
@@ -158,7 +169,7 @@ def filtro_vfx(efeito: str, i: dict, intensidade: float, cor: str) -> str:
 
 def cmd_vfx(a):
     i = info(a.entrada)
-    ff("-i", a.entrada, "-vf", filtro_vfx(a.efeito, i, a.intensidade, a.cor), *VIDEO_OUT, "-c:a", "copy", a.saida)
+    ff("-i", a.entrada, "-map", "0:v:0", "-map", "0:a:0?", "-vf", filtro_vfx(a.efeito, i, a.intensidade, a.cor), *VIDEO_OUT, "-c:a", "copy", a.saida)
 
 # ----------------------------------------------------------------------------- transições
 
@@ -185,7 +196,7 @@ def cmd_transicao(a):
     fc = f"[0:v]{norm}[v0];[1:v]{norm}[v1];[v0][v1]xfade=transition={TRANSICOES[a.tipo]}:duration={a.duracao}:offset={off:.3f}[v]"
     maps = ["-map", "[v]"]
     if ia["tem_audio"] and ib["tem_audio"]:
-        fc += f";[0:a]aresample=48000[a0];[1:a]aresample=48000[a1];[a0][a1]acrossfade=d={a.duracao}[a]"
+        fc += f";[0:a:0]aresample=48000[a0];[1:a:0]aresample=48000[a1];[a0][a1]acrossfade=d={a.duracao}[a]"
         maps += ["-map", "[a]", *AUDIO_OUT]
     ff("-i", a.a, "-i", a.b, "-filter_complex", fc, *maps, *VIDEO_OUT, a.saida)
 
@@ -194,15 +205,26 @@ def cmd_transicao(a):
 FORMATOS = {"9:16": (1080, 1920), "1:1": (1080, 1080), "4:5": (1080, 1350), "16:9": (1920, 1080), "4k": (3840, 2160)}
 
 
+def escala(W: int, H: int, modo: str = "increase", fonte: dict | None = None) -> str:
+    """Redimensiona com Lanczos; se a ampliação passar de 1,5x, aplica nitidez leve (compensa a suavização do upscale)."""
+    f = f"scale={W}:{H}:force_original_aspect_ratio={modo}:flags=lanczos"
+    if fonte and fonte.get("largura") and fonte.get("altura"):
+        fator = max(W / fonte["largura"], H / fonte["altura"]) if modo == "increase" else min(W / fonte["largura"], H / fonte["altura"])
+        if fator > 1.5:
+            f += ",unsharp=5:5:0.6:5:5:0.0"
+    return f
+
+
 def cmd_reframe(a):
     W, H = FORMATOS[a.formato]
+    i = info(a.entrada)
     if a.modo == "crop":
-        vf = f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H}:(iw-{W})*{a.foco_x}:(ih-{H})/2,setsar=1"
-        ff("-i", a.entrada, "-vf", vf, *VIDEO_OUT, "-c:a", "copy", a.saida)
+        vf = f"{escala(W, H, 'increase', i)},crop={W}:{H}:(iw-{W})*{a.foco_x}:(ih-{H})/2,setsar=1"
+        ff("-i", a.entrada, "-map", "0:v:0", "-map", "0:a:0?", "-vf", vf, *VIDEO_OUT, "-c:a", "copy", a.saida)
     else:  # fundo desfocado
         fc = (f"[0:v]split[a][b];[a]scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},gblur=sigma=40,eq=brightness=-0.08[bg];"
-              f"[b]scale={W}:{H}:force_original_aspect_ratio=decrease[fg];[bg][fg]overlay=(W-w)/2:(H-h)/2,setsar=1[v]")
-        maps = ["-map", "[v]"] + (["-map", "0:a?", "-c:a", "copy"])
+              f"[b]{escala(W, H, 'decrease', i)}[fg];[bg][fg]overlay=(W-w)/2:(H-h)/2,setsar=1[v]")
+        maps = ["-map", "[v]"] + (["-map", "0:a:0?", "-c:a", "copy"])
         ff("-i", a.entrada, "-filter_complex", fc, *maps, *VIDEO_OUT, a.saida)
 
 # ----------------------------------------------------------------------------- velocidade / congelar
@@ -220,14 +242,14 @@ def cadeia_atempo(fator: float) -> str:
 def cmd_velocidade(a):
     i = info(a.entrada)
     if a.reverso:
-        args = ["-i", a.entrada, "-vf", "reverse", *VIDEO_OUT]
+        args = ["-i", a.entrada, "-map", "0:v:0", "-map", "0:a:0?", "-vf", "reverse", *VIDEO_OUT]
         args += (["-af", "areverse", *AUDIO_OUT] if i["tem_audio"] else [])
         ff(*args, a.saida)
         return
     vf = f"setpts=PTS/{a.fator}"
     if a.suave and a.fator < 1:
         vf += f",minterpolate=fps={i['fps'] or 30}:mi_mode=mci:mc_mode=aobmc:vsbmc=1"
-    args = ["-i", a.entrada, "-vf", vf, *VIDEO_OUT]
+    args = ["-i", a.entrada, "-map", "0:v:0", "-map", "0:a:0?", "-vf", vf, *VIDEO_OUT]
     args += (["-af", cadeia_atempo(a.fator), *AUDIO_OUT] if i["tem_audio"] and not a.mudo else ["-an"])
     ff(*args, a.saida)
 
@@ -238,9 +260,9 @@ def cmd_congelar(a):
     n = int(round(a.em * fps))
     loops = int(round(a.duracao * fps))
     vf = f"loop=loop={loops}:size=1:start={n},setpts=N/({fps}*TB)"
-    args = ["-i", a.entrada, "-vf", vf, *VIDEO_OUT]
+    args = ["-i", a.entrada, "-map", "0:v:0", "-vf", vf, *VIDEO_OUT]
     if i["tem_audio"]:
-        af = (f"[0:a]atrim=0:{a.em},asetpts=PTS-STARTPTS[a1];[0:a]atrim={a.em},asetpts=PTS-STARTPTS,adelay={int(a.duracao*1000)}:all=1[a2];"
+        af = (f"[0:a:0]atrim=0:{a.em},asetpts=PTS-STARTPTS[a1];[0:a:0]atrim={a.em},asetpts=PTS-STARTPTS,adelay={int(a.duracao*1000)}:all=1[a2];"
               f"[a1][a2]concat=n=2:v=0:a=1[a]")
         args = ["-i", a.entrada, "-filter_complex", f"[0:v]{vf}[v];{af}", "-map", "[v]", "-map", "[a]", *VIDEO_OUT, *AUDIO_OUT]
     ff(*args, a.saida)
@@ -275,14 +297,14 @@ def cmd_audio(a):
         if a.fade_out:
             vf_fade.append(f"fade=t=out:st={max(0, i['duracao'] - a.fade_out):.3f}:d={a.fade_out}")
         vargs = (["-vf", ",".join(vf_fade), *VIDEO_OUT] if (vf_fade and a.fade_video) else ["-c:v", "copy"])
-        ff("-i", a.entrada, "-af", af, *vargs, *AUDIO_OUT, "-ar", "48000", a.saida)
+        ff("-i", a.entrada, "-map", "0:v:0", "-map", "0:a:0", "-af", af, *vargs, *AUDIO_OUT, "-ar", "48000", "-t", f"{i['duracao']:.3f}", a.saida)
     else:
-        ff("-i", a.entrada, "-vn", "-af", af, "-ar", "48000", a.saida)
+        ff("-i", a.entrada, "-map", "0:a:0", "-vn", "-af", af, "-ar", "48000", a.saida)
 
 
 def cmd_ducking(a):
     # voz (do vídeo) controla o volume da música via sidechain
-    fc = (f"[1:a]volume={a.volume_musica},aloop=loop=-1:size=2e9[m];[0:a]asplit=2[voz][sc];"
+    fc = (f"[1:a:0]volume={a.volume_musica},aloop=loop=-1:size=2e9[m];[0:a:0]asplit=2[voz][sc];"
           f"[m][sc]sidechaincompress=threshold=0.03:ratio=8:attack=20:release=400[md];"
           f"[voz][md]amix=inputs=2:duration=first:dropout_transition=2:normalize=0,loudnorm=I={a.lufs}:TP=-1.5:LRA=11[a]")
     ff("-i", a.video, "-i", a.musica, "-filter_complex", fc, "-map", "0:v?", "-map", "[a]", "-c:v", "copy", *AUDIO_OUT, a.saida)
@@ -336,7 +358,7 @@ def cmd_chroma(a):
     fc = (f"[1:v]scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H}[bg];"
           f"[0:v]chromakey={a.cor}:{a.similaridade}:{a.suavidade}[fg];[bg][fg]overlay=shortest=1[v]")
     extra = ["-loop", "1"] if a.fundo.lower().endswith((".png", ".jpg", ".jpeg", ".webp")) else []
-    ff("-i", a.entrada, *extra, "-i", a.fundo, "-filter_complex", fc, "-map", "[v]", "-map", "0:a?", *VIDEO_OUT, "-c:a", "copy", "-shortest", a.saida)
+    ff("-i", a.entrada, *extra, "-i", a.fundo, "-filter_complex", fc, "-map", "[v]", "-map", "0:a:0?", *VIDEO_OUT, "-c:a", "copy", "-shortest", a.saida)
 
 
 def cmd_split(a):
@@ -347,7 +369,7 @@ def cmd_split(a):
     else:
         W = ia["largura"]
         fc = f"[0:v]scale={W}:-2[x];[1:v]scale={W}:-2[y];[x][y]vstack=inputs=2,setsar=1[v]"
-    ff("-i", a.a, "-i", a.b, "-filter_complex", fc, "-map", "[v]", "-map", "0:a?", *VIDEO_OUT, *AUDIO_OUT, "-shortest", a.saida)
+    ff("-i", a.a, "-i", a.b, "-filter_complex", fc, "-map", "[v]", "-map", "0:a:0?", *VIDEO_OUT, *AUDIO_OUT, "-shortest", a.saida)
 
 
 def cmd_pip(a):
@@ -357,7 +379,7 @@ def cmd_pip(a):
     i = info(a.principal)
     pw = int(i["largura"] * a.escala) // 2 * 2
     fc = f"[1:v]scale={pw}:-2{borda}[p];[0:v][p]overlay={pos}:shortest=1[v]"
-    ff("-i", a.principal, "-i", a.secundario, "-filter_complex", fc, "-map", "[v]", "-map", "0:a?", *VIDEO_OUT, "-c:a", "copy", a.saida)
+    ff("-i", a.principal, "-i", a.secundario, "-filter_complex", fc, "-map", "[v]", "-map", "0:a:0?", *VIDEO_OUT, "-c:a", "copy", a.saida)
 
 
 def cmd_foto(a):
@@ -423,7 +445,7 @@ def cmd_transcrever(a):
     base = Path(a.saida or Path(a.entrada).with_suffix(""))
     base.parent.mkdir(parents=True, exist_ok=True)
     wav = base.with_suffix(".16k.wav")
-    ff("-i", a.entrada, "-vn", "-ar", "16000", "-ac", "1", "-c:a", "pcm_s16le", str(wav))
+    ff("-i", a.entrada, "-map", "0:a:0", "-vn", "-ar", "16000", "-ac", "1", "-c:a", "pcm_s16le", str(wav))
     cmd = [cli, "-m", modelo, "-f", wav, "-l", a.idioma, "-osrt", "-ovtt", "-otxt", "-ojf", "-of", base, "-t", str(os.cpu_count() or 4)]
     if a.prompt:
         cmd += ["--prompt", a.prompt]
@@ -447,7 +469,7 @@ def cmd_legendar(a):
     srt = Path(a.srt).resolve()
     esc = str(srt).replace("\\", "/").replace(":", "\\:").replace("'", "\\'")
     vf = f"subtitles='{esc}':force_style='{ESTILOS_LEGENDA[a.estilo]}'"
-    ff("-i", a.entrada, "-vf", vf, *VIDEO_OUT, "-c:a", "copy", a.saida)
+    ff("-i", a.entrada, "-map", "0:v:0", "-map", "0:a:0?", "-vf", vf, *VIDEO_OUT, "-c:a", "copy", a.saida)
 
 # ----------------------------------------------------------------------------- exportação
 
@@ -463,29 +485,32 @@ PLATAFORMAS = {
 def cmd_exportar(a):
     W, H, fps, maxbr, lufs = PLATAFORMAS[a.plataforma]
     i = info(a.entrada)
+    # mantém a cadência de origem quando é padrão e não excede o alvo (24→30 repete quadros e trepida)
+    if i["fps"] and any(abs(i["fps"] - p) < 0.02 for p in (23.976, 24, 25, 29.97, 30)) and i["fps"] <= fps + 0.01:
+        fps = i["fps"]
     if a.modo == "blur" and abs(i["largura"] / max(1, i["altura"]) - W / H) > 0.02:
         vf = None
         fc = (f"[0:v]split[a][b];[a]scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},gblur=sigma=40,eq=brightness=-0.08[bg];"
-              f"[b]scale={W}:{H}:force_original_aspect_ratio=decrease[fg];[bg][fg]overlay=(W-w)/2:(H-h)/2,fps={fps},setsar=1[v]")
+              f"[b]{escala(W, H, 'decrease', i)}[fg];[bg][fg]overlay=(W-w)/2:(H-h)/2,fps={fps},setsar=1[v]")
     else:
         fc = None
-        vf = f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},fps={fps},setsar=1"
+        vf = f"{escala(W, H, 'increase', i)},crop={W}:{H},fps={fps},setsar=1"
     crf = "20" if a.plataforma == "whatsapp" else "18"
     venc = ["-c:v", "libx264", "-preset", "slow", "-crf", crf, "-maxrate", maxbr, "-bufsize", maxbr, "-pix_fmt", "yuv420p",
             "-profile:v", "high", "-movflags", "+faststart"]
     args = ["-i", a.entrada]
     if fc:
-        args += ["-filter_complex", fc, "-map", "[v]", "-map", "0:a?"]
+        args += ["-filter_complex", fc, "-map", "[v]", "-map", "0:a:0?"]
     else:
-        args += ["-vf", vf]
+        args += ["-vf", vf, "-map", "0:v:0", "-map", "0:a:0?"]
     if i["tem_audio"]:
         args += ["-af", f"loudnorm=I={lufs}:TP=-1.5:LRA=11", *AUDIO_OUT, "-ar", "48000"]
-    ff(*args, *venc, a.saida)
-    print(f"Exportado para {a.plataforma}: {W}x{H} @{fps}fps, {lufs} LUFS → {a.saida}")
+    ff(*args, *venc, "-t", f"{i['duracao']:.3f}", a.saida)
+    print(f"Exportado para {a.plataforma}: {W}x{H} @{fps:g}fps, {lufs} LUFS → {a.saida}")
 
 
 def cmd_cortar(a):
-    ff("-i", a.entrada, "-ss", str(a.inicio), "-to", str(a.fim), *VIDEO_OUT, *AUDIO_OUT, a.saida)
+    ff("-i", a.entrada, "-map", "0:v:0", "-map", "0:a:0?", "-ss", str(a.inicio), "-to", str(a.fim), *VIDEO_OUT, *AUDIO_OUT, a.saida)
 
 
 def cmd_juntar(a):
@@ -497,7 +522,7 @@ def cmd_juntar(a):
     for k in range(n):
         fc += f"[{k}:v]scale={W}:{H}:force_original_aspect_ratio=decrease,pad={W}:{H}:(ow-iw)/2:(oh-ih)/2,setsar=1,fps={fps},format=yuv420p[v{k}];"
         if todos_audio:
-            fc += f"[{k}:a]aresample=48000[a{k}];"
+            fc += f"[{k}:a:0]aresample=48000[a{k}];"
     fc += "".join(f"[v{k}]" + (f"[a{k}]" if todos_audio else "") for k in range(n))
     fc += f"concat=n={n}:v=1:a={1 if todos_audio else 0}[v]" + ("[a]" if todos_audio else "")
     args = []

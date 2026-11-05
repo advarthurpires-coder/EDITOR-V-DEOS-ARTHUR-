@@ -37,3 +37,21 @@ Isto é a memória de longo prazo do editor: leia antes de editar, atualize depo
 - ArthurShowcase: o título "EXTRAORDINÁRIO." (fontSize 100) passava da borda do cartão de vidro em 1080 px → 86.
   Lição: textos longos em caixa-alta e peso 900 pedem conferência de quadro (`remotion still`) antes do render final.
 - O processo da sessão pode reiniciar no meio de tarefas longas: fazer commit cedo e rodar baterias longas em segundo plano.
+
+## 2026-11-05 — Primeiro vídeo real (iPhone, `midia/brutos/video-01.MOV`)
+- **Arquivo de iPhone**: 480×360 com `rotation=-90` (exibe 360×480 em pé), 24 fps, **duas faixas de áudio**
+  (AAC estéreo + faixa espacial de 4 canais em codec que o FFmpeg não decodifica) e 5 faixas de dados.
+  - `info()` ignorava a rotação → corrigido (lê `side_data_list.rotation`/tag `rotate` e troca largura/altura).
+  - Sem `-map`, o FFmpeg escolhe a faixa de áudio com **mais canais** (a espacial) → todos os comandos agora mapeiam
+    `0:v:0` e `0:a:0` explicitamente; filtros usam `[0:a:0]`.
+- **Upscale 4×** (480 → 1920): `estudio.py` passou a usar Lanczos e, acima de 1,5×, `unsharp` leve (função `escala`).
+  Mesmo assim fica suave: pedir ao usuário o **arquivo original** (enviar como documento/arquivo, não como vídeo
+  comprimido do app) — a fonte recebida já veio em 360p.
+- **Exportação**: converter 24→30 fps repete quadros de forma irregular (trepidação) → `exportar` mantém o fps de origem
+  quando é padrão (23,976/24/25/29,97/30) e ≤ alvo. `loudnorm` + AAC alongavam o áudio ~0,1 s → saída limitada com `-t`
+  à duração da fonte (comandos `audio` e `exportar`).
+- **Pipeline usado**: `cor --preset natural` → `audio --ruido --voz-eq --compressor --lufs -14 --fade-in 0.05 --fade-out 0.2`
+  → `exportar --plataforma reels` (crop central 3:4→9:16). Resultado: 1080×1920, 24 fps, 6,08 s, −14,3 LUFS, pico −1,5 dBFS.
+- **Sem transcrição** (huggingface.co e alphacephei.com bloqueados) → legendas, gancho e tarja aguardam o texto falado
+  e a finalidade do vídeo. Não inventar texto de gancho/legenda nem identificar a pessoa sem confirmação.
+- Pendente: incluir no `testar-estudio.sh` um caso com rotação + segunda faixa de áudio (regressão destes bugs).
