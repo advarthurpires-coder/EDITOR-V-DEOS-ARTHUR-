@@ -220,6 +220,17 @@
   "tipo": "component",
   "variaveis": 3
  },
+ "chromatic-radial-split": {
+  "brilho_medio": 72.0,
+  "duracao": 4.0,
+  "ficha_demo": true,
+  "movimento": 3.31,
+  "movimento_pico": 11.28,
+  "ok": true,
+  "quadros_analisados": 16,
+  "tipo": "block",
+  "variaveis": 0
+ },
  "grain-overlay": {
   "brilho_medio": 48.6,
   "duracao": 4.0,
