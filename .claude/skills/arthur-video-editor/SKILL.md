@@ -25,6 +25,7 @@ Ao receber QUALQUER tarefa audiovisual, aplique esta skill. Leia o `CLAUDE.md` d
 ## Ferramentas — escolha por especialidade
 
 - Remotion em `projetos/remotion-base/`: composições React, motions parametrizados, overlays e séries visuais. O exemplo `ArthurShowcase` demonstra componentes executáveis sem arquivos externos.
+- Reels oficial (`ReelsArthur`, ver `projetos/reels-arthur/README.md`): reutilize `src/reels/fx.tsx` (glitch, light leak, partículas, grão, motion blur real, kinetic type, karaokê, gravity drop, chart grow, speed ramp), `src/reels/comum.tsx` (transições de capítulo) e o pipeline `projetos/reels-arthur/scripts/build.sh` (trilha/SFX sintetizados, grading FFmpeg, −14 LUFS, export Instagram).
 - HyperFrames: vídeos HTML/GSAP, cenas, interfaces e animação. Use CLI instalado e consulte `projetos/teste-hyperframes/`.
 - FFmpeg: cortes, redimensionamento, filtros, cor, áudio, normalização, mixagem e export. Confira `scripts/efeitos-ffmpeg.sh`.
 - whisper.cpp: transcrição PT-BR para legendas; exporte SRT/VTT e confira timing. Veja `CLAUDE.md`.

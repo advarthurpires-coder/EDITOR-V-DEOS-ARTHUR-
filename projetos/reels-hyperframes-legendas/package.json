@@ -1,0 +1,9 @@
+{
+  "name": "reels-hyperframes-legendas",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "npx --yes hyperframes@0.9.13 check",
+    "render": "npx --yes hyperframes@0.9.13 render . --format mov -o ../remotion-base/public/reels/hf-legendas.mov"
+  }
+}

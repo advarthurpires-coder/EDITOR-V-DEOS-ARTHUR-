@@ -10,3 +10,9 @@ midia/saida/
 *.log
 .DS_Store
 projetos/*/.hyperframes/
+# Mídia gerada pelo pipeline do Reels (recriada por projetos/reels-arthur/scripts/build.sh)
+projetos/remotion-base/public/reels/*.wav
+projetos/remotion-base/public/reels/*.mp4
+projetos/remotion-base/public/reels/*.mov
+projetos/remotion-base/public/reels/grain/
+__pycache__/

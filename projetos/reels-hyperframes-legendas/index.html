@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="pt-BR" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <!-- Capítulo 04 do Reels oficial: legendas e tipografia cinética em HTML + GSAP.
+         Renderizado com transparência (MOV ProRes 4444) e composto no Remotion. -->
+    <script src="vendor/gsap.min.js"></script>
+    <style>
+      :root {
+        --ouro: #d4af61;
+        --ouro-claro: #f3dc9b;
+        --branco: #f5f2ea;
+        --preto: #04060a;
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: transparent; }
+      #root { position: relative; width: 1080px; height: 1920px; font-family: Montserrat, sans-serif; color: var(--branco); }
+      .grupo { position: absolute; left: 0; width: 1080px; text-align: center; overflow: visible; }
+      .w { display: inline-block; font-weight: 900; font-size: 96px; letter-spacing: -3px; margin: 0 12px; line-height: 1.05; }
+      .caixa { color: var(--preto); background: var(--ouro); padding: 0 26px; border-radius: 22px; box-shadow: 0 0 50px rgba(212, 175, 97, 0.55); }
+      #g-type { top: 820px; font-family: "JetBrains Mono", monospace; font-size: 50px; font-weight: 700; color: var(--ouro-claro); }
+      #g-type .lbl { display: block; font-size: 30px; letter-spacing: 8px; color: #8d97a8; margin-bottom: 34px; font-weight: 400; }
+      #type-caret { display: inline-block; width: 26px; height: 58px; background: var(--ouro-claro); vertical-align: -8px; margin-left: 6px; }
+      #g-enfase { top: 700px; }
+      #enfase-txt { display: inline-block; font-weight: 900; font-size: 180px; letter-spacing: -5px;
+        background: linear-gradient(100deg, #8c6a2c 0%, #d4af61 30%, #f3dc9b 50%, #d4af61 70%, #8c6a2c 100%);
+        background-size: 200% 100%; -webkit-background-clip: text; background-clip: text; color: transparent; }
+      #enfase-sub { display: block; margin-top: 30px; font-size: 40px; font-weight: 600; letter-spacing: 10px; color: var(--branco); }
+      #g-estilo { top: 780px; }
+      .b { display: inline-block; font-weight: 900; font-size: 96px; margin: 0 12px; }
+      .karaoke-bar { position: absolute; left: 190px; width: 700px; height: 10px; top: 1080px; border-radius: 10px; background: rgba(255, 255, 255, 0.12); overflow: hidden; }
+      #karaoke-fill { width: 700px; height: 10px; background: linear-gradient(90deg, #8c6a2c, #f3dc9b); transform-origin: 0 50%; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="8" data-width="1080" data-height="1920">
+      <!-- 1) Palavra a palavra (pop-up) com destaque -->
+      <div id="g-pop" class="grupo clip" data-start="0.2" data-duration="2.3" data-track-index="1" style="top: 700px"><div id="g-pop-in">
+        <div><span class="w" id="w1">CADA</span><span class="w caixa" id="w2">PALAVRA</span></div>
+        <div><span class="w" id="w3">NO</span><span class="w" id="w4">TEMPO</span></div>
+        <div><span class="w" id="w5" style="color: var(--ouro-claro)">CERTO.</span></div>
+      </div></div>
+      <!-- 2) Typewriter -->
+      <div id="g-type" class="grupo clip" data-start="2.6" data-duration="2.4" data-track-index="2"><div id="g-type-in">
+        <span class="lbl">TYPEWRITER · SRT</span>
+        <span id="type-txt"></span><span id="type-caret"></span>
+      </div></div>
+      <!-- 3) Texto mascarado + gradiente dourado -->
+      <div id="g-enfase" class="grupo clip" data-start="5.0" data-duration="1.5" data-track-index="3"><div id="g-enfase-in">
+        <span id="enfase-txt">ÊNFASE</span>
+        <span id="enfase-sub">MASKED REVEAL</span>
+      </div></div>
+      <!-- 4) Bounce + barra de progresso karaokê -->
+      <div id="g-estilo" class="grupo clip" data-start="6.5" data-duration="1.5" data-track-index="4"><div id="g-estilo-in">
+        <span class="b" id="b1">COM</span><span class="b caixa" id="b2">ESTILO</span>
+        <div class="karaoke-bar"><div id="karaoke-fill"></div></div>
+      </div></div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      // 1) pop-up palavra a palavra, sincronizado com os "pops" da trilha (0.4 / 0.9 / 1.4 s)
+      const pops = [["#w1", 0.4], ["#w2", 0.9], ["#w3", 1.4], ["#w4", 1.6], ["#w5", 1.9]];
+      pops.forEach(([id, t]) => {
+        tl.fromTo(id, { opacity: 0, scale: 2.2, y: 40, filter: "blur(10px)" }, { opacity: 1, scale: 1, y: 0, filter: "blur(0px)", duration: 0.28, ease: "back.out(2.2)" }, t);
+      });
+      tl.to("#w2", { scale: 1.08, duration: 0.18, yoyo: true, repeat: 1, ease: "power2.inOut" }, 2.0);
+      tl.to("#g-pop-in", { opacity: 0, y: -60, duration: 0.18, ease: "power2.in" }, 2.3);
+
+      // 2) typewriter (2.9 → 4.1 s, alinhado ao som de digitação)
+      const frase = "legenda.srt → sincronizada";
+      const tipo = { n: 0 };
+      tl.fromTo("#g-type .lbl", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, 2.6);
+      tl.fromTo(tipo, { n: 0 }, {
+        n: frase.length, duration: 1.2, ease: "none",
+        onUpdate: () => { document.getElementById("type-txt").textContent = frase.slice(0, Math.round(tipo.n)); },
+      }, 2.9);
+      [3.0, 3.5, 4.2, 4.6].forEach((t, i) => tl.set("#type-caret", { opacity: i % 2 ? 1 : 0.15 }, t));
+      tl.to("#g-type-in", { opacity: 0, duration: 0.15, ease: "power2.in" }, 4.85);
+
+      // 3) masked reveal: o texto sobe por trás de uma máscara + brilho percorrendo o gradiente
+      tl.fromTo("#enfase-txt", { clipPath: "inset(100% 0 0 0)", y: 120, scale: 1.25 }, { clipPath: "inset(0% 0 0 0)", y: 0, scale: 1, duration: 0.32, ease: "expo.out" }, 5.15);
+      tl.fromTo("#enfase-txt", { backgroundPosition: "200% 0" }, { backgroundPosition: "0% 0", duration: 1.2, ease: "power1.inOut" }, 5.2);
+      tl.fromTo("#enfase-sub", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 5.4);
+      tl.to("#g-enfase-in", { opacity: 0, scale: 1.4, duration: 0.15, ease: "power2.in" }, 6.35);
+
+      // 4) bounce + progresso
+      tl.fromTo("#b1", { opacity: 0, y: -260 }, { opacity: 1, y: 0, duration: 0.45, ease: "bounce.out" }, 6.5);
+      tl.fromTo("#b2", { opacity: 0, y: -320, rotation: -8 }, { opacity: 1, y: 0, rotation: 0, duration: 0.5, ease: "bounce.out" }, 6.6);
+      tl.fromTo("#karaoke-fill", { scaleX: 0 }, { scaleX: 1, duration: 1.2, ease: "none" }, 6.7);
+      tl.to("#g-estilo-in", { opacity: 0, duration: 0.12, ease: "power2.in" }, 7.86);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

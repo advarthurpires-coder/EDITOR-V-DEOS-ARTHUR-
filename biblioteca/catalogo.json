@@ -8,15 +8,15 @@
     "motores": [
       "remotion"
     ],
-    "status": "integracao_nativa",
+    "status": "exemplo_executavel",
     "parametros": [
       "duracaoFrames",
       "easing",
       "direcao",
       "intensidade"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível por biblioteca/ferramenta externa; exige implementação e teste no pipeline."
+    "arquivo_exemplo": "projetos/remotion-base/src/reels/cenas/Final.tsx",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "transicoes.smooth-zoom-in",
@@ -27,15 +27,15 @@
     "motores": [
       "remotion"
     ],
-    "status": "integracao_nativa",
+    "status": "exemplo_executavel",
     "parametros": [
       "duracaoFrames",
       "easing",
       "direcao",
       "intensidade"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível por biblioteca/ferramenta externa; exige implementação e teste no pipeline."
+    "arquivo_exemplo": "projetos/remotion-base/src/reels/comum.tsx",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "transicoes.smooth-zoom-out",
@@ -65,15 +65,15 @@
     "motores": [
       "remotion"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "duracaoFrames",
       "easing",
       "direcao",
       "intensidade"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "projetos/remotion-base/src/reels/cenas/CapitulosA.tsx",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "transicoes.whip-pan",
@@ -84,15 +84,15 @@
     "motores": [
       "remotion"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "duracaoFrames",
       "easing",
       "direcao",
       "intensidade"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "projetos/remotion-base/src/reels/comum.tsx",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "transicoes.motion-blur-transition",
@@ -103,15 +103,15 @@
     "motores": [
       "remotion"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "duracaoFrames",
       "easing",
       "direcao",
       "intensidade"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "projetos/remotion-base/src/reels/fx.tsx",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "transicoes.speed-ramp-transition",
@@ -217,15 +217,15 @@
     "motores": [
       "remotion"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "duracaoFrames",
       "easing",
       "direcao",
       "intensidade"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "projetos/remotion-base/src/reels/comum.tsx",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "transicoes.film-burn",
@@ -255,15 +255,15 @@
     "motores": [
       "remotion"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "duracaoFrames",
       "easing",
       "direcao",
       "intensidade"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "projetos/remotion-base/src/reels/comum.tsx",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "transicoes.rgb-split",
@@ -274,15 +274,15 @@
     "motores": [
       "remotion"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "duracaoFrames",
       "easing",
       "direcao",
       "intensidade"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "projetos/remotion-base/src/reels/fx.tsx",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "transicoes.flash-cut",
@@ -293,15 +293,15 @@
     "motores": [
       "remotion"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "duracaoFrames",
       "easing",
       "direcao",
       "intensidade"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "projetos/remotion-base/src/reels/comum.tsx",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "transicoes.spin-transition",
@@ -578,15 +578,15 @@
     "motores": [
       "remotion"
     ],
-    "status": "integracao_nativa",
+    "status": "exemplo_executavel",
     "parametros": [
       "duracaoFrames",
       "easing",
       "direcao",
       "intensidade"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível por biblioteca/ferramenta externa; exige implementação e teste no pipeline."
+    "arquivo_exemplo": "projetos/remotion-base/src/reels/comum.tsx",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "transicoes.ripple-transition",
@@ -616,15 +616,15 @@
     "motores": [
       "remotion"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "duracaoFrames",
       "zoom",
       "perspectiva",
       "easing"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "projetos/remotion-base/src/reels/cenas/CapitulosA.tsx",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "camera_3d.dolly-zoom",
@@ -635,15 +635,15 @@
     "motores": [
       "remotion"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "duracaoFrames",
       "zoom",
       "perspectiva",
       "easing"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "projetos/remotion-base/src/reels/cenas/CapitulosA.tsx",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "camera_3d.vertigo",
@@ -654,15 +654,15 @@
     "motores": [
       "remotion"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "duracaoFrames",
       "zoom",
       "perspectiva",
       "easing"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "projetos/remotion-base/src/reels/cenas/CapitulosA.tsx",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "camera_3d.push-in",
@@ -806,15 +806,15 @@
     "motores": [
       "remotion"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "duracaoFrames",
       "zoom",
       "perspectiva",
       "easing"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "projetos/remotion-base/src/reels/cenas/CapitulosA.tsx",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "camera_3d.multi-layer-parallax",
@@ -825,15 +825,15 @@
     "motores": [
       "remotion"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "duracaoFrames",
       "zoom",
       "perspectiva",
       "easing"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "projetos/remotion-base/src/reels/cenas/CapitulosA.tsx",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "camera_3d.camera-fly-through",
@@ -1091,15 +1091,15 @@
     "motores": [
       "remotion"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "duracaoFrames",
       "zoom",
       "perspectiva",
       "easing"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "projetos/remotion-base/src/reels/CenaFonte.tsx",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "camera_3d.3d-perspective-shift",
@@ -1186,15 +1186,15 @@
     "motores": [
       "remotion"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "duracaoFrames",
       "easing",
       "escala",
       "cor"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "projetos/remotion-base/src/reels/fx.tsx",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "motion_graphics.overshoot",
@@ -1224,15 +1224,15 @@
     "motores": [
       "remotion"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "duracaoFrames",
       "easing",
       "escala",
       "cor"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "projetos/remotion-base/src/reels/fx.tsx",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "motion_graphics.morphing-shapes",
@@ -1262,15 +1262,15 @@
     "motores": [
       "remotion"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "duracaoFrames",
       "easing",
       "escala",
       "cor"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "projetos/remotion-base/src/reels/fx.tsx",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "motion_graphics.floating-elements",
@@ -1300,15 +1300,15 @@
     "motores": [
       "remotion"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "duracaoFrames",
       "easing",
       "escala",
       "cor"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "projetos/remotion-base/src/reels/cenas/CapitulosA.tsx",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "motion_graphics.liquid-motion",
@@ -1681,7 +1681,7 @@
       "remotion",
       "whisper"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "texto",
       "fonte",
@@ -1689,8 +1689,8 @@
       "posicao",
       "duracaoFrames"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "projetos/remotion-base/src/reels/fx.tsx",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "legendas_tipografia.word-by-word-captions",
@@ -1702,7 +1702,7 @@
       "remotion",
       "whisper"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "texto",
       "fonte",
@@ -1710,8 +1710,8 @@
       "posicao",
       "duracaoFrames"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "projetos/reels-hyperframes-legendas/index.html",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "legendas_tipografia.karaoke-captions",
@@ -1723,7 +1723,7 @@
       "remotion",
       "whisper"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "texto",
       "fonte",
@@ -1731,8 +1731,8 @@
       "posicao",
       "duracaoFrames"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "projetos/remotion-base/src/reels/fx.tsx",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "legendas_tipografia.giant-captions",
@@ -1765,7 +1765,7 @@
       "remotion",
       "whisper"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "texto",
       "fonte",
@@ -1773,8 +1773,8 @@
       "posicao",
       "duracaoFrames"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "projetos/reels-hyperframes-legendas/index.html",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "legendas_tipografia.subtitle-bounce",
@@ -1807,7 +1807,7 @@
       "remotion",
       "whisper"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "texto",
       "fonte",
@@ -1815,8 +1815,8 @@
       "posicao",
       "duracaoFrames"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "projetos/reels-hyperframes-legendas/index.html",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "legendas_tipografia.highlight-words",
@@ -1912,7 +1912,7 @@
       "remotion",
       "whisper"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "texto",
       "fonte",
@@ -1920,8 +1920,8 @@
       "posicao",
       "duracaoFrames"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "projetos/reels-hyperframes-legendas/index.html",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "legendas_tipografia.3d-typography",
@@ -2080,7 +2080,7 @@
       "remotion",
       "whisper"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "texto",
       "fonte",
@@ -2088,8 +2088,8 @@
       "posicao",
       "duracaoFrames"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "projetos/remotion-base/src/reels/cenas/Abertura.tsx",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "legendas_tipografia.subtitle-progress",
@@ -2143,7 +2143,7 @@
       "remotion",
       "whisper"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "texto",
       "fonte",
@@ -2151,8 +2151,8 @@
       "posicao",
       "duracaoFrames"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "projetos/remotion-base/src/reels/fx.tsx",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "legendas_tipografia.lower-thirds",
@@ -2185,7 +2185,7 @@
       "remotion",
       "whisper"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "texto",
       "fonte",
@@ -2193,8 +2193,8 @@
       "posicao",
       "duracaoFrames"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "projetos/remotion-base/src/reels/cenas/Final.tsx",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "legendas_tipografia.bounce-captions",
@@ -2206,7 +2206,7 @@
       "remotion",
       "whisper"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "texto",
       "fonte",
@@ -2214,8 +2214,8 @@
       "posicao",
       "duracaoFrames"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "projetos/reels-hyperframes-legendas/index.html",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "legendas_tipografia.caption-follow-speaker",
@@ -2461,14 +2461,14 @@
       "ffmpeg",
       "remotion"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "intensidade",
       "mistura",
       "duracaoFrames"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "projetos/remotion-base/src/reels/cenas/CapitulosA.tsx",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "vfx.bloom",
@@ -2518,14 +2518,14 @@
       "ffmpeg",
       "remotion"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "intensidade",
       "mistura",
       "duracaoFrames"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "projetos/remotion-base/src/reels/fx.tsx",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "vfx.vhs",
@@ -2537,14 +2537,14 @@
       "ffmpeg",
       "remotion"
     ],
-    "status": "integracao_nativa",
+    "status": "exemplo_executavel",
     "parametros": [
       "intensidade",
       "mistura",
       "duracaoFrames"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível por biblioteca/ferramenta externa; exige implementação e teste no pipeline."
+    "arquivo_exemplo": "scripts/efeitos-ffmpeg.sh",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "vfx.analog-noise",
@@ -2575,14 +2575,14 @@
       "ffmpeg",
       "remotion"
     ],
-    "status": "integracao_nativa",
+    "status": "exemplo_executavel",
     "parametros": [
       "intensidade",
       "mistura",
       "duracaoFrames"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível por biblioteca/ferramenta externa; exige implementação e teste no pipeline."
+    "arquivo_exemplo": "projetos/remotion-base/src/reels/fx.tsx",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "vfx.retro-camcorder",
@@ -2822,14 +2822,14 @@
       "ffmpeg",
       "remotion"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "intensidade",
       "mistura",
       "duracaoFrames"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "projetos/remotion-base/src/reels/cenas/CapitulosA.tsx",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "vfx.digital-distortion",
@@ -2841,14 +2841,14 @@
       "ffmpeg",
       "remotion"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "intensidade",
       "mistura",
       "duracaoFrames"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "projetos/remotion-base/src/reels/fx.tsx",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "estilos.cinematic-editing",
@@ -2859,15 +2859,15 @@
     "motores": [
       "orquestracao"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "ritmo",
       "paleta",
       "tipografia",
       "trilha"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "projetos/remotion-base/src/reels/cenas/CapitulosB.tsx",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "estilos.documentary-style",
@@ -2954,15 +2954,15 @@
     "motores": [
       "orquestracao"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "ritmo",
       "paleta",
       "tipografia",
       "trilha"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "projetos/remotion-base/src/reels/cenas/CapitulosB.tsx",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "estilos.dark-cinematic",
@@ -3011,15 +3011,15 @@
     "motores": [
       "orquestracao"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "ritmo",
       "paleta",
       "tipografia",
       "trilha"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "projetos/remotion-base/src/reels/cenas/CapitulosB.tsx",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "estilos.epic-adventure",
@@ -3049,15 +3049,15 @@
     "motores": [
       "orquestracao"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "ritmo",
       "paleta",
       "tipografia",
       "trilha"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "projetos/remotion-base/src/reels/cenas/CapitulosB.tsx",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "estilos.podcast-highlights",
@@ -3413,15 +3413,15 @@
       "hyperframes",
       "remotion"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "posicao",
       "escala",
       "layout",
       "duracaoFrames"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "projetos/remotion-base/src/reels/cenas/CapitulosB.tsx",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "interfaces_mockups.app-interface-animation",
@@ -3553,15 +3553,15 @@
       "hyperframes",
       "remotion"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "posicao",
       "escala",
       "layout",
       "duracaoFrames"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "projetos/remotion-base/src/reels/cenas/CapitulosB.tsx",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "interfaces_mockups.prompt-bar",
@@ -3593,15 +3593,15 @@
       "hyperframes",
       "remotion"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "posicao",
       "escala",
       "layout",
       "duracaoFrames"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "projetos/remotion-base/src/reels/cenas/CapitulosC.tsx",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "interfaces_mockups.drag-and-drop-file",
@@ -3633,15 +3633,15 @@
       "hyperframes",
       "remotion"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "posicao",
       "escala",
       "layout",
       "duracaoFrames"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "projetos/remotion-base/src/reels/cenas/CapitulosC.tsx",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "interfaces_mockups.storyboard-animation",
@@ -3873,15 +3873,15 @@
       "hyperframes",
       "remotion"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "posicao",
       "escala",
       "layout",
       "duracaoFrames"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "projetos/remotion-base/src/reels/cenas/CapitulosB.tsx",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "interfaces_mockups.feed-of-reels",
@@ -4098,14 +4098,14 @@
     "motores": [
       "ffmpeg"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "pontoEntrada",
       "pontoSaida",
       "duracaoFrames"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "projetos/remotion-base/src/reels/cenas/CapitulosB.tsx",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "montagem.montage-sequence",
@@ -4116,14 +4116,14 @@
     "motores": [
       "ffmpeg"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "pontoEntrada",
       "pontoSaida",
       "duracaoFrames"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "projetos/remotion-base/src/reels/cenas/Final.tsx",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "montagem.speed-ramp",
@@ -4134,14 +4134,14 @@
     "motores": [
       "ffmpeg"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "pontoEntrada",
       "pontoSaida",
       "duracaoFrames"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "projetos/remotion-base/src/reels/cenas/CapitulosB.tsx",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "montagem.slow-motion",
@@ -4314,14 +4314,14 @@
     "motores": [
       "ffmpeg"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "pontoEntrada",
       "pontoSaida",
       "duracaoFrames"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "projetos/remotion-base/src/reels/fx.tsx",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "montagem.match-on-motion",
@@ -4386,14 +4386,14 @@
     "motores": [
       "ffmpeg"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "pontoEntrada",
       "pontoSaida",
       "duracaoFrames"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "projetos/remotion-base/src/reels/cenas/CapitulosB.tsx",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "montagem.paper-cut",
@@ -4441,15 +4441,15 @@
     "motores": [
       "ffmpeg"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "contraste",
       "saturacao",
       "temperatura",
       "intensidade"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "scripts/efeitos-ffmpeg.sh",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "color_grading.dark-moody",
@@ -4517,15 +4517,15 @@
     "motores": [
       "ffmpeg"
     ],
-    "status": "integracao_nativa",
+    "status": "exemplo_executavel",
     "parametros": [
       "contraste",
       "saturacao",
       "temperatura",
       "intensidade"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível por biblioteca/ferramenta externa; exige implementação e teste no pipeline."
+    "arquivo_exemplo": "scripts/efeitos-ffmpeg.sh",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "color_grading.high-contrast",
@@ -4536,15 +4536,15 @@
     "motores": [
       "ffmpeg"
     ],
-    "status": "integracao_nativa",
+    "status": "exemplo_executavel",
     "parametros": [
       "contraste",
       "saturacao",
       "temperatura",
       "intensidade"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível por biblioteca/ferramenta externa; exige implementação e teste no pipeline."
+    "arquivo_exemplo": "scripts/efeitos-ffmpeg.sh",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "color_grading.matte-film-look",
@@ -4802,15 +4802,15 @@
     "motores": [
       "ffmpeg"
     ],
-    "status": "integracao_nativa",
+    "status": "exemplo_executavel",
     "parametros": [
       "contraste",
       "saturacao",
       "temperatura",
       "intensidade"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível por biblioteca/ferramenta externa; exige implementação e teste no pipeline."
+    "arquivo_exemplo": "scripts/efeitos-ffmpeg.sh",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "color_grading.highlight-roll-off",
@@ -4897,14 +4897,14 @@
     "motores": [
       "ffmpeg"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "ganhoDB",
       "sincronizacao",
       "duracaoMs"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "projetos/reels-arthur/scripts/gerar_trilha.py",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "efeitos_sonoros.cinematic-impact",
@@ -4915,14 +4915,14 @@
     "motores": [
       "ffmpeg"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "ganhoDB",
       "sincronizacao",
       "duracaoMs"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "projetos/reels-arthur/scripts/gerar_trilha.py",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "efeitos_sonoros.bass-drop",
@@ -4951,14 +4951,14 @@
     "motores": [
       "ffmpeg"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "ganhoDB",
       "sincronizacao",
       "duracaoMs"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "projetos/reels-arthur/scripts/gerar_trilha.py",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "efeitos_sonoros.riser",
@@ -4969,14 +4969,14 @@
     "motores": [
       "ffmpeg"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "ganhoDB",
       "sincronizacao",
       "duracaoMs"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "projetos/reels-arthur/scripts/gerar_trilha.py",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "efeitos_sonoros.reverse-riser",
@@ -4987,14 +4987,14 @@
     "motores": [
       "ffmpeg"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "ganhoDB",
       "sincronizacao",
       "duracaoMs"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "projetos/reels-arthur/scripts/gerar_trilha.py",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "efeitos_sonoros.glitch-sound",
@@ -5005,14 +5005,14 @@
     "motores": [
       "ffmpeg"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "ganhoDB",
       "sincronizacao",
       "duracaoMs"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "projetos/reels-arthur/scripts/gerar_trilha.py",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "efeitos_sonoros.digital-click",
@@ -5023,14 +5023,14 @@
     "motores": [
       "ffmpeg"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "ganhoDB",
       "sincronizacao",
       "duracaoMs"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "projetos/reels-arthur/scripts/gerar_trilha.py",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "efeitos_sonoros.camera-shutter",
@@ -5041,14 +5041,14 @@
     "motores": [
       "ffmpeg"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "ganhoDB",
       "sincronizacao",
       "duracaoMs"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "projetos/reels-arthur/scripts/gerar_trilha.py",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "efeitos_sonoros.typing-keyboard",
@@ -5059,14 +5059,14 @@
     "motores": [
       "ffmpeg"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "ganhoDB",
       "sincronizacao",
       "duracaoMs"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "projetos/reels-arthur/scripts/gerar_trilha.py",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "efeitos_sonoros.notification-pop-sfx",
@@ -5077,14 +5077,14 @@
     "motores": [
       "ffmpeg"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "ganhoDB",
       "sincronizacao",
       "duracaoMs"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "projetos/reels-arthur/scripts/gerar_trilha.py",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "efeitos_sonoros.ui-hover",
@@ -5131,14 +5131,14 @@
     "motores": [
       "ffmpeg"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "ganhoDB",
       "sincronizacao",
       "duracaoMs"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "projetos/reels-arthur/scripts/gerar_trilha.py",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "efeitos_sonoros.paper-flip",
@@ -5257,14 +5257,14 @@
     "motores": [
       "ffmpeg"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "ganhoDB",
       "sincronizacao",
       "duracaoMs"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "projetos/reels-arthur/scripts/gerar_trilha.py",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "efeitos_sonoros.braam",
@@ -5275,14 +5275,14 @@
     "motores": [
       "ffmpeg"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "ganhoDB",
       "sincronizacao",
       "duracaoMs"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "projetos/reels-arthur/scripts/gerar_trilha.py",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "efeitos_sonoros.reverse-cymbal",
@@ -5293,14 +5293,14 @@
     "motores": [
       "ffmpeg"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "ganhoDB",
       "sincronizacao",
       "duracaoMs"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "projetos/reels-arthur/scripts/gerar_trilha.py",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "efeitos_sonoros.logo-sound-reveal",
@@ -5311,14 +5311,14 @@
     "motores": [
       "ffmpeg"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "ganhoDB",
       "sincronizacao",
       "duracaoMs"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "projetos/reels-arthur/scripts/gerar_trilha.py",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "efeitos_sonoros.pop-impact",
@@ -5329,14 +5329,14 @@
     "motores": [
       "ffmpeg"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "ganhoDB",
       "sincronizacao",
       "duracaoMs"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "projetos/reels-arthur/scripts/gerar_trilha.py",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "efeitos_sonoros.wind-sweep",
@@ -5365,14 +5365,14 @@
     "motores": [
       "ffmpeg"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "ganhoDB",
       "sincronizacao",
       "duracaoMs"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "projetos/reels-arthur/scripts/gerar_trilha.py",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "efeitos_sonoros.shimmer",
@@ -5383,14 +5383,14 @@
     "motores": [
       "ffmpeg"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "ganhoDB",
       "sincronizacao",
       "duracaoMs"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "projetos/reels-arthur/scripts/gerar_trilha.py",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "audio.ai-voiceover",
@@ -5516,14 +5516,14 @@
       "ffmpeg",
       "whisper"
     ],
-    "status": "integracao_nativa",
+    "status": "exemplo_executavel",
     "parametros": [
       "ganhoDB",
       "lufsAlvo",
       "frequencia"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível por biblioteca/ferramenta externa; exige implementação e teste no pipeline."
+    "arquivo_exemplo": "scripts/efeitos-ffmpeg.sh",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "audio.echo-reduction",
@@ -5573,14 +5573,14 @@
       "ffmpeg",
       "whisper"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "ganhoDB",
       "lufsAlvo",
       "frequencia"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "projetos/reels-arthur/scripts/gerar_trilha.py",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "audio.loudness-normalization",
@@ -5592,14 +5592,14 @@
       "ffmpeg",
       "whisper"
     ],
-    "status": "integracao_nativa",
+    "status": "exemplo_executavel",
     "parametros": [
       "ganhoDB",
       "lufsAlvo",
       "frequencia"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível por biblioteca/ferramenta externa; exige implementação e teste no pipeline."
+    "arquivo_exemplo": "projetos/reels-arthur/scripts/gerar_assets.py",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "audio.voice-eq",
@@ -5668,14 +5668,14 @@
       "ffmpeg",
       "whisper"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "ganhoDB",
       "lufsAlvo",
       "frequencia"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "projetos/reels-arthur/scripts/gerar_trilha.py",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "audio.audio-fade-in",
@@ -5706,14 +5706,14 @@
       "ffmpeg",
       "whisper"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "ganhoDB",
       "lufsAlvo",
       "frequencia"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "projetos/reels-arthur/scripts/gerar_trilha.py",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "audio.music-crossfade",
@@ -5820,14 +5820,14 @@
       "ffmpeg",
       "whisper"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "ganhoDB",
       "lufsAlvo",
       "frequencia"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "projetos/reels-arthur/scripts/gerar_trilha.py",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "audio.audio-gate",
@@ -6364,15 +6364,15 @@
       "remotion",
       "hyperframes"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "titulo",
       "subtitulo",
       "formato",
       "duracaoFrames"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "projetos/remotion-base/src/reels/ReelsArthur.tsx",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "templates.tiktok-template",
@@ -6937,14 +6937,14 @@
     "motores": [
       "orquestracao"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "configuracao",
       "entrada",
       "saida"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "biblioteca/presets.json",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "infraestrutura.live-preview",
@@ -7153,14 +7153,14 @@
     "motores": [
       "orquestracao"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "configuracao",
       "entrada",
       "saida"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "projetos/reels-arthur/scripts/build.sh",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "infraestrutura.licensed-audio-library",
@@ -7261,14 +7261,14 @@
     "motores": [
       "orquestracao"
     ],
-    "status": "catalogado",
+    "status": "exemplo_executavel",
     "parametros": [
       "configuracao",
       "entrada",
       "saida"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Especificação para futura implementação; não presumir que o efeito já execute."
+    "arquivo_exemplo": "scripts/catalogo.py",
+    "observacao": "Implementado e renderizado no Reels oficial (projetos/reels-arthur)."
   },
   {
     "id": "infraestrutura.production-checklist",

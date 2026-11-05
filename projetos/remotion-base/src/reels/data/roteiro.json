@@ -1,0 +1,741 @@
+{
+ "titulo": "Arthur Video Editor AI — Reels oficial",
+ "fps": 30,
+ "largura": 1080,
+ "altura": 1920,
+ "bpm": 120,
+ "duracao": 168,
+ "blocos": [
+  {
+   "id": "abertura",
+   "inicio": 0,
+   "fim": 8
+  },
+  {
+   "id": "tecnologias",
+   "inicio": 8,
+   "fim": 20,
+   "entrada": "zoom"
+  },
+  {
+   "id": "montagem-final",
+   "inicio": 146,
+   "fim": 158,
+   "entrada": "flash"
+  },
+  {
+   "id": "encerramento",
+   "inicio": 158,
+   "fim": 168,
+   "entrada": "flash"
+  }
+ ],
+ "capitulos": [
+  {
+   "n": 1,
+   "cat": "transicoes",
+   "titulo": "TRANSIÇÕES CINEMATOGRÁFICAS",
+   "legenda": "Zoom, whip pan, glow e cortes que conduzem o olhar.",
+   "inicio": 20,
+   "dur": 10,
+   "entrada": "flash",
+   "sfx": [
+    [
+     1.67,
+     "impact_s"
+    ],
+    [
+     3.33,
+     "whoosh"
+    ],
+    [
+     5.0,
+     "shimmer"
+    ],
+    [
+     6.67,
+     "sweep"
+    ],
+    [
+     8.33,
+     "glitch"
+    ]
+   ]
+  },
+  {
+   "n": 2,
+   "cat": "camera_3d",
+   "titulo": "CÂMERA & 3D",
+   "legenda": "Órbita, dolly zoom e parallax em perspectiva real.",
+   "inicio": 30,
+   "dur": 10,
+   "entrada": "whip",
+   "sfx": [
+    [
+     0.6,
+     "drone_swell"
+    ],
+    [
+     4.0,
+     "sweep"
+    ],
+    [
+     5.2,
+     "lowhit"
+    ],
+    [
+     7.0,
+     "whoosh"
+    ]
+   ]
+  },
+  {
+   "n": 3,
+   "cat": "motion_graphics",
+   "titulo": "MOTION GRAPHICS",
+   "legenda": "Ícones, gráficos e dados que ganham vida.",
+   "inicio": 40,
+   "dur": 8,
+   "entrada": "orbit",
+   "sfx": [
+    [
+     0.5,
+     "pop"
+    ],
+    [
+     0.7,
+     "pop"
+    ],
+    [
+     0.9,
+     "pop"
+    ],
+    [
+     1.1,
+     "pop"
+    ],
+    [
+     1.3,
+     "pop"
+    ],
+    [
+     2.7,
+     "click"
+    ],
+    [
+     4.0,
+     "pop"
+    ],
+    [
+     4.25,
+     "pop"
+    ],
+    [
+     4.5,
+     "pop"
+    ],
+    [
+     4.75,
+     "pop"
+    ],
+    [
+     6.0,
+     "sweep"
+    ]
+   ]
+  },
+  {
+   "n": 4,
+   "cat": "legendas_tipografia",
+   "titulo": "LEGENDAS & TIPOGRAFIA",
+   "legenda": "Cada palavra no tempo certo, com ênfase.",
+   "inicio": 48,
+   "dur": 8,
+   "entrada": "drop",
+   "sfx": [
+    [
+     0.4,
+     "pop"
+    ],
+    [
+     0.9,
+     "pop"
+    ],
+    [
+     1.4,
+     "pop"
+    ],
+    [
+     2.9,
+     "typing"
+    ],
+    [
+     5.3,
+     "impact_s"
+    ],
+    [
+     6.6,
+     "pop"
+    ]
+   ]
+  },
+  {
+   "n": 5,
+   "cat": "vfx",
+   "titulo": "EFEITOS VISUAIS",
+   "legenda": "Glitch, partículas, luz e composição em camadas.",
+   "inicio": 56,
+   "dur": 10,
+   "entrada": "glitch",
+   "sfx": [
+    [
+     0.8,
+     "glitch"
+    ],
+    [
+     1.6,
+     "glitch"
+    ],
+    [
+     2.5,
+     "impact"
+    ],
+    [
+     5.0,
+     "click"
+    ],
+    [
+     5.5,
+     "click"
+    ],
+    [
+     6.0,
+     "click"
+    ],
+    [
+     6.5,
+     "click"
+    ],
+    [
+     7.5,
+     "whoosh"
+    ],
+    [
+     9.0,
+     "lowhit"
+    ]
+   ]
+  },
+  {
+   "n": 6,
+   "cat": "estilos",
+   "titulo": "ESTILOS DE EDIÇÃO",
+   "legenda": "Uma mesma história, quatro personalidades.",
+   "inicio": 66,
+   "dur": 8,
+   "entrada": "leak",
+   "sfx": [
+    [
+     2.0,
+     "whoosh"
+    ],
+    [
+     4.0,
+     "whoosh"
+    ],
+    [
+     6.0,
+     "whoosh"
+    ],
+    [
+     6.5,
+     "hit"
+    ],
+    [
+     7.0,
+     "hit"
+    ],
+    [
+     7.5,
+     "hit"
+    ]
+   ]
+  },
+  {
+   "n": 7,
+   "cat": "interfaces_mockups",
+   "titulo": "INTERFACES & MOCKUPS",
+   "legenda": "Celulares, apps e redes sociais em 3D.",
+   "inicio": 74,
+   "dur": 8,
+   "entrada": "whip",
+   "sfx": [
+    [
+     1.5,
+     "notify"
+    ],
+    [
+     3.0,
+     "notify"
+    ],
+    [
+     4.5,
+     "pop"
+    ],
+    [
+     5.2,
+     "notify"
+    ],
+    [
+     6.4,
+     "shutter"
+    ]
+   ]
+  },
+  {
+   "n": 8,
+   "cat": "montagem",
+   "titulo": "MONTAGEM & RITMO",
+   "legenda": "Cortes no beat e speed ramps sob controle.",
+   "inicio": 82,
+   "dur": 10,
+   "entrada": "zoom",
+   "sfx": [
+    [
+     4.0,
+     "reverse"
+    ],
+    [
+     5.2,
+     "whoosh_slow"
+    ],
+    [
+     6.6,
+     "whoosh"
+    ],
+    [
+     8.0,
+     "click"
+    ],
+    [
+     8.4,
+     "click"
+    ],
+    [
+     8.8,
+     "click"
+    ],
+    [
+     9.2,
+     "click"
+    ]
+   ]
+  },
+  {
+   "n": 9,
+   "cat": "color_grading",
+   "titulo": "COLOR GRADING",
+   "legenda": "Antes e depois, processado de verdade no FFmpeg.",
+   "inicio": 92,
+   "dur": 10,
+   "entrada": "iris",
+   "sfx": [
+    [
+     1.5,
+     "sweep"
+    ],
+    [
+     3.5,
+     "sweep"
+    ],
+    [
+     5.5,
+     "sweep"
+    ],
+    [
+     7.5,
+     "sweep"
+    ],
+    [
+     8.2,
+     "impact_s"
+    ]
+   ]
+  },
+  {
+   "n": 10,
+   "cat": "efeitos_sonoros",
+   "titulo": "EFEITOS SONOROS",
+   "legenda": "Whooshes, impactos e risers sintetizados aqui.",
+   "inicio": 102,
+   "dur": 8,
+   "entrada": "glitch",
+   "sfx": [
+    [
+     0.6,
+     "whoosh"
+    ],
+    [
+     1.6,
+     "impact"
+    ],
+    [
+     2.6,
+     "riser_s"
+    ],
+    [
+     4.3,
+     "glitch"
+    ],
+    [
+     5.4,
+     "pop"
+    ],
+    [
+     5.7,
+     "pop"
+    ],
+    [
+     6.4,
+     "shimmer"
+    ]
+   ]
+  },
+  {
+   "n": 11,
+   "cat": "audio",
+   "titulo": "ÁUDIO & NARRAÇÃO",
+   "legenda": "Limpeza, mixagem e loudness para redes.",
+   "inicio": 110,
+   "dur": 8,
+   "entrada": "flash",
+   "sfx": [
+    [
+     1.0,
+     "sweep"
+    ],
+    [
+     4.0,
+     "click"
+    ],
+    [
+     6.6,
+     "pop"
+    ]
+   ]
+  },
+  {
+   "n": 12,
+   "cat": "automacao_ia",
+   "titulo": "INTELIGÊNCIA ARTIFICIAL",
+   "legenda": "Automação com transparência sobre cada estado.",
+   "inicio": 118,
+   "dur": 10,
+   "entrada": "zoom",
+   "sfx": [
+    [
+     0.8,
+     "shimmer"
+    ],
+    [
+     3.4,
+     "sweep"
+    ],
+    [
+     4.6,
+     "click"
+    ],
+    [
+     5.2,
+     "click"
+    ],
+    [
+     5.8,
+     "click"
+    ],
+    [
+     6.8,
+     "pop"
+    ],
+    [
+     7.2,
+     "pop"
+    ],
+    [
+     7.6,
+     "pop"
+    ]
+   ]
+  },
+  {
+   "n": 13,
+   "cat": "templates",
+   "titulo": "TEMPLATES",
+   "legenda": "Reels, YouTube, publicidade e eventos.",
+   "inicio": 128,
+   "dur": 8,
+   "entrada": "whip",
+   "sfx": [
+    [
+     0.4,
+     "lowhit"
+    ],
+    [
+     0.6,
+     "lowhit"
+    ],
+    [
+     0.8,
+     "lowhit"
+    ],
+    [
+     1.0,
+     "lowhit"
+    ],
+    [
+     2.0,
+     "whoosh"
+    ],
+    [
+     3.4,
+     "whoosh"
+    ],
+    [
+     4.7,
+     "whoosh"
+    ],
+    [
+     6.0,
+     "whoosh"
+    ],
+    [
+     6.7,
+     "click"
+    ],
+    [
+     7.0,
+     "click"
+    ],
+    [
+     7.3,
+     "click"
+    ]
+   ]
+  },
+  {
+   "n": 14,
+   "cat": "infraestrutura",
+   "titulo": "INFRAESTRUTURA",
+   "legenda": "Timeline, presets, biblioteca e exportação.",
+   "inicio": 136,
+   "dur": 10,
+   "entrada": "orbit",
+   "sfx": [
+    [
+     3.9,
+     "typing"
+    ],
+    [
+     6.3,
+     "click"
+    ],
+    [
+     9.3,
+     "chime"
+    ]
+   ]
+  }
+ ],
+ "sfx_globais": [
+  [
+   0.0,
+   "subboom"
+  ],
+  [
+   0.2,
+   "hit"
+  ],
+  [
+   0.5,
+   "hit"
+  ],
+  [
+   0.85,
+   "hit"
+  ],
+  [
+   1.2,
+   "whoosh"
+  ],
+  [
+   1.5,
+   "impact_s"
+  ],
+  [
+   2.4,
+   "glitch"
+  ],
+  [
+   2.4,
+   "lowhit"
+  ],
+  [
+   3.4,
+   "whoosh"
+  ],
+  [
+   5.5,
+   "riser"
+  ],
+  [
+   5.5,
+   "braam"
+  ],
+  [
+   5.5,
+   "impact"
+  ],
+  [
+   5.7,
+   "shimmer"
+  ],
+  [
+   9.0,
+   "whoosh"
+  ],
+  [
+   11.0,
+   "whoosh"
+  ],
+  [
+   13.0,
+   "whoosh"
+  ],
+  [
+   15.0,
+   "whoosh"
+  ],
+  [
+   17.0,
+   "whoosh"
+  ],
+  [
+   18.6,
+   "sweep"
+  ],
+  [
+   19.0,
+   "riser_s"
+  ],
+  [
+   146.0,
+   "riser_long"
+  ],
+  [
+   146.0,
+   "braam"
+  ],
+  [
+   146.0,
+   "impact"
+  ],
+  [
+   150.0,
+   "impact_s"
+  ],
+  [
+   152.7,
+   "impact_s"
+  ],
+  [
+   155.0,
+   "glitch"
+  ],
+  [
+   155.0,
+   "impact"
+  ],
+  [
+   158.0,
+   "revcym"
+  ],
+  [
+   158.0,
+   "impact"
+  ],
+  [
+   158.0,
+   "subboom"
+  ],
+  [
+   158.4,
+   "shimmer"
+  ],
+  [
+   161.0,
+   "logo"
+  ]
+ ],
+ "sfx_transicao": {
+  "flash": [
+   [
+    0.0,
+    "impact_s"
+   ]
+  ],
+  "zoom": [
+   [
+    -1.2,
+    "riser_s"
+   ],
+   [
+    0.0,
+    "impact_s"
+   ]
+  ],
+  "whip": [
+   [
+    -0.25,
+    "whoosh"
+   ]
+  ],
+  "orbit": [
+   [
+    -0.3,
+    "whoosh"
+   ],
+   [
+    0.0,
+    "lowhit"
+   ]
+  ],
+  "drop": [
+   [
+    0.15,
+    "subboom"
+   ]
+  ],
+  "glitch": [
+   [
+    -0.15,
+    "glitch"
+   ]
+  ],
+  "leak": [
+   [
+    -0.2,
+    "shimmer"
+   ],
+   [
+    0.0,
+    "hit"
+   ]
+  ],
+  "iris": [
+   [
+    -0.1,
+    "sweep"
+   ]
+  ]
+ }
+}
