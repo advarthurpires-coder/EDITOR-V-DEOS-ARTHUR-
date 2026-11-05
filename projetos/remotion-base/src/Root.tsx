@@ -5,6 +5,12 @@ import { Vinheta } from "./Vinheta";
 import { ArthurShowcase } from "./ArthurShowcase";
 import { Vitrine } from "./composicoes/Vitrine";
 import { ReelsJuridico, PropsReelsJuridico } from "./composicoes/ReelsJuridico";
+import { TransicaoShader, PropsTransicaoShader } from "./componentes/TransicaoShader";
+
+const padraoTransicao: PropsTransicaoShader = {
+  videoA: "exemplo-a.mp4", videoB: "exemplo-b.mp4", shader: "whip-pan",
+  duracaoA: 3, duracaoB: 3, transicao: 0.8, largura: 1920, altura: 1080, fps: 30,
+};
 
 const padraoReels: PropsReelsJuridico = {
   gancho: "Atenção ao prazo!",
@@ -43,6 +49,23 @@ export const RemotionRoot: React.FC = () => (
         }
         return { durationInFrames: Math.round(props.duracaoSegundos * 30), props: { ...props, legendas } };
       }}
+    />
+
+    {/* Transição GLSL (shaders dos blocos HyperFrames) entre dois clipes reais — use via: python3 scripts/estudio.py transicao-shader */}
+    <Composition
+      id="TransicaoShader"
+      component={TransicaoShader}
+      defaultProps={padraoTransicao}
+      fps={30}
+      width={1920}
+      height={1080}
+      durationInFrames={156}
+      calculateMetadata={({ props }) => ({
+        fps: props.fps,
+        width: props.largura,
+        height: props.altura,
+        durationInFrames: Math.round((props.duracaoA + props.duracaoB - props.transicao) * props.fps),
+      })}
     />
   </>
 );

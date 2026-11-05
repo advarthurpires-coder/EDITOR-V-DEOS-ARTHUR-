@@ -7,3 +7,4 @@ export * from "./ChecklistAnimado";
 export * from "./KenBurns";
 export * from "./Atmosfera";
 export * from "./MaquinaEscrever";
+export * from "./TransicaoShader";

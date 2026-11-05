@@ -1,0 +1,94 @@
+<!doctype html>
+<!--
+  Template: Apresentação institucional (catálogo templates.corporate-presentation)
+  Vídeo institucional 16:9 de 12 s (4 cenas de 3 s): capa, áreas de atuação, números e contato.
+  Renderizar: npx hyperframes render projetos/apresentacao-institucional -o saida.mp4
+  Editar textos: troque o conteúdo das cenas abaixo; cores e fontes seguem marca.ts (azul #0b1d33, dourado #e8c77a).
+  Conteúdo informativo (Provimento CFOAB 205/2021): sem promessa de resultado nem captação indevida.
+-->
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <script src="vendor/gsap.min.js"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Playfair+Display:wght@600;700&display=block");
+      :root { --fundo: #0b1d33; --fundo2: #132b4a; --dourado: #e8c77a; --texto: #ffffff; --suave: #c9d3e0; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1920px; height: 1080px; overflow: hidden; background: var(--fundo); }
+      .slide { position: absolute; inset: 0; width: 1920px; height: 1080px; background: linear-gradient(160deg, var(--fundo), var(--fundo2));
+               color: var(--texto); font-family: Inter, sans-serif; padding: 140px 160px; overflow: hidden; }
+      .kicker { font-size: 34px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--dourado); font-weight: 600; }
+      .titulo { font-family: "Playfair Display", serif; font-size: 120px; line-height: 1.05; margin-top: 40px; }
+      .linha { width: 260px; height: 6px; background: var(--dourado); margin: 56px 0; }
+      .sub { font-size: 44px; color: var(--suave); max-width: 1300px; line-height: 1.35; }
+      .grade { display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px; margin-top: 80px; }
+      .cartao { border: 2px solid rgba(232,199,122,.45); border-radius: 28px; padding: 56px 48px; background: rgba(255,255,255,.04); }
+      .cartao h3 { font-family: "Playfair Display", serif; font-size: 56px; color: var(--dourado); }
+      .cartao p { font-size: 40px; color: var(--suave); margin-top: 20px; line-height: 1.3; }
+      .numero { font-size: 150px; font-weight: 800; color: var(--dourado); font-variant-numeric: tabular-nums; }
+      .rotulo { font-size: 42px; color: var(--suave); }
+      .contato { font-size: 56px; margin-top: 30px; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="12" data-width="1920" data-height="1080">
+    <div id="capa" class="slide clip" data-track-index="0" data-label="Capa" data-start="0" data-duration="3" data-width="1920" data-height="1080">
+      <div class="kicker c-in">Advocacia</div>
+      <div class="titulo c-in">Arthur Pires<br />Advocacia</div>
+      <div class="linha c-linha"></div>
+      <div class="sub c-in">Atuação estratégica e humanizada, com informação clara em cada etapa.</div>
+    </div>
+
+    <div id="areas" class="slide clip" data-track-index="1" data-label="Áreas de atuação" data-start="3" data-duration="3" data-width="1920" data-height="1080">
+      <div class="kicker">Áreas de atuação</div>
+      <div class="grade">
+        <div class="cartao a-in"><h3>Cível e Família</h3><p>Contratos, responsabilidade civil, divórcio, alimentos, sucessões.</p></div>
+        <div class="cartao a-in"><h3>Trabalhista e Previdenciário</h3><p>Relações de trabalho, benefícios do INSS e revisões.</p></div>
+        <div class="cartao a-in"><h3>Consumidor e Criminal</h3><p>Defesa do consumidor e atuação criminal com técnica e sigilo.</p></div>
+      </div>
+    </div>
+
+    <div id="numeros" class="slide clip" data-track-index="2" data-label="Números" data-start="6" data-duration="3" data-width="1920" data-height="1080">
+      <div class="kicker">O escritório</div>
+      <div class="grade">
+        <div class="n-in"><div class="numero" id="n1">0</div><div class="rotulo">anos de atuação</div></div>
+        <div class="n-in"><div class="numero" id="n2">0</div><div class="rotulo">áreas do Direito</div></div>
+        <div class="n-in"><div class="numero">24h</div><div class="rotulo">canal de atendimento</div></div>
+      </div>
+    </div>
+
+    <div id="contato" class="slide clip" data-track-index="3" data-label="Contato" data-start="9" data-duration="3" data-width="1920" data-height="1080">
+      <div class="kicker">Contato</div>
+      <div class="titulo" style="font-size:96px">Fale com o escritório</div>
+      <div class="linha"></div>
+      <div class="contato">(00) 00000-0000</div>
+      <div class="contato">contato@seuescritorio.adv.br</div>
+      <div class="sub" style="margin-top:50px">OAB/UF 000.000</div>
+    </div>
+
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {};
+      var tl = gsap.timeline({ paused: true });
+      // capa (0–3 s)
+      tl.from("#capa .c-in", { opacity: 0, y: 50, duration: 0.7, ease: "power3.out", stagger: 0.15 }, 0.1)
+        .from("#capa .c-linha", { scaleX: 0, transformOrigin: "left", duration: 0.8, ease: "power2.inOut" }, 0.4)
+        .to("#capa > *", { opacity: 0, y: -30, duration: 0.4, ease: "power2.in", stagger: 0.05 }, 2.55);
+      // áreas (3–6 s)
+      tl.from("#areas .kicker", { opacity: 0, y: 30, duration: 0.5, ease: "power3.out" }, 3.05)
+        .from("#areas .a-in", { opacity: 0, y: 60, duration: 0.6, ease: "back.out(1.4)", stagger: 0.18 }, 3.15)
+        .to("#areas > *", { opacity: 0, duration: 0.35, ease: "power2.in" }, 5.6);
+      // números (6–9 s)
+      var a = { v: 0 }, b = { v: 0 };
+      tl.from("#numeros .kicker", { opacity: 0, y: 30, duration: 0.5, ease: "power3.out" }, 6.05)
+        .from("#numeros .n-in", { opacity: 0, y: 40, duration: 0.5, ease: "power3.out", stagger: 0.15 }, 6.15)
+        .to(a, { v: 10, duration: 1.2, ease: "expo.out", onUpdate: function () { document.getElementById("n1").textContent = Math.round(a.v) + "+"; } }, 6.3)
+        .to(b, { v: 6, duration: 1.2, ease: "expo.out", onUpdate: function () { document.getElementById("n2").textContent = Math.round(b.v); } }, 6.45)
+        .to("#numeros > *", { opacity: 0, duration: 0.35, ease: "power2.in" }, 8.6);
+      // contato (9–12 s)
+      tl.from("#contato > *", { opacity: 0, y: 30, duration: 0.5, ease: "power2.out", stagger: 0.12 }, 9.05);
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

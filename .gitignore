@@ -13,3 +13,8 @@ projetos/*/.hyperframes/
 __pycache__/
 projetos/remotion-base/public/brutos/
 midia/trabalho/
+projetos/remotion-base/public/_transicao/
+projetos/hf-biblioteca/vendor/
+projetos/hf-biblioteca/_render-*.html
+projetos/hf-biblioteca/renders/
+projetos/hf-biblioteca/node_modules/

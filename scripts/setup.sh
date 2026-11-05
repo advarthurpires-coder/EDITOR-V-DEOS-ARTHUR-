@@ -34,6 +34,12 @@ if [ ! -d "$ROOT/projetos/remotion-base/node_modules/remotion" ]; then
   (cd "$ROOT/projetos/remotion-base" && npm install --no-audit --no-fund >/dev/null 2>&1) || log "AVISO: falha no npm install do Remotion"
 fi
 
+# 4b) Biblioteca de blocos HyperFrames: bibliotecas JS locais (GSAP, Three.js...) — CDNs são bloqueados no ambiente
+if [ -d "$ROOT/projetos/hf-biblioteca/compositions" ]; then
+  log "Preparando bibliotecas dos blocos HyperFrames..."
+  python3 "$ROOT/scripts/blocos.py" preparar >/dev/null 2>&1 || log "AVISO: falha ao preparar projetos/hf-biblioteca/vendor"
+fi
+
 # 5) whisper.cpp (compila do código-fonte)
 if [ ! -x "$WHISPER_DIR/build/bin/whisper-cli" ]; then
   log "Compilando whisper.cpp (leva alguns minutos)..."

@@ -1,0 +1,146 @@
+{
+ "app-showcase": {
+  "brilho_medio": 187.9,
+  "duracao": 5.5,
+  "ficha_demo": false,
+  "movimento": 6.73,
+  "ok": true,
+  "quadros_analisados": 22,
+  "tipo": "block",
+  "variaveis": 0
+ },
+ "arc-motion-path": {
+  "brilho_medio": 64.8,
+  "duracao": 4.0,
+  "ficha_demo": false,
+  "movimento": 0.66,
+  "ok": true,
+  "quadros_analisados": 16,
+  "tipo": "component",
+  "variaveis": 0
+ },
+ "beat-accent": {
+  "brilho_medio": 37.6,
+  "duracao": 4.0,
+  "ficha_demo": false,
+  "movimento": 2.41,
+  "ok": true,
+  "quadros_analisados": 16,
+  "tipo": "component",
+  "variaveis": 3
+ },
+ "browser-device-stage": {
+  "brilho_medio": 35.8,
+  "duracao": 4.0,
+  "ficha_demo": false,
+  "movimento": 0.42,
+  "ok": true,
+  "quadros_analisados": 16,
+  "tipo": "component",
+  "variaveis": 5
+ },
+ "camcorder-hud": {
+  "brilho_medio": 38.8,
+  "duracao": 4.0,
+  "ficha_demo": false,
+  "movimento": 0.48,
+  "ok": true,
+  "quadros_analisados": 16,
+  "tipo": "block",
+  "variaveis": 0
+ },
+ "camera-dolly-zoom": {
+  "brilho_medio": 65.6,
+  "duracao": 4.0,
+  "ficha_demo": false,
+  "movimento": 6.5,
+  "ok": true,
+  "quadros_analisados": 16,
+  "tipo": "block",
+  "variaveis": 4
+ },
+ "camera-rig-depth-stack": {
+  "erro": " infinite/unbounded animation (e.g. animation-iteration-count: infinite, repeat: -1 WAAPI, or a looping Lottie clip) or a Three.js scene with no discoverable AnimationClip.\n     \u2192 Fix: add data-duration=\"<seconds>\" to your root <div data-composition-id=\"...\"> element.\n     \u2192 The runtime finished initializing but reported zero duration. This is permanent.\n   Try --docker for containerized rendering",
+  "ok": false
+ },
+ "camera-shake": {
+  "brilho_medio": 47.9,
+  "duracao": 4.0,
+  "ficha_demo": false,
+  "movimento": 4.52,
+  "ok": true,
+  "quadros_analisados": 16,
+  "tipo": "component",
+  "variaveis": 4
+ },
+ "caption-camera-follow": {
+  "brilho_medio": 53.4,
+  "duracao": 4.0,
+  "ficha_demo": false,
+  "movimento": 21.1,
+  "ok": true,
+  "quadros_analisados": 16,
+  "tipo": "component",
+  "variaveis": 3
+ },
+ "caption-emoji-pop": {
+  "brilho_medio": 39.5,
+  "duracao": 4.0,
+  "ficha_demo": false,
+  "movimento": 0.67,
+  "ok": true,
+  "quadros_analisados": 16,
+  "tipo": "component",
+  "variaveis": 0
+ },
+ "caption-glitch-rgb": {
+  "brilho_medio": 35.7,
+  "duracao": 4.0,
+  "ficha_demo": false,
+  "movimento": 1.43,
+  "ok": true,
+  "quadros_analisados": 16,
+  "tipo": "component",
+  "variaveis": 0
+ },
+ "grain-overlay": {
+  "brilho_medio": 48.6,
+  "duracao": 4.0,
+  "ficha_demo": false,
+  "movimento": 1.58,
+  "ok": true,
+  "quadros_analisados": 16,
+  "tipo": "component",
+  "variaveis": 0
+ },
+ "liquid-glass-widgets": {
+  "brilho_medio": 22.1,
+  "duracao": 8.0,
+  "ficha_demo": false,
+  "movimento": 1.56,
+  "ok": true,
+  "quadros_analisados": 32,
+  "tipo": "block",
+  "variaveis": 0
+ },
+ "snow": {
+  "brilho_medio": 38.3,
+  "duracao": 6.0,
+  "ficha_demo": false,
+  "movimento": 0.7,
+  "ok": true,
+  "quadros_analisados": 24,
+  "tipo": "block",
+  "variaveis": 2
+ },
+ "wireframe-portal-title": {
+  "brilho_medio": 214.1,
+  "duracao": 8.0,
+  "ficha_demo": false,
+  "movimento": 1.52,
+  "ok": true,
+  "quadros_analisados": 32,
+  "tipo": "block",
+  "variaveis": 9
+ }
+}

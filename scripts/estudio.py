@@ -25,6 +25,10 @@ Comandos
   exportar    Exporta com preset de plataforma (reels, tiktok, shorts, youtube, youtube-4k, feed, linkedin, whatsapp).
   cortar      Recorta um trecho [inicio, fim] (com recodificação precisa).
   juntar      Concatena vários clipes (mesma resolução é recomendada).
+  transicao-shader  Transição GLSL (whip-pan, glitch, light-leak, film burn...) entre dois clipes reais (Remotion).
+  batidas     Detecta batidas (BPM e tempos) de uma música.
+  montagem-ritmo  Corta e alterna clipes nas batidas da música (beat cut / rhythm editing).
+  crossfade-musica  Fusão entre duas trilhas.  ·  tom  Muda o tom da voz/música (semitons).
   sfx         Gera efeitos sonoros sintetizados (whoosh, impacto, sub-boom, riser, clique, pop, drone, braam...).
 """
 from __future__ import annotations
@@ -35,6 +39,7 @@ import os
 import re
 import shutil
 import subprocess
+import tempfile
 import sys
 from pathlib import Path
 
@@ -273,10 +278,14 @@ def cadeia_audio(a) -> str:
     f = []
     if a.ruido:
         f.append(f"afftdn=nf={a.ruido_nivel}")
+    if getattr(a, "gate", False):
+        f.append("agate=threshold=0.02:ratio=4:attack=5:release=120:range=0.1")
     if a.voz_eq:
         f.append("highpass=f=80,lowpass=f=14000,equalizer=f=250:t=q:w=1.2:g=-2.5,equalizer=f=3200:t=q:w=1.0:g=3,equalizer=f=8000:t=q:w=1.5:g=1.5")
     if a.compressor:
         f.append("acompressor=threshold=-20dB:ratio=3:attack=5:release=80:makeup=2")
+    if getattr(a, "deesser", False):
+        f.append("deesser=i=0.6:m=0.5:f=0.5:s=o")
     if a.fade_in:
         f.append(f"afade=t=in:d={a.fade_in}")
     if a.fade_out:
@@ -578,6 +587,114 @@ def normalizar_pico(arquivo: Path, alvo_db: float = -3.0) -> None:
     ff("-i", str(arquivo), "-af", f"volume={ganho:.2f}dB", str(tmp))
     tmp.replace(arquivo)
 
+# ----------------------------------------------------------------------------- transição com shader (Remotion + GLSL dos blocos HyperFrames)
+
+SHADERS = ["whip-pan", "glitch", "light-leak", "ridged-burn", "ripple-waves", "thermal-distortion", "cross-warp-morph",
+           "domain-warp-dissolve", "chromatic-radial-split"]
+
+
+def cmd_transicao_shader(a):
+    """Une A → B com transição GLSL renderizada no Remotion (componente TransicaoShader)."""
+    proj = RAIZ / "projetos" / "remotion-base"
+    pub = proj / "public" / "_transicao"
+    pub.mkdir(parents=True, exist_ok=True)
+    ia, ib = info(a.a), info(a.b)
+    W, H = (a.largura or ia["largura"]), (a.altura or ia["altura"])
+    fps = a.fps or (ia["fps"] if ia["fps"] in (24, 25, 30, 50, 60) else 30)
+    # normaliza os clipes (rotação aplicada, mesmo tamanho/fps, áudio estéreo 48 kHz) para o navegador decodificar sem surpresas
+    nomes = []
+    for k, (arq, inf) in enumerate(((a.a, ia), (a.b, ib))):
+        dst = pub / f"clip{k}.mp4"
+        args = ["-i", arq]
+        if inf["tem_audio"]:
+            af = ["-map", "0:a:0", "-c:a", "aac", "-ar", "48000", "-ac", "2"]
+        else:  # clipe mudo: trilha silenciosa para o crossfade de áudio funcionar
+            args += ["-f", "lavfi", "-t", str(inf["duracao"]), "-i", "anullsrc=r=48000:cl=stereo"]
+            af = ["-map", "1:a", "-c:a", "aac", "-shortest"]
+        ff(*args, "-map", "0:v:0", "-vf", f"{escala(W, H, 'increase', inf)},crop={W}:{H},fps={fps},setsar=1", *VIDEO_OUT, *af, str(dst))
+        nomes.append(f"_transicao/{dst.name}")
+    props = {"videoA": nomes[0], "videoB": nomes[1], "shader": a.shader, "duracaoA": round(ia["duracao"], 3), "duracaoB": round(ib["duracao"], 3),
+             "transicao": a.duracao, "largura": W, "altura": H, "fps": fps}
+    pf = pub / "props.json"
+    pf.write_text(json.dumps(props), encoding="utf-8")
+    env = dict(os.environ)
+    hs = sorted(Path("/opt/pw-browsers").glob("chromium_headless_shell-*/chrome-headless-shell-linux64/chrome-headless-shell"))
+    if hs and not env.get("REMOTION_BROWSER_EXECUTABLE"):
+        env["REMOTION_BROWSER_EXECUTABLE"] = str(hs[-1])
+    saida = Path(a.saida).resolve()
+    r = subprocess.run(["npx", "remotion", "render", "src/index.ts", "TransicaoShader", str(saida), f"--props={pf}", "--log=error",
+                        "--gl=swangle"], cwd=proj, env=env, capture_output=True, text=True)
+    if r.returncode != 0:
+        sys.stderr.write(r.stdout[-2000:] + r.stderr[-3000:])
+        raise SystemExit("Falha no render da transição (Remotion)")
+    shutil.rmtree(pub, ignore_errors=True)
+    print(f"Transição {a.shader} ({a.duracao}s): {saida}")
+
+# ----------------------------------------------------------------------------- música, tom e ritmo
+
+def cmd_crossfade_musica(a):
+    """Fusão entre duas trilhas (o fim de A se sobrepõe ao início de B)."""
+    ff("-i", a.a, "-i", a.b, "-filter_complex", f"[0:a:0]aresample=48000[x];[1:a:0]aresample=48000[y];[x][y]acrossfade=d={a.duracao}:c1={a.curva}:c2={a.curva}[a]",
+       "-map", "[a]", *( ["-c:a", "pcm_s16le"] if a.saida.lower().endswith(".wav") else AUDIO_OUT), a.saida)
+
+
+def cmd_tom(a):
+    """Muda o tom (semitons) mantendo a duração. Vídeo é copiado."""
+    razao = 2 ** (a.semitons / 12)
+    af = f"rubberband=pitch={razao:.6f}:formant={'preserved' if a.preservar_formantes else 'shifted'}"
+    i = info(a.entrada)
+    if i["tem_video"] and not a.saida.lower().endswith((".wav", ".mp3", ".m4a")):
+        ff("-i", a.entrada, "-map", "0:v:0", "-map", "0:a:0", "-af", af, "-c:v", "copy", *AUDIO_OUT, a.saida)
+    else:
+        ff("-i", a.entrada, "-map", "0:a:0", "-af", af, a.saida)
+
+
+def detectar_batidas(arquivo: str) -> dict:
+    r = subprocess.run(["hyperframes", "beats", arquivo, "--json"], capture_output=True, text=True, timeout=600)
+    if r.returncode != 0:
+        raise SystemExit("Falha na detecção de batidas: " + (r.stderr or r.stdout)[-500:])
+    return json.loads(r.stdout[r.stdout.index("{"):])
+
+
+def cmd_batidas(a):
+    d = detectar_batidas(a.entrada)
+    print(json.dumps({"bpm": d.get("bpm"), "total": d.get("count"), "batidas": d.get("beatTimes")}, ensure_ascii=False))
+
+
+def cmd_montagem_ritmo(a):
+    """Corta os clipes nas batidas da música (a cada N batidas), alterna entre eles e junta com a trilha."""
+    d = detectar_batidas(a.musica)
+    bt = [t for t in d.get("beatTimes", []) if t >= a.inicio_musica]
+    if len(bt) < 2:
+        raise SystemExit("Batidas insuficientes na música.")
+    marcas = bt[:: a.a_cada]
+    if a.duracao:
+        marcas = [t for t in marcas if t - marcas[0] <= a.duracao]
+    W, H = FORMATOS[a.formato]
+    fps = 30
+    infos = [info(c) for c in a.clipes]
+    pos = [0.0] * len(infos)
+    tmp = Path(tempfile.mkdtemp(prefix="ritmo-"))
+    partes = []
+    for k in range(len(marcas) - 1):
+        dur = marcas[k + 1] - marcas[k]
+        j = k % len(infos)
+        if pos[j] + dur > infos[j]["duracao"]:
+            pos[j] = 0.0
+        seg = tmp / f"s{k:03d}.mp4"
+        ff("-ss", f"{pos[j]:.3f}", "-t", f"{dur:.3f}", "-i", a.clipes[j], "-map", "0:v:0", "-an",
+           "-vf", f"{escala(W, H, 'increase', infos[j])},crop={W}:{H},fps={fps},setsar=1", *VIDEO_OUT, str(seg))
+        partes.append(seg)
+        pos[j] += dur
+    lista = tmp / "lista.txt"
+    lista.write_text("".join(f"file '{p}'\n" for p in partes), encoding="utf-8")
+    total = marcas[-1] - marcas[0]
+    ff("-f", "concat", "-safe", "0", "-i", str(lista), "-ss", f"{marcas[0]:.3f}", "-t", f"{total:.3f}", "-i", a.musica,
+       "-map", "0:v:0", "-map", "1:a:0", "-c:v", "copy", "-af", f"afade=t=out:st={max(0, total - 0.6):.3f}:d=0.6,loudnorm=I=-14:TP=-1.5:LRA=11",
+       *AUDIO_OUT, "-t", f"{total:.3f}", a.saida)
+    shutil.rmtree(tmp, ignore_errors=True)
+    print(f"Montagem no ritmo: {len(partes)} cortes, {d.get('bpm')} BPM, {total:.2f}s → {a.saida}")
+
 # ----------------------------------------------------------------------------- CLI
 
 def main():
@@ -623,6 +740,8 @@ def main():
     s.add_argument("--ruido-nivel", type=int, default=-25); s.add_argument("--voz-eq", action="store_true"); s.add_argument("--compressor", action="store_true")
     s.add_argument("--fade-in", type=float, default=0); s.add_argument("--fade-out", type=float, default=0)
     s.add_argument("--fade-video", action="store_true", help="aplica os fades também na imagem")
+    s.add_argument("--gate", action="store_true", help="silencia ruído de fundo entre frases (noise gate)")
+    s.add_argument("--deesser", action="store_true", help="reduz sibilância (S, Ç, X)")
     s.set_defaults(fn=cmd_audio)
 
     s = sp.add_parser("ducking"); s.add_argument("video"); s.add_argument("musica"); s.add_argument("saida")
@@ -672,6 +791,20 @@ def main():
 
     s = sp.add_parser("sfx"); s.add_argument("nome", choices=list(SFX) + ["todos"]); s.add_argument("saida", help="arquivo .wav ou pasta (para 'todos')")
     s.add_argument("--duracao", type=float); s.add_argument("--volume", type=float, default=1.0); s.set_defaults(fn=cmd_sfx)
+
+    s = sp.add_parser("transicao-shader"); s.add_argument("a"); s.add_argument("b"); s.add_argument("saida")
+    s.add_argument("--shader", default="whip-pan", choices=SHADERS); s.add_argument("--duracao", type=float, default=0.8)
+    s.add_argument("--largura", type=int); s.add_argument("--altura", type=int); s.add_argument("--fps", type=int); s.set_defaults(fn=cmd_transicao_shader)
+
+    s = sp.add_parser("crossfade-musica"); s.add_argument("a"); s.add_argument("b"); s.add_argument("saida")
+    s.add_argument("--duracao", type=float, default=3.0); s.add_argument("--curva", default="tri", help="tri, qsin, exp, log..."); s.set_defaults(fn=cmd_crossfade_musica)
+    s = sp.add_parser("tom"); s.add_argument("entrada"); s.add_argument("saida"); s.add_argument("--semitons", type=float, required=True)
+    s.add_argument("--preservar-formantes", action="store_true", help="voz mais natural"); s.set_defaults(fn=cmd_tom)
+    s = sp.add_parser("batidas"); s.add_argument("entrada"); s.set_defaults(fn=cmd_batidas)
+    s = sp.add_parser("montagem-ritmo"); s.add_argument("saida"); s.add_argument("musica"); s.add_argument("clipes", nargs="+")
+    s.add_argument("--a-cada", type=int, default=1, help="cortar a cada N batidas"); s.add_argument("--formato", default="9:16", choices=list(FORMATOS))
+    s.add_argument("--duracao", type=float, help="duração máxima (s)"); s.add_argument("--inicio-musica", type=float, default=0.0)
+    s.set_defaults(fn=cmd_montagem_ritmo)
 
     a = p.parse_args()
     a.fn(a)

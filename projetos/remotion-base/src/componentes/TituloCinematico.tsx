@@ -1,12 +1,13 @@
 import React from "react";
-import { AbsoluteFill, interpolate, useCurrentFrame, Easing } from "remotion";
+import { AbsoluteFill, interpolate, useCurrentFrame } from "remotion";
+import { curvas } from "../curvas";
 import { marca } from "../marca";
 
 /** Título cinematográfico: tracking (espaçamento abrindo), desfoque → foco, linha dourada. */
 export const TituloCinematico: React.FC<{ titulo: string; subtitulo?: string; fundo?: string }> = ({ titulo, subtitulo, fundo }) => {
   const frame = useCurrentFrame();
-  const t = interpolate(frame, [0, 40], [0, 1], { extrapolateRight: "clamp", easing: Easing.out(Easing.cubic) });
-  const linha = interpolate(frame, [15, 45], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.inOut(Easing.cubic) });
+  const t = interpolate(frame, [0, 40], [0, 1], { extrapolateRight: "clamp", easing: curvas.saida });
+  const linha = interpolate(frame, [15, 45], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: curvas.cinematica });
   const sub = interpolate(frame, [30, 50], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
   return (
     <AbsoluteFill style={{ backgroundColor: fundo ?? "transparent", justifyContent: "center", alignItems: "center", textAlign: "center" }}>
