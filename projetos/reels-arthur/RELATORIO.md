@@ -7,7 +7,7 @@ Data: 05/11/2026 · Primeiro teste audiovisual da biblioteca.
 | Arquivo (`midia/saida/`) | Especificação medida |
 |---|---|
 | `ARTHUR_VIDEO_EDITOR_REELS_INSTAGRAM.mp4` | 1080×1920 · 30 fps · 168,0 s (5.040 frames) · H.264 High @ L4.2 · yuv420p · BT.709 (primaries/transfer/matrix) · CRF 18 com teto de 20 Mbps (média 5,8 Mbps) · AAC-LC 48 kHz estéreo 128 kbps · **−13,9 LUFS integrados · true peak −1,6 dBTP** · LRA 3,4 LU · faststart (moov no início) · 124 MB |
-| `ARTHUR_VIDEO_EDITOR_REELS_4K_MASTER.mp4` | 2160×3840 nativo (render Remotion em escala 2, não upscale) · 30 fps · H.264 High @ L5.2 · CRF 14 · BT.709 · AAC 320 kbps — ver item 6 |
+| `ARTHUR_VIDEO_EDITOR_REELS_4K_MASTER.mp4` | 2160×3840 **nativo** (render Remotion em escala 2, não upscale) · 30 fps · 168,0 s (5.040 frames) · H.264 High @ L5.2 · yuv420p · BT.709 · CRF 14 (média 57,6 Mbps) · AAC-LC 48 kHz estéreo 320 kbps · faststart · 1,2 GB. Renderizado em 4 blocos (`render-4k-blocos.sh`, ~2h20 no total) porque um render único excede o limite de 2 h por tarefa do ambiente |
 | `ARTHUR_VIDEO_EDITOR_CAPA.jpg` | 1080×1920, still `CapaReels` do Remotion |
 
 A média de 5,8 Mbps é baixa porque o material é gráfico (fundos escuros e formas limpas comprimem muito bem em CRF 18); o
