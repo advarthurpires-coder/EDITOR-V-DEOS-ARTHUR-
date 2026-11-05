@@ -42,8 +42,8 @@ RE_FONTSOURCE = re.compile(r"https://cdn\.jsdelivr\.net/fontsource/fonts/(?P<fam
 RE_CDNJS_THREE = re.compile(r"https://cdnjs\.cloudflare\.com/ajax/libs/three\.js/r(?P<r>\d+)/three\.min\.js")
 
 
-def run(cmd, cwd=None, silencioso=True, timeout=None) -> subprocess.CompletedProcess:
-    r = subprocess.run([str(c) for c in cmd], cwd=cwd, capture_output=True, text=True, timeout=timeout)
+def run(cmd, cwd=None, silencioso=True, timeout=None, env=None) -> subprocess.CompletedProcess:
+    r = subprocess.run([str(c) for c in cmd], cwd=cwd, capture_output=True, text=True, timeout=timeout, env=env)
     if r.returncode != 0:
         if not silencioso:
             sys.stderr.write(r.stdout[-2000:] + r.stderr[-3000:])
@@ -414,8 +414,11 @@ def modo_render(nome: str) -> str:
     return "host" if ("assetUrl(" in texto and not proprio) else "direto"
 
 
-def _executar_render(cmd: list, limite_s: float) -> None:
-    run(cmd, cwd=BIB, timeout=limite_s)
+def _executar_render(cmd: list, limite_s: float, webgpu: bool = False) -> None:
+    env = dict(os.environ)
+    if webgpu:  # sem GPU no ambiente: WebGPU por software (SwiftShader), mais lento
+        env["PRODUCER_ALLOW_SOFTWARE_WEBGPU"] = "true"
+    run(cmd, cwd=BIB, timeout=limite_s, env=env)
 
 
 def renderizar(nome: str, saida: Path, variaveis: dict | None = None, qualidade: str = "looks", fps: int | None = None,
@@ -429,6 +432,9 @@ def renderizar(nome: str, saida: Path, variaveis: dict | None = None, qualidade:
     D = duracao or m["duracao"]
     limite = max(240.0, D * 45)
     base = ["-o", str(saida), "--quality", qualidade, "--format", formato, "--quiet"] + (["--fps", str(fps)] if fps else [])
+    webgpu = "data-requires-webgpu" in (RAIZ / m["arquivo"]).read_text(encoding="utf-8")
+    if webgpu:
+        limite *= 3
     ordem = [modo or modo_render(nome)]
     if ordem[0] != "trecho":
         ordem.append("host" if ordem[0] == "direto" else "direto")
@@ -441,7 +447,7 @@ def renderizar(nome: str, saida: Path, variaveis: dict | None = None, qualidade:
                     cmd += ["--variables", json.dumps(variaveis, ensure_ascii=False)]
                 if duracao and duracao < m["duracao"] and formato == "mp4":
                     cmd += ["--end", str(duracao)]
-                _executar_render(cmd, limite)
+                _executar_render(cmd, limite, webgpu)
             elif md == "trecho":
                 f = fundo if fundo else (None if formato in ("mov", "webm") else "#0b1d33")
                 host = criar_host_trecho(nome, duracao, f, escala)
@@ -449,14 +455,14 @@ def renderizar(nome: str, saida: Path, variaveis: dict | None = None, qualidade:
                 if variaveis:
                     cmd += ["--variables", json.dumps(variaveis, ensure_ascii=False)]
                 try:
-                    _executar_render(cmd, limite)
+                    _executar_render(cmd, limite, webgpu)
                 finally:
                     host.unlink(missing_ok=True)
             else:
                 f = fundo if fundo else (None if formato in ("mov", "webm") else "#0b1d33")
                 host = criar_host(nome, variaveis, duracao, f)
                 try:
-                    _executar_render(["hyperframes", "render", str(BIB), "-c", host.name, *base], limite)
+                    _executar_render(["hyperframes", "render", str(BIB), "-c", host.name, *base], limite, webgpu)
                 finally:
                     host.unlink(missing_ok=True)
             if saida.exists() and saida.stat().st_size > 0:
