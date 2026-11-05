@@ -384,8 +384,11 @@ def criar_host_trecho(nome: str, duracao: float | None, fundo: str | None, escal
     <script>
       window.__timelines = window.__timelines || {{}};
       var tl = gsap.timeline({{ paused: true }});
+      var startTime = 0.2;  // receitas do registro assumem esta variável na cena hospedeira
       try {{
+        {{
 {receita}
+        }}
       }} catch (e) {{ console.error("receita do trecho falhou:", e); }}
       if (tl.duration() < {D}) tl.to({{}}, {{ duration: {D} - tl.duration() }}, tl.duration());
       window.__timelines["{host_id}"] = tl;

@@ -187,6 +187,39 @@
   "tipo": "component",
   "variaveis": 7
  },
+ "chat-message": {
+  "brilho_medio": 18.2,
+  "duracao": 3.0,
+  "ficha_demo": false,
+  "movimento": 0.24,
+  "movimento_pico": 2.69,
+  "ok": true,
+  "quadros_analisados": 12,
+  "tipo": "component",
+  "variaveis": 6
+ },
+ "chat-thread": {
+  "brilho_medio": 21.5,
+  "duracao": 4.0,
+  "ficha_demo": false,
+  "movimento": 2.84,
+  "movimento_pico": 36.9,
+  "ok": true,
+  "quadros_analisados": 16,
+  "tipo": "component",
+  "variaveis": 6
+ },
+ "chromatic-aberration-wipe": {
+  "brilho_medio": 40.9,
+  "duracao": 4.0,
+  "ficha_demo": false,
+  "movimento": 0.0,
+  "movimento_pico": 0.01,
+  "ok": false,
+  "quadros_analisados": 16,
+  "tipo": "component",
+  "variaveis": 3
+ },
  "grain-overlay": {
   "brilho_medio": 48.6,
   "duracao": 4.0,
