@@ -1,0 +1,6577 @@
+{
+ "versao": 1,
+ "atualizado_em": "2026-11-05",
+ "status_legenda": {
+  "implementado": "Existe no repositório e foi testado (comando/componente indicado em como_usar).",
+  "integracao": "Disponível numa ferramenta instalada (bloco do registro HyperFrames, filtro FFmpeg, recurso Remotion), sem componente próprio nosso ainda.",
+  "catalogado": "Apenas planejado/documentado; requer desenvolvimento, modelo de IA ou biblioteca externa."
+ },
+ "categorias": {
+  "transicoes": {
+   "numero": 1,
+   "nome": "Transições cinematográficas"
+  },
+  "camera-3d": {
+   "numero": 2,
+   "nome": "Movimentos de câmera e efeitos 3D"
+  },
+  "motion-graphics": {
+   "numero": 3,
+   "nome": "Motion graphics e animações de elementos"
+  },
+  "legendas-tipografia": {
+   "numero": 4,
+   "nome": "Legendas e tipografia animada"
+  },
+  "vfx": {
+   "numero": 5,
+   "nome": "Efeitos visuais (VFX)"
+  },
+  "estilos": {
+   "numero": 6,
+   "nome": "Estilos de edição"
+  },
+  "interfaces-mockups": {
+   "numero": 7,
+   "nome": "Composições, interfaces e mockups"
+  },
+  "cortes-montagem": {
+   "numero": 8,
+   "nome": "Cortes e técnicas de montagem"
+  },
+  "cor": {
+   "numero": 9,
+   "nome": "Color grading e tratamentos de imagem"
+  },
+  "sfx": {
+   "numero": 10,
+   "nome": "Efeitos sonoros (SFX)"
+  },
+  "audio": {
+   "numero": 11,
+   "nome": "Voz, narração, música e edição de áudio"
+  },
+  "ia": {
+   "numero": 12,
+   "nome": "Edições inteligentes com IA"
+  },
+  "templates": {
+   "numero": 13,
+   "nome": "Templates e formatos de vídeo"
+  },
+  "recursos-editor": {
+   "numero": 14,
+   "nome": "Recursos adicionais do editor"
+  }
+ },
+ "itens": [
+  {
+   "id": "transicoes.smooth-zoom-in-out",
+   "nome": "Smooth Zoom In / Out",
+   "categoria": "transicoes",
+   "descricao": "Zoom de entrada/saída que funde as duas tomadas.",
+   "ferramentas": [
+    "ffmpeg",
+    "hyperframes"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py transicao a.mp4 b.mp4 out.mp4 --tipo zoom | HF: hyperframes add cinematic-zoom",
+   "parametros": "--duracao (s)",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "transicoes.zoom-through-cut",
+   "nome": "Zoom Through Cut",
+   "categoria": "transicoes",
+   "descricao": "Avança a câmera através do quadro até a próxima cena.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add zoom-through-transition",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "transicoes.whip-pan",
+   "nome": "Whip Pan",
+   "categoria": "transicoes",
+   "descricao": "Chicote de câmera com borrão direcional entre cenas.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add whip-pan  |  hyperframes add whip-pan-cut",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "transicoes.motion-blur-transition",
+   "nome": "Motion Blur Transition",
+   "categoria": "transicoes",
+   "descricao": "Transição com desfoque de movimento horizontal.",
+   "ferramentas": [
+    "ffmpeg",
+    "hyperframes"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py transicao a b out --tipo desfoque | HF: hyperframes add transitions-blur",
+   "parametros": "--duracao",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "transicoes.speed-ramp-transition",
+   "nome": "Speed Ramp Transition",
+   "categoria": "transicoes",
+   "descricao": "Acelera o fim da cena A e desacelera o início da B, mascarando o corte.",
+   "ferramentas": [
+    "ffmpeg",
+    "remotion"
+   ],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "Requer rampa de velocidade variável (não implementada).",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "transicoes.seamless-match-cut",
+   "nome": "Seamless Match Cut",
+   "categoria": "transicoes",
+   "descricao": "Corte entre formas/movimentos equivalentes em cenas diferentes.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add match-cut  |  hyperframes add text-match-cut  |  hyperframes add type-match-cut",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "transicoes.invisible-cut",
+   "nome": "Invisible Cut",
+   "categoria": "transicoes",
+   "descricao": "Corte escondido num elemento que cobre o quadro (parede, passante).",
+   "ferramentas": [
+    "remotion",
+    "ffmpeg"
+   ],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "Depende da captação planejada e de máscara.",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "transicoes.mask-transition",
+   "nome": "Mask Transition",
+   "categoria": "transicoes",
+   "descricao": "Revela a próxima cena por uma máscara geométrica (círculo, íris, radial).",
+   "ferramentas": [
+    "ffmpeg",
+    "hyperframes"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py transicao a b out --tipo circulo-abre|radial | HF: hyperframes add iris-reveal",
+   "parametros": "Formas: circulo-abre, circulo-fecha, radial",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "transicoes.object-wipe",
+   "nome": "Object Wipe",
+   "categoria": "transicoes",
+   "descricao": "Um objeto em cena passa pela câmera e serve de cortina.",
+   "ferramentas": [
+    "remotion"
+   ],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "Requer segmentação/rotoscopia do objeto.",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "transicoes.light-leak-transition",
+   "nome": "Light Leak Transition",
+   "categoria": "transicoes",
+   "descricao": "Vazamento de luz quente que funde as cenas.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add light-leak  |  hyperframes add organic-light-leak-overlay",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "transicoes.film-burn",
+   "nome": "Film Burn",
+   "categoria": "transicoes",
+   "descricao": "Queima de película entre cenas.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add ridged-burn (verificar visual)",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "transicoes.glitch-transition",
+   "nome": "Glitch Transition",
+   "categoria": "transicoes",
+   "descricao": "Transição digital com falhas e deslocamentos.",
+   "ferramentas": [
+    "hyperframes",
+    "ffmpeg"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add glitch  |  aproximação: python3 scripts/estudio.py transicao --tipo pixel",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "transicoes.rgb-split",
+   "nome": "RGB Split",
+   "categoria": "transicoes",
+   "descricao": "Separação dos canais RGB durante a troca.",
+   "ferramentas": [
+    "hyperframes",
+    "ffmpeg"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add chromatic-aberration-wipe | hyperframes add chromatic-radial-split | efeito: python3 scripts/estudio.py vfx --efeito aberracao",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "transicoes.flash-cut",
+   "nome": "Flash Cut",
+   "categoria": "transicoes",
+   "descricao": "Corte com clarão branco.",
+   "ferramentas": [
+    "ffmpeg",
+    "hyperframes"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py transicao a b out --tipo flash --duracao 0.3 | HF: hyperframes add flash-through-white",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "transicoes.spin-transition",
+   "nome": "Spin Transition",
+   "categoria": "transicoes",
+   "descricao": "Giro rápido da imagem na troca de cena.",
+   "ferramentas": [
+    "remotion",
+    "hyperframes"
+   ],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "Ver transitions-3d no registro para alternativa.",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "transicoes.camera-shake-cut",
+   "nome": "Camera Shake Cut",
+   "categoria": "transicoes",
+   "descricao": "Corte acompanhado de tremor de câmera (impacto).",
+   "ferramentas": [
+    "ffmpeg",
+    "hyperframes",
+    "remotion"
+   ],
+   "status": "integracao",
+   "como_usar": "python3 scripts/estudio.py vfx --efeito tremor no clipe + corte | HF: hyperframes add camera-shake | Remotion: TremorCamera",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "transicoes.push-slide-swipe",
+   "nome": "Push / Slide / Swipe",
+   "categoria": "transicoes",
+   "descricao": "Uma cena empurra/desliza a outra para fora do quadro.",
+   "ferramentas": [
+    "ffmpeg",
+    "remotion",
+    "hyperframes"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py transicao a b out --tipo slide-esquerda|push-esquerda | Remotion: slide() (Vitrine.tsx)",
+   "parametros": "direção: esquerda/direita/cima/baixo",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "transicoes.parallax-transition",
+   "nome": "Parallax Transition",
+   "categoria": "transicoes",
+   "descricao": "Camadas se movem em velocidades diferentes na troca.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add parallax-zoom  |  hyperframes add parallax-unzoom",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "transicoes.liquid-morph",
+   "nome": "Liquid Morph",
+   "categoria": "transicoes",
+   "descricao": "Distorção líquida que deforma uma cena na outra.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add cross-warp-morph  |  hyperframes add domain-warp-dissolve",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "transicoes.portal-transition",
+   "nome": "Portal Transition",
+   "categoria": "transicoes",
+   "descricao": "Abertura de portal que revela a próxima cena.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add vfx-portal",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "transicoes.paper-tear",
+   "nome": "Paper Tear",
+   "categoria": "transicoes",
+   "descricao": "Rasgo de papel revelando a próxima cena.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add torn-paper-rip",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "transicoes.glass-shatter",
+   "nome": "Glass Shatter",
+   "categoria": "transicoes",
+   "descricao": "Imagem se estilhaça como vidro.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add vfx-shatter  |  hyperframes add glass-shard-title",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "transicoes.3d-cube-rotation",
+   "nome": "3D Cube Rotation",
+   "categoria": "transicoes",
+   "descricao": "Cenas nas faces de um cubo que gira.",
+   "ferramentas": [
+    "hyperframes",
+    "remotion"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add transitions-3d | (Remotion flip() implementado na Vitrine — não é cubo)",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "transicoes.luma-fade",
+   "nome": "Luma Fade",
+   "categoria": "transicoes",
+   "descricao": "Dissolução guiada pela luminância (áreas claras primeiro).",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "Aproximações disponíveis: --tipo fade-preto / fade-cinza.",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "transicoes.morphing-transition",
+   "nome": "Morphing Transition",
+   "categoria": "transicoes",
+   "descricao": "Uma forma/elemento se transforma no seguinte.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add morph-swap  |  hyperframes add facet-morph",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "transicoes.fade-dissolve",
+   "nome": "Fade / Dissolve",
+   "categoria": "transicoes",
+   "descricao": "Fusão clássica entre cenas (extra do catálogo).",
+   "ferramentas": [
+    "ffmpeg",
+    "remotion"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py transicao a b out --tipo fade|dissolver|fade-preto | Remotion: fade()",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "transicoes.wipe-clock-wipe-flip",
+   "nome": "Wipe / Clock Wipe / Flip",
+   "categoria": "transicoes",
+   "descricao": "Cortinas lineares, relógio e virada 3D (extra do catálogo).",
+   "ferramentas": [
+    "ffmpeg",
+    "remotion"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py transicao --tipo wipe-esquerda | Remotion: wipe(), clockWipe(), flip() em Vitrine.tsx",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "camera-3d.orbit-camera",
+   "nome": "Orbit Camera",
+   "categoria": "camera-3d",
+   "descricao": "Câmera orbitando um objeto/cena 3D.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add frost-sequence-camera-orbit | hyperframes add three-orbiting-cards",
+   "parametros": "Para filmagem real: catalogado.",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "camera-3d.dolly-zoom-vertigo",
+   "nome": "Dolly Zoom / Vertigo",
+   "categoria": "camera-3d",
+   "descricao": "Zoom óptico contrário ao deslocamento (efeito vertigem).",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add camera-dolly-zoom",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "camera-3d.push-in-pull-back",
+   "nome": "Push In / Pull Back",
+   "categoria": "camera-3d",
+   "descricao": "Aproximação/afastamento suave da câmera.",
+   "ferramentas": [
+    "ffmpeg",
+    "remotion",
+    "hyperframes"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py vfx --efeito zoom-in|zoom-out | python3 scripts/estudio.py foto --movimento push-in|pull-back | Remotion: KenBurns",
+   "parametros": "--intensidade (0.15 = 15% de zoom)",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "camera-3d.digital-zoom",
+   "nome": "Digital Zoom",
+   "categoria": "camera-3d",
+   "descricao": "Zoom digital (reenquadramento) sobre o vídeo.",
+   "ferramentas": [
+    "ffmpeg",
+    "remotion"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py vfx in out --efeito zoom-in --intensidade 1.5",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "camera-3d.camera-roll",
+   "nome": "Camera Roll",
+   "categoria": "camera-3d",
+   "descricao": "Rotação da câmera no eixo da lente.",
+   "ferramentas": [
+    "ffmpeg",
+    "remotion"
+   ],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "Simples de implementar (rotate) quando houver demanda.",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "camera-3d.camera-tracking",
+   "nome": "Camera Tracking",
+   "categoria": "camera-3d",
+   "descricao": "Câmera virtual que acompanha um ponto rastreado.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "Requer rastreamento de movimento.",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "camera-3d.handheld-camera",
+   "nome": "Handheld Camera",
+   "categoria": "camera-3d",
+   "descricao": "Simula câmera na mão (oscilação lenta e orgânica).",
+   "ferramentas": [
+    "ffmpeg",
+    "remotion"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py vfx --efeito handheld | Remotion: <TremorCamera amplitude={6} velocidade={0.2}>",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "camera-3d.cinematic-camera-shake",
+   "nome": "Cinematic Camera Shake",
+   "categoria": "camera-3d",
+   "descricao": "Tremor de impacto/ação.",
+   "ferramentas": [
+    "ffmpeg",
+    "remotion",
+    "hyperframes"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py vfx --efeito tremor --intensidade 1.5 | Remotion: TremorCamera | HF: hyperframes add camera-shake",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "camera-3d.3d-parallax",
+   "nome": "3D Parallax",
+   "categoria": "camera-3d",
+   "descricao": "Profundidade simulada com camadas em movimento.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add parallax-device-dive | hyperframes add camera-rig-depth-stack",
+   "parametros": "Para fotos reais: requer mapa de profundidade (catalogado).",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "camera-3d.multi-layer-parallax",
+   "nome": "Multi-Layer Parallax",
+   "categoria": "camera-3d",
+   "descricao": "Várias camadas recortadas movendo-se em velocidades distintas.",
+   "ferramentas": [
+    "hyperframes",
+    "remotion"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add camera-rig-depth-stack | hyperframes add caption-parallax-layers",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "camera-3d.camera-fly-through",
+   "nome": "Camera Fly Through",
+   "categoria": "camera-3d",
+   "descricao": "Voo de câmera através de ambiente/galeria.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add gallery-tunnel | hyperframes add scroll-camera-story",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "camera-3d.infinite-zoom",
+   "nome": "Infinite Zoom",
+   "categoria": "camera-3d",
+   "descricao": "Zoom contínuo que entra em imagem dentro de imagem.",
+   "ferramentas": [
+    "remotion"
+   ],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "Requer sequência de imagens encaixadas.",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "camera-3d.perspective-shift",
+   "nome": "Perspective Shift",
+   "categoria": "camera-3d",
+   "descricao": "Mudança de perspectiva/inclinação do plano.",
+   "ferramentas": [
+    "remotion",
+    "hyperframes"
+   ],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "Alternativa gráfica: tilt-card / split-tilt-cards.",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "camera-3d.tilt-shift",
+   "nome": "Tilt Shift",
+   "categoria": "camera-3d",
+   "descricao": "Faixa de foco com desfoque em cima/baixo (efeito miniatura).",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "Viável com gblur + máscara de gradiente.",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "camera-3d.rack-focus",
+   "nome": "Rack Focus",
+   "categoria": "camera-3d",
+   "descricao": "Troca de foco entre planos.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add rack-focus | hyperframes add focus-rack",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "camera-3d.depth-of-field",
+   "nome": "Depth of Field",
+   "categoria": "camera-3d",
+   "descricao": "Desfoque de profundidade de campo.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add focus-blur-resolve (elementos gráficos)",
+   "parametros": "Em filmagem: requer mapa de profundidade.",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "camera-3d.dolly-in-dolly-out",
+   "nome": "Dolly In / Dolly Out",
+   "categoria": "camera-3d",
+   "descricao": "Aproximação/afastamento com sensação de deslocamento.",
+   "ferramentas": [
+    "ffmpeg",
+    "remotion"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py foto --movimento push-in|pull-back | Remotion: KenBurns",
+   "parametros": "Simulado por zoom (sem paralaxe real).",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "camera-3d.virtual-drone-shot",
+   "nome": "Virtual Drone Shot",
+   "categoria": "camera-3d",
+   "descricao": "Simula voo de drone sobre uma foto (zoom + deriva).",
+   "ferramentas": [
+    "ffmpeg",
+    "remotion"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py foto foto.jpg out.mp4 --movimento drone | Remotion: KenBurns movimento=\"drone\"",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "camera-3d.camera-follow",
+   "nome": "Camera Follow",
+   "categoria": "camera-3d",
+   "descricao": "Câmera acompanha um elemento (texto, cursor).",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add caption-camera-follow | hyperframes add cursor-zoom-follow",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "camera-3d.zoom-reveal",
+   "nome": "Zoom Reveal",
+   "categoria": "camera-3d",
+   "descricao": "Afasta para revelar o contexto completo.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add pull-back-reveal | hyperframes add ui-focus-zoom",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "camera-3d.frame-break",
+   "nome": "Frame Break",
+   "categoria": "camera-3d",
+   "descricao": "Sujeito 'sai' da moldura do quadro.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "Requer recorte do sujeito (segmentação).",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "camera-3d.ui-world",
+   "nome": "UI World",
+   "categoria": "camera-3d",
+   "descricao": "Câmera navegando por interfaces em espaço 3D.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add ui-3d-reveal | hyperframes add app-showcase",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "motion-graphics.kinetic-hook",
+   "nome": "Kinetic Hook",
+   "categoria": "motion-graphics",
+   "descricao": "Gancho inicial com texto de impacto animado.",
+   "ferramentas": [
+    "remotion",
+    "hyperframes"
+   ],
+   "status": "implementado",
+   "como_usar": "Remotion: Gancho em composicoes/ReelsJuridico.tsx | HF: hyperframes add headline-slam",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "motion-graphics.gravity-drop",
+   "nome": "Gravity Drop",
+   "categoria": "motion-graphics",
+   "descricao": "Elementos caem com gravidade e assentam.",
+   "ferramentas": [
+    "remotion",
+    "hyperframes"
+   ],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "Viável com spring/física; ainda não construído.",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "motion-graphics.elastic-bounce",
+   "nome": "Elastic Bounce",
+   "categoria": "motion-graphics",
+   "descricao": "Entrada elástica com quique.",
+   "ferramentas": [
+    "remotion",
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "Remotion spring(damping baixo) | HF: hyperframes add rubber-band-bumper",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "motion-graphics.spring-animation",
+   "nome": "Spring Animation",
+   "categoria": "motion-graphics",
+   "descricao": "Animação por mola (natural, com inércia).",
+   "ferramentas": [
+    "remotion",
+    "hyperframes"
+   ],
+   "status": "implementado",
+   "como_usar": "Remotion: spring() — usado em LowerThird, ChecklistAnimado, Gancho | HF: hyperframes add spring-pop",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "motion-graphics.overshoot",
+   "nome": "Overshoot",
+   "categoria": "motion-graphics",
+   "descricao": "Passa do ponto final e volta.",
+   "ferramentas": [
+    "remotion",
+    "hyperframes"
+   ],
+   "status": "implementado",
+   "como_usar": "Remotion: spring({config:{damping:11}}) (Gancho) | HF: extended-keyframe",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "motion-graphics.stagger-animation",
+   "nome": "Stagger Animation",
+   "categoria": "motion-graphics",
+   "descricao": "Itens entram em cascata.",
+   "ferramentas": [
+    "remotion",
+    "hyperframes"
+   ],
+   "status": "implementado",
+   "como_usar": "Remotion: ChecklistAnimado (intervaloFrames) | HF: hyperframes add stagger-cascade",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "motion-graphics.morphing-shapes",
+   "nome": "Morphing Shapes",
+   "categoria": "motion-graphics",
+   "descricao": "Formas que se transformam.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add facet-morph | hyperframes add icon-morph-beat",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "motion-graphics.particle-explosion",
+   "nome": "Particle Explosion",
+   "categoria": "motion-graphics",
+   "descricao": "Explosão de partículas.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add caption-particle-burst | hyperframes add char-slam-explode | hyperframes add confetti",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "motion-graphics.floating-elements",
+   "nome": "Floating Elements",
+   "categoria": "motion-graphics",
+   "descricao": "Elementos flutuando suavemente.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add drift-hold",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "motion-graphics.icon-impact",
+   "nome": "Icon Impact",
+   "categoria": "motion-graphics",
+   "descricao": "Ícone entra com impacto e pulso.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add beat-accent | hyperframes add badge-pop",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "motion-graphics.liquid-motion",
+   "nome": "Liquid Motion",
+   "categoria": "motion-graphics",
+   "descricao": "Movimento líquido/gooey.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add goo | hyperframes add gooey-split | hyperframes add vfx-liquid-background",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "motion-graphics.magnetic-motion",
+   "nome": "Magnetic Motion",
+   "categoria": "motion-graphics",
+   "descricao": "Elementos atraídos magneticamente.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add magnetic-cursor | hyperframes add vfx-magnetic",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "motion-graphics.animated-arrows",
+   "nome": "Animated Arrows",
+   "categoria": "motion-graphics",
+   "descricao": "Setas desenhadas à mão animadas.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add hw-arrow",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "motion-graphics.progress-bars",
+   "nome": "Progress Bars",
+   "categoria": "motion-graphics",
+   "descricao": "Barras de progresso.",
+   "ferramentas": [
+    "remotion",
+    "hyperframes"
+   ],
+   "status": "implementado",
+   "como_usar": "Remotion: BarraProgresso | HF: hyperframes add mk-progress-stat | hyperframes add conic-progress-ring",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "motion-graphics.animated-checklists",
+   "nome": "Animated Checklists",
+   "categoria": "motion-graphics",
+   "descricao": "Lista com checks animados.",
+   "ferramentas": [
+    "remotion",
+    "hyperframes"
+   ],
+   "status": "implementado",
+   "como_usar": "Remotion: ChecklistAnimado | HF: hyperframes add marker-checklist-card",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "motion-graphics.chart-grow",
+   "nome": "Chart Grow",
+   "categoria": "motion-graphics",
+   "descricao": "Gráficos que crescem.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add animated-bar-chart | hyperframes add data-chart | hyperframes add mk-line-graph",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "motion-graphics.data-counter",
+   "nome": "Data Counter",
+   "categoria": "motion-graphics",
+   "descricao": "Número contando até o valor final (pt-BR).",
+   "ferramentas": [
+    "remotion",
+    "hyperframes"
+   ],
+   "status": "implementado",
+   "como_usar": "Remotion: ContadorDados (prefixo 'R$ ', casas decimais) | HF: hyperframes add count-up",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "motion-graphics.infographic-reveal",
+   "nome": "Infographic Reveal",
+   "categoria": "motion-graphics",
+   "descricao": "Infográfico revelado em etapas.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add chart-story | hyperframes add hw-pipeline | hyperframes add flowchart",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "motion-graphics.animated-timeline",
+   "nome": "Animated Timeline",
+   "categoria": "motion-graphics",
+   "descricao": "Linha do tempo animada (ex.: cronologia de um processo).",
+   "ferramentas": [
+    "remotion"
+   ],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "Alta utilidade jurídica — candidato prioritário.",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "motion-graphics.doodle-boil",
+   "nome": "Doodle Boil",
+   "categoria": "motion-graphics",
+   "descricao": "Traço desenhado 'fervendo' (estilo rabisco).",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add hw-boil",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "motion-graphics.paper-cut-animation",
+   "nome": "Paper Cut Animation",
+   "categoria": "motion-graphics",
+   "descricao": "Recortes de papel/colagem.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add paper-collage-reveal",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "motion-graphics.glassmorphism",
+   "nome": "Glassmorphism",
+   "categoria": "motion-graphics",
+   "descricao": "Cartões de vidro fosco.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add liquid-glass-widgets | hyperframes add ios26-liquid-glass",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "motion-graphics.neon-glow-motion",
+   "nome": "Neon Glow Motion",
+   "categoria": "motion-graphics",
+   "descricao": "Contornos neon animados.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add lt-neon-border | hyperframes add caption-neon-glow",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "motion-graphics.3d-object-rotation",
+   "nome": "3D Object Rotation",
+   "categoria": "motion-graphics",
+   "descricao": "Objeto/logo 3D girando.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add product-turntable | hyperframes add extruded-logo",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "motion-graphics.follow-path-animation",
+   "nome": "Follow Path Animation",
+   "categoria": "motion-graphics",
+   "descricao": "Elemento percorre um caminho.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add arc-motion-path | hyperframes add offset-path-traveler",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "legendas-tipografia.kinetic-typography",
+   "nome": "Kinetic Typography",
+   "categoria": "legendas-tipografia",
+   "descricao": "Tipografia cinética sincronizada com a fala.",
+   "ferramentas": [
+    "hyperframes",
+    "remotion"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add kinetic-center-build | hyperframes add kinetic-type-swap",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "legendas-tipografia.word-by-word-captions",
+   "nome": "Word by Word Captions",
+   "categoria": "legendas-tipografia",
+   "descricao": "Uma palavra por vez na tela.",
+   "ferramentas": [
+    "remotion"
+   ],
+   "status": "implementado",
+   "como_usar": "Remotion: <LegendaDinamica estilo=\"palavra\" legendas={...}/>",
+   "parametros": "Entrada: Caption[] (estudio transcrever → *.legendas.json)",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "legendas-tipografia.karaoke-captions",
+   "nome": "Karaoke Captions",
+   "categoria": "legendas-tipografia",
+   "descricao": "Palavras mudam de cor conforme são ditas.",
+   "ferramentas": [
+    "remotion",
+    "hyperframes"
+   ],
+   "status": "implementado",
+   "como_usar": "Remotion: LegendaDinamica estilo=\"karaoke\" | HF: hyperframes add caption-pill-karaoke",
+   "parametros": "corDestaque, agruparMs",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "legendas-tipografia.giant-captions",
+   "nome": "Giant Captions",
+   "categoria": "legendas-tipografia",
+   "descricao": "Legendas gigantes em caixa-alta.",
+   "ferramentas": [
+    "remotion",
+    "ffmpeg"
+   ],
+   "status": "implementado",
+   "como_usar": "Remotion: estilo=\"gigante\" | python3 scripts/estudio.py legendar in.mp4 leg.srt out.mp4 --estilo gigante",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "legendas-tipografia.pop-up-captions",
+   "nome": "Pop-up Captions",
+   "categoria": "legendas-tipografia",
+   "descricao": "Legenda entra com 'pop' e palavra ativa ampliada.",
+   "ferramentas": [
+    "remotion",
+    "hyperframes"
+   ],
+   "status": "implementado",
+   "como_usar": "Remotion: estilo=\"pop\" | HF: hyperframes add caption-emoji-pop",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "legendas-tipografia.subtitle-bounce",
+   "nome": "Subtitle Bounce",
+   "categoria": "legendas-tipografia",
+   "descricao": "Legenda com quique na entrada.",
+   "ferramentas": [
+    "remotion"
+   ],
+   "status": "implementado",
+   "como_usar": "Remotion: estilo=\"pop\" (spring com overshoot)",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "legendas-tipografia.typewriter-effect",
+   "nome": "Typewriter Effect",
+   "categoria": "legendas-tipografia",
+   "descricao": "Texto digitado letra a letra com cursor.",
+   "ferramentas": [
+    "remotion",
+    "hyperframes"
+   ],
+   "status": "implementado",
+   "como_usar": "Remotion: MaquinaEscrever | HF: hyperframes add typewriter",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "legendas-tipografia.highlight-words",
+   "nome": "Highlight Words",
+   "categoria": "legendas-tipografia",
+   "descricao": "Palavras-chave destacadas.",
+   "ferramentas": [
+    "remotion",
+    "hyperframes"
+   ],
+   "status": "implementado",
+   "como_usar": "Remotion: estilo=\"destaque\" | HF: hyperframes add caption-highlight | hyperframes add marker-highlight",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "legendas-tipografia.word-shake",
+   "nome": "Word Shake",
+   "categoria": "legendas-tipografia",
+   "descricao": "Palavra treme para ênfase.",
+   "ferramentas": [
+    "remotion"
+   ],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "Fácil de adicionar como estilo da LegendaDinamica.",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "legendas-tipografia.text-tracking",
+   "nome": "Text Tracking",
+   "categoria": "legendas-tipografia",
+   "descricao": "Espaçamento entre letras abrindo.",
+   "ferramentas": [
+    "remotion",
+    "hyperframes"
+   ],
+   "status": "implementado",
+   "como_usar": "Remotion: TituloCinematico | HF: hyperframes add tracking-in",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "legendas-tipografia.text-reveal",
+   "nome": "Text Reveal",
+   "categoria": "legendas-tipografia",
+   "descricao": "Texto revelado do desfoque ao foco.",
+   "ferramentas": [
+    "remotion",
+    "hyperframes"
+   ],
+   "status": "implementado",
+   "como_usar": "Remotion: TituloCinematico | HF: hyperframes add soft-blur-in | hyperframes add bottom-up-letters",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "legendas-tipografia.masked-text",
+   "nome": "Masked Text",
+   "categoria": "legendas-tipografia",
+   "descricao": "Texto como máscara de imagem/vídeo.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add texture-mask-text | hyperframes add svg-mask-reveal",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "legendas-tipografia.3d-typography",
+   "nome": "3D Typography",
+   "categoria": "legendas-tipografia",
+   "descricao": "Tipografia com volume 3D.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add wireframe-portal-title | hyperframes add code-3d-extrude",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "legendas-tipografia.glass-type",
+   "nome": "Glass Type",
+   "categoria": "legendas-tipografia",
+   "descricao": "Letras de vidro.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add glass-shard-title",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "legendas-tipografia.neon-text",
+   "nome": "Neon Text",
+   "categoria": "legendas-tipografia",
+   "descricao": "Texto neon.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add caption-neon-glow | hyperframes add caption-neon-accent",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "legendas-tipografia.text-behind-subject",
+   "nome": "Text Behind Subject",
+   "categoria": "legendas-tipografia",
+   "descricao": "Texto atrás da pessoa.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "Requer recorte do sujeito por IA (modelo não instalado).",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "legendas-tipografia.text-explosion",
+   "nome": "Text Explosion",
+   "categoria": "legendas-tipografia",
+   "descricao": "Letras explodem/se dispersam.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add char-slam-explode | hyperframes add particle-text-dissolve",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "legendas-tipografia.rolling-text",
+   "nome": "Rolling Text",
+   "categoria": "legendas-tipografia",
+   "descricao": "Texto rolando (slot machine/letreiro).",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add slot-machine-roll | hyperframes add ticker-takeover | hyperframes add news-ticker",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "legendas-tipografia.gradient-typography",
+   "nome": "Gradient Typography",
+   "categoria": "legendas-tipografia",
+   "descricao": "Texto com preenchimento em degradê.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add caption-gradient-fill",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "legendas-tipografia.glitch-typography",
+   "nome": "Glitch Typography",
+   "categoria": "legendas-tipografia",
+   "descricao": "Texto com falha digital.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add rgb-glitch-text | hyperframes add caption-glitch-rgb",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "legendas-tipografia.subtitle-progress",
+   "nome": "Subtitle Progress",
+   "categoria": "legendas-tipografia",
+   "descricao": "Barra de progresso de retenção.",
+   "ferramentas": [
+    "remotion"
+   ],
+   "status": "implementado",
+   "como_usar": "Remotion: BarraProgresso (topo/base)",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "legendas-tipografia.dynamic-emoji-captions",
+   "nome": "Dynamic Emoji Captions",
+   "categoria": "legendas-tipografia",
+   "descricao": "Emojis contextuais junto às legendas.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add caption-emoji-pop",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "legendas-tipografia.highlight-box-captions",
+   "nome": "Highlight Box Captions",
+   "categoria": "legendas-tipografia",
+   "descricao": "Palavra ativa dentro de caixa colorida.",
+   "ferramentas": [
+    "remotion",
+    "ffmpeg"
+   ],
+   "status": "implementado",
+   "como_usar": "Remotion: estilo=\"destaque\" | python3 scripts/estudio.py legendar --estilo caixa",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "legendas-tipografia.lower-thirds",
+   "nome": "Lower Thirds",
+   "categoria": "legendas-tipografia",
+   "descricao": "Tarja com nome e cargo.",
+   "ferramentas": [
+    "remotion",
+    "hyperframes"
+   ],
+   "status": "implementado",
+   "como_usar": "Remotion: LowerThird | HF: lt-clean-bar, lt-mask-reveal, lt-side-rule e outras 8 variações",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "legendas-tipografia.cinematic-titles",
+   "nome": "Cinematic Titles",
+   "categoria": "legendas-tipografia",
+   "descricao": "Títulos cinematográficos.",
+   "ferramentas": [
+    "remotion",
+    "hyperframes"
+   ],
+   "status": "implementado",
+   "como_usar": "Remotion: TituloCinematico | HF: hyperframes add titlecard-calm | hyperframes add titlecard-lockup",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "legendas-tipografia.legendas-estaticas-srt-queimadas",
+   "nome": "Legendas estáticas SRT queimadas",
+   "categoria": "legendas-tipografia",
+   "descricao": "Legenda SRT tradicional gravada na imagem (extra).",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py legendar in.mp4 leg.srt out.mp4 --estilo classico|reels|gigante|caixa",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "vfx.green-screen-chroma-key",
+   "nome": "Green Screen / Chroma Key",
+   "categoria": "vfx",
+   "descricao": "Remove fundo verde/azul e aplica novo fundo.",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py chroma pessoa.mp4 fundo.jpg out.mp4 --cor 0x00FF00",
+   "parametros": "--similaridade, --suavidade",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "vfx.background-replacement",
+   "nome": "Background Replacement",
+   "categoria": "vfx",
+   "descricao": "Troca o fundo do vídeo.",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py chroma ... (requer fundo chapado)",
+   "parametros": "Sem fundo chapado: depende de IA (catalogado).",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "vfx.background-removal",
+   "nome": "Background Removal",
+   "categoria": "vfx",
+   "descricao": "Remove o fundo sem tela verde (IA).",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "Skill /media-use oferece; depende de modelo/serviço externo.",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "vfx.object-removal",
+   "nome": "Object Removal",
+   "categoria": "vfx",
+   "descricao": "Apaga objetos indesejados.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "Logotipos estáticos: filtro delogo do FFmpeg (não encapsulado).",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "vfx.object-tracking",
+   "nome": "Object Tracking",
+   "categoria": "vfx",
+   "descricao": "Rastreia um objeto pelo vídeo.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "vfx.face-tracking",
+   "nome": "Face Tracking",
+   "categoria": "vfx",
+   "descricao": "Rastreia o rosto (para zoom, desfoque, reenquadramento).",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "Útil para anonimizar partes (LGPD).",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "vfx.motion-tracking",
+   "nome": "Motion Tracking",
+   "categoria": "vfx",
+   "descricao": "Prende elementos gráficos a um ponto em movimento.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "vfx.rotoscoping",
+   "nome": "Rotoscoping",
+   "categoria": "vfx",
+   "descricao": "Recorte quadro a quadro do sujeito.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "vfx.glow-effect",
+   "nome": "Glow Effect",
+   "categoria": "vfx",
+   "descricao": "Brilho difuso nas áreas claras.",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py vfx --efeito glow --intensidade 1",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "vfx.bloom",
+   "nome": "Bloom",
+   "categoria": "vfx",
+   "descricao": "Halo de luz nas altas luzes.",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py vfx --efeito glow (mesma técnica)",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "vfx.lens-flare",
+   "nome": "Lens Flare",
+   "categoria": "vfx",
+   "descricao": "Reflexo de lente.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add lens-flare | hyperframes add vfx-anamorphic-flare",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "vfx.chromatic-aberration",
+   "nome": "Chromatic Aberration",
+   "categoria": "vfx",
+   "descricao": "Franjas coloridas nas bordas.",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py vfx --efeito aberracao",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "vfx.vhs-analog-noise",
+   "nome": "VHS / Analog Noise",
+   "categoria": "vfx",
+   "descricao": "Fita VHS: ruído, linhas, cores lavadas, deslocamento RGB.",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py vfx --efeito vhs",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "vfx.film-grain",
+   "nome": "Film Grain",
+   "categoria": "vfx",
+   "descricao": "Grão de película.",
+   "ferramentas": [
+    "ffmpeg",
+    "remotion",
+    "hyperframes"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py vfx --efeito grao | Remotion: GraoFilme | HF: hyperframes add grain-overlay",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "vfx.retro-camcorder",
+   "nome": "Retro Camcorder",
+   "categoria": "vfx",
+   "descricao": "Visual de filmadora antiga com HUD.",
+   "ferramentas": [
+    "hyperframes",
+    "ffmpeg"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add camcorder-hud + python3 scripts/estudio.py vfx --efeito vhs",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "vfx.hologram-effect",
+   "nome": "Hologram Effect",
+   "categoria": "vfx",
+   "descricao": "Holograma.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add hologram",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "vfx.double-exposure",
+   "nome": "Double Exposure",
+   "categoria": "vfx",
+   "descricao": "Dupla exposição de duas imagens.",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "Viável com blend=screen (não encapsulado).",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "vfx.ghost-trail",
+   "nome": "Ghost Trail",
+   "categoria": "vfx",
+   "descricao": "Rastro fantasma do movimento.",
+   "ferramentas": [
+    "ffmpeg",
+    "hyperframes"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py vfx --efeito rastro | HF: hyperframes add echo-trail",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "vfx.freeze-frame",
+   "nome": "Freeze Frame",
+   "categoria": "vfx",
+   "descricao": "Congela um quadro por N segundos.",
+   "ferramentas": [
+    "ffmpeg",
+    "hyperframes"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py congelar in.mp4 out.mp4 --em 2.0 --duracao 1.5 | HF: hyperframes add freeze-frame-dressing",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "vfx.pixel-sorting",
+   "nome": "Pixel Sorting",
+   "categoria": "vfx",
+   "descricao": "Ordenação de pixels (glitch art).",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "vfx.displacement",
+   "nome": "Displacement",
+   "categoria": "vfx",
+   "descricao": "Deformação por mapa de deslocamento.",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "FFmpeg possui displace (não encapsulado).",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "vfx.heat-distortion",
+   "nome": "Heat Distortion",
+   "categoria": "vfx",
+   "descricao": "Distorção de calor.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add thermal-distortion (transição)",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "vfx.smoke-overlay",
+   "nome": "Smoke Overlay",
+   "categoria": "vfx",
+   "descricao": "Fumaça sobreposta.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "Requer banco de overlays licenciados.",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "vfx.fire-particles",
+   "nome": "Fire Particles",
+   "categoria": "vfx",
+   "descricao": "Partículas de fogo/brasas.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "vfx.rain-snow-effects",
+   "nome": "Rain / Snow Effects",
+   "categoria": "vfx",
+   "descricao": "Chuva ou neve.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add snow (neve). Chuva: catalogado.",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "vfx.vignette",
+   "nome": "Vignette",
+   "categoria": "vfx",
+   "descricao": "Escurecimento das bordas.",
+   "ferramentas": [
+    "ffmpeg",
+    "remotion",
+    "hyperframes"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py vfx --efeito vinheta | Remotion: Vinheta | HF: hyperframes add vignette",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "vfx.color-isolation",
+   "nome": "Color Isolation",
+   "categoria": "vfx",
+   "descricao": "Mantém uma cor e dessatura o resto.",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py vfx --efeito isolar-cor --cor red",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "estilos.cinematic-editing",
+   "nome": "Cinematic Editing",
+   "categoria": "estilos",
+   "descricao": "Ritmo contido, planos longos, grade cinematográfica, letterbox opcional.",
+   "ferramentas": [
+    "ffmpeg",
+    "remotion"
+   ],
+   "status": "catalogado",
+   "como_usar": "Receita: cor cinematic + vinheta + grão leve + fades + TituloCinematico",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "estilos.documentary-style",
+   "nome": "Documentary Style",
+   "categoria": "estilos",
+   "descricao": "Narração, B-roll, entrevistas com lower thirds, ritmo pausado.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "Receita: LowerThird + Ken Burns em fotos + cor matte",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "estilos.hollywood-trailer",
+   "nome": "Hollywood Trailer",
+   "categoria": "estilos",
+   "descricao": "Cartelas, braams, risers, cortes no impacto, crescendo.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "Receita: sfx braam/riser/impacto + flash + TituloCinematico + dark-moody",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "estilos.luxury-premium",
+   "nome": "Luxury / Premium",
+   "categoria": "estilos",
+   "descricao": "Movimentos lentos, tipografia serifada, dourado, muito respiro.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "Receita: luxo-dourado + Playfair + push-in lento + fade",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "estilos.minimalist-clean",
+   "nome": "Minimalist Clean",
+   "categoria": "estilos",
+   "descricao": "Fundo limpo, pouca cor, tipografia simples.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "catalogado",
+   "como_usar": "Blocos HF mk-* (minimal/professional)",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "estilos.corporate-professional",
+   "nome": "Corporate Professional",
+   "categoria": "estilos",
+   "descricao": "Sóbrio, institucional, dados e logotipo.",
+   "ferramentas": [
+    "hyperframes",
+    "remotion"
+   ],
+   "status": "catalogado",
+   "como_usar": "ContadorDados + LowerThird + mk-* blocks",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "estilos.dark-cinematic",
+   "nome": "Dark Cinematic",
+   "categoria": "estilos",
+   "descricao": "Baixa luz, contraste alto, tons frios.",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "catalogado",
+   "como_usar": "Receita: dark-moody + vinheta + drone sfx",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "estilos.motivational-inspirational",
+   "nome": "Motivational / Inspirational",
+   "categoria": "estilos",
+   "descricao": "Música crescente, frases de impacto, câmera lenta.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "estilos.emotional-storytelling",
+   "nome": "Emotional Storytelling",
+   "categoria": "estilos",
+   "descricao": "Narrativa com depoimento, close, trilha suave.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "estilos.epic-adventure",
+   "nome": "Epic Adventure",
+   "categoria": "estilos",
+   "descricao": "Planos amplos, drone, trilha épica.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "estilos.fast-paced-reels",
+   "nome": "Fast-Paced Reels",
+   "categoria": "estilos",
+   "descricao": "Cortes a cada 1–2 s, legendas dinâmicas, zooms de ênfase.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "Receita: silencio + LegendaDinamica pop + vfx zoom-in + whoosh",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "estilos.podcast-highlights",
+   "nome": "Podcast Highlights",
+   "categoria": "estilos",
+   "descricao": "Trechos de podcast com legendas e waveform.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "estilos.talking-head-dynamic",
+   "nome": "Talking Head Dynamic",
+   "categoria": "estilos",
+   "descricao": "Fala para câmera com punch-ins, legendas e B-roll.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "Receita: silencio + ReelsJuridico + zoom-in alternado",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "estilos.alex-hormozi-style",
+   "nome": "Alex Hormozi Style",
+   "categoria": "estilos",
+   "descricao": "Inspirado no ritmo do criador: legendas grandes centrais, palavras-chave coloridas, cortes secos.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "Receita: LegendaDinamica gigante/destaque + jump cuts + pop sfx (sem copiar marca alheia)",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "estilos.mrbeast-inspired-pacing",
+   "nome": "MrBeast-Inspired Pacing",
+   "categoria": "estilos",
+   "descricao": "Ritmo muito rápido, ganchos a cada poucos segundos, retenção máxima.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "Inspiração de ritmo apenas, sem elementos de terceiros.",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "estilos.social-media-viral",
+   "nome": "Social Media Viral",
+   "categoria": "estilos",
+   "descricao": "Gancho em 1 s, legendas, CTA.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "estilos.retro-vintage",
+   "nome": "Retro Vintage",
+   "categoria": "estilos",
+   "descricao": "Cores lavadas, grão, VHS ou película.",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "catalogado",
+   "como_usar": "Receita: vintage-kodak + grao | vhs",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "estilos.cyberpunk-futuristic",
+   "nome": "Cyberpunk / Futuristic",
+   "categoria": "estilos",
+   "descricao": "Neon, glitch, magenta/ciano.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "estilos.editorial-fashion",
+   "nome": "Editorial Fashion",
+   "categoria": "estilos",
+   "descricao": "Tipografia editorial, cortes no ritmo, flashes.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "estilos.wedding-cinematic",
+   "nome": "Wedding Cinematic",
+   "categoria": "estilos",
+   "descricao": "Câmera lenta, tons quentes, trilha emotiva.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "estilos.travel-vlog",
+   "nome": "Travel Vlog",
+   "categoria": "estilos",
+   "descricao": "Drone, transições de movimento, mapas.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "estilos.sports-highlights",
+   "nome": "Sports Highlights",
+   "categoria": "estilos",
+   "descricao": "Cortes rápidos, câmera lenta nos lances, placares.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "estilos.real-estate-luxury",
+   "nome": "Real Estate Luxury",
+   "categoria": "estilos",
+   "descricao": "Movimentos lentos, grade limpa, ficha técnica.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "estilos.testimonial-editing",
+   "nome": "Testimonial Editing",
+   "categoria": "estilos",
+   "descricao": "Depoimento com lower third e B-roll.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "Atenção ao Provimento 205/2021 (depoimentos de clientes).",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "interfaces-mockups.phone-mockup",
+   "nome": "Phone Mockup",
+   "categoria": "interfaces-mockups",
+   "descricao": "Vídeo dentro de um celular.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add device-frame-stage | hyperframes add vfx-iphone-device",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "interfaces-mockups.laptop-mockup",
+   "nome": "Laptop Mockup",
+   "categoria": "interfaces-mockups",
+   "descricao": "Vídeo dentro de um notebook.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add multi-device-splay (verificar variação laptop)",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "interfaces-mockups.browser-window",
+   "nome": "Browser Window",
+   "categoria": "interfaces-mockups",
+   "descricao": "Janela de navegador animada.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add browser-device-stage",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "interfaces-mockups.app-interface-animation",
+   "nome": "App Interface Animation",
+   "categoria": "interfaces-mockups",
+   "descricao": "Fluxos de app animados.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add app-showcase | hyperframes add onboarding-stepper-flow",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "interfaces-mockups.social-media-feed",
+   "nome": "Social Media Feed",
+   "categoria": "interfaces-mockups",
+   "descricao": "Feed rolando.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add scroll-feed",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "interfaces-mockups.scrolling-reels-grid",
+   "nome": "Scrolling Reels Grid",
+   "categoria": "interfaces-mockups",
+   "descricao": "Grade de vídeos rolando.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "interfaces-mockups.instagram-comment-pop-up",
+   "nome": "Instagram Comment Pop-up",
+   "categoria": "interfaces-mockups",
+   "descricao": "Comentário surgindo na tela.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add yt-comment-card (adaptar visual)",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "interfaces-mockups.falling-comments",
+   "nome": "Falling Comments",
+   "categoria": "interfaces-mockups",
+   "descricao": "Comentários caindo/empilhando.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "Alternativa: notification-pileup.",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "interfaces-mockups.chat-bubble-animation",
+   "nome": "Chat Bubble Animation",
+   "categoria": "interfaces-mockups",
+   "descricao": "Balões de conversa.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add chat-message | hyperframes add chat-thread | hyperframes add message-thread-reveal",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "interfaces-mockups.notification-pop",
+   "nome": "Notification Pop",
+   "categoria": "interfaces-mockups",
+   "descricao": "Notificação surgindo.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add native-notification-pop | hyperframes add macos-notification",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "interfaces-mockups.prompt-bar",
+   "nome": "Prompt Bar",
+   "categoria": "interfaces-mockups",
+   "descricao": "Barra de prompt sendo digitada.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add typed-prompt",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "interfaces-mockups.search-bar-animation",
+   "nome": "Search Bar Animation",
+   "categoria": "interfaces-mockups",
+   "descricao": "Busca sendo digitada.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add typed-prompt (adaptar)",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "interfaces-mockups.drag-and-drop-file",
+   "nome": "Drag and Drop File",
+   "categoria": "interfaces-mockups",
+   "descricao": "Arquivo arrastado e solto.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add cursor-drag-drop",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "interfaces-mockups.editor-timeline-simulation",
+   "nome": "Editor Timeline Simulation",
+   "categoria": "interfaces-mockups",
+   "descricao": "Simulação de linha do tempo de editor.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "interfaces-mockups.storyboard-animation",
+   "nome": "Storyboard Animation",
+   "categoria": "interfaces-mockups",
+   "descricao": "Quadros de storyboard animados.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "interfaces-mockups.couch-wall",
+   "nome": "Couch Wall",
+   "categoria": "interfaces-mockups",
+   "descricao": "Termo das referências do usuário — definição a confirmar.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "Confirmar com o Dr. Arthur o que é esperado.",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "interfaces-mockups.headline-wall",
+   "nome": "Headline Wall",
+   "categoria": "interfaces-mockups",
+   "descricao": "Mural de manchetes.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "Alternativa: mk-clone-wall-transition.",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "interfaces-mockups.cover-story",
+   "nome": "Cover Story",
+   "categoria": "interfaces-mockups",
+   "descricao": "Composição estilo capa de revista.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "interfaces-mockups.pull-back-reveal",
+   "nome": "Pull-Back Reveal",
+   "categoria": "interfaces-mockups",
+   "descricao": "Afasta revelando o conjunto.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add pull-back-reveal",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "interfaces-mockups.floating-screens",
+   "nome": "Floating Screens",
+   "categoria": "interfaces-mockups",
+   "descricao": "Telas flutuando no espaço.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add multi-device-splay | hyperframes add three-orbiting-cards",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "interfaces-mockups.split-screen",
+   "nome": "Split Screen",
+   "categoria": "interfaces-mockups",
+   "descricao": "Tela dividida.",
+   "ferramentas": [
+    "ffmpeg",
+    "hyperframes"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py split a.mp4 b.mp4 out.mp4 --orientacao h|v | HF: hyperframes add comparison-split",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "interfaces-mockups.picture-in-picture",
+   "nome": "Picture in Picture",
+   "categoria": "interfaces-mockups",
+   "descricao": "Vídeo menor sobre o principal.",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py pip principal.mp4 sec.mp4 out.mp4 --posicao inf-dir --escala 0.3",
+   "parametros": "--borda, --cor-borda, --margem",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "interfaces-mockups.video-collage",
+   "nome": "Video Collage",
+   "categoria": "interfaces-mockups",
+   "descricao": "Mosaico de vídeos.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add mk-placeholder-grid | hyperframes add paper-collage-reveal",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "interfaces-mockups.3d-gallery-wall",
+   "nome": "3D Gallery Wall",
+   "categoria": "interfaces-mockups",
+   "descricao": "Galeria 3D de imagens.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add gallery-tunnel | hyperframes add carousel-orbit-1..5",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "interfaces-mockups.infinite-video-grid",
+   "nome": "Infinite Video Grid",
+   "categoria": "interfaces-mockups",
+   "descricao": "Grade infinita de vídeos.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "interfaces-mockups.glass-ui-cards",
+   "nome": "Glass UI Cards",
+   "categoria": "interfaces-mockups",
+   "descricao": "Cartões de interface de vidro.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add liquid-glass-widgets",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "cortes-montagem.jump-cut",
+   "nome": "Jump Cut",
+   "categoria": "cortes-montagem",
+   "descricao": "Cortes dentro da mesma tomada (remove pausas).",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py silencio in.mp4 out.mp4 --limiar -35dB --minimo 0.45",
+   "parametros": "--margem (respiro)",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "cortes-montagem.j-cut",
+   "nome": "J-Cut",
+   "categoria": "cortes-montagem",
+   "descricao": "Áudio da próxima cena começa antes da imagem.",
+   "ferramentas": [
+    "remotion",
+    "ffmpeg"
+   ],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "Viável no Remotion com <Audio> deslocado.",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "cortes-montagem.l-cut",
+   "nome": "L-Cut",
+   "categoria": "cortes-montagem",
+   "descricao": "Áudio da cena anterior continua sobre a próxima imagem.",
+   "ferramentas": [
+    "remotion",
+    "ffmpeg"
+   ],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "cortes-montagem.match-cut",
+   "nome": "Match Cut",
+   "categoria": "cortes-montagem",
+   "descricao": "Corte por correspondência visual.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add match-cut",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "cortes-montagem.smash-cut",
+   "nome": "Smash Cut",
+   "categoria": "cortes-montagem",
+   "descricao": "Corte abrupto para contraste forte.",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py juntar out.mp4 a.mp4 b.mp4 (+ python3 scripts/estudio.py sfx impacto)",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "cortes-montagem.hard-cut",
+   "nome": "Hard Cut",
+   "categoria": "cortes-montagem",
+   "descricao": "Corte seco.",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py cortar / juntar",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "cortes-montagem.cut-on-action",
+   "nome": "Cut on Action",
+   "categoria": "cortes-montagem",
+   "descricao": "Corte no meio de um movimento.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "Técnica editorial; requer análise das tomadas.",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "cortes-montagem.beat-cut",
+   "nome": "Beat Cut",
+   "categoria": "cortes-montagem",
+   "descricao": "Cortes no tempo da música.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes beats <projeto> (detecta batidas) | HF: beat-freeze-cut",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "cortes-montagem.montage-sequence",
+   "nome": "Montage Sequence",
+   "categoria": "cortes-montagem",
+   "descricao": "Sequência de planos curtos com transições.",
+   "ferramentas": [
+    "ffmpeg",
+    "remotion"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py juntar + python3 scripts/estudio.py transicao | Remotion TransitionSeries",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "cortes-montagem.speed-ramp",
+   "nome": "Speed Ramp",
+   "categoria": "cortes-montagem",
+   "descricao": "Variação progressiva de velocidade.",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "Hoje só velocidade constante por trecho.",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "cortes-montagem.slow-motion",
+   "nome": "Slow Motion",
+   "categoria": "cortes-montagem",
+   "descricao": "Câmera lenta (com interpolação opcional).",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py velocidade in out --fator 0.5 --suave",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "cortes-montagem.fast-motion",
+   "nome": "Fast Motion",
+   "categoria": "cortes-montagem",
+   "descricao": "Acelerado.",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py velocidade in out --fator 2",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "cortes-montagem.reverse-playback",
+   "nome": "Reverse Playback",
+   "categoria": "cortes-montagem",
+   "descricao": "Reprodução reversa.",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py velocidade in out --reverso",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "cortes-montagem.freeze-frame-cut",
+   "nome": "Freeze Frame Cut",
+   "categoria": "cortes-montagem",
+   "descricao": "Congela no corte.",
+   "ferramentas": [
+    "ffmpeg",
+    "hyperframes"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py congelar | HF: hyperframes add beat-freeze-cut",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "cortes-montagem.multi-camera-cut",
+   "nome": "Multi-Camera Cut",
+   "categoria": "cortes-montagem",
+   "descricao": "Alterna entre câmeras sincronizadas.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "cortes-montagem.reaction-cut",
+   "nome": "Reaction Cut",
+   "categoria": "cortes-montagem",
+   "descricao": "Corte para a reação.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "PiP/split já implementados podem servir de base.",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "cortes-montagem.b-roll-insert",
+   "nome": "B-Roll Insert",
+   "categoria": "cortes-montagem",
+   "descricao": "Insere imagens de apoio sobre a fala.",
+   "ferramentas": [
+    "remotion"
+   ],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "Candidato prioritário (componente de sobreposição temporizada).",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "cortes-montagem.cutaway",
+   "nome": "Cutaway",
+   "categoria": "cortes-montagem",
+   "descricao": "Corte para detalhe/contexto.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "cortes-montagem.rhythm-editing",
+   "nome": "Rhythm Editing",
+   "categoria": "cortes-montagem",
+   "descricao": "Edição guiada pelo ritmo.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes beats",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "cortes-montagem.time-remapping",
+   "nome": "Time Remapping",
+   "categoria": "cortes-montagem",
+   "descricao": "Remapeamento de tempo por curvas.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "cortes-montagem.trim-cortar-trecho",
+   "nome": "Trim / Cortar trecho",
+   "categoria": "cortes-montagem",
+   "descricao": "Recorte preciso de início e fim (extra).",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py cortar in.mp4 out.mp4 --inicio 12.5 --fim 40",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "cortes-montagem.smart-scene-detection",
+   "nome": "Smart Scene Detection",
+   "categoria": "cortes-montagem",
+   "descricao": "Detecta trocas de cena (extra).",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py cenas in.mp4 --limiar 0.3",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "cor.hollywood-cinematic-lut",
+   "nome": "Hollywood Cinematic LUT",
+   "categoria": "cor",
+   "descricao": "Look cinematográfico (preset) ou LUT .cube própria.",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py cor in out --preset cinematic | --lut arquivo.cube",
+   "parametros": "--intensidade 0..1",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "cor.teal-and-orange",
+   "nome": "Teal and Orange",
+   "categoria": "cor",
+   "descricao": "Sombras azuladas, pele/altas alaranjadas.",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py cor --preset teal-orange",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "cor.dark-moody",
+   "nome": "Dark Moody",
+   "categoria": "cor",
+   "descricao": "Escuro, dessaturado, frio.",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py cor --preset dark-moody",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "cor.warm-film",
+   "nome": "Warm Film",
+   "categoria": "cor",
+   "descricao": "Película quente.",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py cor --preset warm-film",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "cor.golden-hour",
+   "nome": "Golden Hour",
+   "categoria": "cor",
+   "descricao": "Luz dourada de fim de tarde.",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py cor --preset golden-hour",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "cor.black-and-white",
+   "nome": "Black and White",
+   "categoria": "cor",
+   "descricao": "Preto e branco contrastado.",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py cor --preset pb",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "cor.high-contrast",
+   "nome": "High Contrast",
+   "categoria": "cor",
+   "descricao": "Contraste alto.",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py cor --preset alto-contraste",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "cor.matte-film-look",
+   "nome": "Matte Film Look",
+   "categoria": "cor",
+   "descricao": "Pretos levantados, altas suavizadas.",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py cor --preset matte",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "cor.vintage-kodak-look",
+   "nome": "Vintage Kodak Look",
+   "categoria": "cor",
+   "descricao": "Aparência de filme vintage.",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py cor --preset vintage-kodak",
+   "parametros": "Aproximação; emulação fiel exige LUT.",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "cor.film-emulation",
+   "nome": "Film Emulation",
+   "categoria": "cor",
+   "descricao": "Emulação de película por LUT.",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py cor --lut pelicula.cube",
+   "parametros": "LUTs licenciadas não incluídas.",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "cor.pastel-soft",
+   "nome": "Pastel Soft",
+   "categoria": "cor",
+   "descricao": "Tons pastel suaves.",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py cor --preset pastel",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "cor.luxury-gold",
+   "nome": "Luxury Gold",
+   "categoria": "cor",
+   "descricao": "Dourado elegante com vinheta.",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py cor --preset luxo-dourado",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "cor.cold-blue",
+   "nome": "Cold Blue",
+   "categoria": "cor",
+   "descricao": "Tons frios azulados.",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py cor --preset azul-frio",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "cor.desaturated-drama",
+   "nome": "Desaturated Drama",
+   "categoria": "cor",
+   "descricao": "Pouca saturação, muito contraste.",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py cor --preset drama-dessaturado",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "cor.hdr-look",
+   "nome": "HDR Look",
+   "categoria": "cor",
+   "descricao": "Aparência HDR (nitidez + contraste local simulado).",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py cor --preset hdr-look",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "cor.skin-tone-correction",
+   "nome": "Skin Tone Correction",
+   "categoria": "cor",
+   "descricao": "Correção de tom de pele.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "cor.exposure-matching",
+   "nome": "Exposure Matching",
+   "categoria": "cor",
+   "descricao": "Igualar exposição entre câmeras/tomadas.",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "Parcial: --preset correcao-auto (normalize).",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "cor.white-balance-matching",
+   "nome": "White Balance Matching",
+   "categoria": "cor",
+   "descricao": "Igualar balanço de branco.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "cor.selective-color",
+   "nome": "Selective Color",
+   "categoria": "cor",
+   "descricao": "Ajuste de uma faixa de cor.",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "FFmpeg selectivecolor (não encapsulado).",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "cor.color-isolation",
+   "nome": "Color Isolation",
+   "categoria": "cor",
+   "descricao": "Isolar uma cor.",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py vfx --efeito isolar-cor --cor red",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "cor.vignette",
+   "nome": "Vignette",
+   "categoria": "cor",
+   "descricao": "Vinheta.",
+   "ferramentas": [
+    "ffmpeg",
+    "remotion"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py vfx --efeito vinheta | python3 scripts/estudio.py cor --vinheta",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "cor.highlight-roll-off",
+   "nome": "Highlight Roll-Off",
+   "categoria": "cor",
+   "descricao": "Transição suave nas altas luzes.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "cor.correcao-automatica",
+   "nome": "Correção automática",
+   "categoria": "cor",
+   "descricao": "Normaliza pretos/brancos automaticamente (extra).",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py cor --preset correcao-auto",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "sfx.whoosh",
+   "nome": "Whoosh",
+   "categoria": "sfx",
+   "descricao": "Passagem de ar para transições (sintetizado; para produção final, preferir biblioteca licenciada).",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py sfx whoosh saida.wav",
+   "parametros": "--duracao, --volume (pico normalizado em -3 dBFS)",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": "Sintetizado por FFmpeg (qualidade de rascunho/uso leve)."
+  },
+  {
+   "id": "sfx.cinematic-impact",
+   "nome": "Cinematic Impact",
+   "categoria": "sfx",
+   "descricao": "Impacto grave com ataque (sintetizado; para produção final, preferir biblioteca licenciada).",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py sfx impacto saida.wav",
+   "parametros": "--duracao, --volume (pico normalizado em -3 dBFS)",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": "Sintetizado por FFmpeg (qualidade de rascunho/uso leve)."
+  },
+  {
+   "id": "sfx.bass-drop",
+   "nome": "Bass Drop",
+   "categoria": "sfx",
+   "descricao": "Queda de grave.",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py sfx sub-boom saida.wav",
+   "parametros": "Mesmo gerador do Sub Boom.",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": "Sintetizado por FFmpeg (qualidade de rascunho/uso leve)."
+  },
+  {
+   "id": "sfx.sub-boom",
+   "nome": "Sub Boom",
+   "categoria": "sfx",
+   "descricao": "Grave profundo com queda de afinação (sintetizado; para produção final, preferir biblioteca licenciada).",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py sfx sub-boom saida.wav",
+   "parametros": "--duracao, --volume (pico normalizado em -3 dBFS)",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": "Sintetizado por FFmpeg (qualidade de rascunho/uso leve)."
+  },
+  {
+   "id": "sfx.riser",
+   "nome": "Riser",
+   "categoria": "sfx",
+   "descricao": "Tensão crescente (sintetizado; para produção final, preferir biblioteca licenciada).",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py sfx riser saida.wav",
+   "parametros": "--duracao, --volume (pico normalizado em -3 dBFS)",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": "Sintetizado por FFmpeg (qualidade de rascunho/uso leve)."
+  },
+  {
+   "id": "sfx.reverse-riser",
+   "nome": "Reverse Riser",
+   "categoria": "sfx",
+   "descricao": "Sucção/reverso antes do corte (sintetizado; para produção final, preferir biblioteca licenciada).",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py sfx riser-reverso saida.wav",
+   "parametros": "--duracao, --volume (pico normalizado em -3 dBFS)",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": "Sintetizado por FFmpeg (qualidade de rascunho/uso leve)."
+  },
+  {
+   "id": "sfx.glitch-sound",
+   "nome": "Glitch Sound",
+   "categoria": "sfx",
+   "descricao": "Falha digital (sintetizado; para produção final, preferir biblioteca licenciada).",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py sfx glitch saida.wav",
+   "parametros": "--duracao, --volume (pico normalizado em -3 dBFS)",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": "Sintetizado por FFmpeg (qualidade de rascunho/uso leve)."
+  },
+  {
+   "id": "sfx.digital-click",
+   "nome": "Digital Click",
+   "categoria": "sfx",
+   "descricao": "Clique curto (sintetizado; para produção final, preferir biblioteca licenciada).",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py sfx clique saida.wav",
+   "parametros": "--duracao, --volume (pico normalizado em -3 dBFS)",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": "Sintetizado por FFmpeg (qualidade de rascunho/uso leve)."
+  },
+  {
+   "id": "sfx.camera-shutter",
+   "nome": "Camera Shutter",
+   "categoria": "sfx",
+   "descricao": "Obturador de câmera.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "Requer biblioteca.",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "sfx.typing-keyboard",
+   "nome": "Typing Keyboard",
+   "categoria": "sfx",
+   "descricao": "Digitação.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "sfx.notification-pop",
+   "nome": "Notification Pop",
+   "categoria": "sfx",
+   "descricao": "Duas notas de notificação (sintetizado; para produção final, preferir biblioteca licenciada).",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py sfx notificacao saida.wav",
+   "parametros": "--duracao, --volume (pico normalizado em -3 dBFS)",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": "Sintetizado por FFmpeg (qualidade de rascunho/uso leve)."
+  },
+  {
+   "id": "sfx.ui-hover",
+   "nome": "UI Hover",
+   "categoria": "sfx",
+   "descricao": "Pop curto para elementos de UI (sintetizado; para produção final, preferir biblioteca licenciada).",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py sfx pop saida.wav",
+   "parametros": "--duracao, --volume (pico normalizado em -3 dBFS)",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": "Sintetizado por FFmpeg (qualidade de rascunho/uso leve)."
+  },
+  {
+   "id": "sfx.swipe-sound",
+   "nome": "Swipe Sound",
+   "categoria": "sfx",
+   "descricao": "Deslizar.",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py sfx whoosh saida.wav --duracao 0.4",
+   "parametros": "Whoosh curto.",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": "Sintetizado por FFmpeg (qualidade de rascunho/uso leve)."
+  },
+  {
+   "id": "sfx.transition-sweep",
+   "nome": "Transition Sweep",
+   "categoria": "sfx",
+   "descricao": "Varredura de transição.",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py sfx whoosh saida.wav --duracao 1.2",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": "Sintetizado por FFmpeg (qualidade de rascunho/uso leve)."
+  },
+  {
+   "id": "sfx.paper-flip",
+   "nome": "Paper Flip",
+   "categoria": "sfx",
+   "descricao": "Virar página.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "sfx.glass-break",
+   "nome": "Glass Break",
+   "categoria": "sfx",
+   "descricao": "Vidro quebrando.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "sfx.metallic-hit",
+   "nome": "Metallic Hit",
+   "categoria": "sfx",
+   "descricao": "Batida metálica.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "sfx.heartbeat",
+   "nome": "Heartbeat",
+   "categoria": "sfx",
+   "descricao": "Batimentos cardíacos (sintetizado; para produção final, preferir biblioteca licenciada).",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py sfx batimento saida.wav",
+   "parametros": "--duracao, --volume (pico normalizado em -3 dBFS)",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": "Sintetizado por FFmpeg (qualidade de rascunho/uso leve)."
+  },
+  {
+   "id": "sfx.crowd-applause",
+   "nome": "Crowd Applause",
+   "categoria": "sfx",
+   "descricao": "Aplausos.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "sfx.ambient-atmosphere",
+   "nome": "Ambient Atmosphere",
+   "categoria": "sfx",
+   "descricao": "Ambiência.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "sfx.cinematic-drone",
+   "nome": "Cinematic Drone",
+   "categoria": "sfx",
+   "descricao": "Pad grave contínuo de tensão (sintetizado; para produção final, preferir biblioteca licenciada).",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py sfx drone saida.wav",
+   "parametros": "--duracao, --volume (pico normalizado em -3 dBFS)",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": "Sintetizado por FFmpeg (qualidade de rascunho/uso leve)."
+  },
+  {
+   "id": "sfx.braam",
+   "nome": "Braam",
+   "categoria": "sfx",
+   "descricao": "Metais graves de trailer (sintetizado; para produção final, preferir biblioteca licenciada).",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py sfx braam saida.wav",
+   "parametros": "--duracao, --volume (pico normalizado em -3 dBFS)",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": "Sintetizado por FFmpeg (qualidade de rascunho/uso leve)."
+  },
+  {
+   "id": "sfx.reverse-cymbal",
+   "nome": "Reverse Cymbal",
+   "categoria": "sfx",
+   "descricao": "Prato reverso.",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py sfx riser-reverso saida.wav",
+   "parametros": "Aproximação sintetizada.",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": "Sintetizado por FFmpeg (qualidade de rascunho/uso leve)."
+  },
+  {
+   "id": "sfx.logo-sound-reveal",
+   "nome": "Logo Sound Reveal",
+   "categoria": "sfx",
+   "descricao": "Assinatura sonora de logotipo.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "Ideal: compor uma assinatura própria do escritório.",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "audio.ai-voiceover",
+   "nome": "AI Voiceover",
+   "categoria": "audio",
+   "descricao": "Narração por IA.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "Skill /media-use (HeyGen/Kokoro) — depende de serviço ou modelo baixado.",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "audio.text-to-speech-tts",
+   "nome": "Text to Speech (TTS)",
+   "categoria": "audio",
+   "descricao": "Texto em fala.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "Kokoro local requer download de modelo (bloqueado na rede atual).",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "audio.voice-cloning-com-autorizacao",
+   "nome": "Voice Cloning (com autorização)",
+   "categoria": "audio",
+   "descricao": "Clonagem de voz mediante autorização expressa.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "Exige consentimento documentado do titular da voz.",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "audio.automatic-transcription",
+   "nome": "Automatic Transcription",
+   "categoria": "audio",
+   "descricao": "Transcrição automática (whisper.cpp).",
+   "ferramentas": [
+    "whisper"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py transcrever in.mp4 --idioma pt",
+   "parametros": "--modelo, --prompt (vocabulário jurídico)",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": "Código pronto; teste real pendente: modelo Whisper não baixado (huggingface.co bloqueado)."
+  },
+  {
+   "id": "audio.speaker-diarization",
+   "nome": "Speaker Diarization",
+   "categoria": "audio",
+   "descricao": "Identifica quem fala.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "audio.voice-enhancement",
+   "nome": "Voice Enhancement",
+   "categoria": "audio",
+   "descricao": "Realce de voz (EQ + compressão).",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py audio in out --voz-eq --compressor",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "audio.noise-reduction",
+   "nome": "Noise Reduction",
+   "categoria": "audio",
+   "descricao": "Redução de ruído.",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py audio in out --ruido --ruido-nivel -25",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "audio.echo-reduction",
+   "nome": "Echo Reduction",
+   "categoria": "audio",
+   "descricao": "Redução de eco/reverberação.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "audio.silence-removal",
+   "nome": "Silence Removal",
+   "categoria": "audio",
+   "descricao": "Remove silêncios.",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py silencio in out",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "audio.automatic-audio-ducking",
+   "nome": "Automatic Audio Ducking",
+   "categoria": "audio",
+   "descricao": "Música abaixa quando há voz.",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py ducking video.mp4 musica.mp3 out.mp4 --volume-musica 0.25",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "audio.loudness-normalization",
+   "nome": "Loudness Normalization",
+   "categoria": "audio",
+   "descricao": "Normalização de loudness (LUFS).",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py audio in out --lufs -14",
+   "parametros": "-14 redes · -16 podcast · -23 TV",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "audio.voice-eq",
+   "nome": "Voice EQ",
+   "categoria": "audio",
+   "descricao": "Equalização de voz.",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py audio --voz-eq",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "audio.audio-compression",
+   "nome": "Audio Compression",
+   "categoria": "audio",
+   "descricao": "Compressão dinâmica.",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py audio --compressor",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "audio.beat-detection",
+   "nome": "Beat Detection",
+   "categoria": "audio",
+   "descricao": "Detecta batidas da música.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes beats <projeto>",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "audio.beat-synchronization",
+   "nome": "Beat Synchronization",
+   "categoria": "audio",
+   "descricao": "Sincroniza cortes/animações com batidas.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes beats + blocos beat-*",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "audio.audio-fade-in-out",
+   "nome": "Audio Fade In / Out",
+   "categoria": "audio",
+   "descricao": "Fades de áudio (e imagem opcional).",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py audio in out --fade-in 0.5 --fade-out 1 [--fade-video]",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "audio.music-crossfade",
+   "nome": "Music Crossfade",
+   "categoria": "audio",
+   "descricao": "Fusão entre músicas.",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "integracao",
+   "como_usar": "FFmpeg acrossfade (usado em transicao; não encapsulado para áudio puro)",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "audio.background-ambience",
+   "nome": "Background Ambience",
+   "categoria": "audio",
+   "descricao": "Ambiência de fundo.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "audio.multilingual-dubbing",
+   "nome": "Multilingual Dubbing",
+   "categoria": "audio",
+   "descricao": "Dublagem multilíngue.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "audio.audio-translation",
+   "nome": "Audio Translation",
+   "categoria": "audio",
+   "descricao": "Tradução do áudio.",
+   "ferramentas": [
+    "whisper"
+   ],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "whisper.cpp traduz apenas para inglês (-tr).",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "audio.voice-pitch-shifting",
+   "nome": "Voice Pitch Shifting",
+   "categoria": "audio",
+   "descricao": "Altera o tom da voz.",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "integracao",
+   "como_usar": "FFmpeg asetrate + atempo (não encapsulado)",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "audio.sound-design-layering",
+   "nome": "Sound Design Layering",
+   "categoria": "audio",
+   "descricao": "Camadas de design sonoro.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "Base: sfx sintetizados + amix.",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "ia.ai-auto-edit",
+   "nome": "AI Auto Edit",
+   "categoria": "ia",
+   "descricao": "Edição completa automática a partir de instrução.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "Hoje: Claude orquestra estudio.py + templates manualmente.",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "ia.smart-scene-detection",
+   "nome": "Smart Scene Detection",
+   "categoria": "ia",
+   "descricao": "Detecção de cenas.",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py cenas in.mp4",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "ia.automatic-highlight-extraction",
+   "nome": "Automatic Highlight Extraction",
+   "categoria": "ia",
+   "descricao": "Extrai melhores trechos.",
+   "ferramentas": [
+    "whisper"
+   ],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "Viável: transcrição + análise do Claude + cortar.",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "ia.ai-best-moments",
+   "nome": "AI Best Moments",
+   "categoria": "ia",
+   "descricao": "Melhores momentos.",
+   "ferramentas": [
+    "whisper"
+   ],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "ia.viral-hook-detection",
+   "nome": "Viral Hook Detection",
+   "categoria": "ia",
+   "descricao": "Identifica frases-gancho.",
+   "ferramentas": [
+    "whisper"
+   ],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "Viável a partir da transcrição.",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "ia.automatic-b-roll-suggestion",
+   "nome": "Automatic B-Roll Suggestion",
+   "categoria": "ia",
+   "descricao": "Sugere B-roll.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "ia.ai-cut-on-beat",
+   "nome": "AI Cut on Beat",
+   "categoria": "ia",
+   "descricao": "Cortes no beat automáticos.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes beats",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "ia.smart-silence-removal",
+   "nome": "Smart Silence Removal",
+   "categoria": "ia",
+   "descricao": "Remoção inteligente de silêncio.",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py silencio",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "ia.ai-auto-captions",
+   "nome": "AI Auto Captions",
+   "categoria": "ia",
+   "descricao": "Legendas automáticas.",
+   "ferramentas": [
+    "whisper",
+    "remotion"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py transcrever → *.legendas.json → LegendaDinamica / python3 scripts/estudio.py legendar",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": "LegendaDinamica testada com legendas de exemplo; falta testar a etapa de transcrição (modelo Whisper)."
+  },
+  {
+   "id": "ia.smart-caption-styling",
+   "nome": "Smart Caption Styling",
+   "categoria": "ia",
+   "descricao": "Estilo de legenda escolhido pelo conteúdo.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "ia.automatic-reframing",
+   "nome": "Automatic Reframing",
+   "categoria": "ia",
+   "descricao": "Reenquadra para outra proporção.",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py reframe in out --formato 9:16 --modo crop|blur --foco-x 0.5",
+   "parametros": "Centro fixo/ajustável; sem rastreio de rosto.",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "ia.face-centered-crop",
+   "nome": "Face-Centered Crop",
+   "categoria": "ia",
+   "descricao": "Corte centrado no rosto.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "Requer detecção facial.",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "ia.ai-video-summarization",
+   "nome": "AI Video Summarization",
+   "categoria": "ia",
+   "descricao": "Resumo do vídeo.",
+   "ferramentas": [
+    "whisper"
+   ],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "ia.long-video-to-shorts",
+   "nome": "Long Video to Shorts",
+   "categoria": "ia",
+   "descricao": "Vídeo longo em cortes curtos.",
+   "ferramentas": [
+    "whisper",
+    "ffmpeg"
+   ],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "Viável: transcrever → escolher trechos → cortar → reframe → legendar.",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "ia.ai-storyboard-generation",
+   "nome": "AI Storyboard Generation",
+   "categoria": "ia",
+   "descricao": "Storyboard gerado por IA.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "ia.ai-scene-classification",
+   "nome": "AI Scene Classification",
+   "categoria": "ia",
+   "descricao": "Classifica cenas.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "ia.automatic-color-matching",
+   "nome": "Automatic Color Matching",
+   "categoria": "ia",
+   "descricao": "Iguala cor entre tomadas.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "ia.smart-sound-effects-placement",
+   "nome": "Smart Sound Effects Placement",
+   "categoria": "ia",
+   "descricao": "Posiciona SFX automaticamente.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "ia.ai-music-suggestion",
+   "nome": "AI Music Suggestion",
+   "categoria": "ia",
+   "descricao": "Sugere trilha.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "ia.ai-motion-graphics-selection",
+   "nome": "AI Motion Graphics Selection",
+   "categoria": "ia",
+   "descricao": "Escolhe blocos de motion pelo conteúdo.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes catalog --query \"<descrição>\"",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "ia.ai-quality-enhancement",
+   "nome": "AI Quality Enhancement",
+   "categoria": "ia",
+   "descricao": "Melhoria de qualidade por IA.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "ia.smart-video-upscaling",
+   "nome": "Smart Video Upscaling",
+   "categoria": "ia",
+   "descricao": "Upscale por IA.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "Upscale simples (lanczos) via exportar youtube-4k.",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "ia.ai-content-repurposing",
+   "nome": "AI Content Repurposing",
+   "categoria": "ia",
+   "descricao": "Reaproveita conteúdo em vários formatos.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "ia.automated-multi-format-editing",
+   "nome": "Automated Multi-Format Editing",
+   "categoria": "ia",
+   "descricao": "Exporta o mesmo vídeo em vários formatos.",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "Hoje: rodar exportar para cada plataforma.",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "templates.reels-tiktok-shorts",
+   "nome": "Reels / TikTok / Shorts",
+   "categoria": "templates",
+   "descricao": "Vertical 1080x1920 com gancho, legendas, tarja, CTA e progresso.",
+   "ferramentas": [
+    "remotion",
+    "ffmpeg"
+   ],
+   "status": "implementado",
+   "como_usar": "Remotion: ReelsJuridico | exportar --plataforma reels|tiktok|shorts",
+   "parametros": "props: video, gancho, legendas, estiloLegenda, nome, cargo, cta, duracaoSegundos",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "templates.youtube-long-form",
+   "nome": "YouTube Long Form",
+   "categoria": "templates",
+   "descricao": "16:9 longo com capítulos.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "templates.youtube-intro-outro",
+   "nome": "YouTube Intro / Outro",
+   "categoria": "templates",
+   "descricao": "Abertura e encerramento.",
+   "ferramentas": [
+    "remotion",
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "Remotion: Vinheta | HF: hyperframes add yt-logo-intro | hyperframes add logo-outro",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "templates.podcast-clips",
+   "nome": "Podcast Clips",
+   "categoria": "templates",
+   "descricao": "Cortes de podcast.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "templates.video-ads",
+   "nome": "Video Ads",
+   "categoria": "templates",
+   "descricao": "Anúncios.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "Atenção às regras da OAB para publicidade.",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "templates.product-commercial",
+   "nome": "Product Commercial",
+   "categoria": "templates",
+   "descricao": "Comercial de produto.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "templates.event-aftermovie",
+   "nome": "Event Aftermovie",
+   "categoria": "templates",
+   "descricao": "Resumo de evento.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "templates.wedding-highlights",
+   "nome": "Wedding Highlights",
+   "categoria": "templates",
+   "descricao": "Melhores momentos de casamento.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "templates.testimonial",
+   "nome": "Testimonial",
+   "categoria": "templates",
+   "descricao": "Depoimento.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "templates.documentary",
+   "nome": "Documentary",
+   "categoria": "templates",
+   "descricao": "Documentário.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "templates.educational-explainer",
+   "nome": "Educational Explainer",
+   "categoria": "templates",
+   "descricao": "Explicativo educacional.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "Ver style-sampling (explainers).",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "templates.news-report",
+   "nome": "News Report",
+   "categoria": "templates",
+   "descricao": "Formato telejornal.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "Blocos: lower-third-bild, news-ticker.",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "templates.corporate-presentation",
+   "nome": "Corporate Presentation",
+   "categoria": "templates",
+   "descricao": "Apresentação institucional.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "Skill /slideshow",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "templates.brand-story",
+   "nome": "Brand Story",
+   "categoria": "templates",
+   "descricao": "História da marca.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "templates.motivational-reel",
+   "nome": "Motivational Reel",
+   "categoria": "templates",
+   "descricao": "Reel motivacional.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "templates.religious-worship-highlights",
+   "nome": "Religious / Worship Highlights",
+   "categoria": "templates",
+   "descricao": "Destaques de cultos/eventos religiosos.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "templates.real-estate-showcase",
+   "nome": "Real Estate Showcase",
+   "categoria": "templates",
+   "descricao": "Vitrine de imóveis.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "templates.legal-educational-content",
+   "nome": "Legal Educational Content",
+   "categoria": "templates",
+   "descricao": "Conteúdo jurídico educativo (Provimento 205/2021).",
+   "ferramentas": [
+    "remotion"
+   ],
+   "status": "implementado",
+   "como_usar": "Remotion: ReelsJuridico + LegendaDinamica + LowerThird",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "templates.social-media-announcement",
+   "nome": "Social Media Announcement",
+   "categoria": "templates",
+   "descricao": "Anúncio para redes.",
+   "ferramentas": [
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes add social-proof-card | hyperframes add cta-lockup",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "templates.countdown-event-teaser",
+   "nome": "Countdown / Event Teaser",
+   "categoria": "templates",
+   "descricao": "Contagem regressiva.",
+   "ferramentas": [
+    "remotion"
+   ],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "ContadorDados aceita de=10 ate=0 como base.",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "recursos-editor.timeline-com-multiplas-trilhas",
+   "nome": "Timeline com múltiplas trilhas",
+   "categoria": "recursos-editor",
+   "descricao": "Linha do tempo com trilhas.",
+   "ferramentas": [
+    "remotion",
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "remotion studio | hyperframes preview / hyperframes timeline",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "recursos-editor.editor-de-keyframes",
+   "nome": "Editor de keyframes",
+   "categoria": "recursos-editor",
+   "descricao": "Edição de keyframes.",
+   "ferramentas": [
+    "remotion",
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "hyperframes keyframes | Remotion Studio",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "recursos-editor.controle-de-curvas-de-animacao",
+   "nome": "Controle de curvas de animação",
+   "categoria": "recursos-editor",
+   "descricao": "Easing e curvas.",
+   "ferramentas": [
+    "remotion",
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "Remotion Easing / GSAP eases",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "recursos-editor.biblioteca-de-presets",
+   "nome": "Biblioteca de presets",
+   "categoria": "recursos-editor",
+   "descricao": "Presets de cor, transição, legenda, plataforma e SFX.",
+   "ferramentas": [
+    "ffmpeg",
+    "remotion"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py <comando> -h lista os presets",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "recursos-editor.previa-em-tempo-real",
+   "nome": "Prévia em tempo real",
+   "categoria": "recursos-editor",
+   "descricao": "Pré-visualização interativa.",
+   "ferramentas": [
+    "remotion",
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "npx remotion studio | hyperframes preview --background",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "recursos-editor.historico-de-alteracoes",
+   "nome": "Histórico de alterações",
+   "categoria": "recursos-editor",
+   "descricao": "Histórico/versões.",
+   "ferramentas": [
+    "git",
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "git log | hyperframes history",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "recursos-editor.camadas-de-video-texto-e-audio",
+   "nome": "Camadas de vídeo, texto e áudio",
+   "categoria": "recursos-editor",
+   "descricao": "Composição em camadas.",
+   "ferramentas": [
+    "remotion",
+    "hyperframes"
+   ],
+   "status": "integracao",
+   "como_usar": "Remotion <Sequence>/<AbsoluteFill> | HTML do HyperFrames",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "recursos-editor.editor-de-mascaras",
+   "nome": "Editor de máscaras",
+   "categoria": "recursos-editor",
+   "descricao": "Edição de máscaras.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "recursos-editor.editor-de-legendas",
+   "nome": "Editor de legendas",
+   "categoria": "recursos-editor",
+   "descricao": "Revisão de legendas.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "Hoje: editar SRT/JSON gerados.",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "recursos-editor.editor-de-cores",
+   "nome": "Editor de cores",
+   "categoria": "recursos-editor",
+   "descricao": "Ajuste fino de cor.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "Hoje: presets + LUT.",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "recursos-editor.templates-reutilizaveis",
+   "nome": "Templates reutilizáveis",
+   "categoria": "recursos-editor",
+   "descricao": "Templates parametrizados.",
+   "ferramentas": [
+    "remotion"
+   ],
+   "status": "implementado",
+   "como_usar": "Remotion: ReelsJuridico, Vinheta, Vitrine",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "recursos-editor.sistema-de-projetos",
+   "nome": "Sistema de projetos",
+   "categoria": "recursos-editor",
+   "descricao": "Organização por projeto.",
+   "ferramentas": [
+    "git"
+   ],
+   "status": "implementado",
+   "como_usar": "projetos/<nome> + midia/brutos + midia/saida",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "recursos-editor.controle-de-proporcao-e-resolucao",
+   "nome": "Controle de proporção e resolução",
+   "categoria": "recursos-editor",
+   "descricao": "Proporções e resoluções.",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py reframe / python3 scripts/estudio.py exportar",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "recursos-editor.exportacao-em-lote",
+   "nome": "Exportação em lote",
+   "categoria": "recursos-editor",
+   "descricao": "Vários formatos de uma vez.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "recursos-editor.renderizacao-4k",
+   "nome": "Renderização 4K",
+   "categoria": "recursos-editor",
+   "descricao": "Exportação 3840x2160.",
+   "ferramentas": [
+    "ffmpeg",
+    "remotion"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py exportar --plataforma youtube-4k | npx remotion render --scale 2",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "recursos-editor.presets-para-redes-sociais",
+   "nome": "Presets para redes sociais",
+   "categoria": "recursos-editor",
+   "descricao": "Resolução, fps, bitrate e loudness por plataforma.",
+   "ferramentas": [
+    "ffmpeg"
+   ],
+   "status": "implementado",
+   "como_usar": "python3 scripts/estudio.py exportar --plataforma reels|tiktok|shorts|feed|youtube|linkedin|whatsapp|stories",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  },
+  {
+   "id": "recursos-editor.biblioteca-de-trilhas-e-efeitos-licenciados",
+   "nome": "Biblioteca de trilhas e efeitos licenciados",
+   "categoria": "recursos-editor",
+   "descricao": "Banco de músicas/SFX licenciados.",
+   "ferramentas": [],
+   "status": "catalogado",
+   "como_usar": "",
+   "parametros": "SFX sintetizados disponíveis em categoria 10.",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": false,
+   "observacoes": ""
+  },
+  {
+   "id": "recursos-editor.gerenciamento-de-fontes-e-elementos-graficos",
+   "nome": "Gerenciamento de fontes e elementos gráficos",
+   "categoria": "recursos-editor",
+   "descricao": "Fontes e identidade.",
+   "ferramentas": [
+    "remotion"
+   ],
+   "status": "implementado",
+   "como_usar": "projetos/remotion-base/src/marca.ts (Inter + Playfair Display via @fontsource)",
+   "parametros": "",
+   "compatibilidade": [
+    "16:9",
+    "9:16",
+    "1:1",
+    "4:5"
+   ],
+   "testado": true,
+   "observacoes": ""
+  }
+ ]
+}

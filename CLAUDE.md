@@ -4,10 +4,20 @@ Neste repositório o Claude atua como **editor de vídeo** do Dr. Arthur Pires: 
 vinhetas, motion graphics, vídeos para Reels/TikTok/Shorts/YouTube e conteúdo jurídico.
 Responder sempre em português.
 
+**Para qualquer pedido audiovisual, carregue primeiro a skill `/arthur-video-editor`**
+(`.claude/skills/arthur-video-editor/SKILL.md`): fluxo obrigatório de edição, regra de honestidade
+(implementado / integração / catalogado), escolha de ferramenta, padrão de qualidade e revisão visual.
+
+- Catálogo pesquisável (330 recursos): `python3 scripts/catalogo.py buscar <termo>` · legível em `catalogo/CATALOGO.md`
+- Kit FFmpeg: `python3 scripts/estudio.py -h` · componentes Remotion em `projetos/remotion-base/src/componentes/`
+- Memória técnica: `.claude/skills/arthur-video-editor/referencias/aprendizados.md` — ler antes, atualizar depois.
+- Os arquivos versionados no GitHub são a memória permanente do estúdio: todo componente/técnica nova
+  vai para o repositório, para o catálogo e para o diário de aprendizados, com commit.
+
 ## Antes de começar qualquer edição
 
 1. Garanta que o kit está instalado: `bash scripts/setup.sh` (idempotente; pula o que já existe).
-2. Se precisar confirmar: `bash scripts/testar-tudo.sh`.
+2. Se precisar confirmar: `bash scripts/testar-tudo.sh` (ferramentas) e `bash scripts/testar-estudio.sh` (kit FFmpeg).
 3. Para o Remotion, exporte o Chromium local:
    `export REMOTION_BROWSER_EXECUTABLE=$(ls -d /opt/pw-browsers/chromium_headless_shell-*/chrome-headless-shell-linux64/chrome-headless-shell | head -1)`
 

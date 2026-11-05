@@ -10,3 +10,5 @@ midia/saida/
 *.log
 .DS_Store
 projetos/*/.hyperframes/
+__pycache__/
+projetos/remotion-base/public/brutos/

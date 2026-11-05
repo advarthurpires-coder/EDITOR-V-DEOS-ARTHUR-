@@ -1,0 +1,23 @@
+[
+  {"text": "Você", "startMs": 0, "endMs": 300, "timestampMs": 150, "confidence": null},
+  {"text": " sabia", "startMs": 300, "endMs": 650, "timestampMs": 475, "confidence": null},
+  {"text": " que", "startMs": 650, "endMs": 850, "timestampMs": 750, "confidence": null},
+  {"text": " pode", "startMs": 850, "endMs": 1150, "timestampMs": 1000, "confidence": null},
+  {"text": " pedir", "startMs": 1150, "endMs": 1500, "timestampMs": 1325, "confidence": null},
+  {"text": " a", "startMs": 1500, "endMs": 1600, "timestampMs": 1550, "confidence": null},
+  {"text": " revisão", "startMs": 1600, "endMs": 2100, "timestampMs": 1850, "confidence": null},
+  {"text": " do", "startMs": 2100, "endMs": 2250, "timestampMs": 2175, "confidence": null},
+  {"text": " seu", "startMs": 2250, "endMs": 2450, "timestampMs": 2350, "confidence": null},
+  {"text": " benefício?", "startMs": 2450, "endMs": 3100, "timestampMs": 2775, "confidence": null},
+  {"text": " O", "startMs": 3400, "endMs": 3550, "timestampMs": 3475, "confidence": null},
+  {"text": " prazo", "startMs": 3550, "endMs": 3950, "timestampMs": 3750, "confidence": null},
+  {"text": " é", "startMs": 3950, "endMs": 4100, "timestampMs": 4025, "confidence": null},
+  {"text": " de", "startMs": 4100, "endMs": 4250, "timestampMs": 4175, "confidence": null},
+  {"text": " dez", "startMs": 4250, "endMs": 4550, "timestampMs": 4400, "confidence": null},
+  {"text": " anos.", "startMs": 4550, "endMs": 5100, "timestampMs": 4825, "confidence": null},
+  {"text": " Fique", "startMs": 5400, "endMs": 5750, "timestampMs": 5575, "confidence": null},
+  {"text": " atento", "startMs": 5750, "endMs": 6200, "timestampMs": 5975, "confidence": null},
+  {"text": " aos", "startMs": 6200, "endMs": 6400, "timestampMs": 6300, "confidence": null},
+  {"text": " seus", "startMs": 6400, "endMs": 6650, "timestampMs": 6525, "confidence": null},
+  {"text": " direitos.", "startMs": 6650, "endMs": 7300, "timestampMs": 6975, "confidence": null}
+]
