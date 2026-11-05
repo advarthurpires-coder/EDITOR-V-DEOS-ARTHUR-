@@ -352,8 +352,14 @@ def eh_trecho(texto: str) -> bool:
 
 def receita_timeline(texto: str) -> str:
     """Código do comentário 'Timeline integration' (usa a variável tl)."""
-    m = re.search(r"<!--\s*Timeline integration:?(.*?)-->", texto, re.S | re.I)
-    return m.group(1).strip() if m else ""
+    m = re.search(r"<!--\s*Timeline integration[^\n]*?:?(.*?)-->", texto, re.S | re.I)
+    if not m:
+        return ""
+    linhas = m.group(1).strip().splitlines()
+    # descarta linhas de texto explicativo antes do código (ex.: "example (paste into your composition's GSAP timeline):")
+    while linhas and not re.search(r"\btl\.|\bgsap\.|\b(const|let|var)\s|;\s*$|^\s*//", linhas[0]):
+        linhas.pop(0)
+    return "\n".join(linhas)
 
 
 def criar_host_trecho(nome: str, duracao: float | None, fundo: str | None, escala: float = 1.0) -> Path:
