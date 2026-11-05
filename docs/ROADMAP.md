@@ -12,6 +12,11 @@
 - [x] Biblioteca de transições com `@remotion/transitions` 4.0.540 (mesma versão do core): fade, slide, wipe, flip, clockWipe
 - [x] Componentes Remotion reutilizáveis + template parametrizado `ReelsJuridico`
 - [x] Legendas palavra a palavra (karaokê, pop, destaque, gigante) a partir de `Caption[]`
+- [x] Motor de blocos HyperFrames offline (`scripts/blocos.py`): 91/94 itens testados, overlays com alfa, lote, sugestão
+- [x] 9 transições GLSL aplicadas a clipes reais (`estudio.py transicao-shader`)
+- [x] Batidas, montagem no ritmo, gate, de-esser, crossfade, tom
+- [x] Prévia ao vivo, timeline, keyframes e histórico (`scripts/projeto.py`)
+- [x] Abertura/encerramento de YouTube e vídeo institucional (templates próprios)
 
 ## Próximos incrementos (ainda NÃO implementados)
 - [ ] Editor web com timeline multitrilha, keyframes e reprodução
@@ -22,7 +27,9 @@
 - [ ] 3D, tracking, rotoscopia e efeitos sofisticados com testes
 - [ ] Sistema de SFX com catálogo de arquivos realmente licenciados (hoje: 12 SFX sintetizados por FFmpeg)
 - [ ] TTS e outras ferramentas de geração de áudio configuradas e autorizadas
-- [ ] Renderização em lote, testes de vídeo automatizados e CI
+- [ ] CI no GitHub para os testes (render em lote e verificação automática de blocos já existem localmente)
+- [ ] Adaptar à mídia do usuário os blocos de transição/câmera do registro que hoje só animam conteúdo de exemplo
+- [ ] Modo apresentação ao vivo (`hyperframes present`) — player não exibiu as cenas neste ambiente
 - [ ] Captura automática de prévias para cada efeito
 - [ ] Aprendizado contínuo por atualização versionada da skill e dos componentes
 

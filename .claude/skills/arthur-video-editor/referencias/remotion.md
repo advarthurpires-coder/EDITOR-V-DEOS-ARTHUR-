@@ -13,6 +13,8 @@ Mídia própria vai em `public/` e é referenciada com `staticFile("pasta/arquiv
 | `Vinheta` | 1080×1920, 4 s | Abertura simples com nome + subtítulo (props `titulo`, `subtitulo`) |
 | `ArthurShowcase` | 1080×1920, ~10,7 s | Demonstração vertical: kinetic hook, chart grow/contador, phone mockup com legenda gigante e pop-up, title card em vidro |
 | `Vitrine` | 1920×1080, 12 s | Demonstração de todos os componentes e transições — referência visual e teste |
+| `AberturaYoutube` | 1920×1080, 4 s | Abertura de canal: título cinematográfico, vinheta e grão (props `titulo`, `subtitulo`) |
+| `EncerramentoYoutube` | 1920×1080, 10 s | Encerramento com chamada e cartões para elementos finais (props `titulo`, `chamada`, `cartoes[]`) |
 | `TransicaoShader` | conforme props | Transição GLSL entre dois clipes (use via `estudio.py transicao-shader`) |
 | `ReelsJuridico` | 1080×1920, `duracaoSegundos` | Template de Reels: gancho, vídeo de fundo, legendas, tarja, CTA, progresso |
 

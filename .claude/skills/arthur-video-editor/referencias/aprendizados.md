@@ -76,3 +76,20 @@ Isto é a memória de longo prazo do editor: leia antes de editar, atualize depo
   como **vídeo** institucional; modo apresentação fica pendente.
 - **Desempenho**: ~2 min por bloco no teste (render ProRes com alfa + composição); dois testadores em paralelo
   (`--reverso --relatorio outro.json`) aproveitam os 4 vCPUs.
+
+## 2026-11-05 — Resultado dos testes dos blocos e revisão honesta do catálogo
+- **91 de 94** blocos/componentes citados no catálogo renderizaram e foram verificados (2 por inspeção visual:
+  macos-notification e slot-machine-roll, animações pequenas abaixo do critério automático). Relatório:
+  `projetos/hf-biblioteca/relatorio-testes.json`; prévias: `biblioteca/previas/`.
+- Correções necessárias no caminho: (1) receitas dos trechos assumem `startTime` na cena e às vezes trazem texto antes do
+  código; (2) itens com `data-requires-webgpu` exigem `PRODUCER_ALLOW_SOFTWARE_WEBGPU=true` (SwiftShader); (3) `tl.labels`
+  não existe no proxy de GSAP do render (ajuste local no `flowchart`); (4) componentes com tom `ink` (texto escuro)
+  somem sobre o azul da marca — teste sobre cinza médio; em fundo escuro use `--var tone=paper`.
+- Não suportados aqui: `vfx-shatter` (API HTML-in-canvas ausente no Chrome headless), `parallax-zoom/unzoom`
+  (estruturais: envolvem a SUA grade de cartões).
+- **Revisão de honestidade**: renderizar ≠ servir. Itens de conteúdo com texto/mídia fixos e sem parâmetros (legendas
+  neon/emoji de exemplo, app-showcase, widgets, grade de placeholders, comentário estilo YouTube) e o multi-device-splay
+  (monitor, não notebook) voltaram a `integracao_nativa`. `yt-logo-intro` (logo do YouTube) e `logo-outro` (logo do
+  Figma) não servem para o escritório → criadas `AberturaYoutube`/`EncerramentoYoutube` próprias.
+- `npx remotion still` falhou uma vez com `getaddrinfo ENOTFOUND remotion.media` (consulta de rede do Remotion) e funcionou
+  na repetição: se ocorrer, repetir o comando.
