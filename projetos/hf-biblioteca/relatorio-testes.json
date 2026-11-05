@@ -503,6 +503,17 @@
   "erro": "adlessShell=true, platform=linux)\n[initSession:screenshot] page.goto start (0ms)\n\n✗  Render failed\n\n   This composition declares data-requires-webgpu, but a usable WebGPU device could not be created on this browser launch. Run on a host with a GPU, set PRODUCER_ALLOW_SOFTWARE_WEBGPU=true to render it on SwiftShader (slow), or remove data-requires-webgpu.\n   Try --docker for containerized rendering",
   "ok": false
  },
+ "light-leak": {
+  "brilho_medio": 79.3,
+  "duracao": 4.0,
+  "ficha_demo": true,
+  "movimento": 6.12,
+  "movimento_pico": 29.36,
+  "ok": true,
+  "quadros_analisados": 16,
+  "tipo": "block",
+  "variaveis": 0
+ },
  "liquid-glass-widgets": {
   "brilho_medio": 22.1,
   "duracao": 8.0,
@@ -510,6 +521,28 @@
   "movimento": 1.56,
   "ok": true,
   "quadros_analisados": 32,
+  "tipo": "block",
+  "variaveis": 0
+ },
+ "logo-outro": {
+  "brilho_medio": 26.8,
+  "duracao": 6.0,
+  "ficha_demo": false,
+  "movimento": 0.23,
+  "movimento_pico": 1.0,
+  "ok": true,
+  "quadros_analisados": 24,
+  "tipo": "block",
+  "variaveis": 0
+ },
+ "macos-notification": {
+  "brilho_medio": 38.2,
+  "duracao": 5.0,
+  "ficha_demo": false,
+  "movimento": 0.05,
+  "movimento_pico": 0.26,
+  "ok": false,
+  "quadros_analisados": 20,
   "tipo": "block",
   "variaveis": 0
  },
