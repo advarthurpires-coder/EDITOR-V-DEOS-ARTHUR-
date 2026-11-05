@@ -562,7 +562,9 @@ def gerar_folha(video: Path, destino: Path, colunas: int = 4) -> None:
 
 def cmd_testar(a):
     nomes = a.nomes or itens_instalados()
-    rel_arq = BIB / "relatorio-testes.json"
+    if a.reverso:
+        nomes = list(reversed(nomes))
+    rel_arq = Path(a.relatorio) if a.relatorio else BIB / "relatorio-testes.json"
     relatorio = json.loads(rel_arq.read_text(encoding="utf-8")) if rel_arq.exists() else {}
     PREVIAS.mkdir(parents=True, exist_ok=True)
     tmp = Path(tempfile.mkdtemp(prefix="testehf-"))
@@ -617,7 +619,10 @@ def main():
     s.add_argument("--ajuste", default="conter", choices=["conter", "cobrir"]); s.add_argument("--qualidade", default="looks"); s.set_defaults(fn=cmd_sobrepor)
     s = sp.add_parser("sugerir"); s.add_argument("consulta"); s.add_argument("--limite", type=int, default=12); s.set_defaults(fn=cmd_sugerir)
     s = sp.add_parser("previa"); s.add_argument("nome"); s.add_argument("--var", action="append"); s.add_argument("--duracao", type=float); s.set_defaults(fn=cmd_previa)
-    s = sp.add_parser("testar"); s.add_argument("nomes", nargs="*"); s.add_argument("--max-segundos", type=float, default=6.0); s.set_defaults(fn=cmd_testar)
+    s = sp.add_parser("testar"); s.add_argument("nomes", nargs="*"); s.add_argument("--max-segundos", type=float, default=6.0)
+    s.add_argument("--relatorio", help="arquivo do relatório (padrão: projetos/hf-biblioteca/relatorio-testes.json)")
+    s.add_argument("--reverso", action="store_true", help="testar na ordem inversa (útil para rodar dois processos em paralelo)")
+    s.set_defaults(fn=cmd_testar)
     a = p.parse_args()
     a.fn(a)
 

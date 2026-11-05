@@ -71,7 +71,10 @@ python3 scripts/catalogo.py --resumo     # panorama do que existe
 |---|---|---|
 | Cortar, juntar, transições entre clipes, cor, VFX de imagem, áudio, reenquadrar, SFX sintetizados, exportar | **FFmpeg** via `scripts/estudio.py` (atalhos simples em `scripts/efeitos-ffmpeg.sh`) | `python3 scripts/estudio.py -h` · `referencias/ffmpeg-estudio.md` |
 | Templates parametrizados, legendas por palavra, lower thirds, títulos, contadores, séries com padrão fixo | **Remotion** | `projetos/remotion-base/src/componentes/` · `referencias/remotion.md` |
-| Motion graphics prontos (~450 blocos: transições shader, mockups, gráficos, 3D, captions estilizados) | **HyperFrames** | `hyperframes catalog --query "<ideia>"` · skills `/hyperframes`, `/hyperframes-registry` · `projetos/teste-hyperframes/` |
+| Motion graphics prontos (~450 blocos: mockups, gráficos, 3D, captions estilizados, partículas, overlays) | **HyperFrames** via `scripts/blocos.py` | `blocos.py sugerir/renderizar/sobrepor` · `referencias/blocos-hyperframes.md` · skills `/hyperframes`, `/hyperframes-registry` |
+| Transições cinematográficas GLSL entre os seus clipes | **Remotion** + shaders dos blocos | `estudio.py transicao-shader --shader whip-pan…` |
+| Cortes no ritmo da música | **HyperFrames beats** + FFmpeg | `estudio.py batidas` · `estudio.py montagem-ritmo` |
+| Prévia ao vivo, timeline, keyframes, histórico | Remotion Studio / HyperFrames | `scripts/projeto.py previa/timeline/keyframes/historico` |
 | Transcrição e legendas | **whisper.cpp** | `estudio.py transcrever` → `.srt` + `.legendas.json` (formato Remotion) |
 | Importar mídia de URL | **yt-dlp** | somente fonte própria ou autorizada; nunca contornar DRM |
 
@@ -140,6 +143,7 @@ cd projetos/remotion-base && npx remotion compositions src/index.ts   # Vinheta,
 
 - `referencias/remotion.md`: componentes e composições Remotion do estúdio.
 - `referencias/ffmpeg-estudio.md`: todos os comandos do `estudio.py`, presets e parâmetros.
+- `referencias/blocos-hyperframes.md`: motor de blocos (modos, parâmetros, overlays, armadilhas de rede/CDN).
 - `referencias/plataformas.md`: especificações por rede social (resolução, áreas seguras, loudness).
 - `referencias/aprendizados.md`: diário técnico. **Leia antes, atualize depois.**
 - `biblioteca/CATALOGO.md`: catálogo legível (gerado de `biblioteca/catalogo.json`); `biblioteca/presets.json`: 14 presets.

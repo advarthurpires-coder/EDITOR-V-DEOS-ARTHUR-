@@ -19,6 +19,17 @@
   "tipo": "component",
   "variaveis": 0
  },
+ "badge-pop": {
+  "brilho_medio": 38.4,
+  "duracao": 4.0,
+  "ficha_demo": false,
+  "movimento": 0.04,
+  "movimento_pico": 0.44,
+  "ok": true,
+  "quadros_analisados": 16,
+  "tipo": "component",
+  "variaveis": 3
+ },
  "beat-accent": {
   "brilho_medio": 37.6,
   "duracao": 4.0,
@@ -60,8 +71,15 @@
   "variaveis": 4
  },
  "camera-rig-depth-stack": {
-  "erro": " infinite/unbounded animation (e.g. animation-iteration-count: infinite, repeat: -1 WAAPI, or a looping Lottie clip) or a Three.js scene with no discoverable AnimationClip.\n     \u2192 Fix: add data-duration=\"<seconds>\" to your root <div data-composition-id=\"...\"> element.\n     \u2192 The runtime finished initializing but reported zero duration. This is permanent.\n   Try --docker for containerized rendering",
-  "ok": false
+  "brilho_medio": 52.2,
+  "duracao": 4.0,
+  "ficha_demo": false,
+  "movimento": 0.73,
+  "movimento_pico": 6.69,
+  "ok": true,
+  "quadros_analisados": 16,
+  "tipo": "component",
+  "variaveis": 0
  },
  "camera-shake": {
   "brilho_medio": 47.9,
@@ -102,6 +120,72 @@
   "quadros_analisados": 16,
   "tipo": "component",
   "variaveis": 0
+ },
+ "caption-neon-accent": {
+  "brilho_medio": 43.1,
+  "duracao": 4.0,
+  "ficha_demo": false,
+  "movimento": 2.92,
+  "movimento_pico": 6.71,
+  "ok": true,
+  "quadros_analisados": 16,
+  "tipo": "component",
+  "variaveis": 0
+ },
+ "caption-neon-glow": {
+  "brilho_medio": 39.6,
+  "duracao": 4.0,
+  "ficha_demo": false,
+  "movimento": 2.28,
+  "movimento_pico": 4.08,
+  "ok": true,
+  "quadros_analisados": 16,
+  "tipo": "component",
+  "variaveis": 0
+ },
+ "caption-parallax-layers": {
+  "brilho_medio": 41.2,
+  "duracao": 4.0,
+  "ficha_demo": false,
+  "movimento": 2.12,
+  "movimento_pico": 6.7,
+  "ok": true,
+  "quadros_analisados": 16,
+  "tipo": "component",
+  "variaveis": 0
+ },
+ "caption-particle-burst": {
+  "brilho_medio": 39.9,
+  "duracao": 4.0,
+  "ficha_demo": false,
+  "movimento": 1.81,
+  "movimento_pico": 2.68,
+  "ok": true,
+  "quadros_analisados": 16,
+  "tipo": "component",
+  "variaveis": 0
+ },
+ "char-slam-explode": {
+  "brilho_medio": 41.5,
+  "duracao": 3.5,
+  "ficha_demo": false,
+  "movimento": 0.88,
+  "movimento_pico": 3.36,
+  "ok": true,
+  "quadros_analisados": 14,
+  "tipo": "component",
+  "variaveis": 3
+ },
+ "chart-story": {
+  "brilho_medio": 49.1,
+  "duracao": 4.0,
+  "ficha_demo": false,
+  "movimento": 1.23,
+  "movimento_pico": 5.72,
+  "ok": true,
+  "quadros_analisados": 16,
+  "tipo": "component",
+  "variaveis": 7
  },
  "grain-overlay": {
   "brilho_medio": 48.6,

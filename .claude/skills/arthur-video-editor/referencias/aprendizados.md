@@ -55,3 +55,24 @@ Isto é a memória de longo prazo do editor: leia antes de editar, atualize depo
 - **Sem transcrição** (huggingface.co e alphacephei.com bloqueados) → legendas, gancho e tarja aguardam o texto falado
   e a finalidade do vídeo. Não inventar texto de gancho/legenda nem identificar a pessoa sem confirmação.
 - Pendente: incluir no `testar-estudio.sh` um caso com rotação + segunda faixa de áudio (regressão destes bugs).
+
+## 2026-11-05 — Implementação dos recursos "por integração"
+- **Motor `scripts/blocos.py`** para os blocos HyperFrames: instalação, reescrita de CDN para `./vendor`, três modos de
+  render (direto/host/trecho) com fallback, parâmetros (`--var`), overlays com alfa (`sobrepor`), lote e verificação
+  automática (render → compor sobre a cor da marca → exige movimento médio > 0,05 ou pico > 0,3). Detalhes e armadilhas:
+  `referencias/blocos-hyperframes.md`.
+- **Critério de honestidade aplicado**: bloco que só anima conteúdo de exemplo (transições/câmera do registro) continua
+  `integracao_nativa` com observação; só vira `implementado` o que funciona com a mídia/texto do usuário.
+- **Transições GLSL**: os 9 blocos "ficha" de transição usam o mesmo contrato (`u_from/u_to/u_progress/u_resolution/v_uv`).
+  `scripts/extrair_shaders.py` extrai o GLSL estaticamente (sem executar JS; cuidado: `);` aparece dentro do GLSL, então
+  a leitura do argumento percorre literais) e `TransicaoShader.tsx` aplica com `OffthreadVideo.onVideoFrame` +
+  WebGL (`--gl=swangle`). As fichas não invertem o eixo Y (cenas sólidas escondem isso); com vídeo real é preciso
+  `UNPACK_FLIP_Y_WEBGL = true`. Render de 5,2 s a 1280×720 ≈ 25 s.
+- **Batidas**: `hyperframes beats arquivo --json` funciona offline (120,2 BPM numa faixa sintética de 120 BPM);
+  base de `estudio.py batidas` e `montagem-ritmo`.
+- **Tom**: `rubberband=pitch=2^(n/12)` — medido 219,4 Hz → 261,9 Hz para +3 semitons (esperado 261,6).
+- **Slideshow ao vivo (`hyperframes present`)**: o player não resolveu as cenas (precisou de `startTime/endTime` na ilha)
+  e não exibiu o conteúdo neste ambiente; o servidor lê a ilha só ao iniciar (reiniciar após editar). Template entregue
+  como **vídeo** institucional; modo apresentação fica pendente.
+- **Desempenho**: ~2 min por bloco no teste (render ProRes com alfa + composição); dois testadores em paralelo
+  (`--reverso --relatorio outro.json`) aproveitam os 4 vCPUs.

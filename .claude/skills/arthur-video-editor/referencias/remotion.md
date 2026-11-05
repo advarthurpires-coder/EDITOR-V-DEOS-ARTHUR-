@@ -13,6 +13,7 @@ Mídia própria vai em `public/` e é referenciada com `staticFile("pasta/arquiv
 | `Vinheta` | 1080×1920, 4 s | Abertura simples com nome + subtítulo (props `titulo`, `subtitulo`) |
 | `ArthurShowcase` | 1080×1920, ~10,7 s | Demonstração vertical: kinetic hook, chart grow/contador, phone mockup com legenda gigante e pop-up, title card em vidro |
 | `Vitrine` | 1920×1080, 12 s | Demonstração de todos os componentes e transições — referência visual e teste |
+| `TransicaoShader` | conforme props | Transição GLSL entre dois clipes (use via `estudio.py transicao-shader`) |
 | `ReelsJuridico` | 1080×1920, `duracaoSegundos` | Template de Reels: gancho, vídeo de fundo, legendas, tarja, CTA, progresso |
 
 ### Props do `ReelsJuridico`
@@ -44,10 +45,16 @@ gerado por `python3 scripts/estudio.py transcrever`.
 | `MaquinaEscrever` | `texto`, `caracteresPorFrame`, `tamanho` | Typewriter |
 | `Vinheta`, `GraoFilme` | `intensidade` / `opacidade` | Vignette, Film Grain |
 | `TremorCamera` | `amplitude`, `velocidade` (envolve filhos) | Handheld, Camera Shake |
+| `TransicaoShader` | `videoA`, `videoB`, `shader`, `duracaoA/B`, `transicao`, `largura`, `altura`, `fps` | 9 transições GLSL (shaders em `src/shaders/transicoes.ts`) |
 | `Gancho`, `Cta` (em `composicoes/ReelsJuridico.tsx`) | `texto` | Kinetic Hook |
 
 Transições (pacote `@remotion/transitions`, ver `Vitrine.tsx`): `fade()`, `slide({direction})`, `wipe({direction})`,
 `flip()`, `clockWipe({width,height})` dentro de `<TransitionSeries>`; timing `linearTiming` ou `springTiming`.
+
+## Curvas de animação
+
+`src/curvas.ts`: `curvas.suave|entrada|saida|expressiva|recuo|elastica|quique|cinematica` (para `interpolate`) e
+`molas.suave|natural|elastica|pesada` (para `spring`). Equivalentes GSAP no comentário do arquivo.
 
 ## Convenções
 - Todo componente novo: arquivo em `src/componentes/`, export em `index.ts`, uso demonstrado na `Vitrine` ou numa

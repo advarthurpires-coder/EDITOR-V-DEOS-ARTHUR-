@@ -12,7 +12,7 @@
 | `reframe` | `reframe in out --formato 9:16 --modo blur` | crop (com `--foco-x` 0–1) ou blur (fundo desfocado) |
 | `velocidade` | `velocidade in out --fator 0.5 --suave` / `--reverso` | áudio acompanha (atempo); `--suave` interpola quadros (lento) |
 | `congelar` | `congelar in out --em 3.2 --duracao 1.5` | áudio pausa durante o freeze |
-| `audio` | `audio in out --ruido --voz-eq --compressor --lufs -14 --fade-in 0.3 --fade-out 1` | `--fade-video` aplica fades na imagem também; saída .wav/.mp3 extrai só áudio |
+| `audio` | `audio in out --ruido --voz-eq --compressor --gate --deesser --lufs -14 --fade-in 0.3 --fade-out 1` | `--fade-video` aplica fades na imagem também; saída .wav/.mp3 extrai só áudio |
 | `ducking` | `ducking video.mp4 musica.mp3 out.mp4 --volume-musica 0.25` | sidechain pela voz + loudnorm |
 | `silencio` | `silencio in out --limiar -35dB --minimo 0.45 --margem 0.08` | jump cuts automáticos; ajuste o limiar ao ruído de fundo |
 | `cenas` | `cenas in.mp4 --limiar 0.3` | JSON com tempos de corte |
@@ -25,6 +25,11 @@
 | `exportar` | `exportar in.mp4 out.mp4 --plataforma reels --modo blur` | reels, tiktok, shorts, stories, feed, quadrado, youtube, youtube-4k, linkedin, whatsapp |
 | `cortar` | `cortar in out --inicio 12.5 --fim 40` | recodifica (corte preciso) |
 | `juntar` | `juntar out.mp4 a.mp4 b.mp4 c.mp4` | normaliza resolução/fps do primeiro |
+| `transicao-shader` | `transicao-shader a.mp4 b.mp4 out.mp4 --shader whip-pan --duracao 0.8` | 9 shaders GLSL dos blocos HyperFrames (whip-pan, glitch, light-leak, ridged-burn, ripple-waves, thermal-distortion, cross-warp-morph, domain-warp-dissolve, chromatic-radial-split) via Remotion |
+| `batidas` | `batidas musica.mp3` | BPM e tempos das batidas (motor do HyperFrames) |
+| `montagem-ritmo` | `montagem-ritmo out.mp4 musica.mp3 c1.mp4 c2.mp4 --a-cada 2 --formato 9:16` | corta e alterna clipes nas batidas, com a música por baixo |
+| `crossfade-musica` | `crossfade-musica a.mp3 b.mp3 out.mp3 --duracao 3` | fusão entre trilhas |
+| `tom` | `tom in.mp4 out.mp4 --semitons -2 [--preservar-formantes]` | muda o tom mantendo a duração (rubberband) |
 | `sfx` | `sfx whoosh w.wav` / `sfx todos pasta/` | whoosh, impacto, sub-boom, riser, riser-reverso, clique, pop, notificacao, drone, braam, batimento, glitch (pico −3 dBFS) |
 
 Teste completo: `bash scripts/testar-estudio.sh [pasta]` (todas as opções acima com mídia sintética; ~5 min em 4 vCPUs).

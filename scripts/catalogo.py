@@ -80,6 +80,12 @@ def validate(items, presets):
     estudio = (ROOT / "scripts" / "estudio.py").read_text(encoding="utf-8") if (ROOT / "scripts" / "estudio.py").exists() else ""
     comandos = set(re.findall(r'sp\.add_parser\("([a-z-]+)"', estudio))
     fontes = " ".join(p.read_text(encoding="utf-8") for p in (ROOT / "projetos" / "remotion-base" / "src").rglob("*.tsx"))
+    projeto_py = (ROOT / "scripts" / "projeto.py").read_text(encoding="utf-8") if (ROOT / "scripts" / "projeto.py").exists() else ""
+    cmds_projeto = set(re.findall(r'sp\.add_parser\("([a-z-]+)"', projeto_py))
+    comp_hf = ROOT / "projetos" / "hf-biblioteca" / "compositions"
+
+    def bloco_instalado(nome: str) -> bool:
+        return any(p.exists() for p in (comp_hf / f"{nome}.html", comp_hf / "components" / f"{nome}.html", comp_hf / nome / f"{nome}.html"))
     for i, item in enumerate(items):
         absent = FIELDS - set(item)
         if absent:
@@ -98,6 +104,12 @@ def validate(items, presets):
             for cmd in re.findall(r"estudio\.py ([a-z-]+)", uso):
                 if cmd not in comandos:
                     errors.append(f"{item['id']}: comando inexistente 'estudio.py {cmd}'.")
+            for bloco in re.findall(r"blocos\.py (?:renderizar|previa|variaveis) ([a-z0-9-]+)", uso) + re.findall(r"blocos\.py sobrepor \S+ ([a-z0-9-]+)", uso):
+                if not bloco_instalado(bloco):
+                    errors.append(f"{item['id']}: bloco HyperFrames não instalado '{bloco}'.")
+            for cmd in re.findall(r"projeto\.py ([a-z-]+)", uso):
+                if cmd not in cmds_projeto:
+                    errors.append(f"{item['id']}: comando inexistente 'projeto.py {cmd}'.")
             for comp in re.findall(r"Remotion: <?([A-Z][A-Za-z]+)", uso):
                 if f"export const {comp}" not in fontes:
                     errors.append(f"{item['id']}: componente Remotion inexistente '{comp}'.")

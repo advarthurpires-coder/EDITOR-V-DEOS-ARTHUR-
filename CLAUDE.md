@@ -11,6 +11,7 @@ Responder sempre em português.
 - Biblioteca: `biblioteca/catalogo.json` (387 recursos) e `biblioteca/presets.json` (14 presets) · legível em `biblioteca/CATALOGO.md`
 - Pesquisa: `python3 scripts/catalogo.py --resumo` · `--buscar "termo" [--status implementado]` · `--preset <id>`
 - Kit FFmpeg: `python3 scripts/estudio.py -h` (atalhos simples: `bash scripts/efeitos-ffmpeg.sh`)
+- Blocos HyperFrames (~450, offline): `python3 scripts/blocos.py -h` · ferramentas de projeto: `python3 scripts/projeto.py -h`
 - Remotion: componentes em `projetos/remotion-base/src/componentes/`; composições `Vinheta`, `ArthurShowcase`, `Vitrine`, `ReelsJuridico`
 - Memória técnica: `.claude/skills/arthur-video-editor/referencias/aprendizados.md` (ler antes, atualizar depois)
 - Os arquivos versionados no GitHub são a memória permanente do estúdio: todo componente/técnica nova vai
