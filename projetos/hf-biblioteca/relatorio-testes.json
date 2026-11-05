@@ -444,6 +444,50 @@
   "tipo": "component",
   "variaveis": 0
  },
+ "hw-callout-circle": {
+  "brilho_medio": 67.3,
+  "duracao": 4.0,
+  "ficha_demo": false,
+  "movimento": 0.24,
+  "movimento_pico": 0.55,
+  "ok": true,
+  "quadros_analisados": 16,
+  "tipo": "component",
+  "variaveis": 0
+ },
+ "hw-pipeline": {
+  "brilho_medio": 39.5,
+  "duracao": 7.0,
+  "ficha_demo": false,
+  "movimento": 0.44,
+  "movimento_pico": 1.26,
+  "ok": true,
+  "quadros_analisados": 28,
+  "tipo": "block",
+  "variaveis": 0
+ },
+ "icon-morph-beat": {
+  "brilho_medio": 40.1,
+  "duracao": 2.5,
+  "ficha_demo": false,
+  "movimento": 0.18,
+  "movimento_pico": 0.8,
+  "ok": true,
+  "quadros_analisados": 10,
+  "tipo": "component",
+  "variaveis": 2
+ },
+ "kinetic-center-build": {
+  "brilho_medio": 38.0,
+  "duracao": 2.0,
+  "ficha_demo": false,
+  "movimento": 0.0,
+  "movimento_pico": 0.01,
+  "ok": false,
+  "quadros_analisados": 8,
+  "tipo": "component",
+  "variaveis": 5
+ },
  "liquid-glass-widgets": {
   "brilho_medio": 22.1,
   "duracao": 8.0,
