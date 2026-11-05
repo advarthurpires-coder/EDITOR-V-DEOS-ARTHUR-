@@ -1,24 +1,32 @@
 #!/usr/bin/env python3
 """
-Catálogo de efeitos e recursos do Estúdio Arthur.
+Catálogo de recursos audiovisuais do Estúdio Arthur — pesquisa, presets, manutenção e validação.
+Fonte de verdade: biblioteca/catalogo.json e biblioteca/presets.json (sem dependências externas).
 
-  python3 scripts/catalogo.py buscar "zoom"                    # busca em nome, descrição, uso e ferramentas
-  python3 scripts/catalogo.py buscar legenda --status implementado
-  python3 scripts/catalogo.py listar --categoria transicoes [--status integracao] [--ferramenta ffmpeg]
-  python3 scripts/catalogo.py ver transicoes.flash-cut          # ficha completa de um item
-  python3 scripts/catalogo.py stats                             # contagem por categoria e status
-  python3 scripts/catalogo.py status <id> <implementado|integracao|catalogado> [--uso "..."] [--obs "..."] [--testado]
-  python3 scripts/catalogo.py adicionar <categoria> "<Nome>" --descricao "..." --status ... [--ferramentas a,b] [--uso "..."]
-  python3 scripts/catalogo.py validar                           # consistência do JSON e das referências
-  python3 scripts/catalogo.py md                                # regenera catalogo/CATALOGO.md
+Consultar
+  python3 scripts/catalogo.py --resumo                         # contagem por categoria e estado
+  python3 scripts/catalogo.py --buscar "zoom"                  # termos combinados (E); acentos ignorados
+  python3 scripts/catalogo.py --buscar legenda --status implementado
+  python3 scripts/catalogo.py --categoria transicoes [--motor ffmpeg] [--status integracao_nativa]
+  python3 scripts/catalogo.py --ver motion_graphics.data-counter
+  python3 scripts/catalogo.py --presets                        # lista presets
+  python3 scripts/catalogo.py --preset juridico-sobrio         # efeitos do preset com o estado real de cada um
 
-Status: implementado (existe no repositório e foi testado) · integracao (disponível em ferramenta instalada,
-sem componente próprio) · catalogado (planejado; requer desenvolvimento, modelo ou biblioteca externa).
+Manter
+  python3 scripts/catalogo.py --marcar <id> implementado --uso "comando/componente" --arquivo caminho --testado
+  python3 scripts/catalogo.py --adicionar <categoria> "<Nome>" --descricao "..." [--status catalogado] [--motores a,b] [--uso ...]
+  python3 scripts/catalogo.py --validar                        # integridade + referências a comandos/componentes/arquivos
+  python3 scripts/catalogo.py --md                             # regenera biblioteca/CATALOGO.md
+
+Estados (do mais maduro ao menos):
+  implementado        código reutilizável e parametrizado no repo, testado (testado=false => teste real pendente)
+  exemplo_executavel  existe demonstração em código (ex.: ArthurShowcase), não é componente genérico
+  integracao_nativa   disponível numa ferramenta instalada (bloco HyperFrames, filtro FFmpeg, recurso Remotion) — requer adaptação/teste
+  catalogado          apenas especificação; NÃO implementado
 """
 from __future__ import annotations
 
 import argparse
-import datetime as dt
 import json
 import re
 import sys
@@ -26,198 +34,259 @@ import unicodedata
 from collections import Counter, defaultdict
 from pathlib import Path
 
-RAIZ = Path(__file__).resolve().parent.parent
-ARQ = RAIZ / "catalogo" / "catalogo.json"
-MD = RAIZ / "catalogo" / "CATALOGO.md"
-STATUS = ("implementado", "integracao", "catalogado")
-ICONE = {"implementado": "✅", "integracao": "🔌", "catalogado": "📋"}
+ROOT = Path(__file__).resolve().parents[1]
+CAT = ROOT / "biblioteca" / "catalogo.json"
+PRE = ROOT / "biblioteca" / "presets.json"
+MD = ROOT / "biblioteca" / "CATALOGO.md"
+FIELDS = {"id", "nome", "categoria", "tipo", "motores", "status", "parametros"}
+STATUS = ("implementado", "exemplo_executavel", "integracao_nativa", "catalogado")
+ICONE = {"implementado": "✅", "exemplo_executavel": "🧪", "integracao_nativa": "🔌", "catalogado": "📋"}
+LEGENDA = {
+    "implementado": "Código reutilizável no repositório, parametrizado e testado (ver `como_usar`).",
+    "exemplo_executavel": "Demonstração em código (ex.: ArthurShowcase); não é componente genérico.",
+    "integracao_nativa": "Disponível numa ferramenta instalada; requer adaptação e teste no projeto.",
+    "catalogado": "Apenas especificação — não implementado.",
+}
 
 
-def carregar() -> dict:
-    return json.loads(ARQ.read_text(encoding="utf-8"))
+# ------------------------------------------------------------------ leitura/escrita (API usada pelos testes)
+
+def read():
+    return json.loads(CAT.read_text(encoding="utf-8")), json.loads(PRE.read_text(encoding="utf-8"))
 
 
-def salvar(c: dict) -> None:
-    c["atualizado_em"] = dt.date.today().isoformat()
-    ARQ.write_text(json.dumps(c, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+def write(items) -> None:
+    CAT.write_text(json.dumps(items, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
 def norm(s: str) -> str:
-    return unicodedata.normalize("NFKD", s or "").encode("ascii", "ignore").decode().lower()
+    return unicodedata.normalize("NFKD", s or "").encode("ascii", "ignore").decode().casefold()
 
 
 def slug(s: str) -> str:
     return re.sub(r"[^a-z0-9]+", "-", norm(s)).strip("-")
 
 
-def filtrar(itens, a):
-    for it in itens:
-        if getattr(a, "categoria", None) and it["categoria"] != a.categoria:
-            continue
-        if getattr(a, "status", None) and it["status"] != a.status:
-            continue
-        if getattr(a, "ferramenta", None) and a.ferramenta not in it["ferramentas"]:
-            continue
-        yield it
+# ------------------------------------------------------------------ validação
 
-
-def linha(it) -> str:
-    uso = f"\n      ↳ {it['como_usar']}" if it["como_usar"] else ""
-    teste = "" if it["testado"] or it["status"] != "implementado" else " (teste pendente)"
-    return f"{ICONE[it['status']]} {it['id']}  —  {it['nome']}{teste}: {it['descricao']}{uso}"
-
-
-def cmd_buscar(a):
-    c = carregar()
-    termos = norm(a.termo).split()
-    achados = []
-    for it in filtrar(c["itens"], a):
-        texto = norm(" ".join([it["nome"], it["descricao"], it["como_usar"], it["parametros"], " ".join(it["ferramentas"]), it["categoria"], it["observacoes"]]))
-        if all(t in texto for t in termos):
-            achados.append(it)
-    for it in achados:
-        print(linha(it))
-    print(f"\n{len(achados)} resultado(s).")
-
-
-def cmd_listar(a):
-    c = carregar()
-    n = 0
-    for it in filtrar(c["itens"], a):
-        print(linha(it)); n += 1
-    print(f"\n{n} item(ns).")
-
-
-def cmd_ver(a):
-    c = carregar()
-    it = next((x for x in c["itens"] if x["id"] == a.id), None)
-    if not it:
-        raise SystemExit("Item não encontrado. Use 'buscar'.")
-    print(json.dumps(it, ensure_ascii=False, indent=2))
-
-
-def cmd_stats(a):
-    c = carregar()
-    por = defaultdict(Counter)
-    for it in c["itens"]:
-        por[it["categoria"]][it["status"]] += 1
-    print(f"{'categoria':38} {'✅ impl':>8} {'🔌 integ':>9} {'📋 catal':>9} {'total':>6}")
-    tot = Counter()
-    for cid, meta in sorted(c["categorias"].items(), key=lambda kv: kv[1]["numero"]):
-        k = por[cid]; tot.update(k)
-        print(f"{meta['numero']:>2}. {meta['nome'][:34]:34} {k['implementado']:>8} {k['integracao']:>9} {k['catalogado']:>9} {sum(k.values()):>6}")
-    print(f"{'TOTAL':38} {tot['implementado']:>8} {tot['integracao']:>9} {tot['catalogado']:>9} {sum(tot.values()):>6}")
-
-
-def cmd_status(a):
-    c = carregar()
-    it = next((x for x in c["itens"] if x["id"] == a.id), None)
-    if not it:
-        raise SystemExit("Item não encontrado.")
-    it["status"] = a.novo
-    if a.uso is not None:
-        it["como_usar"] = a.uso
-    if a.obs is not None:
-        it["observacoes"] = a.obs
-    it["testado"] = bool(a.testado) and a.novo == "implementado"
-    salvar(c); cmd_md(a, silencioso=True)
-    print("Atualizado:", linha(it))
-
-
-def cmd_adicionar(a):
-    c = carregar()
-    if a.categoria not in c["categorias"]:
-        raise SystemExit(f"Categoria inválida. Opções: {', '.join(c['categorias'])}")
-    iid = f"{a.categoria}.{slug(a.nome)}"
-    if any(x["id"] == iid for x in c["itens"]):
-        raise SystemExit(f"Já existe: {iid} (use 'status' para atualizar)")
-    it = {"id": iid, "nome": a.nome, "categoria": a.categoria, "descricao": a.descricao,
-          "ferramentas": [f for f in (a.ferramentas or "").split(",") if f], "status": a.status, "como_usar": a.uso or "",
-          "parametros": a.parametros or "", "compatibilidade": (a.compat or "16:9,9:16,1:1,4:5").split(","),
-          "testado": bool(a.testado) and a.status == "implementado", "observacoes": a.obs or ""}
-    c["itens"].append(it)
-    salvar(c); cmd_md(a, silencioso=True)
-    print("Adicionado:", linha(it))
-
-
-def cmd_validar(a):
-    c = carregar()
-    erros = []
-    ids = Counter(x["id"] for x in c["itens"])
-    erros += [f"id duplicado: {i}" for i, n in ids.items() if n > 1]
-    comandos = set(re.findall(r'sp\.add_parser\("([a-z-]+)"', (RAIZ / "scripts" / "estudio.py").read_text(encoding="utf-8")))
-    comp_dir = RAIZ / "projetos" / "remotion-base" / "src"
-    fontes_remotion = " ".join(p.read_text(encoding="utf-8") for p in comp_dir.rglob("*.tsx"))
-    for it in c["itens"]:
-        for campo in ("id", "nome", "categoria", "descricao", "status", "como_usar", "ferramentas"):
-            if campo not in it:
-                erros.append(f"{it.get('id')}: falta campo {campo}")
-        if it["status"] not in STATUS:
-            erros.append(f"{it['id']}: status inválido {it['status']}")
-        if it["categoria"] not in c["categorias"]:
-            erros.append(f"{it['id']}: categoria inexistente")
-        if it["status"] == "implementado":
-            if not it["como_usar"]:
-                erros.append(f"{it['id']}: implementado sem 'como_usar'")
-            for cmd in re.findall(r"estudio\.py ([a-z-]+)", it["como_usar"]):
+def validate(items, presets):
+    errors = []
+    ids = [e.get("id") for e in items]
+    dup = [i for i, n in Counter(ids).items() if n > 1]
+    if dup:
+        errors.append(f"IDs duplicados no catálogo: {dup}")
+    if len(items) < 250:
+        errors.append("Catálogo deve conter ao menos 250 recursos.")
+    estudio = (ROOT / "scripts" / "estudio.py").read_text(encoding="utf-8") if (ROOT / "scripts" / "estudio.py").exists() else ""
+    comandos = set(re.findall(r'sp\.add_parser\("([a-z-]+)"', estudio))
+    fontes = " ".join(p.read_text(encoding="utf-8") for p in (ROOT / "projetos" / "remotion-base" / "src").rglob("*.tsx"))
+    for i, item in enumerate(items):
+        absent = FIELDS - set(item)
+        if absent:
+            errors.append(f"Item {i}: campos ausentes: {sorted(absent)}")
+        st = item.get("status")
+        if st not in STATUS:
+            errors.append(f"Item {i} ({item.get('id')}): status inválido.")
+        if st in ("implementado", "exemplo_executavel"):
+            arq = item.get("arquivo_exemplo")
+            if not arq or not (ROOT / arq).exists():
+                errors.append(f"{item['id']}: arquivo_exemplo ausente ou inexistente ({arq}).")
+        if st == "implementado":
+            uso = item.get("como_usar", "")
+            if not uso:
+                errors.append(f"{item['id']}: implementado sem 'como_usar'.")
+            for cmd in re.findall(r"estudio\.py ([a-z-]+)", uso):
                 if cmd not in comandos:
-                    erros.append(f"{it['id']}: comando estudio inexistente '{cmd}'")
-            for comp in re.findall(r"Remotion: <?([A-Z][A-Za-z]+)", it["como_usar"]):
-                if f"export const {comp}" not in fontes_remotion and comp not in ("Easing",):
-                    erros.append(f"{it['id']}: componente Remotion inexistente '{comp}'")
-    if erros:
-        print("\n".join(erros)); raise SystemExit(1)
-    print(f"OK — {len(c['itens'])} itens válidos.")
+                    errors.append(f"{item['id']}: comando inexistente 'estudio.py {cmd}'.")
+            for comp in re.findall(r"Remotion: <?([A-Z][A-Za-z]+)", uso):
+                if f"export const {comp}" not in fontes:
+                    errors.append(f"{item['id']}: componente Remotion inexistente '{comp}'.")
+    valid = set(ids)
+    for p in presets:
+        for eid in p.get("efeitos", []):
+            if eid not in valid:
+                errors.append(f"Preset {p.get('id')}: efeito inexistente {eid}.")
+    return errors
 
 
-def cmd_md(a, silencioso: bool = False):
-    c = carregar()
-    tot = Counter(x["status"] for x in c["itens"])
-    L = ["# Catálogo de efeitos e recursos — Estúdio Arthur", "",
-         "> Gerado automaticamente a partir de `catalogo/catalogo.json` por `python3 scripts/catalogo.py md`. Não edite à mão.", "",
-         f"Atualizado em {c.get('atualizado_em', '')} · **{len(c['itens'])} itens** · "
-         f"✅ {tot['implementado']} implementados · 🔌 {tot['integracao']} por integração · 📋 {tot['catalogado']} catalogados", "",
-         "| Ícone | Status | Significado |", "|---|---|---|"]
-    for s in STATUS:
-        L.append(f"| {ICONE[s]} | {s} | {c['status_legenda'][s]} |")
-    L += ["", "Busca rápida: `python3 scripts/catalogo.py buscar <termo> [--status implementado]`", ""]
-    for cid, meta in sorted(c["categorias"].items(), key=lambda kv: kv[1]["numero"]):
-        its = [x for x in c["itens"] if x["categoria"] == cid]
+# ------------------------------------------------------------------ apresentação
+
+def linha(x, detalhado=True) -> str:
+    pend = " (teste pendente)" if x["status"] == "implementado" and not x.get("testado", True) else ""
+    s = f"{ICONE.get(x['status'], '?')} {x['id']} | {x['nome']} | {x['status']}{pend} | {','.join(x['motores'])}"
+    if detalhado and x.get("como_usar"):
+        s += f"\n      ↳ {x['como_usar']}"
+    return s
+
+
+def filtrar(items, a):
+    termos = norm(a.buscar).split() if a.buscar else []
+    for x in items:
+        if a.categoria and x["categoria"] != a.categoria:
+            continue
+        if a.status and x["status"] != a.status:
+            continue
+        if a.motor and a.motor not in x["motores"]:
+            continue
+        if termos:
+            texto = norm(" ".join([x["nome"], x["id"], x["categoria"], x.get("categoria_nome", ""), x["tipo"], " ".join(x["motores"]),
+                                   x.get("descricao", ""), x.get("como_usar", ""), x.get("observacao", "")]))
+            if not all(t in texto for t in termos):
+                continue
+        yield x
+
+
+def resumo(items, presets):
+    print(f"Catálogo: {len(items)} recursos em {len({x['categoria'] for x in items})} categorias; {len(presets)} presets.")
+    por = defaultdict(Counter)
+    nomes = {}
+    for x in items:
+        por[x["categoria"]][x["status"]] += 1
+        nomes[x["categoria"]] = x.get("categoria_nome", x["categoria"])
+    print(f"\n{'categoria':44} {'✅impl':>7} {'🧪exem':>7} {'🔌integ':>8} {'📋catal':>8} {'total':>6}")
+    tot = Counter()
+    for cat in dict.fromkeys(x["categoria"] for x in items):
+        k = por[cat]; tot.update(k)
+        print(f"{nomes[cat][:44]:44} {k['implementado']:>7} {k['exemplo_executavel']:>7} {k['integracao_nativa']:>8} {k['catalogado']:>8} {sum(k.values()):>6}")
+    print(f"{'TOTAL':44} {tot['implementado']:>7} {tot['exemplo_executavel']:>7} {tot['integracao_nativa']:>8} {tot['catalogado']:>8} {sum(tot.values()):>6}")
+    pend = [x["id"] for x in items if x["status"] == "implementado" and not x.get("testado", True)]
+    if pend:
+        print(f"\nImplementados com teste real pendente: {', '.join(pend)}")
+
+
+def mostrar_preset(pid, items, presets):
+    p = next((q for q in presets if q["id"] == pid), None)
+    if not p:
+        raise SystemExit(f"Preset não encontrado. Opções: {', '.join(q['id'] for q in presets)}")
+    por_id = {x["id"]: x for x in items}
+    print(f"{p['nome']} ({p['id']}) — perfil {p.get('perfil')}, {p.get('formatoPadrao')} @ {p.get('fps')} fps")
+    if p.get("nota"):
+        print(f"Nota: {p['nota']}")
+    for eid in p.get("efeitos", []):
+        print("  " + linha(por_id[eid]))
+    prontos = sum(por_id[e]["status"] == "implementado" for e in p.get("efeitos", []))
+    print(f"\n{prontos}/{len(p.get('efeitos', []))} efeitos do preset implementados.")
+
+
+def gerar_md(items, presets) -> None:
+    tot = Counter(x["status"] for x in items)
+    L = ["# Catálogo de recursos — Estúdio Arthur", "",
+         "> Gerado de `biblioteca/catalogo.json` por `python3 scripts/catalogo.py --md`. Não edite à mão.", "",
+         f"**{len(items)} recursos** · ✅ {tot['implementado']} implementados · 🧪 {tot['exemplo_executavel']} exemplos executáveis · "
+         f"🔌 {tot['integracao_nativa']} por integração nativa · 📋 {tot['catalogado']} catalogados · {len(presets)} presets", "",
+         "| | Estado | Significado |", "|---|---|---|"]
+    L += [f"| {ICONE[s]} | `{s}` | {LEGENDA[s]} |" for s in STATUS]
+    L += ["", "Itens implementados marcados com *(teste pendente)* têm código pronto mas ainda sem validação real.", "",
+          "Busca: `python3 scripts/catalogo.py --buscar \"<termo>\" [--status implementado]`", ""]
+    for cat in dict.fromkeys(x["categoria"] for x in items):
+        its = [x for x in items if x["categoria"] == cat]
         k = Counter(x["status"] for x in its)
-        L += [f"## {meta['numero']}. {meta['nome']}", "",
-              f"✅ {k['implementado']} · 🔌 {k['integracao']} · 📋 {k['catalogado']}", "",
-              "| | Recurso | Descrição | Ferramentas | Como usar / observações |", "|---|---|---|---|---|"]
+        L += [f"## {its[0].get('categoria_nome', cat)} (`{cat}`)", "",
+              f"✅ {k['implementado']} · 🧪 {k['exemplo_executavel']} · 🔌 {k['integracao_nativa']} · 📋 {k['catalogado']}", "",
+              "| | Recurso | Descrição | Motores | Como usar / observação |", "|---|---|---|---|---|"]
         for x in its:
-            uso = x["como_usar"].replace("|", "\\|")
-            extra = " ".join(filter(None, [x["parametros"], x["observacoes"]])).replace("|", "\\|")
-            pend = " *(teste pendente)*" if x["status"] == "implementado" and not x["testado"] else ""
-            celula = " — ".join(filter(None, [f"`{uso}`" if uso else "", extra]))
-            L.append(f"| {ICONE[x['status']]} | **{x['nome']}**{pend} | {x['descricao']} | {', '.join(x['ferramentas'])} | {celula} |")
+            pend = " *(teste pendente)*" if x["status"] == "implementado" and not x.get("testado", True) else ""
+            uso = x.get("como_usar", "").replace("|", "\\|")
+            obs = x.get("observacao", "") if x["status"] != "implementado" or not x.get("testado", True) else ""
+            cel = " — ".join(filter(None, [f"`{uso}`" if uso else "", obs.replace("|", "\\|")]))
+            L.append(f"| {ICONE[x['status']]} | **{x['nome']}**{pend} | {x.get('descricao', '')} | {', '.join(x['motores'])} | {cel} |")
         L.append("")
-    MD.write_text("\n".join(L), encoding="utf-8")
-    if not silencioso:
-        print(f"Gerado {MD.relative_to(RAIZ)}")
+    L += ["## Presets", "", "| Preset | Perfil | Formato | Efeitos implementados |", "|---|---|---|---|"]
+    por_id = {x["id"]: x for x in items}
+    for p in presets:
+        ef = p.get("efeitos", [])
+        ok = sum(por_id[e]["status"] == "implementado" for e in ef if e in por_id)
+        L.append(f"| **{p['nome']}** (`{p['id']}`) | {p.get('perfil', '')} | {p.get('formatoPadrao', '')} | {ok}/{len(ef)} |")
+    MD.write_text("\n".join(L) + "\n", encoding="utf-8")
 
+
+# ------------------------------------------------------------------ CLI
 
 def main():
-    p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    sp = p.add_subparsers(dest="cmd", required=True)
-    def filtros(s):
-        s.add_argument("--categoria"); s.add_argument("--status", choices=STATUS); s.add_argument("--ferramenta")
-    s = sp.add_parser("buscar"); s.add_argument("termo"); filtros(s); s.set_defaults(fn=cmd_buscar)
-    s = sp.add_parser("listar"); filtros(s); s.set_defaults(fn=cmd_listar)
-    s = sp.add_parser("ver"); s.add_argument("id"); s.set_defaults(fn=cmd_ver)
-    s = sp.add_parser("stats"); s.set_defaults(fn=cmd_stats)
-    s = sp.add_parser("status"); s.add_argument("id"); s.add_argument("novo", choices=STATUS)
-    s.add_argument("--uso"); s.add_argument("--obs"); s.add_argument("--testado", action="store_true"); s.set_defaults(fn=cmd_status)
-    s = sp.add_parser("adicionar"); s.add_argument("categoria"); s.add_argument("nome"); s.add_argument("--descricao", required=True)
-    s.add_argument("--status", choices=STATUS, default="catalogado"); s.add_argument("--ferramentas"); s.add_argument("--uso")
-    s.add_argument("--parametros"); s.add_argument("--compat"); s.add_argument("--obs"); s.add_argument("--testado", action="store_true")
-    s.set_defaults(fn=cmd_adicionar)
-    s = sp.add_parser("validar"); s.set_defaults(fn=cmd_validar)
-    s = sp.add_parser("md"); s.set_defaults(fn=cmd_md)
-    a = p.parse_args(); a.fn(a)
+    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument("--buscar", metavar="TEXTO")
+    ap.add_argument("--categoria")
+    ap.add_argument("--status", choices=STATUS)
+    ap.add_argument("--motor", help="ffmpeg, remotion, hyperframes, whisper...")
+    ap.add_argument("--resumo", action="store_true")
+    ap.add_argument("--validar", action="store_true")
+    ap.add_argument("--ver", metavar="ID")
+    ap.add_argument("--presets", action="store_true")
+    ap.add_argument("--preset", metavar="ID")
+    ap.add_argument("--md", action="store_true")
+    ap.add_argument("--marcar", nargs=2, metavar=("ID", "STATUS"))
+    ap.add_argument("--adicionar", nargs=2, metavar=("CATEGORIA", "NOME"))
+    ap.add_argument("--descricao"); ap.add_argument("--uso"); ap.add_argument("--arquivo"); ap.add_argument("--obs")
+    ap.add_argument("--motores", help="lista separada por vírgula"); ap.add_argument("--testado", action="store_true")
+    ap.add_argument("--compacto", action="store_true", help="uma linha por item")
+    a = ap.parse_args()
+    items, presets = read()
+
+    if a.validar:
+        errors = validate(items, presets)
+        if errors:
+            print("\n".join(errors), file=sys.stderr)
+            return 1
+        print(f"OK: {len(items)} recursos e {len(presets)} presets válidos.")
+        return 0
+    if a.ver:
+        x = next((i for i in items if i["id"] == a.ver), None)
+        if not x:
+            raise SystemExit("Item não encontrado; use --buscar.")
+        print(json.dumps(x, ensure_ascii=False, indent=2)); return 0
+    if a.presets:
+        for p in presets:
+            print(f"{p['id']:22} {p['nome']} — {p.get('formatoPadrao', '')} ({len(p.get('efeitos', []))} efeitos)")
+        return 0
+    if a.preset:
+        mostrar_preset(a.preset, items, presets); return 0
+    if a.md:
+        gerar_md(items, presets); print(f"Gerado {MD.relative_to(ROOT)}"); return 0
+    if a.marcar:
+        iid, st = a.marcar
+        if st not in STATUS:
+            raise SystemExit(f"Estado inválido. Opções: {', '.join(STATUS)}")
+        x = next((i for i in items if i["id"] == iid), None)
+        if not x:
+            raise SystemExit("Item não encontrado.")
+        x["status"] = st
+        if a.uso is not None: x["como_usar"] = a.uso
+        if a.arquivo is not None: x["arquivo_exemplo"] = a.arquivo
+        if a.obs is not None: x["observacao"] = a.obs
+        if a.motores: x["motores"] = sorted(set(x["motores"]) | set(a.motores.split(",")))
+        x["testado"] = bool(a.testado) and st in ("implementado", "exemplo_executavel")
+        errs = [e for e in validate(items, presets) if iid in e]
+        if errs:
+            raise SystemExit("Não salvo:\n" + "\n".join(errs))
+        write(items); gerar_md(items, presets); print("Atualizado:\n" + linha(x)); return 0
+    if a.adicionar:
+        cat, nome = a.adicionar
+        base = next((i for i in items if i["categoria"] == cat), None)
+        if not base:
+            raise SystemExit(f"Categoria inválida. Opções: {', '.join(dict.fromkeys(i['categoria'] for i in items))}")
+        iid = f"{cat}.{slug(nome)}"
+        if any(i["id"] == iid for i in items):
+            raise SystemExit(f"Já existe: {iid} (use --marcar)")
+        st = a.status or "catalogado"
+        x = {"id": iid, "nome": nome, "categoria": cat, "categoria_nome": base.get("categoria_nome", cat), "tipo": base["tipo"],
+             "motores": (a.motores or "orquestracao").split(","), "status": st, "parametros": ["entrada", "saida"],
+             "arquivo_exemplo": a.arquivo, "observacao": a.obs or LEGENDA[st], "descricao": a.descricao or "",
+             "como_usar": a.uso or "", "testado": bool(a.testado) and st in ("implementado", "exemplo_executavel")}
+        pos = max(i for i, it in enumerate(items) if it["categoria"] == cat) + 1
+        items.insert(pos, x)
+        errs = [e for e in validate(items, presets) if iid in e]
+        if errs:
+            raise SystemExit("Não salvo:\n" + "\n".join(errs))
+        write(items); gerar_md(items, presets); print("Adicionado:\n" + linha(x)); return 0
+    if a.resumo or not any((a.buscar, a.categoria, a.status, a.motor)):
+        resumo(items, presets); return 0
+
+    sel = list(filtrar(items, a))
+    for x in sel:
+        print(linha(x, detalhado=not a.compacto))
+    print(f"Total: {len(sel)}")
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())

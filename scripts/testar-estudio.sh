@@ -21,7 +21,7 @@ ffmpeg -v error -y -f lavfi -i "testsrc2=size=1280x720:rate=30" -f lavfi -i "sin
 ffmpeg -v error -y -f lavfi -i "sine=frequency=880:sample_rate=48000" -t 8 musica.mp3
 printf '1\n00:00:00,000 --> 00:00:02,000\nVocê conhece seus direitos?\n\n2\n00:00:02,000 --> 00:00:04,000\nO prazo é de dez anos.\n' > leg.srt
 
-echo "Cor:";       for p in teal-orange dark-moody warm-film pb luxo-dourado cinematic; do t "cor $p" cor-$p.mp4 $E cor a.mp4 cor-$p.mp4 --preset $p; done
+echo "Cor:";       for p in teal-orange dark-moody warm-film pb luxo-dourado cinematic natural; do t "cor $p" cor-$p.mp4 $E cor a.mp4 cor-$p.mp4 --preset $p; done
 t "cor intensidade 0.5" cor-mix.mp4 $E cor a.mp4 cor-mix.mp4 --preset teal-orange --intensidade 0.5
 echo "VFX:";       for f in grao vhs aberracao glow rastro tremor handheld zoom-in zoom-out vinheta isolar-cor; do t "vfx $f" vfx-$f.mp4 $E vfx a.mp4 vfx-$f.mp4 --efeito $f; done
 echo "Transições:"; for x in fade flash fade-preto wipe-esquerda slide-esquerda push-esquerda zoom circulo-abre pixel radial fade-cinza; do t "transicao $x" tr-$x.mp4 $E transicao a.mp4 b.mp4 tr-$x.mp4 --tipo $x; done

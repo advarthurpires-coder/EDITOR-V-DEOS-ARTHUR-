@@ -6,7 +6,7 @@
 | Comando | Exemplo | Notas |
 |---|---|---|
 | `info` | `info bruto.mp4` | duração, resolução, fps, áudio |
-| `cor` | `cor in.mp4 out.mp4 --preset cinematic --intensidade 0.7 --vinheta` | presets: teal-orange, dark-moody, warm-film, golden-hour, pb, alto-contraste, matte, vintage-kodak, pastel, luxo-dourado, azul-frio, drama-dessaturado, hdr-look, cinematic, correcao-auto · `--lut x.cube` |
+| `cor` | `cor in.mp4 out.mp4 --preset cinematic --intensidade 0.7 --vinheta` | presets: teal-orange, dark-moody, warm-film, golden-hour, pb, alto-contraste, matte, vintage-kodak, pastel, luxo-dourado, azul-frio, drama-dessaturado, hdr-look, cinematic, natural, correcao-auto · `--lut x.cube` |
 | `vfx` | `vfx in out --efeito vhs --intensidade 1.2` | grao, vhs, aberracao, glow, rastro, tremor, handheld, zoom-in, zoom-out, vinheta, isolar-cor (`--cor red`), espelho |
 | `transicao` | `transicao a.mp4 b.mp4 out.mp4 --tipo flash --duracao 0.3` | fade, dissolver, fade-preto, flash, fade-cinza, wipe-*, slide-*, push-*, zoom, circulo-abre/fecha, circulo, radial, pixel, diagonal, barras-h/v, squeeze, cortina, desfoque, distancia, revelar, cobrir. Normaliza resolução/fps e faz crossfade do áudio |
 | `reframe` | `reframe in out --formato 9:16 --modo blur` | crop (com `--foco-x` 0–1) ou blur (fundo desfocado) |
@@ -27,4 +27,5 @@
 | `juntar` | `juntar out.mp4 a.mp4 b.mp4 c.mp4` | normaliza resolução/fps do primeiro |
 | `sfx` | `sfx whoosh w.wav` / `sfx todos pasta/` | whoosh, impacto, sub-boom, riser, riser-reverso, clique, pop, notificacao, drone, braam, batimento, glitch (pico −3 dBFS) |
 
-Teste completo: `bash scripts/testar-estudio.sh [pasta]` (66 verificações com mídia sintética).
+Teste completo: `bash scripts/testar-estudio.sh [pasta]` (todas as opções acima com mídia sintética; ~5 min em 4 vCPUs).
+Atalhos simples equivalentes (vertical, cinematico, vhs, preto-e-branco, limpar-audio, normalizar-audio): `bash scripts/efeitos-ffmpeg.sh`.

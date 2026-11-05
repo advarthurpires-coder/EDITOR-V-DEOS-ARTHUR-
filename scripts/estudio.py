@@ -100,6 +100,7 @@ PRESETS_COR = {
     "drama-dessaturado": "eq=saturation=0.45:contrast=1.22:brightness=-0.02",
     "hdr-look": "unsharp=5:5:0.7:5:5:0.0,eq=contrast=1.12:saturation=1.2,curves=all='0/0 0.25/0.22 0.75/0.8 1/1'",
     "cinematic": "colorbalance=rs=-0.05:bs=0.08:rh=0.06:bh=-0.05,curves=all='0/0.03 0.5/0.48 1/0.97',eq=saturation=0.92:contrast=1.06,vignette=PI/5",
+    "natural": "eq=contrast=1.04:saturation=1.04:gamma=1.01,unsharp=3:3:0.25:3:3:0.0",
     "correcao-auto": "normalize=blackpt=black:whitept=white:smoothing=20:independence=0.3",
 }
 

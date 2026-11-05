@@ -2,6 +2,7 @@ import React from "react";
 import { Composition, staticFile } from "remotion";
 import type { Caption } from "@remotion/captions";
 import { Vinheta } from "./Vinheta";
+import { ArthurShowcase } from "./ArthurShowcase";
 import { Vitrine } from "./composicoes/Vitrine";
 import { ReelsJuridico, PropsReelsJuridico } from "./composicoes/ReelsJuridico";
 
@@ -17,13 +18,16 @@ const padraoReels: PropsReelsJuridico = {
 
 export const RemotionRoot: React.FC = () => (
   <>
-    {/* Vinheta de abertura vertical 9:16 */}
+    {/* Composição original preservada: vinheta vertical 9:16 */}
     <Composition id="Vinheta" component={Vinheta} durationInFrames={120} fps={30} width={1080} height={1920} defaultProps={{ titulo: "Arthur Pires", subtitulo: "Advocacia" }} />
 
-    {/* Vitrine dos componentes (16:9) — referência visual */}
+    {/* Demonstrações executáveis: hook, zoom, counters, barras, phone mockup, giant captions, glass/CTA */}
+    <Composition id="ArthurShowcase" component={ArthurShowcase} durationInFrames={320} fps={30} width={1080} height={1920} />
+
+    {/* Vitrine dos componentes reutilizáveis de src/componentes (16:9) — referência visual e teste */}
     <Composition id="Vitrine" component={Vitrine} durationInFrames={360} fps={30} width={1920} height={1080} />
 
-    {/* Template Reels/TikTok/Shorts jurídico (9:16). Props: video, gancho, legendas (Caption[] ou arquivo JSON), etc. */}
+    {/* Template Reels/TikTok/Shorts jurídico (9:16). Props: video, gancho, legendas (Caption[]), estiloLegenda, nome, cargo, cta, duracaoSegundos */}
     <Composition
       id="ReelsJuridico"
       component={ReelsJuridico}

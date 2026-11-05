@@ -1,0 +1,211 @@
+[
+  {
+    "id": "cinematic-premium",
+    "nome": "Cinematográfico premium",
+    "perfil": "cinematica",
+    "efeitos": [
+      "estilos.cinematic-editing",
+      "color_grading.dark-moody",
+      "transicoes.smooth-zoom-in",
+      "legendas_tipografia.cinematic-titles",
+      "efeitos_sonoros.cinematic-impact"
+    ],
+    "formatoPadrao": "1080x1920",
+    "fps": 30,
+    "nota": "Preset conceitual; o renderizador só pode aplicar os efeitos cujo status e implementação estejam disponíveis."
+  },
+  {
+    "id": "reels-dinamico",
+    "nome": "Reels dinâmico",
+    "perfil": "social",
+    "efeitos": [
+      "estilos.fast-paced-reels",
+      "motion_graphics.kinetic-hook",
+      "legendas_tipografia.giant-captions",
+      "montagem.beat-cut",
+      "efeitos_sonoros.notification-pop-sfx"
+    ],
+    "formatoPadrao": "1080x1920",
+    "fps": 30,
+    "nota": "Preset conceitual; o renderizador só pode aplicar os efeitos cujo status e implementação estejam disponíveis."
+  },
+  {
+    "id": "documentario",
+    "nome": "Documentário",
+    "perfil": "documental",
+    "efeitos": [
+      "estilos.documentary-style",
+      "montagem.j-cut",
+      "vfx.film-grain",
+      "legendas_tipografia.lower-thirds",
+      "efeitos_sonoros.ambient-atmosphere"
+    ],
+    "formatoPadrao": "1080x1920",
+    "fps": 30,
+    "nota": "Preset conceitual; o renderizador só pode aplicar os efeitos cujo status e implementação estejam disponíveis."
+  },
+  {
+    "id": "legendas-virais",
+    "nome": "Legendas dinâmicas",
+    "perfil": "social",
+    "efeitos": [
+      "legendas_tipografia.word-by-word-captions",
+      "legendas_tipografia.highlight-words",
+      "legendas_tipografia.subtitle-bounce",
+      "efeitos_sonoros.pop-impact"
+    ],
+    "formatoPadrao": "1080x1920",
+    "fps": 30,
+    "nota": "Preset conceitual; o renderizador só pode aplicar os efeitos cujo status e implementação estejam disponíveis."
+  },
+  {
+    "id": "evento-emocional",
+    "nome": "Evento emocional",
+    "perfil": "eventos",
+    "efeitos": [
+      "estilos.event-aftermovie",
+      "estilos.emotional-storytelling",
+      "montagem.slow-motion",
+      "color_grading.warm-film",
+      "audio.music-crossfade"
+    ],
+    "formatoPadrao": "1080x1920",
+    "fps": 30,
+    "nota": "Preset conceitual; o renderizador só pode aplicar os efeitos cujo status e implementação estejam disponíveis."
+  },
+  {
+    "id": "juridico-sobrio",
+    "nome": "Educativo jurídico",
+    "perfil": "institucional",
+    "efeitos": [
+      "templates.legal-educational-content",
+      "estilos.minimalist-clean",
+      "legendas_tipografia.lower-thirds",
+      "color_grading.clean-natural",
+      "audio.voice-enhancement"
+    ],
+    "formatoPadrao": "1080x1920",
+    "fps": 30,
+    "nota": "Preset conceitual; o renderizador só pode aplicar os efeitos cujo status e implementação estejam disponíveis."
+  },
+  {
+    "id": "luxo",
+    "nome": "Luxo discreto",
+    "perfil": "institucional",
+    "efeitos": [
+      "estilos.luxury-premium",
+      "color_grading.luxury-gold",
+      "motion_graphics.glassmorphism",
+      "transicoes.smooth-zoom-in",
+      "audio.sound-design-layering"
+    ],
+    "formatoPadrao": "1080x1920",
+    "fps": 30,
+    "nota": "Preset conceitual; o renderizador só pode aplicar os efeitos cujo status e implementação estejam disponíveis."
+  },
+  {
+    "id": "podcast",
+    "nome": "Podcast vertical",
+    "perfil": "social",
+    "efeitos": [
+      "estilos.podcast-highlights",
+      "montagem.jump-cut",
+      "legendas_tipografia.giant-captions",
+      "audio.automatic-transcription",
+      "audio.voice-eq"
+    ],
+    "formatoPadrao": "1080x1920",
+    "fps": 30,
+    "nota": "Preset conceitual; o renderizador só pode aplicar os efeitos cujo status e implementação estejam disponíveis."
+  },
+  {
+    "id": "viagem",
+    "nome": "Viagem e aventura",
+    "perfil": "eventos",
+    "efeitos": [
+      "estilos.travel-vlog",
+      "estilos.epic-adventure",
+      "camera_3d.3d-parallax",
+      "color_grading.golden-hour",
+      "montagem.beat-cut"
+    ],
+    "formatoPadrao": "1080x1920",
+    "fps": 30,
+    "nota": "Preset conceitual; o renderizador só pode aplicar os efeitos cujo status e implementação estejam disponíveis."
+  },
+  {
+    "id": "religioso",
+    "nome": "Evento religioso",
+    "perfil": "eventos",
+    "efeitos": [
+      "templates.religious-worship-highlights",
+      "estilos.emotional-storytelling",
+      "color_grading.golden-hour",
+      "legendas_tipografia.cinematic-titles",
+      "efeitos_sonoros.ambient-atmosphere"
+    ],
+    "formatoPadrao": "1080x1920",
+    "fps": 30,
+    "nota": "Preset conceitual; o renderizador só pode aplicar os efeitos cujo status e implementação estejam disponíveis."
+  },
+  {
+    "id": "tecnologia",
+    "nome": "Tecnologia futurista",
+    "perfil": "tech",
+    "efeitos": [
+      "estilos.cyberpunk-futuristic",
+      "transicoes.glitch-transition",
+      "legendas_tipografia.neon-text",
+      "interfaces_mockups.phone-mockup",
+      "efeitos_sonoros.glitch-sound"
+    ],
+    "formatoPadrao": "1080x1920",
+    "fps": 30,
+    "nota": "Preset conceitual; o renderizador só pode aplicar os efeitos cujo status e implementação estejam disponíveis."
+  },
+  {
+    "id": "explicativo",
+    "nome": "Explicativo animado",
+    "perfil": "educacao",
+    "efeitos": [
+      "templates.educational-explainer",
+      "motion_graphics.animated-checklist",
+      "motion_graphics.chart-grow",
+      "motion_graphics.progress-bar",
+      "audio.voice-eq"
+    ],
+    "formatoPadrao": "1080x1920",
+    "fps": 30,
+    "nota": "Preset conceitual; o renderizador só pode aplicar os efeitos cujo status e implementação estejam disponíveis."
+  },
+  {
+    "id": "institucional",
+    "nome": "Apresentação corporativa",
+    "perfil": "institucional",
+    "efeitos": [
+      "templates.corporate-presentation",
+      "legendas_tipografia.title-card",
+      "motion_graphics.data-counter",
+      "transicoes.slide-transition",
+      "audio.loudness-normalization"
+    ],
+    "formatoPadrao": "1080x1920",
+    "fps": 30,
+    "nota": "Preset conceitual; o renderizador só pode aplicar os efeitos cujo status e implementação estejam disponíveis."
+  },
+  {
+    "id": "product-ad",
+    "nome": "Publicidade de produto",
+    "perfil": "publicidade",
+    "efeitos": [
+      "templates.product-commercial",
+      "templates.product-showcase",
+      "camera_3d.camera-fly-through",
+      "transicoes.light-leak-transition",
+      "efeitos_sonoros.whoosh"
+    ],
+    "formatoPadrao": "1080x1920",
+    "fps": 30,
+    "nota": "Preset conceitual; o renderizador só pode aplicar os efeitos cujo status e implementação estejam disponíveis."
+  }
+]

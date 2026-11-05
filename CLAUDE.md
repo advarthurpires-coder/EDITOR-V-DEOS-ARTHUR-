@@ -5,14 +5,16 @@ vinhetas, motion graphics, vídeos para Reels/TikTok/Shorts/YouTube e conteúdo 
 Responder sempre em português.
 
 **Para qualquer pedido audiovisual, carregue primeiro a skill `/arthur-video-editor`**
-(`.claude/skills/arthur-video-editor/SKILL.md`): fluxo obrigatório de edição, regra de honestidade
-(implementado / integração / catalogado), escolha de ferramenta, padrão de qualidade e revisão visual.
+(`.claude/skills/arthur-video-editor/SKILL.md`): procedimento obrigatório, regra de honestidade
+(implementado / exemplo executável / integração nativa / catalogado), escolha de ferramenta, padrão de qualidade e revisão visual.
 
-- Catálogo pesquisável (330 recursos): `python3 scripts/catalogo.py buscar <termo>` · legível em `catalogo/CATALOGO.md`
-- Kit FFmpeg: `python3 scripts/estudio.py -h` · componentes Remotion em `projetos/remotion-base/src/componentes/`
-- Memória técnica: `.claude/skills/arthur-video-editor/referencias/aprendizados.md` — ler antes, atualizar depois.
-- Os arquivos versionados no GitHub são a memória permanente do estúdio: todo componente/técnica nova
-  vai para o repositório, para o catálogo e para o diário de aprendizados, com commit.
+- Biblioteca: `biblioteca/catalogo.json` (387 recursos) e `biblioteca/presets.json` (14 presets) · legível em `biblioteca/CATALOGO.md`
+- Pesquisa: `python3 scripts/catalogo.py --resumo` · `--buscar "termo" [--status implementado]` · `--preset <id>`
+- Kit FFmpeg: `python3 scripts/estudio.py -h` (atalhos simples: `bash scripts/efeitos-ffmpeg.sh`)
+- Remotion: componentes em `projetos/remotion-base/src/componentes/`; composições `Vinheta`, `ArthurShowcase`, `Vitrine`, `ReelsJuridico`
+- Memória técnica: `.claude/skills/arthur-video-editor/referencias/aprendizados.md` (ler antes, atualizar depois)
+- Os arquivos versionados no GitHub são a memória permanente do estúdio: todo componente/técnica nova vai
+  para o repositório, para o catálogo (`--marcar`/`--adicionar`, só após teste) e para o diário, com commit.
 
 ## Antes de começar qualquer edição
 
@@ -75,3 +77,9 @@ ffmpeg -i entrada.mp4 -af loudnorm=I=-14:TP=-1.5:LRA=11 -c:v copy saida.mp4
   resultado, sem mercantilização, sem captação indevida de clientela).
 - Não baixar nem reutilizar conteúdo de terceiros sem autorização (direitos autorais — Lei 9.610/98).
 - Dados de clientes e processos em vídeos: atenção à LGPD e ao sigilo profissional.
+
+## Documentos de apoio
+
+- Prompt mestre reutilizável: `docs/PROMPT-CLAUDE.md`
+- Arquitetura e estados reais: `docs/ARQUITETURA.md` · Roadmap: `docs/ROADMAP.md`
+- Validação: `python3 scripts/catalogo.py --validar` e `python3 -m unittest discover -s tests`
