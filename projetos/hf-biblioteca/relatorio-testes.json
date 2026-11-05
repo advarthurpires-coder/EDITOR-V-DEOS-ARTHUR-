@@ -242,6 +242,17 @@
   "tipo": "block",
   "variaveis": 0
  },
+ "confetti": {
+  "brilho_medio": 50.8,
+  "duracao": 4.0,
+  "ficha_demo": false,
+  "movimento": 0.0,
+  "movimento_pico": 0.0,
+  "ok": false,
+  "quadros_analisados": 16,
+  "tipo": "component",
+  "variaveis": 0
+ },
  "grain-overlay": {
   "brilho_medio": 48.6,
   "duracao": 4.0,
