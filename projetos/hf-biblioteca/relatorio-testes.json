@@ -546,6 +546,28 @@
   "tipo": "block",
   "variaveis": 0
  },
+ "magnetic-cursor": {
+  "brilho_medio": 49.5,
+  "duracao": 3.6,
+  "ficha_demo": false,
+  "movimento": 0.18,
+  "movimento_pico": 0.39,
+  "ok": true,
+  "quadros_analisados": 14,
+  "tipo": "component",
+  "variaveis": 4
+ },
+ "marker-checklist-card": {
+  "brilho_medio": 82.7,
+  "duracao": 4.0,
+  "ficha_demo": false,
+  "movimento": 4.1,
+  "movimento_pico": 40.73,
+  "ok": true,
+  "quadros_analisados": 16,
+  "tipo": "component",
+  "variaveis": 10
+ },
  "snow": {
   "brilho_medio": 38.3,
   "duracao": 6.0,
