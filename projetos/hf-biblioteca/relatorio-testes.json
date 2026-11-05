@@ -253,6 +253,94 @@
   "tipo": "component",
   "variaveis": 0
  },
+ "cross-warp-morph": {
+  "brilho_medio": 94.0,
+  "duracao": 4.0,
+  "ficha_demo": true,
+  "movimento": 5.34,
+  "movimento_pico": 45.34,
+  "ok": true,
+  "quadros_analisados": 16,
+  "tipo": "block",
+  "variaveis": 0
+ },
+ "cta-close": {
+  "brilho_medio": 38.9,
+  "duracao": 3.5,
+  "ficha_demo": false,
+  "movimento": 2.16,
+  "movimento_pico": 7.75,
+  "ok": true,
+  "quadros_analisados": 14,
+  "tipo": "component",
+  "variaveis": 4
+ },
+ "cta-lockup": {
+  "brilho_medio": 49.7,
+  "duracao": 4.0,
+  "ficha_demo": false,
+  "movimento": 1.1,
+  "movimento_pico": 4.94,
+  "ok": true,
+  "quadros_analisados": 16,
+  "tipo": "component",
+  "variaveis": 4
+ },
+ "cursor-drag-drop": {
+  "brilho_medio": 121.9,
+  "duracao": 3.6,
+  "ficha_demo": false,
+  "movimento": 1.1,
+  "movimento_pico": 4.89,
+  "ok": true,
+  "quadros_analisados": 14,
+  "tipo": "component",
+  "variaveis": 3
+ },
+ "cursor-zoom-follow": {
+  "brilho_medio": 229.1,
+  "duracao": 4.0,
+  "ficha_demo": false,
+  "movimento": 4.99,
+  "movimento_pico": 10.93,
+  "ok": true,
+  "quadros_analisados": 16,
+  "tipo": "component",
+  "variaveis": 9
+ },
+ "domain-warp-dissolve": {
+  "brilho_medio": 83.9,
+  "duracao": 4.0,
+  "ficha_demo": true,
+  "movimento": 6.6,
+  "movimento_pico": 57.24,
+  "ok": true,
+  "quadros_analisados": 16,
+  "tipo": "block",
+  "variaveis": 0
+ },
+ "extruded-logo": {
+  "brilho_medio": 42.4,
+  "duracao": 4.0,
+  "ficha_demo": false,
+  "movimento": 4.73,
+  "movimento_pico": 11.88,
+  "ok": true,
+  "quadros_analisados": 16,
+  "tipo": "block",
+  "variaveis": 5
+ },
+ "facet-morph": {
+  "brilho_medio": 39.8,
+  "duracao": 4.0,
+  "ficha_demo": false,
+  "movimento": 1.78,
+  "movimento_pico": 7.42,
+  "ok": true,
+  "quadros_analisados": 16,
+  "tipo": "component",
+  "variaveis": 4
+ },
  "grain-overlay": {
   "brilho_medio": 48.6,
   "duracao": 4.0,
