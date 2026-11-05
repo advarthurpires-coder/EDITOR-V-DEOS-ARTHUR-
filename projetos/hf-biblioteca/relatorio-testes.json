@@ -590,6 +590,17 @@
   "tipo": "block",
   "variaveis": 21
  },
+ "mk-placeholder-grid": {
+  "brilho_medio": 119.7,
+  "duracao": 8.0,
+  "ficha_demo": false,
+  "movimento": 5.23,
+  "movimento_pico": 69.07,
+  "ok": true,
+  "quadros_analisados": 32,
+  "tipo": "block",
+  "variaveis": 0
+ },
  "snow": {
   "brilho_medio": 38.3,
   "duracao": 6.0,
