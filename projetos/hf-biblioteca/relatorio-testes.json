@@ -568,6 +568,28 @@
   "tipo": "component",
   "variaveis": 10
  },
+ "match-cut": {
+  "brilho_medio": 39.2,
+  "duracao": 4.0,
+  "ficha_demo": false,
+  "movimento": 1.22,
+  "movimento_pico": 6.27,
+  "ok": true,
+  "quadros_analisados": 16,
+  "tipo": "component",
+  "variaveis": 3
+ },
+ "message-thread-reveal": {
+  "brilho_medio": 59.0,
+  "duracao": 25.77,
+  "ficha_demo": false,
+  "movimento": 3.97,
+  "movimento_pico": 117.25,
+  "ok": true,
+  "quadros_analisados": 103,
+  "tipo": "block",
+  "variaveis": 21
+ },
  "snow": {
   "brilho_medio": 38.3,
   "duracao": 6.0,
