@@ -47,12 +47,8 @@ log "6/6 capa e master"
 (cd "$RB" && npx remotion still src/index.ts CapaReels "$WORK/capa.png" --log=error)
 ffmpeg -hide_banner -v error -y -i "$WORK/capa.png" -q:v 2 "$OUT/ARTHUR_VIDEO_EDITOR_CAPA.jpg"
 if [ "$MASTER" = 1 ]; then
-  (cd "$RB" && npx remotion render src/index.ts ReelsArthur "$WORK/reels-4k-video.mp4" --muted --scale=2 --crf=12 --color-space=bt709 --concurrency=4 --jpeg-quality=95 --log=error)
-  ffmpeg -hide_banner -v error -y -i "$WORK/reels-4k-video.mp4" -i "$AUD" -map 0:v:0 -map 1:a:0 \
-    -c:v libx264 -profile:v high -level:v 5.2 -preset slow -crf 14 -pix_fmt yuv420p \
-    -color_primaries bt709 -color_trc bt709 -colorspace bt709 -color_range tv \
-    -c:a aac -b:a 320k -ar 48000 -ac 2 -movflags +faststart -shortest \
-    "$OUT/ARTHUR_VIDEO_EDITOR_REELS_4K_MASTER.mp4"
+  # 4K nativo (escala 2) em 4 blocos retomáveis, concatenados e codificados com o áudio master
+  bash "$ROOT/projetos/reels-arthur/scripts/render-4k-blocos.sh" 0 1 2 3 juntar
 fi
 log "Concluído. Arquivos em $OUT"
 ls -la "$OUT"
