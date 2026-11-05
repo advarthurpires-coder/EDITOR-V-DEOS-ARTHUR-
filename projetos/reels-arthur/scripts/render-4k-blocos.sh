@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Master 4K em blocos (cada bloco é retomável). Uso: bash render-4k-blocos.sh <bloco 0-3> [...]
+# Master 4K em blocos (cada bloco é retomável). Teto de 18 Mbps: arquivo < 400 MiB, entregável pelo app. Uso: bash render-4k-blocos.sh <bloco 0-3> [...]
 #   depois: bash render-4k-blocos.sh juntar
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/../../.." && pwd)"
@@ -11,7 +11,7 @@ for arg in "$@"; do
     : > "$WORK/4k-lista.txt"
     for i in $(seq 0 $((B - 1))); do echo "file '$WORK/4k-bloco-$i.mp4'" >> "$WORK/4k-lista.txt"; done
     ffmpeg -hide_banner -v error -y -f concat -safe 0 -i "$WORK/4k-lista.txt" -i "$RB/public/reels/mix-14lufs.wav" -map 0:v:0 -map 1:a:0 \
-      -c:v libx264 -profile:v high -level:v 5.2 -preset medium -crf 14 -pix_fmt yuv420p \
+      -c:v libx264 -profile:v high -level:v 5.2 -preset slow -crf 16 -maxrate 18M -bufsize 36M -pix_fmt yuv420p \
       -color_primaries bt709 -color_trc bt709 -colorspace bt709 -color_range tv \
       -c:a aac -b:a 320k -ar 48000 -ac 2 -movflags +faststart -shortest "$OUT/ARTHUR_VIDEO_EDITOR_REELS_4K_MASTER.mp4"
     continue
