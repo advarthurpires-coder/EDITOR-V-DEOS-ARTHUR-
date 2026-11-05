@@ -83,6 +83,8 @@ def validate(items, presets):
     projeto_py = (ROOT / "scripts" / "projeto.py").read_text(encoding="utf-8") if (ROOT / "scripts" / "projeto.py").exists() else ""
     cmds_projeto = set(re.findall(r'sp\.add_parser\("([a-z-]+)"', projeto_py))
     comp_hf = ROOT / "projetos" / "hf-biblioteca" / "compositions"
+    rel_arq = ROOT / "projetos" / "hf-biblioteca" / "relatorio-testes.json"
+    relatorio = json.loads(rel_arq.read_text(encoding="utf-8")) if rel_arq.exists() else None
 
     def bloco_instalado(nome: str) -> bool:
         return any(p.exists() for p in (comp_hf / f"{nome}.html", comp_hf / "components" / f"{nome}.html", comp_hf / nome / f"{nome}.html"))
@@ -107,6 +109,8 @@ def validate(items, presets):
             for bloco in re.findall(r"blocos\.py (?:renderizar|previa|variaveis) ([a-z0-9-]+)", uso) + re.findall(r"blocos\.py sobrepor \S+ ([a-z0-9-]+)", uso):
                 if not bloco_instalado(bloco):
                     errors.append(f"{item['id']}: bloco HyperFrames não instalado '{bloco}'.")
+                elif relatorio is not None and not relatorio.get(bloco, {}).get("ok"):
+                    errors.append(f"{item['id']}: bloco '{bloco}' não aprovado no relatório de testes (blocos.py testar).")
             for cmd in re.findall(r"projeto\.py ([a-z-]+)", uso):
                 if cmd not in cmds_projeto:
                     errors.append(f"{item['id']}: comando inexistente 'projeto.py {cmd}'.")

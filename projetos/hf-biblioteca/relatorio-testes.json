@@ -353,12 +353,12 @@
   "variaveis": 0
  },
  "focus-blur-resolve": {
-  "brilho_medio": 38.0,
+  "brilho_medio": 128.7,
   "duracao": 4.0,
   "ficha_demo": false,
-  "movimento": 0.0,
-  "movimento_pico": 0.0,
-  "ok": false,
+  "movimento": 0.49,
+  "movimento_pico": 6.94,
+  "ok": true,
   "quadros_analisados": 16,
   "tipo": "component",
   "variaveis": 3
@@ -397,12 +397,26 @@
   "variaveis": 0
  },
  "godrays": {
-  "erro": "adlessShell=true, platform=linux)\n[initSession:screenshot] page.goto start (0ms)\n\n✗  Render failed\n\n   This composition declares data-requires-webgpu, but a usable WebGPU device could not be created on this browser launch. Run on a host with a GPU, set PRODUCER_ALLOW_SOFTWARE_WEBGPU=true to render it on SwiftShader (slow), or remove data-requires-webgpu.\n   Try --docker for containerized rendering",
-  "ok": false
+  "brilho_medio": 48.7,
+  "duracao": 2.0,
+  "ficha_demo": false,
+  "movimento": 1.47,
+  "movimento_pico": 1.62,
+  "ok": true,
+  "quadros_analisados": 8,
+  "tipo": "block",
+  "variaveis": 0
  },
  "goo": {
-  "erro": "adlessShell=true, platform=linux)\n[initSession:screenshot] page.goto start (0ms)\n\n✗  Render failed\n\n   This composition declares data-requires-webgpu, but a usable WebGPU device could not be created on this browser launch. Run on a host with a GPU, set PRODUCER_ALLOW_SOFTWARE_WEBGPU=true to render it on SwiftShader (slow), or remove data-requires-webgpu.\n   Try --docker for containerized rendering",
-  "ok": false
+  "brilho_medio": 50.2,
+  "duracao": 2.0,
+  "ficha_demo": false,
+  "movimento": 0.57,
+  "movimento_pico": 0.65,
+  "ok": true,
+  "quadros_analisados": 8,
+  "tipo": "block",
+  "variaveis": 0
  },
  "gooey-split": {
   "brilho_medio": 193.4,
@@ -426,8 +440,15 @@
   "variaveis": 0
  },
  "hologram": {
-  "erro": "adlessShell=true, platform=linux)\n[initSession:screenshot] page.goto start (0ms)\n\n✗  Render failed\n\n   This composition declares data-requires-webgpu, but a usable WebGPU device could not be created on this browser launch. Run on a host with a GPU, set PRODUCER_ALLOW_SOFTWARE_WEBGPU=true to render it on SwiftShader (slow), or remove data-requires-webgpu.\n   Try --docker for containerized rendering",
-  "ok": false
+  "brilho_medio": 49.6,
+  "duracao": 2.0,
+  "ficha_demo": false,
+  "movimento": 2.01,
+  "movimento_pico": 2.44,
+  "ok": true,
+  "quadros_analisados": 8,
+  "tipo": "block",
+  "variaveis": 0
  },
  "hw-arrow": {
   "brilho_medio": 56.7,
@@ -485,12 +506,12 @@
   "variaveis": 2
  },
  "kinetic-center-build": {
-  "brilho_medio": 38.0,
+  "brilho_medio": 128.6,
   "duracao": 2.0,
   "ficha_demo": false,
-  "movimento": 0.0,
-  "movimento_pico": 0.01,
-  "ok": false,
+  "movimento": 0.18,
+  "movimento_pico": 0.37,
+  "ok": true,
   "quadros_analisados": 8,
   "tipo": "component",
   "variaveis": 5
@@ -507,8 +528,15 @@
   "variaveis": 6
  },
  "lens-flare": {
-  "erro": "adlessShell=true, platform=linux)\n[initSession:screenshot] page.goto start (0ms)\n\n✗  Render failed\n\n   This composition declares data-requires-webgpu, but a usable WebGPU device could not be created on this browser launch. Run on a host with a GPU, set PRODUCER_ALLOW_SOFTWARE_WEBGPU=true to render it on SwiftShader (slow), or remove data-requires-webgpu.\n   Try --docker for containerized rendering",
-  "ok": false
+  "brilho_medio": 26.5,
+  "duracao": 2.0,
+  "ficha_demo": false,
+  "movimento": 0.32,
+  "movimento_pico": 0.56,
+  "ok": true,
+  "quadros_analisados": 8,
+  "tipo": "block",
+  "variaveis": 0
  },
  "light-leak": {
   "brilho_medio": 79.3,
@@ -543,12 +571,13 @@
   "variaveis": 0
  },
  "macos-notification": {
+  "aprovado_visual": "notificação entra e sai no canto superior direito (elemento pequeno: movimento abaixo do critério automático)",
   "brilho_medio": 38.2,
   "duracao": 5.0,
   "ficha_demo": false,
   "movimento": 0.05,
   "movimento_pico": 0.26,
-  "ok": false,
+  "ok": true,
   "quadros_analisados": 20,
   "tipo": "block",
   "variaveis": 0
@@ -719,22 +748,24 @@
   "variaveis": 2
  },
  "parallax-unzoom": {
-  "brilho_medio": 38.0,
+  "brilho_medio": 129.0,
   "duracao": 4.0,
   "ficha_demo": false,
   "movimento": 0.0,
   "movimento_pico": 0.0,
+  "observacao": "componente estrutural: envolve uma grade de cartões fornecida pelo usuário; sem conteúdo próprio",
   "ok": false,
   "quadros_analisados": 16,
   "tipo": "component",
   "variaveis": 0
  },
  "parallax-zoom": {
-  "brilho_medio": 38.0,
+  "brilho_medio": 129.0,
   "duracao": 4.0,
   "ficha_demo": false,
   "movimento": 0.0,
   "movimento_pico": 0.0,
+  "observacao": "componente estrutural: envolve uma grade de cartões fornecida pelo usuário; sem conteúdo próprio",
   "ok": false,
   "quadros_analisados": 16,
   "tipo": "component",
@@ -851,12 +882,13 @@
   "variaveis": 4
  },
  "slot-machine-roll": {
-  "brilho_medio": 38.0,
+  "aprovado_visual": "texto rola e assenta em \"A7K\" (movimento curto e pequeno)",
+  "brilho_medio": 128.9,
   "duracao": 4.0,
   "ficha_demo": false,
-  "movimento": 0.0,
-  "movimento_pico": 0.0,
-  "ok": false,
+  "movimento": 0.02,
+  "movimento_pico": 0.14,
+  "ok": true,
   "quadros_analisados": 16,
   "tipo": "component",
   "variaveis": 4
@@ -1060,6 +1092,7 @@
  },
  "vfx-shatter": {
   "erro": "o cached paint record for element. [thrown at: at capturePanels (hyperframes-composition://body:354:14) <- at renderFrame (hyperframes-composition://body:826:9) <- at Tween.onUpdate [as _onUpdate] (hyperframes-composition://body:912:13)]. Check the composition's scripts and window.__timelines entries; if they look right, report this as a HyperFrames bug.\n   Try --docker for containerized rendering",
+  "observacao": "usa a API HTML-in-canvas do Chrome (drawElement), indisponível no Chrome headless deste ambiente",
   "ok": false
  },
  "whip-pan": {

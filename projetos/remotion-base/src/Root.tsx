@@ -6,6 +6,7 @@ import { ArthurShowcase } from "./ArthurShowcase";
 import { Vitrine } from "./composicoes/Vitrine";
 import { ReelsJuridico, PropsReelsJuridico } from "./composicoes/ReelsJuridico";
 import { TransicaoShader, PropsTransicaoShader } from "./componentes/TransicaoShader";
+import { AberturaYoutube, EncerramentoYoutube } from "./composicoes/YoutubeAberturaEncerramento";
 
 const padraoTransicao: PropsTransicaoShader = {
   videoA: "exemplo-a.mp4", videoB: "exemplo-b.mp4", shader: "whip-pan",
@@ -50,6 +51,12 @@ export const RemotionRoot: React.FC = () => (
         return { durationInFrames: Math.round(props.duracaoSegundos * 30), props: { ...props, legendas } };
       }}
     />
+
+    {/* Abertura e encerramento de canal (16:9), sem marcas de terceiros */}
+    <Composition id="AberturaYoutube" component={AberturaYoutube} durationInFrames={120} fps={30} width={1920} height={1080}
+      defaultProps={{ titulo: "Arthur Pires", subtitulo: "Direito explicado" }} />
+    <Composition id="EncerramentoYoutube" component={EncerramentoYoutube} durationInFrames={300} fps={30} width={1920} height={1080}
+      defaultProps={{ titulo: "Obrigado por assistir", chamada: "Inscreva-se e ative as notificações", cartoes: ["Próximo vídeo", "Vídeo recomendado"] }} />
 
     {/* Transição GLSL (shaders dos blocos HyperFrames) entre dois clipes reais — use via: python3 scripts/estudio.py transicao-shader */}
     <Composition

@@ -90,9 +90,9 @@
       "intensidade"
     ],
     "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "observacao": "Bloco(s) do registro instalado(s) e renderizado(s) com sucesso, mas animam apenas o conteúdo de exemplo: aplicar aos seus clipes exige editar o HTML do bloco em projetos/hf-biblioteca para trocar as cenas de exemplo pela sua mídia. Testados: zoom-through-transition.",
     "descricao": "Avança a câmera através do quadro até a próxima cena.",
-    "como_usar": "hyperframes add zoom-through-transition",
+    "como_usar": "python3 scripts/blocos.py renderizar zoom-through-transition demo.mp4",
     "testado": false
   },
   {
@@ -102,21 +102,22 @@
     "categoria_nome": "Transições cinematográficas",
     "tipo": "transicao",
     "motores": [
+      "ffmpeg",
       "hyperframes",
       "remotion"
     ],
-    "status": "integracao_nativa",
+    "status": "implementado",
     "parametros": [
       "duracaoFrames",
       "easing",
       "direcao",
       "intensidade"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "projetos/remotion-base/src/componentes/TransicaoShader.tsx",
+    "observacao": "Shader GLSL extraído do bloco HyperFrames e aplicado aos seus clipes (Remotion). Implementado e testado no repositório; ver como_usar.",
     "descricao": "Chicote de câmera com borrão direcional entre cenas.",
-    "como_usar": "hyperframes add whip-pan  |  hyperframes add whip-pan-cut",
-    "testado": false
+    "como_usar": "python3 scripts/estudio.py transicao-shader a.mp4 b.mp4 saida.mp4 --shader whip-pan --duracao 0.8",
+    "testado": true
   },
   {
     "id": "transicoes.motion-blur-transition",
@@ -185,9 +186,9 @@
       "intensidade"
     ],
     "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "observacao": "Bloco(s) do registro instalado(s) e renderizado(s) com sucesso, mas animam apenas o conteúdo de exemplo: aplicar aos seus clipes exige editar o HTML do bloco em projetos/hf-biblioteca para trocar as cenas de exemplo pela sua mídia. Testados: match-cut, text-match-cut, type-match-cut.",
     "descricao": "Corte entre formas/movimentos equivalentes em cenas diferentes.",
-    "como_usar": "hyperframes add match-cut  |  hyperframes add text-match-cut  |  hyperframes add type-match-cut",
+    "como_usar": "python3 scripts/blocos.py renderizar match-cut demo.mp4 | python3 scripts/blocos.py renderizar text-match-cut demo.mp4 | python3 scripts/blocos.py renderizar type-match-cut demo.mp4",
     "testado": false
   },
   {
@@ -269,21 +270,22 @@
     "categoria_nome": "Transições cinematográficas",
     "tipo": "transicao",
     "motores": [
+      "ffmpeg",
       "hyperframes",
       "remotion"
     ],
-    "status": "integracao_nativa",
+    "status": "implementado",
     "parametros": [
       "duracaoFrames",
       "easing",
       "direcao",
       "intensidade"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "projetos/remotion-base/src/componentes/TransicaoShader.tsx",
+    "observacao": "Shader GLSL extraído do bloco HyperFrames e aplicado aos seus clipes (Remotion). Implementado e testado no repositório; ver como_usar.",
     "descricao": "Vazamento de luz quente que funde as cenas.",
-    "como_usar": "hyperframes add light-leak  |  hyperframes add organic-light-leak-overlay",
-    "testado": false
+    "como_usar": "python3 scripts/estudio.py transicao-shader a.mp4 b.mp4 saida.mp4 --shader light-leak --duracao 0.8",
+    "testado": true
   },
   {
     "id": "transicoes.film-burn",
@@ -292,21 +294,22 @@
     "categoria_nome": "Transições cinematográficas",
     "tipo": "transicao",
     "motores": [
+      "ffmpeg",
       "hyperframes",
       "remotion"
     ],
-    "status": "integracao_nativa",
+    "status": "implementado",
     "parametros": [
       "duracaoFrames",
       "easing",
       "direcao",
       "intensidade"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível por biblioteca/ferramenta externa; exige implementação e teste no pipeline.",
+    "arquivo_exemplo": "projetos/remotion-base/src/componentes/TransicaoShader.tsx",
+    "observacao": "Shader GLSL extraído do bloco HyperFrames e aplicado aos seus clipes (Remotion). Implementado e testado no repositório; ver como_usar.",
     "descricao": "Queima de película entre cenas.",
-    "como_usar": "hyperframes add ridged-burn (verificar visual)",
-    "testado": false
+    "como_usar": "python3 scripts/estudio.py transicao-shader a.mp4 b.mp4 saida.mp4 --shader ridged-burn --duracao 0.8",
+    "testado": true
   },
   {
     "id": "transicoes.glitch-transition",
@@ -319,18 +322,18 @@
       "hyperframes",
       "remotion"
     ],
-    "status": "integracao_nativa",
+    "status": "implementado",
     "parametros": [
       "duracaoFrames",
       "easing",
       "direcao",
       "intensidade"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "projetos/remotion-base/src/componentes/TransicaoShader.tsx",
+    "observacao": "Shader GLSL extraído do bloco HyperFrames e aplicado aos seus clipes (Remotion). Implementado e testado no repositório; ver como_usar.",
     "descricao": "Transição digital com falhas e deslocamentos.",
-    "como_usar": "hyperframes add glitch  |  aproximação: python3 scripts/estudio.py transicao --tipo pixel",
-    "testado": false
+    "como_usar": "python3 scripts/estudio.py transicao-shader a.mp4 b.mp4 saida.mp4 --shader glitch --duracao 0.8",
+    "testado": true
   },
   {
     "id": "transicoes.rgb-split",
@@ -343,18 +346,18 @@
       "hyperframes",
       "remotion"
     ],
-    "status": "integracao_nativa",
+    "status": "implementado",
     "parametros": [
       "duracaoFrames",
       "easing",
       "direcao",
       "intensidade"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "projetos/remotion-base/src/componentes/TransicaoShader.tsx",
+    "observacao": "Shader GLSL extraído do bloco HyperFrames e aplicado aos seus clipes (Remotion). Implementado e testado no repositório; ver como_usar.",
     "descricao": "Separação dos canais RGB durante a troca.",
-    "como_usar": "hyperframes add chromatic-aberration-wipe | hyperframes add chromatic-radial-split | efeito: python3 scripts/estudio.py vfx --efeito aberracao",
-    "testado": false
+    "como_usar": "python3 scripts/estudio.py transicao-shader a.mp4 b.mp4 saida.mp4 --shader chromatic-radial-split --duracao 0.8",
+    "testado": true
   },
   {
     "id": "transicoes.flash-cut",
@@ -415,18 +418,18 @@
       "hyperframes",
       "remotion"
     ],
-    "status": "integracao_nativa",
+    "status": "implementado",
     "parametros": [
       "duracaoFrames",
       "easing",
       "direcao",
       "intensidade"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "projetos/hf-biblioteca/compositions/components/camera-shake.html",
+    "observacao": "Bloco do registro HyperFrames adaptado para uso offline e testado (camera-shake). Ver `python3 scripts/blocos.py variaveis camera-shake`.",
     "descricao": "Corte acompanhado de tremor de câmera (impacto).",
-    "como_usar": "python3 scripts/estudio.py vfx --efeito tremor no clipe + corte | HF: hyperframes add camera-shake | Remotion: TremorCamera",
-    "testado": false
+    "como_usar": "python3 scripts/blocos.py renderizar camera-shake saida.mp4 --var shakeProfile=… | python3 scripts/blocos.py sobrepor video.mp4 camera-shake saida.mp4 --inicio 1",
+    "testado": true
   },
   {
     "id": "transicoes.push-transition",
@@ -533,21 +536,22 @@
     "categoria_nome": "Transições cinematográficas",
     "tipo": "transicao",
     "motores": [
+      "ffmpeg",
       "hyperframes",
       "remotion"
     ],
-    "status": "integracao_nativa",
+    "status": "implementado",
     "parametros": [
       "duracaoFrames",
       "easing",
       "direcao",
       "intensidade"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "projetos/remotion-base/src/componentes/TransicaoShader.tsx",
+    "observacao": "Shader GLSL extraído do bloco HyperFrames e aplicado aos seus clipes (Remotion). Implementado e testado no repositório; ver como_usar.",
     "descricao": "Distorção líquida que deforma uma cena na outra.",
-    "como_usar": "hyperframes add cross-warp-morph  |  hyperframes add domain-warp-dissolve",
-    "testado": false
+    "como_usar": "python3 scripts/estudio.py transicao-shader a.mp4 b.mp4 saida.mp4 --shader cross-warp-morph --duracao 0.8 | python3 scripts/estudio.py transicao-shader a.mp4 b.mp4 saida.mp4 --shader domain-warp-dissolve --duracao 0.8",
+    "testado": true
   },
   {
     "id": "transicoes.portal-transition",
@@ -567,9 +571,9 @@
       "intensidade"
     ],
     "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "observacao": "Bloco(s) do registro instalado(s) e renderizado(s) com sucesso, mas animam apenas o conteúdo de exemplo: aplicar aos seus clipes exige editar o HTML do bloco em projetos/hf-biblioteca para trocar as cenas de exemplo pela sua mídia. Testados: vfx-portal.",
     "descricao": "Abertura de portal que revela a próxima cena.",
-    "como_usar": "hyperframes add vfx-portal",
+    "como_usar": "python3 scripts/blocos.py renderizar vfx-portal demo.mp4",
     "testado": false
   },
   {
@@ -590,9 +594,9 @@
       "intensidade"
     ],
     "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "observacao": "Bloco(s) do registro instalado(s) e renderizado(s) com sucesso, mas animam apenas o conteúdo de exemplo: aplicar aos seus clipes exige editar o HTML do bloco em projetos/hf-biblioteca para trocar as cenas de exemplo pela sua mídia. Testados: torn-paper-rip.",
     "descricao": "Rasgo de papel revelando a próxima cena.",
-    "como_usar": "hyperframes add torn-paper-rip",
+    "como_usar": "python3 scripts/blocos.py renderizar torn-paper-rip demo.mp4",
     "testado": false
   },
   {
@@ -613,7 +617,7 @@
       "intensidade"
     ],
     "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "observacao": "Instalação bloqueada pela rede (assets em static.heygen.ai): glass-shard-title.",
     "descricao": "Imagem se estilhaça como vidro.",
     "como_usar": "hyperframes add vfx-shatter  |  hyperframes add glass-shard-title",
     "testado": false
@@ -636,9 +640,9 @@
       "intensidade"
     ],
     "arquivo_exemplo": null,
-    "observacao": "Disponível por biblioteca/ferramenta externa; exige implementação e teste no pipeline.",
+    "observacao": "Bloco(s) do registro instalado(s) e renderizado(s) com sucesso, mas animam apenas o conteúdo de exemplo: aplicar aos seus clipes exige editar o HTML do bloco em projetos/hf-biblioteca para trocar as cenas de exemplo pela sua mídia. Testados: transitions-3d.",
     "descricao": "Cenas nas faces de um cubo que gira.",
-    "como_usar": "hyperframes add transitions-3d | (Remotion flip() implementado na Vitrine — não é cubo)",
+    "como_usar": "python3 scripts/blocos.py renderizar transitions-3d demo.mp4",
     "testado": false
   },
   {
@@ -683,9 +687,9 @@
       "intensidade"
     ],
     "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "observacao": "Bloco(s) do registro instalado(s) e renderizado(s) com sucesso, mas animam apenas o conteúdo de exemplo: aplicar aos seus clipes exige editar o HTML do bloco em projetos/hf-biblioteca para trocar as cenas de exemplo pela sua mídia. Testados: morph-swap, facet-morph.",
     "descricao": "Uma forma/elemento se transforma no seguinte.",
-    "como_usar": "hyperframes add morph-swap  |  hyperframes add facet-morph",
+    "como_usar": "python3 scripts/blocos.py renderizar morph-swap demo.mp4 | python3 scripts/blocos.py renderizar facet-morph demo.mp4",
     "testado": false
   },
   {
@@ -741,20 +745,21 @@
     "categoria_nome": "Transições cinematográficas",
     "tipo": "transicao",
     "motores": [
+      "ffmpeg",
       "remotion"
     ],
-    "status": "integracao_nativa",
+    "status": "implementado",
     "parametros": [
       "duracaoFrames",
       "easing",
       "direcao",
       "intensidade"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível por biblioteca/ferramenta externa; exige implementação e teste no pipeline.",
+    "arquivo_exemplo": "projetos/remotion-base/src/componentes/TransicaoShader.tsx",
+    "observacao": "Shader GLSL extraído do bloco HyperFrames e aplicado aos seus clipes (Remotion). Implementado e testado no repositório; ver como_usar.",
     "descricao": "Ondulação líquida que distorce a troca de cena.",
-    "como_usar": "hyperframes add ripple-waves",
-    "testado": false
+    "como_usar": "python3 scripts/estudio.py transicao-shader a.mp4 b.mp4 saida.mp4 --shader ripple-waves --duracao 0.8",
+    "testado": true
   },
   {
     "id": "camera_3d.orbit-camera",
@@ -774,9 +779,9 @@
       "easing"
     ],
     "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "observacao": "Bloco(s) do registro instalado(s) e renderizado(s) com sucesso, mas animam apenas o conteúdo de exemplo: aplicar aos seus clipes exige editar o HTML do bloco em projetos/hf-biblioteca para trocar as cenas de exemplo pela sua mídia. Testados: three-orbiting-cards.",
     "descricao": "Câmera orbitando um objeto/cena 3D.",
-    "como_usar": "hyperframes add frost-sequence-camera-orbit | hyperframes add three-orbiting-cards",
+    "como_usar": "python3 scripts/blocos.py renderizar three-orbiting-cards demo.mp4",
     "parametros_detalhe": "Para filmagem real: catalogado.",
     "testado": false
   },
@@ -798,9 +803,9 @@
       "easing"
     ],
     "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "observacao": "Bloco(s) do registro instalado(s) e renderizado(s) com sucesso, mas animam apenas o conteúdo de exemplo: aplicar aos seus clipes exige editar o HTML do bloco em projetos/hf-biblioteca para trocar as cenas de exemplo pela sua mídia. Testados: camera-dolly-zoom.",
     "descricao": "Zoom óptico contrário ao deslocamento (efeito vertigem).",
-    "como_usar": "hyperframes add camera-dolly-zoom",
+    "como_usar": "python3 scripts/blocos.py renderizar camera-dolly-zoom demo.mp4",
     "testado": false
   },
   {
@@ -821,9 +826,9 @@
       "easing"
     ],
     "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "observacao": "Bloco(s) do registro instalado(s) e renderizado(s) com sucesso, mas animam apenas o conteúdo de exemplo: aplicar aos seus clipes exige editar o HTML do bloco em projetos/hf-biblioteca para trocar as cenas de exemplo pela sua mídia. Testados: camera-dolly-zoom.",
     "descricao": "Zoom óptico contrário ao deslocamento (efeito vertigem).",
-    "como_usar": "hyperframes add camera-dolly-zoom",
+    "como_usar": "python3 scripts/blocos.py renderizar camera-dolly-zoom demo.mp4",
     "testado": false
   },
   {
@@ -1011,9 +1016,9 @@
       "easing"
     ],
     "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "observacao": "Bloco(s) do registro instalado(s) e renderizado(s) com sucesso, mas animam apenas o conteúdo de exemplo: aplicar aos seus clipes exige editar o HTML do bloco em projetos/hf-biblioteca para trocar as cenas de exemplo pela sua mídia. Testados: parallax-device-dive, camera-rig-depth-stack.",
     "descricao": "Profundidade simulada com camadas em movimento.",
-    "como_usar": "hyperframes add parallax-device-dive | hyperframes add camera-rig-depth-stack",
+    "como_usar": "python3 scripts/blocos.py renderizar parallax-device-dive demo.mp4 | python3 scripts/blocos.py renderizar camera-rig-depth-stack demo.mp4",
     "parametros_detalhe": "Para fotos reais: requer mapa de profundidade (catalogado).",
     "testado": false
   },
@@ -1035,9 +1040,9 @@
       "easing"
     ],
     "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "observacao": "Bloco(s) do registro instalado(s) e renderizado(s) com sucesso, mas animam apenas o conteúdo de exemplo: aplicar aos seus clipes exige editar o HTML do bloco em projetos/hf-biblioteca para trocar as cenas de exemplo pela sua mídia. Testados: camera-rig-depth-stack, caption-parallax-layers.",
     "descricao": "Várias camadas recortadas movendo-se em velocidades distintas.",
-    "como_usar": "hyperframes add camera-rig-depth-stack | hyperframes add caption-parallax-layers",
+    "como_usar": "python3 scripts/blocos.py renderizar camera-rig-depth-stack demo.mp4 | python3 scripts/blocos.py renderizar caption-parallax-layers demo.mp4",
     "testado": false
   },
   {
@@ -1050,18 +1055,18 @@
       "hyperframes",
       "remotion"
     ],
-    "status": "integracao_nativa",
+    "status": "implementado",
     "parametros": [
       "duracaoFrames",
       "zoom",
       "perspectiva",
       "easing"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "projetos/hf-biblioteca/compositions/gallery-tunnel.html",
+    "observacao": "Bloco do registro HyperFrames adaptado para uso offline e testado (gallery-tunnel, scroll-camera-story). Ver `python3 scripts/blocos.py variaveis gallery-tunnel`.",
     "descricao": "Voo de câmera através de ambiente/galeria.",
-    "como_usar": "hyperframes add gallery-tunnel | hyperframes add scroll-camera-story",
-    "testado": false
+    "como_usar": "python3 scripts/blocos.py renderizar gallery-tunnel saida.mp4 --var images=… | python3 scripts/blocos.py sobrepor video.mp4 gallery-tunnel saida.mp4 --inicio 1 | alternativas: scroll-camera-story",
+    "testado": true
   },
   {
     "id": "camera_3d.infinite-zoom",
@@ -1152,9 +1157,9 @@
       "easing"
     ],
     "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "observacao": "Bloco(s) do registro instalado(s) e renderizado(s) com sucesso, mas animam apenas o conteúdo de exemplo: aplicar aos seus clipes exige editar o HTML do bloco em projetos/hf-biblioteca para trocar as cenas de exemplo pela sua mídia. Testados: rack-focus, focus-rack.",
     "descricao": "Troca de foco entre planos.",
-    "como_usar": "hyperframes add rack-focus | hyperframes add focus-rack",
+    "como_usar": "python3 scripts/blocos.py renderizar rack-focus demo.mp4 | python3 scripts/blocos.py renderizar focus-rack demo.mp4",
     "testado": false
   },
   {
@@ -1175,9 +1180,9 @@
       "easing"
     ],
     "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "observacao": "Bloco(s) do registro instalado(s) e renderizado(s) com sucesso, mas animam apenas o conteúdo de exemplo: aplicar aos seus clipes exige editar o HTML do bloco em projetos/hf-biblioteca para trocar as cenas de exemplo pela sua mídia. Testados: focus-blur-resolve.",
     "descricao": "Desfoque de profundidade de campo.",
-    "como_usar": "hyperframes add focus-blur-resolve (elementos gráficos)",
+    "como_usar": "python3 scripts/blocos.py renderizar focus-blur-resolve demo.mp4",
     "parametros_detalhe": "Em filmagem: requer mapa de profundidade.",
     "testado": false
   },
@@ -1262,18 +1267,18 @@
       "hyperframes",
       "remotion"
     ],
-    "status": "integracao_nativa",
+    "status": "implementado",
     "parametros": [
       "duracaoFrames",
       "zoom",
       "perspectiva",
       "easing"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "projetos/hf-biblioteca/compositions/components/caption-camera-follow.html",
+    "observacao": "Bloco do registro HyperFrames adaptado para uso offline e testado (caption-camera-follow, cursor-zoom-follow). Ver `python3 scripts/blocos.py variaveis caption-camera-follow`.",
     "descricao": "Câmera acompanha um elemento (texto, cursor).",
-    "como_usar": "hyperframes add caption-camera-follow | hyperframes add cursor-zoom-follow",
-    "testado": false
+    "como_usar": "python3 scripts/blocos.py renderizar caption-camera-follow saida.mp4 --var accent=… | python3 scripts/blocos.py sobrepor video.mp4 caption-camera-follow saida.mp4 --inicio 1 | alternativas: cursor-zoom-follow",
+    "testado": true
   },
   {
     "id": "camera_3d.zoom-reveal",
@@ -1293,9 +1298,9 @@
       "easing"
     ],
     "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "observacao": "Bloco(s) do registro instalado(s) e renderizado(s) com sucesso, mas animam apenas o conteúdo de exemplo: aplicar aos seus clipes exige editar o HTML do bloco em projetos/hf-biblioteca para trocar as cenas de exemplo pela sua mídia. Testados: pull-back-reveal, ui-focus-zoom.",
     "descricao": "Afasta para revelar o contexto completo.",
-    "como_usar": "hyperframes add pull-back-reveal | hyperframes add ui-focus-zoom",
+    "como_usar": "python3 scripts/blocos.py renderizar pull-back-reveal demo.mp4 | python3 scripts/blocos.py renderizar ui-focus-zoom demo.mp4",
     "testado": false
   },
   {
@@ -1339,9 +1344,9 @@
       "easing"
     ],
     "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "observacao": "Bloco(s) do registro instalado(s) e renderizado(s) com sucesso, mas animam apenas o conteúdo de exemplo: aplicar aos seus clipes exige editar o HTML do bloco em projetos/hf-biblioteca para trocar as cenas de exemplo pela sua mídia. Testados: ui-3d-reveal, app-showcase.",
     "descricao": "Câmera navegando por interfaces em espaço 3D.",
-    "como_usar": "hyperframes add ui-3d-reveal | hyperframes add app-showcase",
+    "como_usar": "python3 scripts/blocos.py renderizar ui-3d-reveal demo.mp4 | python3 scripts/blocos.py renderizar app-showcase demo.mp4",
     "testado": false
   },
   {
@@ -1449,18 +1454,18 @@
       "hyperframes",
       "remotion"
     ],
-    "status": "integracao_nativa",
+    "status": "implementado",
     "parametros": [
       "duracaoFrames",
       "easing",
       "escala",
       "cor"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "projetos/hf-biblioteca/compositions/components/rubber-band-bumper.html",
+    "observacao": "Bloco do registro HyperFrames adaptado para uso offline e testado (rubber-band-bumper). Ver `python3 scripts/blocos.py variaveis rubber-band-bumper`.",
     "descricao": "Entrada elástica com quique.",
-    "como_usar": "Remotion spring(damping baixo) | HF: hyperframes add rubber-band-bumper",
-    "testado": false
+    "como_usar": "python3 scripts/blocos.py renderizar rubber-band-bumper saida.mp4 --var direction=… | python3 scripts/blocos.py sobrepor video.mp4 rubber-band-bumper saida.mp4 --inicio 1",
+    "testado": true
   },
   {
     "id": "motion_graphics.spring-animation",
@@ -1541,18 +1546,18 @@
       "hyperframes",
       "remotion"
     ],
-    "status": "integracao_nativa",
+    "status": "implementado",
     "parametros": [
       "duracaoFrames",
       "easing",
       "escala",
       "cor"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "projetos/hf-biblioteca/compositions/components/facet-morph.html",
+    "observacao": "Bloco do registro HyperFrames adaptado para uso offline e testado (facet-morph, icon-morph-beat). Ver `python3 scripts/blocos.py variaveis facet-morph`.",
     "descricao": "Formas que se transformam.",
-    "como_usar": "hyperframes add facet-morph | hyperframes add icon-morph-beat",
-    "testado": false
+    "como_usar": "python3 scripts/blocos.py renderizar facet-morph saida.mp4 --var forms=… | python3 scripts/blocos.py sobrepor video.mp4 facet-morph saida.mp4 --inicio 1 | alternativas: icon-morph-beat",
+    "testado": true
   },
   {
     "id": "motion_graphics.particle-explosion",
@@ -1564,18 +1569,18 @@
       "hyperframes",
       "remotion"
     ],
-    "status": "integracao_nativa",
+    "status": "implementado",
     "parametros": [
       "duracaoFrames",
       "easing",
       "escala",
       "cor"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "projetos/hf-biblioteca/compositions/components/char-slam-explode.html",
+    "observacao": "Bloco do registro HyperFrames adaptado para uso offline e testado (caption-particle-burst, char-slam-explode, confetti). Ver `python3 scripts/blocos.py variaveis caption-particle-burst`.",
     "descricao": "Explosão de partículas.",
-    "como_usar": "hyperframes add caption-particle-burst | hyperframes add char-slam-explode | hyperframes add confetti",
-    "testado": false
+    "como_usar": "python3 scripts/blocos.py renderizar char-slam-explode saida.mp4 --var text=\"DIREITO\" | python3 scripts/blocos.py sobrepor video.mp4 confetti saida.mp4 --inicio 1 | alternativa: caption-particle-burst (texto fixo)",
+    "testado": true
   },
   {
     "id": "motion_graphics.floating-elements",
@@ -1610,18 +1615,18 @@
       "hyperframes",
       "remotion"
     ],
-    "status": "integracao_nativa",
+    "status": "implementado",
     "parametros": [
       "duracaoFrames",
       "easing",
       "escala",
       "cor"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "projetos/hf-biblioteca/compositions/components/beat-accent.html",
+    "observacao": "Bloco do registro HyperFrames adaptado para uso offline e testado (beat-accent, badge-pop). Ver `python3 scripts/blocos.py variaveis beat-accent`.",
     "descricao": "Ícone entra com impacto e pulso.",
-    "como_usar": "hyperframes add beat-accent | hyperframes add badge-pop",
-    "testado": false
+    "como_usar": "python3 scripts/blocos.py renderizar beat-accent saida.mp4 --var text=… | python3 scripts/blocos.py sobrepor video.mp4 beat-accent saida.mp4 --inicio 1 | alternativas: badge-pop",
+    "testado": true
   },
   {
     "id": "motion_graphics.liquid-motion",
@@ -1633,18 +1638,18 @@
       "hyperframes",
       "remotion"
     ],
-    "status": "integracao_nativa",
+    "status": "implementado",
     "parametros": [
       "duracaoFrames",
       "easing",
       "escala",
       "cor"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "projetos/hf-biblioteca/compositions/goo.html",
+    "observacao": "Bloco do registro HyperFrames adaptado para uso offline e testado (goo, gooey-split, vfx-liquid-background). Ver `python3 scripts/blocos.py variaveis goo`. Renderizado com WebGPU por software (sem GPU no ambiente; mais lento).",
     "descricao": "Movimento líquido/gooey.",
-    "como_usar": "hyperframes add goo | hyperframes add gooey-split | hyperframes add vfx-liquid-background",
-    "testado": false
+    "como_usar": "python3 scripts/blocos.py renderizar goo saida.mp4 | python3 scripts/blocos.py sobrepor video.mp4 goo saida.mp4 --inicio 1 | alternativas: gooey-split, vfx-liquid-background",
+    "testado": true
   },
   {
     "id": "motion_graphics.magnetic-motion",
@@ -1656,18 +1661,18 @@
       "hyperframes",
       "remotion"
     ],
-    "status": "integracao_nativa",
+    "status": "implementado",
     "parametros": [
       "duracaoFrames",
       "easing",
       "escala",
       "cor"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "projetos/hf-biblioteca/compositions/components/magnetic-cursor.html",
+    "observacao": "Bloco do registro HyperFrames adaptado para uso offline e testado (magnetic-cursor, vfx-magnetic). Ver `python3 scripts/blocos.py variaveis magnetic-cursor`.",
     "descricao": "Elementos atraídos magneticamente.",
-    "como_usar": "hyperframes add magnetic-cursor | hyperframes add vfx-magnetic",
-    "testado": false
+    "como_usar": "python3 scripts/blocos.py renderizar magnetic-cursor saida.mp4 --var accent=… | python3 scripts/blocos.py sobrepor video.mp4 magnetic-cursor saida.mp4 --inicio 1 | alternativas: vfx-magnetic",
+    "testado": true
   },
   {
     "id": "motion_graphics.animated-arrows",
@@ -1679,18 +1684,18 @@
       "hyperframes",
       "remotion"
     ],
-    "status": "integracao_nativa",
+    "status": "implementado",
     "parametros": [
       "duracaoFrames",
       "easing",
       "escala",
       "cor"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "projetos/hf-biblioteca/compositions/components/hw-arrow.html",
+    "observacao": "Bloco do registro HyperFrames adaptado para uso offline e testado (hw-arrow). Ver `python3 scripts/blocos.py variaveis hw-arrow`.",
     "descricao": "Setas desenhadas à mão animadas.",
-    "como_usar": "hyperframes add hw-arrow",
-    "testado": false
+    "como_usar": "python3 scripts/blocos.py renderizar hw-arrow saida.mp4 | python3 scripts/blocos.py sobrepor video.mp4 hw-arrow saida.mp4 --inicio 1",
+    "testado": true
   },
   {
     "id": "motion_graphics.progress-bar",
@@ -1796,18 +1801,18 @@
       "hyperframes",
       "remotion"
     ],
-    "status": "integracao_nativa",
+    "status": "implementado",
     "parametros": [
       "duracaoFrames",
       "easing",
       "escala",
       "cor"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "projetos/hf-biblioteca/compositions/components/chart-story.html",
+    "observacao": "Bloco do registro HyperFrames adaptado para uso offline e testado (chart-story, hw-pipeline, flowchart). Ver `python3 scripts/blocos.py variaveis chart-story`.",
     "descricao": "Infográfico revelado em etapas.",
-    "como_usar": "hyperframes add chart-story | hyperframes add hw-pipeline | hyperframes add flowchart",
-    "testado": false
+    "como_usar": "python3 scripts/blocos.py renderizar chart-story saida.mp4 --var type=… | python3 scripts/blocos.py sobrepor video.mp4 chart-story saida.mp4 --inicio 1 | alternativas: hw-pipeline, flowchart",
+    "testado": true
   },
   {
     "id": "motion_graphics.animated-timeline",
@@ -1842,18 +1847,18 @@
       "hyperframes",
       "remotion"
     ],
-    "status": "integracao_nativa",
+    "status": "implementado",
     "parametros": [
       "duracaoFrames",
       "easing",
       "escala",
       "cor"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "projetos/hf-biblioteca/compositions/components/hw-boil.html",
+    "observacao": "Bloco do registro HyperFrames adaptado para uso offline e testado (hw-boil). Ver `python3 scripts/blocos.py variaveis hw-boil`.",
     "descricao": "Traço desenhado 'fervendo' (estilo rabisco).",
-    "como_usar": "hyperframes add hw-boil",
-    "testado": false
+    "como_usar": "python3 scripts/blocos.py renderizar hw-boil saida.mp4 | python3 scripts/blocos.py sobrepor video.mp4 hw-boil saida.mp4 --inicio 1",
+    "testado": true
   },
   {
     "id": "motion_graphics.paper-cut-animation",
@@ -1865,18 +1870,18 @@
       "hyperframes",
       "remotion"
     ],
-    "status": "integracao_nativa",
+    "status": "implementado",
     "parametros": [
       "duracaoFrames",
       "easing",
       "escala",
       "cor"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "projetos/hf-biblioteca/compositions/components/paper-collage-reveal.html",
+    "observacao": "Bloco do registro HyperFrames adaptado para uso offline e testado (paper-collage-reveal). Ver `python3 scripts/blocos.py variaveis paper-collage-reveal`. O texto \"REVEALED\" é fixo no HTML do bloco.",
     "descricao": "Recortes de papel/colagem.",
-    "como_usar": "hyperframes add paper-collage-reveal",
-    "testado": false
+    "como_usar": "python3 scripts/blocos.py renderizar paper-collage-reveal saida.mp4 --var panels=… | python3 scripts/blocos.py sobrepor video.mp4 paper-collage-reveal saida.mp4 --inicio 1",
+    "testado": true
   },
   {
     "id": "motion_graphics.glassmorphism",
@@ -1934,18 +1939,18 @@
       "hyperframes",
       "remotion"
     ],
-    "status": "integracao_nativa",
+    "status": "implementado",
     "parametros": [
       "duracaoFrames",
       "easing",
       "escala",
       "cor"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "projetos/hf-biblioteca/compositions/product-turntable.html",
+    "observacao": "Bloco do registro HyperFrames adaptado para uso offline e testado (product-turntable, extruded-logo). Ver `python3 scripts/blocos.py variaveis product-turntable`.",
     "descricao": "Objeto/logo 3D girando.",
-    "como_usar": "hyperframes add product-turntable | hyperframes add extruded-logo",
-    "testado": false
+    "como_usar": "python3 scripts/blocos.py renderizar product-turntable saida.mp4 --var model_url=… | python3 scripts/blocos.py sobrepor video.mp4 product-turntable saida.mp4 --inicio 1 | alternativas: extruded-logo",
+    "testado": true
   },
   {
     "id": "motion_graphics.follow-path-animation",
@@ -1957,18 +1962,18 @@
       "hyperframes",
       "remotion"
     ],
-    "status": "integracao_nativa",
+    "status": "implementado",
     "parametros": [
       "duracaoFrames",
       "easing",
       "escala",
       "cor"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "projetos/hf-biblioteca/compositions/components/arc-motion-path.html",
+    "observacao": "Bloco do registro HyperFrames adaptado para uso offline e testado (arc-motion-path, offset-path-traveler). Ver `python3 scripts/blocos.py variaveis arc-motion-path`.",
     "descricao": "Elemento percorre um caminho.",
-    "como_usar": "hyperframes add arc-motion-path | hyperframes add offset-path-traveler",
-    "testado": false
+    "como_usar": "python3 scripts/blocos.py renderizar arc-motion-path saida.mp4 | python3 scripts/blocos.py sobrepor video.mp4 arc-motion-path saida.mp4 --inicio 1 --escala 3 | alternativas: offset-path-traveler",
+    "testado": true
   },
   {
     "id": "motion_graphics.morphing-icons",
@@ -1977,20 +1982,21 @@
     "categoria_nome": "Motion graphics",
     "tipo": "animacao",
     "motores": [
+      "hyperframes",
       "remotion"
     ],
-    "status": "integracao_nativa",
+    "status": "implementado",
     "parametros": [
       "duracaoFrames",
       "easing",
       "escala",
       "cor"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "projetos/hf-biblioteca/compositions/components/icon-morph-beat.html",
+    "observacao": "Bloco do registro HyperFrames adaptado para uso offline e testado (icon-morph-beat). Ver `python3 scripts/blocos.py variaveis icon-morph-beat`.",
     "descricao": "Ícones que se transformam uns nos outros.",
-    "como_usar": "hyperframes add icon-morph-beat",
-    "testado": false
+    "como_usar": "python3 scripts/blocos.py renderizar icon-morph-beat saida.mp4 --var pair=… | python3 scripts/blocos.py sobrepor video.mp4 icon-morph-beat saida.mp4 --inicio 1",
+    "testado": true
   },
   {
     "id": "motion_graphics.animated-callout",
@@ -1999,20 +2005,21 @@
     "categoria_nome": "Motion graphics",
     "tipo": "animacao",
     "motores": [
+      "hyperframes",
       "remotion"
     ],
-    "status": "integracao_nativa",
+    "status": "implementado",
     "parametros": [
       "duracaoFrames",
       "easing",
       "escala",
       "cor"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "projetos/hf-biblioteca/compositions/components/hw-callout-circle.html",
+    "observacao": "Bloco do registro HyperFrames adaptado para uso offline e testado (hw-callout-circle, yt-circle-pointer). Ver `python3 scripts/blocos.py variaveis hw-callout-circle`.",
     "descricao": "Destaque animado (círculo/seta) apontando um detalhe.",
-    "como_usar": "hyperframes add hw-callout-circle | hyperframes add yt-circle-pointer",
-    "testado": false
+    "como_usar": "python3 scripts/blocos.py renderizar hw-callout-circle saida.mp4 | python3 scripts/blocos.py sobrepor video.mp4 hw-callout-circle saida.mp4 --inicio 1 | alternativas: yt-circle-pointer",
+    "testado": true
   },
   {
     "id": "motion_graphics.kinetic-shapes",
@@ -2070,7 +2077,7 @@
       "remotion",
       "whisper"
     ],
-    "status": "integracao_nativa",
+    "status": "implementado",
     "parametros": [
       "texto",
       "fonte",
@@ -2078,11 +2085,11 @@
       "posicao",
       "duracaoFrames"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "projetos/hf-biblioteca/compositions/components/kinetic-center-build.html",
+    "observacao": "Bloco do registro HyperFrames adaptado para uso offline e testado (kinetic-center-build, kinetic-type-swap). Ver `python3 scripts/blocos.py variaveis kinetic-center-build`.",
     "descricao": "Tipografia cinética sincronizada com a fala.",
-    "como_usar": "hyperframes add kinetic-center-build | hyperframes add kinetic-type-swap",
-    "testado": false
+    "como_usar": "python3 scripts/blocos.py renderizar kinetic-center-build saida.mp4 --var text=… | python3 scripts/blocos.py sobrepor video.mp4 kinetic-center-build saida.mp4 --inicio 1 | alternativas: kinetic-type-swap",
+    "testado": true
   },
   {
     "id": "legendas_tipografia.word-by-word-captions",
@@ -2345,7 +2352,7 @@
       "remotion",
       "whisper"
     ],
-    "status": "integracao_nativa",
+    "status": "implementado",
     "parametros": [
       "texto",
       "fonte",
@@ -2353,11 +2360,11 @@
       "posicao",
       "duracaoFrames"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "projetos/hf-biblioteca/compositions/components/svg-mask-reveal.html",
+    "observacao": "Bloco do registro HyperFrames adaptado para uso offline e testado (svg-mask-reveal). Ver `python3 scripts/blocos.py variaveis svg-mask-reveal`. Itens não usados (falharam): texture-mask-text",
     "descricao": "Texto como máscara de imagem/vídeo.",
-    "como_usar": "hyperframes add texture-mask-text | hyperframes add svg-mask-reveal",
-    "testado": false
+    "como_usar": "python3 scripts/blocos.py renderizar svg-mask-reveal saida.mp4 --var text=… | python3 scripts/blocos.py sobrepor video.mp4 svg-mask-reveal saida.mp4 --inicio 1",
+    "testado": true
   },
   {
     "id": "legendas_tipografia.3d-typography",
@@ -2370,7 +2377,7 @@
       "remotion",
       "whisper"
     ],
-    "status": "integracao_nativa",
+    "status": "implementado",
     "parametros": [
       "texto",
       "fonte",
@@ -2378,11 +2385,11 @@
       "posicao",
       "duracaoFrames"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "projetos/hf-biblioteca/compositions/wireframe-portal-title/wireframe-portal-title.html",
+    "observacao": "Bloco do registro HyperFrames adaptado para uso offline e testado (wireframe-portal-title, code-3d-extrude). Ver `python3 scripts/blocos.py variaveis wireframe-portal-title`.",
     "descricao": "Tipografia com volume 3D.",
-    "como_usar": "hyperframes add wireframe-portal-title | hyperframes add code-3d-extrude",
-    "testado": false
+    "como_usar": "python3 scripts/blocos.py renderizar wireframe-portal-title saida.mp4 --var title=… | python3 scripts/blocos.py sobrepor video.mp4 wireframe-portal-title saida.mp4 --inicio 1 | alternativas: code-3d-extrude",
+    "testado": true
   },
   {
     "id": "legendas_tipografia.glass-type",
@@ -2404,7 +2411,7 @@
       "duracaoFrames"
     ],
     "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "observacao": "Ainda não implementado. glass-shard-title: rede bloqueada",
     "descricao": "Letras de vidro.",
     "como_usar": "hyperframes add glass-shard-title",
     "testado": false
@@ -2428,10 +2435,10 @@
       "posicao",
       "duracaoFrames"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "projetos/hf-biblioteca/compositions/components/caption-neon-glow.html",
+    "observacao": "Bloco testado, mas com conteúdo fixo de exemplo e sem parâmetros de conteúdo: para usar com o seu texto/mídia é preciso editar o HTML em projetos/hf-biblioteca. caption-neon-glow / caption-neon-accent exibem legendas de exemplo fixas.",
     "descricao": "Texto neon.",
-    "como_usar": "hyperframes add caption-neon-glow | hyperframes add caption-neon-accent",
+    "como_usar": "python3 scripts/blocos.py renderizar caption-neon-glow saida.mp4 | python3 scripts/blocos.py sobrepor video.mp4 caption-neon-glow saida.mp4 --inicio 1 | alternativas: caption-neon-accent",
     "testado": false
   },
   {
@@ -2470,7 +2477,7 @@
       "remotion",
       "whisper"
     ],
-    "status": "integracao_nativa",
+    "status": "implementado",
     "parametros": [
       "texto",
       "fonte",
@@ -2478,11 +2485,11 @@
       "posicao",
       "duracaoFrames"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "projetos/hf-biblioteca/compositions/components/char-slam-explode.html",
+    "observacao": "Bloco do registro HyperFrames adaptado para uso offline e testado (char-slam-explode, particle-text-dissolve). Ver `python3 scripts/blocos.py variaveis char-slam-explode`.",
     "descricao": "Letras explodem/se dispersam.",
-    "como_usar": "hyperframes add char-slam-explode | hyperframes add particle-text-dissolve",
-    "testado": false
+    "como_usar": "python3 scripts/blocos.py renderizar char-slam-explode saida.mp4 --var text=… | python3 scripts/blocos.py sobrepor video.mp4 char-slam-explode saida.mp4 --inicio 1 | alternativas: particle-text-dissolve",
+    "testado": true
   },
   {
     "id": "legendas_tipografia.rolling-text",
@@ -2495,7 +2502,7 @@
       "remotion",
       "whisper"
     ],
-    "status": "integracao_nativa",
+    "status": "implementado",
     "parametros": [
       "texto",
       "fonte",
@@ -2503,11 +2510,11 @@
       "posicao",
       "duracaoFrames"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "projetos/hf-biblioteca/compositions/components/slot-machine-roll.html",
+    "observacao": "Bloco do registro HyperFrames adaptado para uso offline e testado (slot-machine-roll, ticker-takeover, news-ticker). Ver `python3 scripts/blocos.py variaveis slot-machine-roll`.",
     "descricao": "Texto rolando (slot machine/letreiro).",
-    "como_usar": "hyperframes add slot-machine-roll | hyperframes add ticker-takeover | hyperframes add news-ticker",
-    "testado": false
+    "como_usar": "python3 scripts/blocos.py renderizar slot-machine-roll saida.mp4 --var result=… | python3 scripts/blocos.py sobrepor video.mp4 slot-machine-roll saida.mp4 --inicio 1 --escala 3 | alternativas: ticker-takeover, news-ticker",
+    "testado": true
   },
   {
     "id": "legendas_tipografia.gradient-typography",
@@ -2545,7 +2552,7 @@
       "remotion",
       "whisper"
     ],
-    "status": "integracao_nativa",
+    "status": "implementado",
     "parametros": [
       "texto",
       "fonte",
@@ -2553,11 +2560,11 @@
       "posicao",
       "duracaoFrames"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "projetos/hf-biblioteca/compositions/components/rgb-glitch-text.html",
+    "observacao": "Bloco do registro HyperFrames adaptado para uso offline e testado (rgb-glitch-text, caption-glitch-rgb). Ver `python3 scripts/blocos.py variaveis rgb-glitch-text`.",
     "descricao": "Texto com falha digital.",
-    "como_usar": "hyperframes add rgb-glitch-text | hyperframes add caption-glitch-rgb",
-    "testado": false
+    "como_usar": "python3 scripts/blocos.py renderizar rgb-glitch-text saida.mp4 --var text=… | python3 scripts/blocos.py sobrepor video.mp4 rgb-glitch-text saida.mp4 --inicio 1 --escala 3 | alternativas: caption-glitch-rgb",
+    "testado": true
   },
   {
     "id": "legendas_tipografia.subtitle-progress",
@@ -2602,10 +2609,10 @@
       "posicao",
       "duracaoFrames"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "projetos/hf-biblioteca/compositions/components/caption-emoji-pop.html",
+    "observacao": "Bloco testado, mas com conteúdo fixo de exemplo e sem parâmetros de conteúdo: para usar com o seu texto/mídia é preciso editar o HTML em projetos/hf-biblioteca. caption-emoji-pop exibe legenda e emojis de exemplo fixos.",
     "descricao": "Emojis contextuais junto às legendas.",
-    "como_usar": "hyperframes add caption-emoji-pop",
+    "como_usar": "python3 scripts/blocos.py renderizar caption-emoji-pop saida.mp4 | python3 scripts/blocos.py sobrepor video.mp4 caption-emoji-pop saida.mp4 --inicio 1",
     "testado": false
   },
   {
@@ -2764,10 +2771,11 @@
     "categoria_nome": "Legendas e tipografia",
     "tipo": "texto",
     "motores": [
+      "hyperframes",
       "remotion",
       "whisper"
     ],
-    "status": "integracao_nativa",
+    "status": "implementado",
     "parametros": [
       "texto",
       "fonte",
@@ -2775,11 +2783,11 @@
       "posicao",
       "duracaoFrames"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "projetos/hf-biblioteca/compositions/components/outline-draw.html",
+    "observacao": "Bloco do registro HyperFrames adaptado para uso offline e testado (outline-draw, svg-stroke-trace). Ver `python3 scripts/blocos.py variaveis outline-draw`.",
     "descricao": "Texto revelado pelo contorno sendo desenhado.",
-    "como_usar": "hyperframes add outline-draw | hyperframes add svg-stroke-trace",
-    "testado": false
+    "como_usar": "python3 scripts/blocos.py renderizar outline-draw saida.mp4 --var progress=… | python3 scripts/blocos.py sobrepor video.mp4 outline-draw saida.mp4 --inicio 1 | alternativas: svg-stroke-trace",
+    "testado": true
   },
   {
     "id": "legendas_tipografia.legendas-estaticas-srt-queimadas",
@@ -3061,17 +3069,17 @@
       "hyperframes",
       "remotion"
     ],
-    "status": "integracao_nativa",
+    "status": "implementado",
     "parametros": [
       "intensidade",
       "mistura",
       "duracaoFrames"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "projetos/hf-biblioteca/compositions/lens-flare.html",
+    "observacao": "Bloco do registro HyperFrames adaptado para uso offline e testado (lens-flare, vfx-anamorphic-flare). Ver `python3 scripts/blocos.py variaveis lens-flare`. Renderizado com WebGPU por software (sem GPU no ambiente; mais lento).",
     "descricao": "Reflexo de lente.",
-    "como_usar": "hyperframes add lens-flare | hyperframes add vfx-anamorphic-flare",
-    "testado": false
+    "como_usar": "python3 scripts/blocos.py renderizar lens-flare saida.mp4 | python3 scripts/blocos.py sobrepor video.mp4 lens-flare saida.mp4 --inicio 1 | alternativas: vfx-anamorphic-flare",
+    "testado": true
   },
   {
     "id": "vfx.chromatic-aberration",
@@ -3173,17 +3181,17 @@
       "hyperframes",
       "remotion"
     ],
-    "status": "integracao_nativa",
+    "status": "implementado",
     "parametros": [
       "intensidade",
       "mistura",
       "duracaoFrames"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "projetos/hf-biblioteca/compositions/camcorder-hud.html",
+    "observacao": "Bloco do registro HyperFrames adaptado para uso offline e testado (camcorder-hud). Ver `python3 scripts/blocos.py variaveis camcorder-hud`.",
     "descricao": "Visual de filmadora antiga com HUD.",
-    "como_usar": "hyperframes add camcorder-hud + python3 scripts/estudio.py vfx --efeito vhs",
-    "testado": false
+    "como_usar": "python3 scripts/blocos.py renderizar camcorder-hud saida.mp4 | python3 scripts/blocos.py sobrepor video.mp4 camcorder-hud saida.mp4 --inicio 1",
+    "testado": true
   },
   {
     "id": "vfx.hologram-effect",
@@ -3196,17 +3204,17 @@
       "hyperframes",
       "remotion"
     ],
-    "status": "integracao_nativa",
+    "status": "implementado",
     "parametros": [
       "intensidade",
       "mistura",
       "duracaoFrames"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "projetos/hf-biblioteca/compositions/hologram.html",
+    "observacao": "Bloco do registro HyperFrames adaptado para uso offline e testado (hologram). Ver `python3 scripts/blocos.py variaveis hologram`. Renderizado com WebGPU por software (sem GPU no ambiente; mais lento).",
     "descricao": "Holograma.",
-    "como_usar": "hyperframes add hologram",
-    "testado": false
+    "como_usar": "python3 scripts/blocos.py renderizar hologram saida.mp4 | python3 scripts/blocos.py sobrepor video.mp4 hologram saida.mp4 --inicio 1",
+    "testado": true
   },
   {
     "id": "vfx.double-exposure",
@@ -3333,17 +3341,17 @@
       "hyperframes",
       "remotion"
     ],
-    "status": "integracao_nativa",
+    "status": "implementado",
     "parametros": [
       "intensidade",
       "mistura",
       "duracaoFrames"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "projetos/remotion-base/src/componentes/TransicaoShader.tsx",
+    "observacao": "Shader GLSL extraído do bloco HyperFrames e aplicado aos seus clipes (Remotion). Implementado e testado no repositório; ver como_usar.",
     "descricao": "Distorção de calor.",
-    "como_usar": "hyperframes add thermal-distortion (transição)",
-    "testado": false
+    "como_usar": "python3 scripts/estudio.py transicao-shader a.mp4 b.mp4 saida.mp4 --shader thermal-distortion --duracao 0.8",
+    "testado": true
   },
   {
     "id": "vfx.smoke-overlay",
@@ -3423,17 +3431,17 @@
       "hyperframes",
       "remotion"
     ],
-    "status": "integracao_nativa",
+    "status": "implementado",
     "parametros": [
       "intensidade",
       "mistura",
       "duracaoFrames"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "projetos/hf-biblioteca/compositions/snow.html",
+    "observacao": "Bloco do registro HyperFrames adaptado para uso offline e testado (snow). Ver `python3 scripts/blocos.py variaveis snow`.",
     "descricao": "Chuva ou neve.",
-    "como_usar": "hyperframes add snow (neve). Chuva: catalogado.",
-    "testado": false
+    "como_usar": "python3 scripts/blocos.py renderizar snow saida.mp4 --var density=… | python3 scripts/blocos.py sobrepor video.mp4 snow saida.mp4 --inicio 1",
+    "testado": true
   },
   {
     "id": "vfx.light-rays",
@@ -3443,19 +3451,20 @@
     "tipo": "vfx",
     "motores": [
       "ffmpeg",
+      "hyperframes",
       "remotion"
     ],
-    "status": "integracao_nativa",
+    "status": "implementado",
     "parametros": [
       "intensidade",
       "mistura",
       "duracaoFrames"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "projetos/hf-biblioteca/compositions/godrays.html",
+    "observacao": "Bloco do registro HyperFrames adaptado para uso offline e testado (godrays). Ver `python3 scripts/blocos.py variaveis godrays`. Renderizado com WebGPU por software (sem GPU no ambiente; mais lento).",
     "descricao": "Raios de luz volumétricos.",
-    "como_usar": "hyperframes add godrays",
-    "testado": false
+    "como_usar": "python3 scripts/blocos.py renderizar godrays saida.mp4 | python3 scripts/blocos.py sobrepor video.mp4 godrays saida.mp4 --inicio 1",
+    "testado": true
   },
   {
     "id": "vfx.digital-distortion",
@@ -4123,10 +4132,10 @@
       "layout",
       "duracaoFrames"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "projetos/hf-biblioteca/compositions/components/multi-device-splay.html",
+    "observacao": "Bloco testado, mas com conteúdo fixo de exemplo e sem parâmetros de conteúdo: para usar com o seu texto/mídia é preciso editar o HTML em projetos/hf-biblioteca. multi-device-splay mostra celular, tablet e MONITOR (não notebook), com telas genéricas.",
     "descricao": "Vídeo dentro de um notebook.",
-    "como_usar": "hyperframes add multi-device-splay (verificar variação laptop)",
+    "como_usar": "python3 scripts/blocos.py renderizar multi-device-splay saida.mp4 --var accent=… | python3 scripts/blocos.py sobrepor video.mp4 multi-device-splay saida.mp4 --inicio 1",
     "testado": false
   },
   {
@@ -4139,18 +4148,18 @@
       "hyperframes",
       "remotion"
     ],
-    "status": "integracao_nativa",
+    "status": "implementado",
     "parametros": [
       "posicao",
       "escala",
       "layout",
       "duracaoFrames"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "projetos/hf-biblioteca/compositions/components/browser-device-stage.html",
+    "observacao": "Bloco do registro HyperFrames adaptado para uso offline e testado (browser-device-stage). Ver `python3 scripts/blocos.py variaveis browser-device-stage`.",
     "descricao": "Janela de navegador animada.",
-    "como_usar": "hyperframes add browser-device-stage",
-    "testado": false
+    "como_usar": "python3 scripts/blocos.py renderizar browser-device-stage saida.mp4 --var chrome=… | python3 scripts/blocos.py sobrepor video.mp4 browser-device-stage saida.mp4 --inicio 1",
+    "testado": true
   },
   {
     "id": "interfaces_mockups.app-interface-animation",
@@ -4169,10 +4178,10 @@
       "layout",
       "duracaoFrames"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "projetos/hf-biblioteca/compositions/app-showcase.html",
+    "observacao": "Bloco testado, mas com conteúdo fixo de exemplo e sem parâmetros de conteúdo: para usar com o seu texto/mídia é preciso editar o HTML em projetos/hf-biblioteca. app-showcase mostra um app de exemplo.",
     "descricao": "Fluxos de app animados.",
-    "como_usar": "hyperframes add app-showcase | hyperframes add onboarding-stepper-flow",
+    "como_usar": "python3 scripts/blocos.py renderizar app-showcase saida.mp4 | python3 scripts/blocos.py sobrepor video.mp4 app-showcase saida.mp4 --inicio 1 | alternativas: onboarding-stepper-flow",
     "testado": false
   },
   {
@@ -4185,18 +4194,18 @@
       "hyperframes",
       "remotion"
     ],
-    "status": "integracao_nativa",
+    "status": "implementado",
     "parametros": [
       "posicao",
       "escala",
       "layout",
       "duracaoFrames"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "projetos/hf-biblioteca/compositions/components/scroll-feed.html",
+    "observacao": "Bloco do registro HyperFrames adaptado para uso offline e testado (scroll-feed). Ver `python3 scripts/blocos.py variaveis scroll-feed`.",
     "descricao": "Feed rolando.",
-    "como_usar": "hyperframes add scroll-feed",
-    "testado": false
+    "como_usar": "python3 scripts/blocos.py renderizar scroll-feed saida.mp4 --var speed=… | python3 scripts/blocos.py sobrepor video.mp4 scroll-feed saida.mp4 --inicio 1",
+    "testado": true
   },
   {
     "id": "interfaces_mockups.scrolling-reels-grid",
@@ -4238,10 +4247,10 @@
       "layout",
       "duracaoFrames"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "projetos/hf-biblioteca/compositions/yt-comment-card.html",
+    "observacao": "Bloco testado, mas com conteúdo fixo de exemplo e sem parâmetros de conteúdo: para usar com o seu texto/mídia é preciso editar o HTML em projetos/hf-biblioteca. yt-comment-card é um comentário no estilo YouTube com texto fixo (não é Instagram).",
     "descricao": "Comentário surgindo na tela.",
-    "como_usar": "hyperframes add yt-comment-card (adaptar visual)",
+    "como_usar": "python3 scripts/blocos.py renderizar yt-comment-card saida.mp4 | python3 scripts/blocos.py sobrepor video.mp4 yt-comment-card saida.mp4 --inicio 1",
     "testado": false
   },
   {
@@ -4278,18 +4287,18 @@
       "hyperframes",
       "remotion"
     ],
-    "status": "integracao_nativa",
+    "status": "implementado",
     "parametros": [
       "posicao",
       "escala",
       "layout",
       "duracaoFrames"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "projetos/hf-biblioteca/compositions/components/chat-message.html",
+    "observacao": "Bloco do registro HyperFrames adaptado para uso offline e testado (chat-message, chat-thread, message-thread-reveal). Ver `python3 scripts/blocos.py variaveis chat-message`.",
     "descricao": "Balões de conversa.",
-    "como_usar": "hyperframes add chat-message | hyperframes add chat-thread | hyperframes add message-thread-reveal",
-    "testado": false
+    "como_usar": "python3 scripts/blocos.py renderizar chat-message saida.mp4 --var type=… | python3 scripts/blocos.py sobrepor video.mp4 chat-message saida.mp4 --inicio 1 | alternativas: chat-thread, message-thread-reveal",
+    "testado": true
   },
   {
     "id": "interfaces_mockups.notification-pop",
@@ -4301,18 +4310,18 @@
       "hyperframes",
       "remotion"
     ],
-    "status": "integracao_nativa",
+    "status": "implementado",
     "parametros": [
       "posicao",
       "escala",
       "layout",
       "duracaoFrames"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "projetos/hf-biblioteca/compositions/components/native-notification-pop.html",
+    "observacao": "Bloco do registro HyperFrames adaptado para uso offline e testado (native-notification-pop, macos-notification). Ver `python3 scripts/blocos.py variaveis native-notification-pop`.",
     "descricao": "Notificação surgindo.",
-    "como_usar": "hyperframes add native-notification-pop | hyperframes add macos-notification",
-    "testado": false
+    "como_usar": "python3 scripts/blocos.py renderizar native-notification-pop saida.mp4 --var title=… | python3 scripts/blocos.py sobrepor video.mp4 native-notification-pop saida.mp4 --inicio 1 | alternativas: macos-notification",
+    "testado": true
   },
   {
     "id": "interfaces_mockups.prompt-bar",
@@ -4324,18 +4333,18 @@
       "hyperframes",
       "remotion"
     ],
-    "status": "integracao_nativa",
+    "status": "implementado",
     "parametros": [
       "posicao",
       "escala",
       "layout",
       "duracaoFrames"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "projetos/hf-biblioteca/compositions/components/typed-prompt.html",
+    "observacao": "Bloco do registro HyperFrames adaptado para uso offline e testado (typed-prompt). Ver `python3 scripts/blocos.py variaveis typed-prompt`.",
     "descricao": "Barra de prompt sendo digitada.",
-    "como_usar": "hyperframes add typed-prompt",
-    "testado": false
+    "como_usar": "python3 scripts/blocos.py renderizar typed-prompt saida.mp4 --var text=… | python3 scripts/blocos.py sobrepor video.mp4 typed-prompt saida.mp4 --inicio 1",
+    "testado": true
   },
   {
     "id": "interfaces_mockups.search-bar-animation",
@@ -4347,18 +4356,18 @@
       "hyperframes",
       "remotion"
     ],
-    "status": "integracao_nativa",
+    "status": "implementado",
     "parametros": [
       "posicao",
       "escala",
       "layout",
       "duracaoFrames"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "projetos/hf-biblioteca/compositions/components/typed-prompt.html",
+    "observacao": "Bloco do registro HyperFrames adaptado para uso offline e testado (typed-prompt). Ver `python3 scripts/blocos.py variaveis typed-prompt`.",
     "descricao": "Busca sendo digitada.",
-    "como_usar": "hyperframes add typed-prompt (adaptar)",
-    "testado": false
+    "como_usar": "python3 scripts/blocos.py renderizar typed-prompt saida.mp4 --var text=… | python3 scripts/blocos.py sobrepor video.mp4 typed-prompt saida.mp4 --inicio 1",
+    "testado": true
   },
   {
     "id": "interfaces_mockups.drag-and-drop-file",
@@ -4370,18 +4379,18 @@
       "hyperframes",
       "remotion"
     ],
-    "status": "integracao_nativa",
+    "status": "implementado",
     "parametros": [
       "posicao",
       "escala",
       "layout",
       "duracaoFrames"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "projetos/hf-biblioteca/compositions/components/cursor-drag-drop.html",
+    "observacao": "Bloco do registro HyperFrames adaptado para uso offline e testado (cursor-drag-drop). Ver `python3 scripts/blocos.py variaveis cursor-drag-drop`.",
     "descricao": "Arquivo arrastado e solto.",
-    "como_usar": "hyperframes add cursor-drag-drop",
-    "testado": false
+    "como_usar": "python3 scripts/blocos.py renderizar cursor-drag-drop saida.mp4 --var card_label=… | python3 scripts/blocos.py sobrepor video.mp4 cursor-drag-drop saida.mp4 --inicio 1",
+    "testado": true
   },
   {
     "id": "interfaces_mockups.editor-timeline-simulation",
@@ -4518,9 +4527,9 @@
       "duracaoFrames"
     ],
     "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "observacao": "Bloco(s) do registro instalado(s) e renderizado(s) com sucesso, mas animam apenas o conteúdo de exemplo: aplicar aos seus clipes exige editar o HTML do bloco em projetos/hf-biblioteca para trocar as cenas de exemplo pela sua mídia. Testados: pull-back-reveal.",
     "descricao": "Afasta revelando o conjunto.",
-    "como_usar": "hyperframes add pull-back-reveal",
+    "como_usar": "python3 scripts/blocos.py renderizar pull-back-reveal demo.mp4",
     "testado": false
   },
   {
@@ -4540,10 +4549,10 @@
       "layout",
       "duracaoFrames"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "projetos/hf-biblioteca/compositions/components/multi-device-splay.html",
+    "observacao": "Bloco testado, mas com conteúdo fixo de exemplo e sem parâmetros de conteúdo: para usar com o seu texto/mídia é preciso editar o HTML em projetos/hf-biblioteca. multi-device-splay mostra telas genéricas; inserir sua tela exige edição.",
     "descricao": "Telas flutuando no espaço.",
-    "como_usar": "hyperframes add multi-device-splay | hyperframes add three-orbiting-cards",
+    "como_usar": "python3 scripts/blocos.py renderizar multi-device-splay saida.mp4 --var accent=… | python3 scripts/blocos.py sobrepor video.mp4 multi-device-splay saida.mp4 --inicio 1 | alternativas: three-orbiting-cards",
     "testado": false
   },
   {
@@ -4612,10 +4621,10 @@
       "layout",
       "duracaoFrames"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "projetos/hf-biblioteca/compositions/mk-placeholder-grid.html",
+    "observacao": "Bloco testado, mas com conteúdo fixo de exemplo e sem parâmetros de conteúdo: para usar com o seu texto/mídia é preciso editar o HTML em projetos/hf-biblioteca. mk-placeholder-grid só tem espaços reservados; não recebe vídeos por parâmetro.",
     "descricao": "Mosaico de vídeos.",
-    "como_usar": "hyperframes add mk-placeholder-grid | hyperframes add paper-collage-reveal",
+    "como_usar": "python3 scripts/blocos.py renderizar mk-placeholder-grid saida.mp4 | python3 scripts/blocos.py sobrepor video.mp4 mk-placeholder-grid saida.mp4 --inicio 1 | alternativas: paper-collage-reveal",
     "testado": false
   },
   {
@@ -4628,18 +4637,18 @@
       "hyperframes",
       "remotion"
     ],
-    "status": "integracao_nativa",
+    "status": "implementado",
     "parametros": [
       "posicao",
       "escala",
       "layout",
       "duracaoFrames"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "projetos/hf-biblioteca/compositions/gallery-tunnel.html",
+    "observacao": "Bloco do registro HyperFrames adaptado para uso offline e testado (gallery-tunnel). Ver `python3 scripts/blocos.py variaveis gallery-tunnel`. Itens não usados (falharam): carousel-orbit-1",
     "descricao": "Galeria 3D de imagens.",
-    "como_usar": "hyperframes add gallery-tunnel | hyperframes add carousel-orbit-1..5",
-    "testado": false
+    "como_usar": "python3 scripts/blocos.py renderizar gallery-tunnel saida.mp4 --var images=… | python3 scripts/blocos.py sobrepor video.mp4 gallery-tunnel saida.mp4 --inicio 1",
+    "testado": true
   },
   {
     "id": "interfaces_mockups.infinite-video-grid",
@@ -4681,10 +4690,10 @@
       "layout",
       "duracaoFrames"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "projetos/hf-biblioteca/compositions/liquid-glass-widgets.html",
+    "observacao": "Bloco testado, mas com conteúdo fixo de exemplo e sem parâmetros de conteúdo: para usar com o seu texto/mídia é preciso editar o HTML em projetos/hf-biblioteca. liquid-glass-widgets mostra widgets de exemplo fixos.",
     "descricao": "Cartões de interface de vidro.",
-    "como_usar": "hyperframes add liquid-glass-widgets",
+    "como_usar": "python3 scripts/blocos.py renderizar liquid-glass-widgets saida.mp4 | python3 scripts/blocos.py sobrepor video.mp4 liquid-glass-widgets saida.mp4 --inicio 1",
     "testado": false
   },
   {
@@ -4743,18 +4752,18 @@
       "hyperframes",
       "remotion"
     ],
-    "status": "integracao_nativa",
+    "status": "implementado",
     "parametros": [
       "posicao",
       "escala",
       "layout",
       "duracaoFrames"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "projetos/hf-biblioteca/compositions/components/cta-close.html",
+    "observacao": "CTA de encerramento parametrizado (cta-close, testado). yt-comment-card tem texto fixo de exemplo.",
     "descricao": "Comentário/CTA pedindo interação.",
-    "como_usar": "hyperframes add yt-comment-card | hyperframes add cta-close",
-    "testado": false
+    "como_usar": "python3 scripts/blocos.py variaveis cta-close → python3 scripts/blocos.py renderizar cta-close saida.mp4 --var …",
+    "testado": true
   },
   {
     "id": "interfaces_mockups.checklist-ui",
@@ -4766,18 +4775,18 @@
       "hyperframes",
       "remotion"
     ],
-    "status": "integracao_nativa",
+    "status": "implementado",
     "parametros": [
       "posicao",
       "escala",
       "layout",
       "duracaoFrames"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "projetos/hf-biblioteca/compositions/components/marker-checklist-card.html",
+    "observacao": "Bloco do registro HyperFrames adaptado para uso offline e testado (marker-checklist-card). Ver `python3 scripts/blocos.py variaveis marker-checklist-card`.",
     "descricao": "Checklist em estilo de interface.",
-    "como_usar": "hyperframes add marker-checklist-card | Remotion ChecklistAnimado (implementado) como base",
-    "testado": false
+    "como_usar": "python3 scripts/blocos.py renderizar marker-checklist-card saida.mp4 --var top=… | python3 scripts/blocos.py sobrepor video.mp4 marker-checklist-card saida.mp4 --inicio 1",
+    "testado": true
   },
   {
     "id": "montagem.jump-cut",
@@ -4863,9 +4872,9 @@
       "duracaoFrames"
     ],
     "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "observacao": "Bloco(s) do registro instalado(s) e renderizado(s) com sucesso, mas animam apenas o conteúdo de exemplo: aplicar aos seus clipes exige editar o HTML do bloco em projetos/hf-biblioteca para trocar as cenas de exemplo pela sua mídia. Testados: match-cut.",
     "descricao": "Corte por correspondência visual.",
-    "como_usar": "hyperframes add match-cut",
+    "como_usar": "python3 scripts/blocos.py renderizar match-cut demo.mp4",
     "testado": false
   },
   {
@@ -4942,17 +4951,17 @@
       "ffmpeg",
       "hyperframes"
     ],
-    "status": "integracao_nativa",
+    "status": "implementado",
     "parametros": [
       "pontoEntrada",
       "pontoSaida",
       "duracaoFrames"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "scripts/estudio.py",
+    "observacao": "Implementado e testado no repositório; ver como_usar.",
     "descricao": "Cortes no tempo da música.",
-    "como_usar": "hyperframes beats <projeto> (detecta batidas) | HF: beat-freeze-cut",
-    "testado": false
+    "como_usar": "python3 scripts/estudio.py montagem-ritmo saida.mp4 musica.mp3 clipe1.mp4 clipe2.mp4 [--a-cada 1]",
+    "testado": true
   },
   {
     "id": "montagem.montage-sequence",
@@ -5180,17 +5189,17 @@
       "ffmpeg",
       "hyperframes"
     ],
-    "status": "integracao_nativa",
+    "status": "implementado",
     "parametros": [
       "pontoEntrada",
       "pontoSaida",
       "duracaoFrames"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "scripts/estudio.py",
+    "observacao": "Implementado e testado no repositório; ver como_usar.",
     "descricao": "Edição guiada pelo ritmo.",
-    "como_usar": "hyperframes beats",
-    "testado": false
+    "como_usar": "python3 scripts/estudio.py montagem-ritmo saida.mp4 musica.mp3 clipes... --a-cada 2 --formato 9:16",
+    "testado": true
   },
   {
     "id": "montagem.time-remapping",
@@ -6826,17 +6835,17 @@
       "hyperframes",
       "whisper"
     ],
-    "status": "integracao_nativa",
+    "status": "implementado",
     "parametros": [
       "ganhoDB",
       "lufsAlvo",
       "frequencia"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "scripts/estudio.py",
+    "observacao": "Implementado e testado no repositório; ver como_usar.",
     "descricao": "Detecta batidas da música.",
-    "como_usar": "hyperframes beats <projeto>",
-    "testado": false
+    "como_usar": "python3 scripts/estudio.py batidas musica.mp3",
+    "testado": true
   },
   {
     "id": "audio.beat-synchronization",
@@ -6849,17 +6858,17 @@
       "hyperframes",
       "whisper"
     ],
-    "status": "integracao_nativa",
+    "status": "implementado",
     "parametros": [
       "ganhoDB",
       "lufsAlvo",
       "frequencia"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "scripts/estudio.py",
+    "observacao": "Implementado e testado no repositório; ver como_usar.",
     "descricao": "Sincroniza cortes/animações com batidas.",
-    "como_usar": "hyperframes beats + blocos beat-*",
-    "testado": false
+    "como_usar": "python3 scripts/estudio.py montagem-ritmo saida.mp4 musica.mp3 clipe1.mp4 clipe2.mp4 --a-cada 2",
+    "testado": true
   },
   {
     "id": "audio.audio-fade-in",
@@ -6915,17 +6924,17 @@
       "ffmpeg",
       "whisper"
     ],
-    "status": "integracao_nativa",
+    "status": "implementado",
     "parametros": [
       "ganhoDB",
       "lufsAlvo",
       "frequencia"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "scripts/estudio.py",
+    "observacao": "Implementado e testado no repositório; ver como_usar.",
     "descricao": "Fusão entre músicas.",
-    "como_usar": "FFmpeg acrossfade (usado em transicao; não encapsulado para áudio puro)",
-    "testado": false
+    "como_usar": "python3 scripts/estudio.py crossfade-musica a.mp3 b.mp3 saida.mp3 --duracao 3",
+    "testado": true
   },
   {
     "id": "audio.background-ambience",
@@ -7004,17 +7013,17 @@
       "ffmpeg",
       "whisper"
     ],
-    "status": "integracao_nativa",
+    "status": "implementado",
     "parametros": [
       "ganhoDB",
       "lufsAlvo",
       "frequencia"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "scripts/estudio.py",
+    "observacao": "Implementado e testado no repositório; ver como_usar.",
     "descricao": "Altera o tom da voz.",
-    "como_usar": "FFmpeg asetrate + atempo (não encapsulado)",
-    "testado": false
+    "como_usar": "python3 scripts/estudio.py tom entrada.mp4 saida.mp4 --semitons -2 [--preservar-formantes]",
+    "testado": true
   },
   {
     "id": "audio.sound-design-layering",
@@ -7049,17 +7058,17 @@
       "ffmpeg",
       "whisper"
     ],
-    "status": "integracao_nativa",
+    "status": "implementado",
     "parametros": [
       "ganhoDB",
       "lufsAlvo",
       "frequencia"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "scripts/estudio.py",
+    "observacao": "Implementado e testado no repositório; ver como_usar.",
     "descricao": "Gate: silencia ruído abaixo de um limiar.",
-    "como_usar": "FFmpeg agate (não encapsulado no estudio.py)",
-    "testado": false
+    "como_usar": "python3 scripts/estudio.py audio entrada.mp4 saida.mp4 --gate",
+    "testado": true
   },
   {
     "id": "audio.de-esser",
@@ -7071,17 +7080,17 @@
       "ffmpeg",
       "whisper"
     ],
-    "status": "integracao_nativa",
+    "status": "implementado",
     "parametros": [
       "ganhoDB",
       "lufsAlvo",
       "frequencia"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "scripts/estudio.py",
+    "observacao": "Implementado e testado no repositório; ver como_usar.",
     "descricao": "Reduz sibilância (S, Ç, X) da voz.",
-    "como_usar": "FFmpeg deesser (não encapsulado no estudio.py)",
-    "testado": false
+    "como_usar": "python3 scripts/estudio.py audio entrada.mp4 saida.mp4 --deesser",
+    "testado": true
   },
   {
     "id": "audio.voice-isolation",
@@ -7248,17 +7257,17 @@
       "hyperframes",
       "orquestracao"
     ],
-    "status": "integracao_nativa",
+    "status": "implementado",
     "parametros": [
       "entrada",
       "parametros",
       "revisaoHumana"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "scripts/estudio.py",
+    "observacao": "Implementado e testado no repositório; ver como_usar.",
     "descricao": "Cortes no beat automáticos.",
-    "como_usar": "hyperframes beats",
-    "testado": false
+    "como_usar": "python3 scripts/estudio.py montagem-ritmo saida.mp4 musica.mp3 clipes... (batidas detectadas automaticamente)",
+    "testado": true
   },
   {
     "id": "automacao_ia.smart-silence-removal",
@@ -7532,17 +7541,17 @@
       "hyperframes",
       "orquestracao"
     ],
-    "status": "integracao_nativa",
+    "status": "implementado",
     "parametros": [
       "entrada",
       "parametros",
       "revisaoHumana"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "scripts/blocos.py",
+    "observacao": "Implementado e testado no repositório; ver como_usar.",
     "descricao": "Escolhe blocos de motion pelo conteúdo.",
-    "como_usar": "hyperframes catalog --query \"<descrição>\"",
-    "testado": false
+    "como_usar": "python3 scripts/blocos.py sugerir \"<descrição em inglês>\" → python3 scripts/blocos.py renderizar <bloco> saida.mp4",
+    "testado": true
   },
   {
     "id": "automacao_ia.ai-quality-enhancement",
@@ -7781,18 +7790,18 @@
       "hyperframes",
       "remotion"
     ],
-    "status": "integracao_nativa",
+    "status": "implementado",
     "parametros": [
       "titulo",
       "subtitulo",
       "formato",
       "duracaoFrames"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "projetos/remotion-base/src/composicoes/YoutubeAberturaEncerramento.tsx",
+    "observacao": "Composição própria 16:9 (sem marcas de terceiros). O bloco yt-logo-intro do registro exibe o logo do YouTube: não usar.",
     "descricao": "Abertura e encerramento.",
-    "como_usar": "Remotion: Vinheta | HF: hyperframes add yt-logo-intro | hyperframes add logo-outro",
-    "testado": false
+    "como_usar": "npx remotion render src/index.ts AberturaYoutube out/abertura.mp4 --props='{\"titulo\":\"Arthur Pires\",\"subtitulo\":\"Direito explicado\"}' (Remotion: AberturaYoutube)",
+    "testado": true
   },
   {
     "id": "templates.youtube-outro",
@@ -7804,18 +7813,18 @@
       "hyperframes",
       "remotion"
     ],
-    "status": "integracao_nativa",
+    "status": "implementado",
     "parametros": [
       "titulo",
       "subtitulo",
       "formato",
       "duracaoFrames"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "projetos/remotion-base/src/composicoes/YoutubeAberturaEncerramento.tsx",
+    "observacao": "Composição própria 16:9 com cartões para os elementos finais do YouTube. O bloco logo-outro do registro exibe o logo do Figma: não usar.",
     "descricao": "Abertura e encerramento.",
-    "como_usar": "Remotion: Vinheta | HF: hyperframes add yt-logo-intro | hyperframes add logo-outro",
-    "testado": false
+    "como_usar": "npx remotion render src/index.ts EncerramentoYoutube out/encerramento.mp4 --props='{\"titulo\":\"Obrigado por assistir\",\"chamada\":\"Inscreva-se\",\"cartoes\":[\"Próximo vídeo\",\"Recomendado\"]}' (Remotion: EncerramentoYoutube)",
+    "testado": true
   },
   {
     "id": "templates.podcast-clips",
@@ -8037,18 +8046,18 @@
       "hyperframes",
       "remotion"
     ],
-    "status": "integracao_nativa",
+    "status": "implementado",
     "parametros": [
       "titulo",
       "subtitulo",
       "formato",
       "duracaoFrames"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "projetos/apresentacao-institucional/index.html",
+    "observacao": "Implementado como VÍDEO institucional. Modo apresentação ao vivo (hyperframes present) ainda não validado: o player não exibiu as cenas neste ambiente.",
     "descricao": "Apresentação institucional.",
-    "como_usar": "Skill /slideshow",
-    "testado": false
+    "como_usar": "npx hyperframes render projetos/apresentacao-institucional -o saida.mp4 (vídeo institucional 16:9, 4 cenas; editar textos no index.html)",
+    "testado": true
   },
   {
     "id": "templates.brand-story",
@@ -8175,18 +8184,18 @@
       "hyperframes",
       "remotion"
     ],
-    "status": "integracao_nativa",
+    "status": "implementado",
     "parametros": [
       "titulo",
       "subtitulo",
       "formato",
       "duracaoFrames"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "projetos/hf-biblioteca/compositions/components/social-proof-card.html",
+    "observacao": "Bloco do registro HyperFrames adaptado para uso offline e testado (social-proof-card, cta-lockup). Ver `python3 scripts/blocos.py variaveis social-proof-card`.",
     "descricao": "Anúncio para redes.",
-    "como_usar": "hyperframes add social-proof-card | hyperframes add cta-lockup",
-    "testado": false
+    "como_usar": "python3 scripts/blocos.py renderizar social-proof-card saida.mp4 --var brand=… | python3 scripts/blocos.py sobrepor video.mp4 social-proof-card saida.mp4 --inicio 1 | alternativas: cta-lockup",
+    "testado": true
   },
   {
     "id": "templates.countdown-event-teaser",
@@ -8292,17 +8301,17 @@
       "orquestracao",
       "remotion"
     ],
-    "status": "integracao_nativa",
+    "status": "implementado",
     "parametros": [
       "configuracao",
       "entrada",
       "saida"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "scripts/projeto.py",
+    "observacao": "Visualização/edição via Remotion Studio e HyperFrames (não é um editor próprio).",
     "descricao": "Linha do tempo com trilhas.",
-    "como_usar": "remotion studio | hyperframes preview / hyperframes timeline",
-    "testado": false
+    "como_usar": "python3 scripts/projeto.py timeline <projeto> (HyperFrames: trilhas e clipes; Remotion: composições) | prévia: projeto.py previa iniciar",
+    "testado": true
   },
   {
     "id": "infraestrutura.keyframe-editor",
@@ -8315,17 +8324,17 @@
       "orquestracao",
       "remotion"
     ],
-    "status": "integracao_nativa",
+    "status": "implementado",
     "parametros": [
       "configuracao",
       "entrada",
       "saida"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "scripts/projeto.py",
+    "observacao": "Inspeção e onion-skin de keyframes; edição é no código-fonte da composição.",
     "descricao": "Edição de keyframes.",
-    "como_usar": "hyperframes keyframes | Remotion Studio",
-    "testado": false
+    "como_usar": "python3 scripts/projeto.py keyframes <projeto-hf> [--seletor \"#id\"] [--imagem onion.png]",
+    "testado": true
   },
   {
     "id": "infraestrutura.easing-curves",
@@ -8338,17 +8347,17 @@
       "orquestracao",
       "remotion"
     ],
-    "status": "integracao_nativa",
+    "status": "implementado",
     "parametros": [
       "configuracao",
       "entrada",
       "saida"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "projetos/remotion-base/src/curvas.ts",
+    "observacao": "Implementado e testado no repositório; ver como_usar.",
     "descricao": "Easing e curvas.",
-    "como_usar": "Remotion Easing / GSAP eases",
-    "testado": false
+    "como_usar": "Remotion: curvas.saida / curvas.cinematica / molas.natural (src/curvas.ts) | GSAP: power3.out, back.out(1.7)…",
+    "testado": true
   },
   {
     "id": "infraestrutura.preset-library",
@@ -8384,17 +8393,17 @@
       "orquestracao",
       "remotion"
     ],
-    "status": "integracao_nativa",
+    "status": "implementado",
     "parametros": [
       "configuracao",
       "entrada",
       "saida"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "scripts/projeto.py",
+    "observacao": "Implementado e testado no repositório; ver como_usar.",
     "descricao": "Pré-visualização interativa.",
-    "como_usar": "npx remotion studio | hyperframes preview --background",
-    "testado": false
+    "como_usar": "python3 scripts/projeto.py previa iniciar|status|parar <projeto> [--porta 3000]",
+    "testado": true
   },
   {
     "id": "infraestrutura.undo-history",
@@ -8407,17 +8416,17 @@
       "hyperframes",
       "orquestracao"
     ],
-    "status": "integracao_nativa",
+    "status": "implementado",
     "parametros": [
       "configuracao",
       "entrada",
       "saida"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "scripts/projeto.py",
+    "observacao": "Implementado e testado no repositório; ver como_usar.",
     "descricao": "Histórico/versões.",
-    "como_usar": "git log | hyperframes history",
-    "testado": false
+    "como_usar": "python3 scripts/projeto.py historico <projeto> (HyperFrames history + commits Git)",
+    "testado": true
   },
   {
     "id": "infraestrutura.video-layers",
@@ -8430,17 +8439,17 @@
       "orquestracao",
       "remotion"
     ],
-    "status": "integracao_nativa",
+    "status": "implementado",
     "parametros": [
       "configuracao",
       "entrada",
       "saida"
     ],
-    "arquivo_exemplo": null,
-    "observacao": "Disponível em ferramenta instalada (bloco/filtro/recurso nativo); requer adaptação e teste no projeto.",
+    "arquivo_exemplo": "projetos/remotion-base/src/composicoes/ReelsJuridico.tsx",
+    "observacao": "Implementado e testado no repositório; ver como_usar.",
     "descricao": "Composição em camadas.",
-    "como_usar": "Remotion <Sequence>/<AbsoluteFill> | HTML do HyperFrames",
-    "testado": false
+    "como_usar": "Remotion: camadas com <Sequence>/<AbsoluteFill> — ver composicoes/ReelsJuridico.tsx (vídeo, vinheta, legendas, gancho, tarja, CTA, progresso)",
+    "testado": true
   },
   {
     "id": "infraestrutura.mask-editor",
