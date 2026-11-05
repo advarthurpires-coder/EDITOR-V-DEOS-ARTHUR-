@@ -210,12 +210,12 @@
   "variaveis": 6
  },
  "chromatic-aberration-wipe": {
-  "brilho_medio": 40.9,
+  "brilho_medio": 46.6,
   "duracao": 4.0,
   "ficha_demo": false,
-  "movimento": 0.0,
-  "movimento_pico": 0.01,
-  "ok": false,
+  "movimento": 1.62,
+  "movimento_pico": 7.32,
+  "ok": true,
   "quadros_analisados": 16,
   "tipo": "component",
   "variaveis": 3
@@ -243,12 +243,12 @@
   "variaveis": 0
  },
  "confetti": {
-  "brilho_medio": 50.8,
+  "brilho_medio": 50.4,
   "duracao": 4.0,
   "ficha_demo": false,
-  "movimento": 0.0,
-  "movimento_pico": 0.0,
-  "ok": false,
+  "movimento": 0.44,
+  "movimento_pico": 0.66,
+  "ok": true,
   "quadros_analisados": 16,
   "tipo": "component",
   "variaveis": 0
@@ -342,8 +342,15 @@
   "variaveis": 4
  },
  "flowchart": {
-  "erro": "warningOwners\":[]}\n\n✗  Render failed\n\n   Render blocked by 1 correctness warning:\n   - sub_timeline_script_failure: A composition script threw before its timeline registered (still unregistered: flowchart) (runtime-error:flowchart TypeError: Cannot read properties of undefined (reading 'hold5')). Fix the error; a composition animated by CSS or rAF rathe…\n   Try --docker for containerized rendering",
-  "ok": false
+  "brilho_medio": 232.6,
+  "duracao": 12.0,
+  "ficha_demo": false,
+  "movimento": 0.21,
+  "movimento_pico": 3.26,
+  "ok": true,
+  "quadros_analisados": 48,
+  "tipo": "block",
+  "variaveis": 0
  },
  "focus-blur-resolve": {
   "brilho_medio": 38.0,
@@ -778,12 +785,12 @@
   "variaveis": 11
  },
  "rgb-glitch-text": {
-  "brilho_medio": 38.0,
+  "brilho_medio": 38.1,
   "duracao": 4.0,
   "ficha_demo": false,
-  "movimento": 0.0,
-  "movimento_pico": 0.0,
-  "ok": false,
+  "movimento": 0.5,
+  "movimento_pico": 6.94,
+  "ok": true,
   "quadros_analisados": 16,
   "tipo": "component",
   "variaveis": 3

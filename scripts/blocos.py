@@ -587,10 +587,10 @@ def cmd_testar(a):
         try:
             m = meta_item(n)
             limite = min(m["duracao"], a.max_segundos)
-            # renderiza com alfa e compõe sobre a cor da marca: overlays transparentes (neve, partículas) ficam visíveis
+            # renderiza com alfa e compõe sobre cinza médio: overlays claros (neve) e textos escuros ("ink") ficam visíveis
             mov = renderizar(n, tmp / f"{n}.mov", None, "draft", duracao=limite, formato="mov")
             vid = tmp / f"{n}.mp4"
-            run(["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-f", "lavfi", "-i", f"color=c=0x0b1d33:s={m['largura']}x{m['altura']}:r=30",
+            run(["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-f", "lavfi", "-i", f"color=c=0x7f858c:s={m['largura']}x{m['altura']}:r=30",
                  "-i", str(mov), "-filter_complex", "[0][1]overlay=shortest=1:format=auto,format=yuv420p", "-c:v", "libx264", "-crf", "23",
                  "-preset", "veryfast", str(vid)])
             mov.unlink(missing_ok=True)
