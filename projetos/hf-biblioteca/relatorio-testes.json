@@ -601,6 +601,28 @@
   "tipo": "block",
   "variaveis": 0
  },
+ "morph-swap": {
+  "brilho_medio": 35.7,
+  "duracao": 3.5,
+  "ficha_demo": false,
+  "movimento": 0.8,
+  "movimento_pico": 7.1,
+  "ok": true,
+  "quadros_analisados": 14,
+  "tipo": "component",
+  "variaveis": 4
+ },
+ "multi-device-splay": {
+  "brilho_medio": 104.4,
+  "duracao": 4.0,
+  "ficha_demo": false,
+  "movimento": 7.66,
+  "movimento_pico": 49.46,
+  "ok": true,
+  "quadros_analisados": 16,
+  "tipo": "component",
+  "variaveis": 1
+ },
  "snow": {
   "brilho_medio": 38.3,
   "duracao": 6.0,
